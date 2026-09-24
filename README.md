@@ -1,6 +1,6 @@
 # ClassFinder
 
-ClassFinder will help students enter classes and receive campus directions. The repository currently contains the development infrastructure only; production application code, screens, routing logic, and campus data have not been created.
+ClassFinder will help students enter classes and receive campus directions. The repository now contains the initial Vite/React application shell; class-entry behavior, routing logic, and campus data are still being built.
 
 ## Repository map
 
@@ -8,10 +8,11 @@ ClassFinder will help students enter classes and receive campus directions. The 
 - `package.json` — npm scripts and development dependencies.
 - `Dockerfile`, `compose.yml`, `.dockerignore` — reproducible Node.js development environment.
 - `scripts/` — infrastructure-only verification.
+- `index.html` — Vite's browser document shell.
+- `src/` — React application source, with `main.tsx` as the entrypoint and `App.tsx` as the root component.
 - `tests/` — future unit, UI, and end-to-end test locations; no product tests exist yet.
 - `.github/workflows/` — pull-request checks and GitHub Pages release deployment.
 - `.agents/skills/` — project-provided agent skills.
-- `src/` — not created yet; application implementation owns this directory.
 
 ## Getting Started
 
@@ -31,7 +32,7 @@ On a host with Node.js 22 LTS installed, run:
 npm ci
 ```
 
-Or start the development environment with Docker after application code provides the Vite entrypoint:
+Or start the development environment with Docker:
 
 ```sh
 docker compose up --build
@@ -56,7 +57,7 @@ npm run test:smoke
 docker compose config
 ```
 
-`npm run build` is intentionally not runnable until the application implementation adds Vite's `index.html` and entrypoint. The test commands currently validate the configured harness and pass with no product tests; application work must add meaningful tests before relying on coverage.
+The test commands currently validate the configured harness and pass with no product tests; application work must add meaningful tests before relying on coverage.
 
 ## GitHub configuration
 
@@ -67,4 +68,12 @@ The release workflow deploys version tags to GitHub Pages. Before its first rele
 - **`docker` is not recognized or the daemon is unavailable:** Start Docker Desktop (or the Docker service) and rerun `docker version`.
 - **Dependency install fails:** Use Node.js 22 LTS and rerun `npm ci`; do not mix npm with another package manager.
 - **Port is already in use:** Stop the process using the future Vite development port or change the Compose port mapping when application development begins.
+- **Docker reports an npm permission error:** Recreate the dependency volume after a prior run created it with root ownership:
+
+  ```sh
+  docker compose down -v
+  docker compose up --build
+  ```
+
+  The `-v` removes only the local `node_modules` volume; dependencies will be installed again from `package-lock.json`.
 - **GitHub Pages deployment fails:** Confirm Pages is enabled for GitHub Actions and that the repository allows the workflow's `pages: write` and `id-token: write` permissions.
