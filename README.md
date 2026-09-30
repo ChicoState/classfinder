@@ -9,7 +9,7 @@ ClassFinder will help students enter classes and receive campus directions. The 
 - `Dockerfile`, `compose.yml`, `.dockerignore` — reproducible Node.js development environment.
 - `scripts/` — infrastructure-only verification.
 - `index.html` — Vite's browser document shell.
-- `src/` — React application source, with `main.tsx` as the entrypoint and `App.tsx` as the root component.
+- `src/` — React application source, with `main.tsx` as the entrypoint, `App.tsx` as the root component, shared graph contracts in `lib/graph.ts`, and graph-assembly helpers in `graph/`.
 - `tests/` — future unit, UI, and end-to-end test locations; no product tests exist yet.
 - `.github/workflows/` — pull-request checks and GitHub Pages release deployment.
 - `.agents/skills/` — project-provided agent skills.
