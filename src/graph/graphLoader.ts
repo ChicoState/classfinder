@@ -23,8 +23,13 @@ export function connectBothWays(
 export function loadGraphFromData(): [Graph, Nodes] {
   const graph: Graph = new Map<NodeId, Edge[]>;
   const nodes: Nodes = new Map<NodeId, Node>;
-
-  // load graph from data
+  
+  /** Load graph from data
+   * ideas for data:
+   * nodes might have a building id to detect whether a user is within a building after finding the closest node that represents their position
+   * edges might have a kind, such as corridor, door, stair, etc, so that the instructions can be more specific
+   * 
+   */
 
   return [graph, nodes];
 }

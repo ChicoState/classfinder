@@ -8,7 +8,6 @@ function createNode(id: NodeId, x: number, y: number): Node {
     id,
     buildingId: null,
     floorId: null,
-    area: 'Outdoors',
     position: { x, y }
   };
 }

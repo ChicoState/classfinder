@@ -1,7 +1,6 @@
 export type NodeId = string & { readonly __brand: 'NodeId' };
 export type FloorId = number;
 
-export type Area = 'Outdoors' | 'Holt';
 export type EdgeKind =
   | 'corridor'
   | 'door'
@@ -14,7 +13,6 @@ export type Node = {
   id: NodeId;
   buildingId: string | null;
   floorId: FloorId | null;
-  area: Area;
   position: {
     x: number;
     y: number;
