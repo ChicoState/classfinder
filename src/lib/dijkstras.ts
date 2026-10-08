@@ -25,6 +25,8 @@ function distanceSqr(x1: number, y1: number, x2: number, y2: number): number {
   return xDistance ** 2 + yDistance ** 2;
 }
 
+// inefficient but probably fine for this project
+// if it proves not to be, partition nodes by chunks to optimize
 function getStartLocation(nodes: Nodes, x: number, y: number): Node | null {
   let closestNode: Node | null = null;
   let closestDistanceSqr = Number.POSITIVE_INFINITY;

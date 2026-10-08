@@ -1,0 +1,1366 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/ocon/ocon-2.pdf",
+    "sourceDate": "2003-10-07",
+    "building": "O'Connell Technology Center",
+    "floor": 2,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "coordinateFrame": "ocon-floor-1",
+    "origin": {
+      "nodeId": "ocon-1-exit-lower-ao",
+      "description": "Shared origin at the first-floor lower lobby AO exterior doorway; projected onto this floor's drawing.",
+      "pdfPointFromTopLeft": {
+        "x": 386.06666666666666,
+        "y": 568.5999999999999
+      }
+    },
+    "alignment": {
+      "method": "Translation to floor 1 using the passenger elevator shaft; common printed scale and drawing axes retained.",
+      "translationToFloor1PdfPoints": {
+        "x": 57.333333333333336,
+        "y": -16
+      },
+      "accuracy": "Approximate manual alignment, not a survey."
+    },
+    "axes": {
+      "x": "Positive toward the right of the PDF.",
+      "y": "Positive toward the top of the PDF; not geographic north."
+    },
+    "undirected": true,
+    "loading": "Initialize an adjacency list for every node, then add each edge in both directions. Node IDs are globally unique. Cross-floor edges are in connections.json.",
+    "nodeConvention": "Room nodes represent doorways. Additional nodes mark circulation junctions, required bends, and stair/elevator access points.",
+    "distanceConvention": "Plan-view feet between adjacent nodes, rounded to two decimals. Weight 1. Ramp lengths exclude unknown slope correction.",
+    "accessibility": "Omitted isAccessible means unknown. Floor plans alone do not certify accessible routes.",
+    "limitations": [
+      "Manually digitized from a dated plan. Coordinates, openings, and alignment need on-site verification.",
+      "No room-center or decorative nodes. Enclosed areas with no discernible entrance are not given invented routes.",
+      "Door edges include approaches and interior travel between visible room doors. Access restrictions and furnishings are not established.",
+      "The two ramps beside rooms 255 and 249 are retained. Their distances are plan-view lengths; slope and elevation change are not specified.",
+      "Room 241 is accessed through 242; 244A through 244; 251A through 251; 249A through 249; 254A through 254."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "ocon-2-stairs-west",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -76.05,
+        "y": 137.47
+      }
+    },
+    {
+      "id": "ocon-2-stairs-upper",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -23.08,
+        "y": 166.18
+      }
+    },
+    {
+      "id": "ocon-2-stairs-lower",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -23.08,
+        "y": 11.18
+      }
+    },
+    {
+      "id": "ocon-2-elevator-passenger",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -22.16,
+        "y": 149.32
+      }
+    },
+    {
+      "id": "ocon-2-elevator-service",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -22.16,
+        "y": 144.32
+      }
+    },
+    {
+      "id": "ocon-2-hall-west",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -70.86,
+        "y": 132.84
+      }
+    },
+    {
+      "id": "ocon-2-hall-northwest",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -70.86,
+        "y": 157.29
+      }
+    },
+    {
+      "id": "ocon-2-hall-diagonal",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -59.75,
+        "y": 168.4
+      }
+    },
+    {
+      "id": "ocon-2-hall-north",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -48.82,
+        "y": 178.58
+      }
+    },
+    {
+      "id": "ocon-2-hall-northeast",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -26.79,
+        "y": 172.84
+      }
+    },
+    {
+      "id": "ocon-2-lobby-upper",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -14.56,
+        "y": 155.81
+      }
+    },
+    {
+      "id": "ocon-2-hall-cross-west",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -51.23,
+        "y": 132.84
+      }
+    },
+    {
+      "id": "ocon-2-hall-cross-middle",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -36.6,
+        "y": 132.84
+      }
+    },
+    {
+      "id": "ocon-2-hall-east-upper",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -2.9,
+        "y": 133.03
+      }
+    },
+    {
+      "id": "ocon-2-hall-223",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -2.9,
+        "y": 109.14
+      }
+    },
+    {
+      "id": "ocon-2-hall-225",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -1.23,
+        "y": 87.29
+      }
+    },
+    {
+      "id": "ocon-2-hall-ramps",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -1.23,
+        "y": 76.92
+      }
+    },
+    {
+      "id": "ocon-2-hall-228",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -1.23,
+        "y": 66.92
+      }
+    },
+    {
+      "id": "ocon-2-hall-230",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -2.9,
+        "y": 47.1
+      }
+    },
+    {
+      "id": "ocon-2-hall-232",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -2.9,
+        "y": 27.29
+      }
+    },
+    {
+      "id": "ocon-2-hall-234",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -2.9,
+        "y": 14.51
+      }
+    },
+    {
+      "id": "ocon-2-hall-lower-east",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -15.31,
+        "y": 3.4
+      }
+    },
+    {
+      "id": "ocon-2-hall-lower-west",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -50.12,
+        "y": 3.95
+      }
+    },
+    {
+      "id": "ocon-2-hall-lower-middle",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -39.56,
+        "y": 3.77
+      }
+    },
+    {
+      "id": "ocon-2-hall-classrooms-east",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -15.31,
+        "y": 43.03
+      }
+    },
+    {
+      "id": "ocon-2-hall-classrooms-middle",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -42.16,
+        "y": 43.03
+      }
+    },
+    {
+      "id": "ocon-2-hall-classrooms-west",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -51.42,
+        "y": 43.03
+      }
+    },
+    {
+      "id": "ocon-2-room-208",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -71.42,
+        "y": 160.25
+      }
+    },
+    {
+      "id": "ocon-2-room-209",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -64.01,
+        "y": 168.4
+      }
+    },
+    {
+      "id": "ocon-2-room-210",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -59.01,
+        "y": 173.03
+      }
+    },
+    {
+      "id": "ocon-2-room-211",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -53.45,
+        "y": 178.95
+      }
+    },
+    {
+      "id": "ocon-2-room-214",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -43.64,
+        "y": 182.1
+      }
+    },
+    {
+      "id": "ocon-2-room-214-to-215",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -16.23,
+        "y": 180.62
+      }
+    },
+    {
+      "id": "ocon-2-room-215",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -11.05,
+        "y": 168.77
+      }
+    },
+    {
+      "id": "ocon-2-room-215A",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -0.49,
+        "y": 159.51
+      }
+    },
+    {
+      "id": "ocon-2-room-206",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -43.64,
+        "y": 174.69
+      }
+    },
+    {
+      "id": "ocon-2-custodial-north",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -58.82,
+        "y": 166.73
+      }
+    },
+    {
+      "id": "ocon-2-room-219",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 148.77
+      }
+    },
+    {
+      "id": "ocon-2-room-220",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 145.81
+      }
+    },
+    {
+      "id": "ocon-2-room-221",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 129.51
+      }
+    },
+    {
+      "id": "ocon-2-room-222",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 125.99
+      }
+    },
+    {
+      "id": "ocon-2-room-223",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 109.32
+      }
+    },
+    {
+      "id": "ocon-2-room-224",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 105.81
+      }
+    },
+    {
+      "id": "ocon-2-room-225",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 3.21,
+        "y": 89.32
+      }
+    },
+    {
+      "id": "ocon-2-room-226",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 3.21,
+        "y": 85.62
+      }
+    },
+    {
+      "id": "ocon-2-room-228",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 3.21,
+        "y": 68.95
+      }
+    },
+    {
+      "id": "ocon-2-room-229",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 3.21,
+        "y": 65.62
+      }
+    },
+    {
+      "id": "ocon-2-room-230",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 48.77
+      }
+    },
+    {
+      "id": "ocon-2-room-231",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 45.44
+      }
+    },
+    {
+      "id": "ocon-2-room-232",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 29.14
+      }
+    },
+    {
+      "id": "ocon-2-room-233",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 25.62
+      }
+    },
+    {
+      "id": "ocon-2-room-234",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": 1.73,
+        "y": 15.06
+      }
+    },
+    {
+      "id": "ocon-2-room-235",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -0.49,
+        "y": 10.99
+      }
+    },
+    {
+      "id": "ocon-2-room-236",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -5.68,
+        "y": 4.88
+      }
+    },
+    {
+      "id": "ocon-2-room-237",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -24.01,
+        "y": -1.42
+      }
+    },
+    {
+      "id": "ocon-2-room-239",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -31.79,
+        "y": -1.79
+      }
+    },
+    {
+      "id": "ocon-2-room-242",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -53.08,
+        "y": -0.86
+      }
+    },
+    {
+      "id": "ocon-2-room-241",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -65.49,
+        "y": -6.79
+      }
+    },
+    {
+      "id": "ocon-2-room-244",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -56.79,
+        "y": 41.73
+      }
+    },
+    {
+      "id": "ocon-2-room-244A",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -69.38,
+        "y": 4.51
+      }
+    },
+    {
+      "id": "ocon-2-room-246",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -45.12,
+        "y": 38.21
+      }
+    },
+    {
+      "id": "ocon-2-room-247",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -12.53,
+        "y": 38.21
+      }
+    },
+    {
+      "id": "ocon-2-room-251",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -48.64,
+        "y": 49.32
+      }
+    },
+    {
+      "id": "ocon-2-room-251A",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -47.9,
+        "y": 81.36
+      }
+    },
+    {
+      "id": "ocon-2-room-249",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -12.16,
+        "y": 63.21
+      }
+    },
+    {
+      "id": "ocon-2-room-249A",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -39.38,
+        "y": 48.95
+      }
+    },
+    {
+      "id": "ocon-2-ramp-upper-landing",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -6.97,
+        "y": 91.55
+      }
+    },
+    {
+      "id": "ocon-2-ramp-middle-landing",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -6.97,
+        "y": 76.92
+      }
+    },
+    {
+      "id": "ocon-2-ramp-lower-landing",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -6.97,
+        "y": 63.21
+      }
+    },
+    {
+      "id": "ocon-2-room-255",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -12.16,
+        "y": 91.55
+      }
+    },
+    {
+      "id": "ocon-2-room-255-to-249",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -15.49,
+        "y": 75.44
+      }
+    },
+    {
+      "id": "ocon-2-room-unlabeled-north-of-255",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -28.08,
+        "y": 129.69
+      }
+    },
+    {
+      "id": "ocon-2-room-unlabeled-east-of-255",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -7.34,
+        "y": 109.88
+      }
+    },
+    {
+      "id": "ocon-2-room-254",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -50.49,
+        "y": 126.73
+      }
+    },
+    {
+      "id": "ocon-2-room-254-west-door",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -79.94,
+        "y": 129.14
+      }
+    },
+    {
+      "id": "ocon-2-room-254A",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -79.94,
+        "y": 87.84
+      }
+    },
+    {
+      "id": "ocon-2-custodial",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -38.08,
+        "y": 137.84
+      }
+    },
+    {
+      "id": "ocon-2-restroom-vestibule",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -53.82,
+        "y": 137.29
+      }
+    },
+    {
+      "id": "ocon-2-restroom-men",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -56.42,
+        "y": 141.36
+      }
+    },
+    {
+      "id": "ocon-2-restroom-women",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -50.86,
+        "y": 141.36
+      }
+    },
+    {
+      "id": "ocon-2-room-254-turn",
+      "buildingId": "ocon",
+      "floorId": 2,
+      "position": {
+        "x": -68.27,
+        "y": 122.1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "ocon-2-hall-west",
+      "to": "ocon-2-stairs-west",
+      "distance": 6.96,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-northeast",
+      "to": "ocon-2-stairs-upper",
+      "distance": 7.62,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-lower-east",
+      "to": "ocon-2-stairs-lower",
+      "distance": 11,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-lobby-upper",
+      "to": "ocon-2-elevator-passenger",
+      "distance": 9.99,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-lobby-upper",
+      "to": "ocon-2-elevator-service",
+      "distance": 13.78,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-northwest",
+      "to": "ocon-2-room-208",
+      "distance": 3.01,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-diagonal",
+      "to": "ocon-2-room-209",
+      "distance": 4.26,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-diagonal",
+      "to": "ocon-2-room-210",
+      "distance": 4.69,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-north",
+      "to": "ocon-2-room-211",
+      "distance": 4.64,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-north",
+      "to": "ocon-2-room-214",
+      "distance": 6.26,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-214",
+      "to": "ocon-2-room-214-to-215",
+      "distance": 27.45,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-214-to-215",
+      "to": "ocon-2-room-215",
+      "distance": 12.93,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-northeast",
+      "to": "ocon-2-room-215",
+      "distance": 16.26,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-lobby-upper",
+      "to": "ocon-2-room-215A",
+      "distance": 14.55,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-north",
+      "to": "ocon-2-room-206",
+      "distance": 6.48,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-diagonal",
+      "to": "ocon-2-custodial-north",
+      "distance": 1.91,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-lobby-upper",
+      "to": "ocon-2-room-219",
+      "distance": 17.75,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-lobby-upper",
+      "to": "ocon-2-room-220",
+      "distance": 19.11,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-east-upper",
+      "to": "ocon-2-room-221",
+      "distance": 5.82,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-east-upper",
+      "to": "ocon-2-room-222",
+      "distance": 8.43,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-223",
+      "to": "ocon-2-room-223",
+      "distance": 4.63,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-223",
+      "to": "ocon-2-room-224",
+      "distance": 5.7,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-225",
+      "to": "ocon-2-room-225",
+      "distance": 4.88,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-225",
+      "to": "ocon-2-room-226",
+      "distance": 4.74,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-228",
+      "to": "ocon-2-room-228",
+      "distance": 4.88,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-228",
+      "to": "ocon-2-room-229",
+      "distance": 4.63,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-230",
+      "to": "ocon-2-room-230",
+      "distance": 4.92,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-230",
+      "to": "ocon-2-room-231",
+      "distance": 4.92,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-232",
+      "to": "ocon-2-room-232",
+      "distance": 4.99,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-232",
+      "to": "ocon-2-room-233",
+      "distance": 4.92,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-234",
+      "to": "ocon-2-room-234",
+      "distance": 4.66,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-234",
+      "to": "ocon-2-room-235",
+      "distance": 4.27,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-lower-east",
+      "to": "ocon-2-room-236",
+      "distance": 9.74,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-lower-east",
+      "to": "ocon-2-room-237",
+      "distance": 9.95,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-lower-middle",
+      "to": "ocon-2-room-239",
+      "distance": 9.55,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-lower-west",
+      "to": "ocon-2-room-242",
+      "distance": 5.65,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-242",
+      "to": "ocon-2-room-241",
+      "distance": 13.75,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-classrooms-west",
+      "to": "ocon-2-room-244",
+      "distance": 5.53,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-244",
+      "to": "ocon-2-room-244A",
+      "distance": 39.29,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-classrooms-middle",
+      "to": "ocon-2-room-246",
+      "distance": 5.66,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-classrooms-east",
+      "to": "ocon-2-room-247",
+      "distance": 5.56,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-classrooms-west",
+      "to": "ocon-2-room-251",
+      "distance": 6.88,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-251",
+      "to": "ocon-2-room-251A",
+      "distance": 32.05,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-ramps",
+      "to": "ocon-2-ramp-middle-landing",
+      "distance": 5.74,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-ramp-middle-landing",
+      "to": "ocon-2-ramp-upper-landing",
+      "distance": 14.63,
+      "weight": 1,
+      "type": "ramp"
+    },
+    {
+      "from": "ocon-2-ramp-middle-landing",
+      "to": "ocon-2-ramp-lower-landing",
+      "distance": 13.71,
+      "weight": 1,
+      "type": "ramp"
+    },
+    {
+      "from": "ocon-2-ramp-upper-landing",
+      "to": "ocon-2-room-255",
+      "distance": 5.19,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-ramp-lower-landing",
+      "to": "ocon-2-room-249",
+      "distance": 5.19,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-255",
+      "to": "ocon-2-room-255-to-249",
+      "distance": 16.45,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-255-to-249",
+      "to": "ocon-2-room-249",
+      "distance": 12.68,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-249",
+      "to": "ocon-2-room-249A",
+      "distance": 30.73,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-cross-middle",
+      "to": "ocon-2-room-unlabeled-north-of-255",
+      "distance": 9.08,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-223",
+      "to": "ocon-2-room-unlabeled-east-of-255",
+      "distance": 4.5,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-cross-west",
+      "to": "ocon-2-room-254",
+      "distance": 6.15,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-west",
+      "to": "ocon-2-room-254-west-door",
+      "distance": 9.8,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-254-west-door",
+      "to": "ocon-2-room-254A",
+      "distance": 41.3,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-cross-middle",
+      "to": "ocon-2-custodial",
+      "distance": 5.21,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-cross-west",
+      "to": "ocon-2-restroom-vestibule",
+      "distance": 5.15,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-restroom-vestibule",
+      "to": "ocon-2-restroom-men",
+      "distance": 4.83,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-restroom-vestibule",
+      "to": "ocon-2-restroom-women",
+      "distance": 5.03,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-hall-west",
+      "to": "ocon-2-hall-northwest",
+      "distance": 24.45,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-northwest",
+      "to": "ocon-2-hall-diagonal",
+      "distance": 15.71,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-diagonal",
+      "to": "ocon-2-hall-north",
+      "distance": 14.94,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-north",
+      "to": "ocon-2-hall-northeast",
+      "distance": 22.77,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-northeast",
+      "to": "ocon-2-lobby-upper",
+      "distance": 20.97,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-lobby-upper",
+      "to": "ocon-2-hall-east-upper",
+      "distance": 25.59,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-east-upper",
+      "to": "ocon-2-hall-223",
+      "distance": 23.89,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-223",
+      "to": "ocon-2-hall-225",
+      "distance": 21.91,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-225",
+      "to": "ocon-2-hall-ramps",
+      "distance": 10.37,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-ramps",
+      "to": "ocon-2-hall-228",
+      "distance": 10,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-228",
+      "to": "ocon-2-hall-230",
+      "distance": 19.89,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-230",
+      "to": "ocon-2-hall-232",
+      "distance": 19.81,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-232",
+      "to": "ocon-2-hall-234",
+      "distance": 12.78,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-234",
+      "to": "ocon-2-hall-lower-east",
+      "distance": 16.66,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-lower-east",
+      "to": "ocon-2-hall-lower-middle",
+      "distance": 24.25,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-lower-middle",
+      "to": "ocon-2-hall-lower-west",
+      "distance": 10.56,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-west",
+      "to": "ocon-2-hall-cross-west",
+      "distance": 19.63,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-cross-west",
+      "to": "ocon-2-hall-cross-middle",
+      "distance": 14.63,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-cross-middle",
+      "to": "ocon-2-hall-east-upper",
+      "distance": 33.7,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-230",
+      "to": "ocon-2-hall-classrooms-east",
+      "distance": 13.06,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-classrooms-east",
+      "to": "ocon-2-hall-classrooms-middle",
+      "distance": 26.85,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-hall-classrooms-middle",
+      "to": "ocon-2-hall-classrooms-west",
+      "distance": 9.26,
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-2-room-254",
+      "to": "ocon-2-room-254-turn",
+      "distance": 18.37,
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-2-room-254-turn",
+      "to": "ocon-2-room-254-west-door",
+      "distance": 13.63,
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

@@ -10,9 +10,34 @@ ClassFinder will help students enter classes and receive campus directions. The 
 - `scripts/` — infrastructure-only verification.
 - `index.html` — Vite's browser document shell.
 - `src/` — React application source, with `main.tsx` as the entrypoint, `App.tsx` as the root component, shared graph contracts in `lib/graph.ts`, and graph-assembly helpers in `graph/`.
-- `tests/` — future unit, UI, and end-to-end test locations; no product tests exist yet.
+- `src/data/` — bundled floor-plan JSON and a local visual verification preview.
+- `tests/unit/` — graph loading, graph assembly, and Dijkstra tests; `tests/ui/` and `tests/e2e/` are reserved for future flows.
 - `.github/workflows/` — pull-request checks and GitHub Pages release deployment.
 - `.agents/skills/` — project-provided agent skills.
+
+## Floor-plan graph data
+
+`src/graph/graphLoader.ts` discovers all `src/data/<building-id>/*.json` files
+at build time using Vite's eager glob imports and returns fresh
+`[Graph, Nodes]` maps. Each JSON edge is stored once and loaded in both directions,
+preserving its distance, weight, kind, and optional accessibility flag. Coordinates
+and distances are in feet. For O'Connell, the lower lobby's AO-marked exterior doorway serves as
+the origin. Upper floors are approximately aligned using the passenger elevator
+shaft. The JSON metadata records the PDF scale and digitization limitations.
+The 13 adjacent-floor connections use the user-selected provisional distance of
+15 feet each. The upper stair connects floors 1–2 only; the west and lower stairs
+and both elevators connect floors 1–4.
+
+Before calling `calculatePath`, filter its `nodes` argument to the known starting
+building and floor, while retaining the complete graph and destination node.
+Nearest-node lookup uses only X/Y and cannot distinguish overlapping floors.
+
+This data belongs in `src/data` because it is part of the application and is
+imported by the loader. A root-level data directory would make more sense for
+independent source datasets or preprocessing inputs. The original PDFs remain in
+`csuc-floor-plans/`; `src/data/ocon/floor-*-preview.png` files are local review aids
+and are not imported by the application or intended for commits. The loader
+trusts the bundled dataset; it is not an arbitrary JSON upload parser.
 
 ## Getting Started
 
@@ -57,7 +82,8 @@ npm run test:smoke
 docker compose config
 ```
 
-The test commands currently validate the configured harness and pass with no product tests; application work must add meaningful tests before relying on coverage.
+Unit tests cover graph loading and routing. UI and end-to-end coverage must be
+added as application flows are implemented.
 
 ## GitHub configuration
 
@@ -76,4 +102,5 @@ The release workflow deploys version tags to GitHub Pages. Before its first rele
   ```
 
   The `-v` removes only the local `node_modules` volume; dependencies will be installed again from `package-lock.json`.
+
 - **GitHub Pages deployment fails:** Confirm Pages is enabled for GitHub Actions and that the repository allows the workflow's `pages: write` and `id-token: write` permissions.

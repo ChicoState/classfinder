@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "buildingId": "ocon",
+    "units": "feet",
+    "undirected": true,
+    "distanceStatus": "provisional",
+    "distanceBasis": "User-directed base value of 15 feet for each adjacent-floor stair/elevator connection. Not measured from the PDFs.",
+    "weightBasis": "Weight 1; elevator waiting time and stair effort are not modeled.",
+    "loading": "Load all four floor files before expanding these connections in both directions.",
+    "limitations": [
+      "Upper stairs link floors 1 and 2 only; no corresponding stair appears on floors 3 and 4.",
+      "Stair connections are inaccessible. Elevator accessibility and service-elevator access permissions remain unspecified.",
+      "Replace provisional distances with measured walking/vertical travel distances. Horizontal node separation is not used to estimate inter-floor travel."
+    ]
+  },
+  "edges": [
+    {
+      "from": "ocon-1-stairs-west-exterior-door",
+      "to": "ocon-2-stairs-west",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ocon-2-stairs-west",
+      "to": "ocon-3-stairs-west",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ocon-3-stairs-west",
+      "to": "ocon-4-stairs-west",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ocon-1-stairs-lower",
+      "to": "ocon-2-stairs-lower",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ocon-2-stairs-lower",
+      "to": "ocon-3-stairs-lower",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ocon-3-stairs-lower",
+      "to": "ocon-4-stairs-lower",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ocon-1-elevator-passenger",
+      "to": "ocon-2-elevator-passenger",
+      "distance": 15,
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "ocon-2-elevator-passenger",
+      "to": "ocon-3-elevator-passenger",
+      "distance": 15,
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "ocon-3-elevator-passenger",
+      "to": "ocon-4-elevator-passenger",
+      "distance": 15,
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "ocon-1-elevator-service",
+      "to": "ocon-2-elevator-service",
+      "distance": 15,
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "ocon-2-elevator-service",
+      "to": "ocon-3-elevator-service",
+      "distance": 15,
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "ocon-3-elevator-service",
+      "to": "ocon-4-elevator-service",
+      "distance": 15,
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "ocon-1-stairs-upper",
+      "to": "ocon-2-stairs-upper",
+      "distance": 15,
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    }
+  ]
+}
