@@ -16,6 +16,19 @@ const data = {
   edges: [...floors.flatMap((floor) => floor.edges), ...connections.edges]
 };
 
+function distanceBetweenNodes(from: NodeId, to: NodeId): number {
+  const fromNode = data.nodes.find((node) => node.id === from);
+  const toNode = data.nodes.find((node) => node.id === to);
+
+  if (!fromNode || !toNode)
+    throw new Error('Serialized edge has a missing endpoint.');
+
+  return Math.hypot(
+    fromNode.position.x - toNode.position.x,
+    fromNode.position.y - toNode.position.y
+  );
+}
+
 describe('loadGraphFromData', () => {
   it('loads the floor-plan nodes with their coordinates and building details', () => {
     const [graph, nodes] = loadGraphFromData();
@@ -32,14 +45,17 @@ describe('loadGraphFromData', () => {
     });
   });
 
-  it('expands each connection in both directions without losing edge attributes', () => {
+  it('derives edge distances from endpoint positions while expanding connections', () => {
     const [graph] = loadGraphFromData();
 
     expect([...graph.values()].flat()).toHaveLength(data.edges.length * 2);
     for (const { from, ...edge } of data.edges) {
-      expect(graph.get(from as NodeId)).toContainEqual(edge);
+      expect(edge).not.toHaveProperty('distance');
+      const distance = distanceBetweenNodes(from as NodeId, edge.to as NodeId);
+      expect(graph.get(from as NodeId)).toContainEqual({ ...edge, distance });
       expect(graph.get(edge.to as NodeId)).toContainEqual({
         ...edge,
+        distance,
         to: from
       });
       expect([
@@ -50,7 +66,6 @@ describe('loadGraphFromData', () => {
         'ramp',
         'outdoor'
       ]).toContain(edge.type);
-      expect(edge.distance).toBeGreaterThan(0);
       expect(edge.weight).toBeGreaterThanOrEqual(0);
     }
   });
@@ -62,14 +77,8 @@ describe('loadGraphFromData', () => {
     if (!entrance) throw new Error('Missing entrance');
 
     for (const goal of nodes.values()) {
-      const outward = calculatePath(graph, nodes, 0, 0, goal);
-      const inward = calculatePath(
-        graph,
-        new Map([...nodes].filter(([, node]) => node.floorId === goal.floorId)),
-        goal.position.x,
-        goal.position.y,
-        entrance
-      );
+      const outward = calculatePath(graph, entrance, goal);
+      const inward = calculatePath(graph, goal, entrance);
       expect(outward, goal.id).not.toBeNull();
       expect(inward, goal.id).not.toBeNull();
       if (goal.id !== entrance.id) {
@@ -89,9 +98,13 @@ describe('loadGraphFromData', () => {
       const from = nodes.get(edge.from as NodeId)!;
       const to = nodes.get(edge.to as NodeId)!;
       expect(to.floorId! - from.floorId!).toBe(1);
-      expect(edge.distance).toBe(15);
+      expect(edge).not.toHaveProperty('distance');
       expect(graph.get(from.id)).toContainEqual(
-        expect.objectContaining({ to: to.id, type: edge.type, distance: 15 })
+        expect.objectContaining({
+          to: to.id,
+          type: edge.type,
+          distance: distanceBetweenNodes(from.id, to.id)
+        })
       );
       if (edge.type === 'stairs') expect(edge.isAccessible).toBe(false);
     }

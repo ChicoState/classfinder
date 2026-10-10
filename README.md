@@ -20,17 +20,23 @@ ClassFinder will help students enter classes and receive campus directions. The 
 `src/graph/graphLoader.ts` discovers all `src/data/<building-id>/*.json` files
 at build time using Vite's eager glob imports and returns fresh
 `[Graph, Nodes]` maps. Each JSON edge is stored once and loaded in both directions,
-preserving its distance, weight, kind, and optional accessibility flag. Coordinates
-and distances are in feet. For O'Connell, the lower lobby's AO-marked exterior doorway serves as
+preserving its weight, kind, and optional accessibility flag; its runtime distance
+is derived from the endpoint coordinates. Coordinates and distances are in feet. For O'Connell, the lower lobby's AO-marked exterior doorway serves as
 the origin. Upper floors are approximately aligned using the passenger elevator
 shaft. The JSON metadata records the PDF scale and digitization limitations.
-The 13 adjacent-floor connections use the user-selected provisional distance of
-15 feet each. The upper stair connects floors 1–2 only; the west and lower stairs
+The upper stair connects floors 1–2 only; the west and lower stairs
 and both elevators connect floors 1–4.
 
-Before calling `calculatePath`, filter its `nodes` argument to the known starting
-building and floor, while retaining the complete graph and destination node.
-Nearest-node lookup uses only X/Y and cannot distinguish overlapping floors.
+Use `findNodeNearPosition` with the known starting floor, then pass the resulting
+start node and the destination node to `calculatePath`. Each returned path edge
+contains both `from` and `to` node IDs so instruction code can derive the direction
+of consecutive segments. Nearest-node lookup uses only X/Y within the requested
+floor.
+
+`src/pathingAdapter.ts` converts a computed path into ordered, generic navigation
+instructions. Corridors and outdoor paths use left/right/straight guidance; doors,
+ramps, stairs, and elevators use their movement type, with vertical transfers naming
+their destination floor.
 
 This data belongs in `src/data` because it is part of the application and is
 imported by the loader. A root-level data directory would make more sense for

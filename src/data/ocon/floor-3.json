@@ -32,7 +32,7 @@
     "undirected": true,
     "loading": "Initialize an adjacency list for every node, then add each edge in both directions. Node IDs are globally unique. Cross-floor edges are in connections.json.",
     "nodeConvention": "Room nodes represent doorways. Additional nodes mark circulation junctions, required bends, and stair/elevator access points.",
-    "distanceConvention": "Plan-view feet between adjacent nodes, rounded to two decimals. Weight 1. Ramp lengths exclude unknown slope correction.",
+    "distanceConvention": "The loader calculates plan-view feet between adjacent nodes from their positions. Weight 1. Ramp lengths exclude unknown slope correction.",
     "accessibility": "Omitted isAccessible means unknown. Floor plans alone do not certify accessible routes.",
     "limitations": [
       "Manually digitized from a dated plan. Coordinates, openings, and alignment need on-site verification.",
@@ -742,602 +742,516 @@
     {
       "from": "ocon-3-hall-west-upper",
       "to": "ocon-3-stairs-west",
-      "distance": 5.97,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-lobby-lower",
       "to": "ocon-3-stairs-lower",
-      "distance": 9.76,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-lobby-upper",
       "to": "ocon-3-elevator-passenger",
-      "distance": 7.45,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-lobby-upper",
       "to": "ocon-3-elevator-service",
-      "distance": 9,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-junction",
       "to": "ocon-3-restroom-vestibule",
-      "distance": 10.77,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-restroom-vestibule",
       "to": "ocon-3-restroom-men",
-      "distance": 4.06,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-restroom-vestibule",
       "to": "ocon-3-restroom-women",
-      "distance": 3.93,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-junction",
       "to": "ocon-3-room-304",
-      "distance": 8.84,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-northwest",
       "to": "ocon-3-custodial",
-      "distance": 11.11,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-northwest",
       "to": "ocon-3-room-308",
-      "distance": 9.04,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-north",
       "to": "ocon-3-room-309",
-      "distance": 7.73,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-north",
       "to": "ocon-3-room-310",
-      "distance": 4.55,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-north",
       "to": "ocon-3-room-311",
-      "distance": 5.91,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-northeast",
       "to": "ocon-3-room-312",
-      "distance": 10.32,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-northeast",
       "to": "ocon-3-room-313",
-      "distance": 10.84,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-lobby-upper",
       "to": "ocon-3-room-313A",
-      "distance": 12.64,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-east-upper",
       "to": "ocon-3-room-316",
-      "distance": 7.11,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-317",
       "to": "ocon-3-room-317",
-      "distance": 4.74,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-317",
       "to": "ocon-3-room-318",
-      "distance": 4.68,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-319",
       "to": "ocon-3-room-319",
-      "distance": 4.81,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-319",
       "to": "ocon-3-room-320",
-      "distance": 4.68,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-321",
       "to": "ocon-3-room-321",
-      "distance": 4.68,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-321",
       "to": "ocon-3-room-322",
-      "distance": 4.74,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-324",
       "to": "ocon-3-room-324",
-      "distance": 4.89,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-324",
       "to": "ocon-3-room-325",
-      "distance": 4.68,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-326",
       "to": "ocon-3-room-326",
-      "distance": 4.81,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-326",
       "to": "ocon-3-room-327",
-      "distance": 4.74,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-328",
       "to": "ocon-3-room-328",
-      "distance": 4.68,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-328",
       "to": "ocon-3-room-329",
-      "distance": 4.68,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-330",
       "to": "ocon-3-room-330",
-      "distance": 3.08,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-lobby-lower",
       "to": "ocon-3-room-331",
-      "distance": 10.13,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-lobby-lower",
       "to": "ocon-3-room-334",
-      "distance": 16.08,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-334",
       "to": "ocon-3-room-334-turn",
-      "distance": 8,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-334-turn",
       "to": "ocon-3-room-334A",
-      "distance": 7.87,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-lower",
       "to": "ocon-3-room-337",
-      "distance": 5.23,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-lower",
       "to": "ocon-3-room-338",
-      "distance": 4.63,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-338",
       "to": "ocon-3-room-338-south-door",
-      "distance": 20.8,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-338-south-door",
       "to": "ocon-3-room-337",
-      "distance": 26.01,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-338",
       "to": "ocon-3-room-339-south-door",
-      "distance": 5.25,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-339-south-door",
       "to": "ocon-3-room-339",
-      "distance": 32.97,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-340",
       "to": "ocon-3-room-339",
-      "distance": 4.63,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-340",
       "to": "ocon-3-room-340",
-      "distance": 5.42,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-326",
       "to": "ocon-3-room-340-east-door",
-      "distance": 10.41,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-340",
       "to": "ocon-3-room-340-east-door",
-      "distance": 39.63,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-324",
       "to": "ocon-3-room-341",
-      "distance": 9.27,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-341",
       "to": "ocon-3-room-341-west-door",
-      "distance": 35.39,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-341-west-door",
       "to": "ocon-3-room-343",
-      "distance": 20.52,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-342",
       "to": "ocon-3-room-342",
-      "distance": 5.57,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-343",
       "to": "ocon-3-room-343",
-      "distance": 5.37,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-344",
       "to": "ocon-3-room-344",
-      "distance": 5.75,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-342",
       "to": "ocon-3-room-344-lower-door",
-      "distance": 5.4,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-344",
       "to": "ocon-3-room-344-lower-door",
-      "distance": 31.31,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-343",
       "to": "ocon-3-room-345",
-      "distance": 4.51,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-345",
       "to": "ocon-3-room-345-west-door",
-      "distance": 21.06,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-345-west-door",
       "to": "ocon-3-room-346",
-      "distance": 21.25,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-347",
       "to": "ocon-3-room-346",
-      "distance": 5.22,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-347",
       "to": "ocon-3-room-347",
-      "distance": 4.9,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-347",
       "to": "ocon-3-room-347A",
-      "distance": 14.74,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-319",
       "to": "ocon-3-room-unlabeled-above-349",
-      "distance": 7.5,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-319",
       "to": "ocon-3-room-349",
-      "distance": 10.12,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-349",
       "to": "ocon-3-room-349-south-door",
-      "distance": 14.06,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-349-south-door",
       "to": "ocon-3-room-341-west-door",
-      "distance": 7.2,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-lobby-upper",
       "to": "ocon-3-room-313-lobby-door",
-      "distance": 11.29,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-room-313",
       "to": "ocon-3-room-313-lobby-door",
-      "distance": 15.87,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-3-hall-west-upper",
       "to": "ocon-3-hall-northwest",
-      "distance": 22.64,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-northwest",
       "to": "ocon-3-hall-north",
-      "distance": 19.05,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-north",
       "to": "ocon-3-hall-northeast",
-      "distance": 28.27,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-northeast",
       "to": "ocon-3-lobby-upper",
-      "distance": 16.86,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-lobby-upper",
       "to": "ocon-3-hall-east-upper",
-      "distance": 19.21,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-east-upper",
       "to": "ocon-3-hall-317",
-      "distance": 6.11,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-317",
       "to": "ocon-3-hall-319",
-      "distance": 19.82,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-319",
       "to": "ocon-3-hall-321",
-      "distance": 20.42,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-321",
       "to": "ocon-3-hall-324",
-      "distance": 20.37,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-324",
       "to": "ocon-3-hall-326",
-      "distance": 19.32,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-326",
       "to": "ocon-3-hall-328",
-      "distance": 19.63,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-328",
       "to": "ocon-3-hall-330",
-      "distance": 10.37,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-330",
       "to": "ocon-3-lobby-lower",
-      "distance": 20.57,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-upper",
       "to": "ocon-3-hall-west-junction",
-      "distance": 17.78,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-junction",
       "to": "ocon-3-hall-east-upper",
-      "distance": 51.49,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-junction",
       "to": "ocon-3-hall-west-347",
-      "distance": 34.81,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-347",
       "to": "ocon-3-hall-west-343",
-      "distance": 8.71,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-343",
       "to": "ocon-3-hall-west-344",
-      "distance": 5.92,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-344",
       "to": "ocon-3-hall-west-342",
-      "distance": 33.89,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-342",
       "to": "ocon-3-hall-west-340",
-      "distance": 9.63,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-340",
       "to": "ocon-3-hall-west-lower",
-      "distance": 36.67,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-3-hall-west-lower",
       "to": "ocon-3-lobby-lower",
-      "distance": 36.48,
       "weight": 1,
       "type": "corridor"
     }

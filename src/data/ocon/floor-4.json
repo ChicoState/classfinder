@@ -32,7 +32,7 @@
     "undirected": true,
     "loading": "Initialize an adjacency list for every node, then add each edge in both directions. Node IDs are globally unique. Cross-floor edges are in connections.json.",
     "nodeConvention": "Room nodes represent doorways. Additional nodes mark circulation junctions, required bends, and stair/elevator access points.",
-    "distanceConvention": "Plan-view feet between adjacent nodes, rounded to two decimals. Weight 1. Ramp lengths exclude unknown slope correction.",
+    "distanceConvention": "The loader calculates plan-view feet between adjacent nodes from their positions. Weight 1. Ramp lengths exclude unknown slope correction.",
     "accessibility": "Omitted isAccessible means unknown. Floor plans alone do not certify accessible routes.",
     "limitations": [
       "Manually digitized from a dated plan. Coordinates, openings, and alignment need on-site verification.",
@@ -634,476 +634,408 @@
     {
       "from": "ocon-4-hall-426",
       "to": "ocon-4-stairs-lower",
-      "distance": 10.9,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-lobby-upper",
       "to": "ocon-4-elevator-passenger",
-      "distance": 9.27,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-414",
       "to": "ocon-4-elevator-service",
-      "distance": 14.77,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-north",
       "to": "ocon-4-restroom-vestibule",
-      "distance": 4.62,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-restroom-vestibule",
       "to": "ocon-4-restroom-men",
-      "distance": 4.49,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-restroom-vestibule",
       "to": "ocon-4-restroom-women",
-      "distance": 4.37,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-west",
       "to": "ocon-4-custodial",
-      "distance": 5.4,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-northwest",
       "to": "ocon-4-room-407",
-      "distance": 1.91,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-north",
       "to": "ocon-4-room-408",
-      "distance": 7.61,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-north",
       "to": "ocon-4-room-409",
-      "distance": 6.03,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-northeast",
       "to": "ocon-4-room-410",
-      "distance": 4.55,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-northeast",
       "to": "ocon-4-room-410A",
-      "distance": 10.78,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-lobby-upper",
       "to": "ocon-4-room-413",
-      "distance": 10.58,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-414",
       "to": "ocon-4-room-414",
-      "distance": 5.96,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-415",
       "to": "ocon-4-room-415",
-      "distance": 4.6,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-415",
       "to": "ocon-4-room-416",
-      "distance": 3.9,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-417",
       "to": "ocon-4-room-417",
-      "distance": 3.69,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-417",
       "to": "ocon-4-room-418",
-      "distance": 4.49,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-419",
       "to": "ocon-4-room-419",
-      "distance": 6.36,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-422",
       "to": "ocon-4-room-422",
-      "distance": 4.61,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-422",
       "to": "ocon-4-room-423",
-      "distance": 4.06,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-424",
       "to": "ocon-4-room-424",
-      "distance": 3.9,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-425",
       "to": "ocon-4-room-425",
-      "distance": 6.64,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-426",
       "to": "ocon-4-room-426",
-      "distance": 4.87,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-427",
       "to": "ocon-4-room-427",
-      "distance": 4.53,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-427",
       "to": "ocon-4-room-428",
-      "distance": 3.93,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-427",
       "to": "ocon-4-room-431",
-      "distance": 8.92,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-room-431-junction",
       "to": "ocon-4-room-431A",
-      "distance": 18.02,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-431A",
       "to": "ocon-4-room-431A-north-door",
-      "distance": 20.94,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-431A-north-door",
       "to": "ocon-4-room-434-to-438",
-      "distance": 25.41,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-lower-cross",
       "to": "ocon-4-room-432",
-      "distance": 7.05,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-432",
       "to": "ocon-4-room-432-south-door",
-      "distance": 19.57,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-432-south-door",
       "to": "ocon-4-room-431-junction",
-      "distance": 5.93,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-lower-cross",
       "to": "ocon-4-room-434",
-      "distance": 6.6,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-434",
       "to": "ocon-4-room-434-to-438",
-      "distance": 45.25,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-434-to-438",
       "to": "ocon-4-room-438-turn",
-      "distance": 39.55,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-lower-cross",
       "to": "ocon-4-room-436",
-      "distance": 9.98,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-436",
       "to": "ocon-4-room-436A",
-      "distance": 24.81,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-436A",
       "to": "ocon-4-room-436A-west-door",
-      "distance": 3.73,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-436A-west-door",
       "to": "ocon-4-room-438-turn",
-      "distance": 7.96,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-438-turn",
       "to": "ocon-4-room-438",
-      "distance": 6.3,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-438",
       "to": "ocon-4-room-438",
-      "distance": 7.56,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-417",
       "to": "ocon-4-room-unlabeled-upper-east-door",
-      "distance": 6.15,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-west-service",
       "to": "ocon-4-room-unlabeled-upper-west-door",
-      "distance": 3.15,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-middle",
       "to": "ocon-4-room-unlabeled-middle",
-      "distance": 9.14,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-unlabeled-middle",
       "to": "ocon-4-room-unlabeled-middle-turn",
-      "distance": 24.33,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-unlabeled-middle-turn",
       "to": "ocon-4-room-unlabeled-middle-side-door",
-      "distance": 18.81,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-room-419",
       "to": "ocon-4-room-419A",
-      "distance": 5.25,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-4-hall-425",
       "to": "ocon-4-hall-lower-cross",
-      "distance": 30,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-stairs-west",
       "to": "ocon-4-hall-west",
-      "distance": 7.82,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-west",
       "to": "ocon-4-hall-northwest",
-      "distance": 23.06,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-northwest",
       "to": "ocon-4-hall-north",
-      "distance": 9.29,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-north",
       "to": "ocon-4-hall-northeast",
-      "distance": 25.74,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-northeast",
       "to": "ocon-4-lobby-upper",
-      "distance": 11.46,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-lobby-upper",
       "to": "ocon-4-hall-414",
-      "distance": 10.86,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-414",
       "to": "ocon-4-hall-415",
-      "distance": 13.52,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-415",
       "to": "ocon-4-hall-417",
-      "distance": 19.45,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-417",
       "to": "ocon-4-hall-middle",
-      "distance": 27.88,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-middle",
       "to": "ocon-4-hall-419",
-      "distance": 7.24,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-419",
       "to": "ocon-4-hall-422",
-      "distance": 25.54,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-422",
       "to": "ocon-4-hall-424",
-      "distance": 18.52,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-424",
       "to": "ocon-4-hall-425",
-      "distance": 6.3,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-425",
       "to": "ocon-4-hall-426",
-      "distance": 9.37,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-426",
       "to": "ocon-4-hall-427",
-      "distance": 8.55,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-419",
       "to": "ocon-4-hall-438",
-      "distance": 19.27,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-hall-west",
       "to": "ocon-4-hall-west-service",
-      "distance": 8.4,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-room-431",
       "to": "ocon-4-room-431-junction",
-      "distance": 27.77,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-4-room-unlabeled-middle-turn",
       "to": "ocon-4-room-unlabeled-middle-side-lower-door",
-      "distance": 14.46,
       "weight": 1,
       "type": "door"
     }

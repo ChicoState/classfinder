@@ -9,7 +9,7 @@ These are retained project-specific decisions, not universal building rules. Ins
 - Dates: floor 1, 2009-09-16; floor 2, 2003-10-07; floor 3, 2001-02-06; floor 4, 2008-08-05. Dates do not establish current conditions.
 - App files: `src/data/ocon/floor-1.json` through `floor-4.json`, plus `connections.json`.
 - `data/ocon-1.json` and flat `src/data/ocon-1.json` are historical paths, not copies to maintain. Root-level data initially followed “under data” literally; `src/data` was subsequently chosen because the loader imports it as app data. One floor per file, grouped by building, was preferred for manageable review and expansion.
-- Existing `floor-*-preview.png` files were explicitly requested. They are local review artifacts, not app imports or files to commit. Prior generation does not authorize previews in future tasks.
+- Existing `floor-*-preview.png` files were explicitly requested. They are local review artifacts, not app imports or files to commit. Temporary previews for self-verification are allowed; creating or refreshing final previews under `src/data` requires an explicit request.
 
 ## Origin and registration
 
@@ -39,7 +39,7 @@ The numerators came from a 2.25-pixels-per-PDF-point rendering. Upper floors sto
 - Passenger elevator: 1–2, 2–3, 3–4 (`elevator-passenger`).
 - Service elevator: 1–2, 2–3, 3–4 (`elevator-service`).
 
-The user first offered measurements, then explicitly chose “15 feet as base value for stairs and elevators for now.” The later instruction governs: distance 15, weight 1, provisional metadata on each adjacent-floor transfer. These are not measured story heights/stair runs. Stairs are inaccessible; elevator accessibility and service access are unspecified.
+Serialized edges do not store distances. The loader derives every runtime distance from the positions of its endpoints, including these transfers. Weight is 1. Stairs are inaccessible; elevator accessibility and service access are unspecified.
 
 ## Recorded doorway interpretations
 

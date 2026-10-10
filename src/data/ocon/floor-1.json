@@ -22,13 +22,13 @@
     },
     "coordinateConversion": "x = (pdfX - 443.4) * 30 / 72; y = (552.6 - pdfY) * 30 / 72, with PDF coordinates measured from the top-left.",
     "undirected": true,
-    "loading": "Index nodes by id to create Nodes. Initialize an empty Graph adjacency list for every node. For each edge, use from as the source and add { to, distance, weight, type, isAccessible? } in both directions (for example, with connectBothWays). NodeId branding must be applied at the TypeScript loading boundary.",
+    "loading": "Index nodes by id to create Nodes. Initialize an empty Graph adjacency list for every node. For each edge, use from as the source, calculate distance from the endpoint positions, and add { to, distance, weight, type, isAccessible? } in both directions (for example, with connectBothWays). NodeId branding must be applied at the TypeScript loading boundary.",
     "nodeConvention": "Room IDs locate doorways, not room centers. Additional nodes represent distinct doors, stair/elevator access points, and only junctions or turns needed to keep route segments in walkable space.",
-    "distanceConvention": "Distances are straight-line feet between adjacent node coordinates, rounded to two decimals. Bend nodes preserve the walking route. Weight 1 means distance-only routing.",
+    "distanceConvention": "The loader calculates straight-line feet between adjacent node coordinates. Bend nodes preserve the walking route. Weight 1 means distance-only routing.",
     "accessibility": "isAccessible is true only on the three entrance edges marked AO/wheelchair in the source. Omitted values mean unknown, not accessible. This does not certify a complete accessible route.",
     "limitations": [
       "Manually digitized from the dated floor plan; coordinates are approximate, not surveyed. Decimal precision is for reproducible calculations.",
-      "Stairs and elevators terminate at first-floor access points in this file. Inter-floor connections and their provisional distances are stored separately in connections.json.",
+      "Stairs and elevators terminate at first-floor access points in this file. Inter-floor connections are stored separately in connections.json.",
       "Door edges may span the approach to a doorway or travel inside a room between doors. Corridor edges include open lobby and circulation space.",
       "Interior room connections follow visible openings, including 106 via custodial, 127A via 127, 130A via 130, and 133A between 136 and 133. Door access restrictions and furnishings are not shown.",
       "The unnumbered enclosed space immediately above 133A is retained as an unlabeled destination.",
@@ -519,7 +519,6 @@
     {
       "from": "ocon-1-exit-lower-ao",
       "to": "ocon-1-lobby-lower",
-      "distance": 14.63,
       "weight": 1,
       "type": "door",
       "isAccessible": true
@@ -527,56 +526,48 @@
     {
       "from": "ocon-1-exit-lower-secondary",
       "to": "ocon-1-lobby-lower",
-      "distance": 14,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-124",
       "to": "ocon-1-hall-130-131",
-      "distance": 17.96,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-hall-130-131",
       "to": "ocon-1-hall-123",
-      "distance": 22.96,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-hall-123",
       "to": "ocon-1-hall-121-133",
-      "distance": 14.82,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-hall-121-133",
       "to": "ocon-1-hall-119-120",
-      "distance": 27.59,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-hall-119-120",
       "to": "ocon-1-lobby-upper-junction",
-      "distance": 16.48,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-lobby-upper-junction",
       "to": "ocon-1-lobby-upper",
-      "distance": 31.33,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-lobby-upper",
       "to": "ocon-1-exit-upper-ao",
-      "distance": 16.66,
       "weight": 1,
       "type": "door",
       "isAccessible": true
@@ -584,252 +575,216 @@
     {
       "from": "ocon-1-lobby-upper",
       "to": "ocon-1-exit-upper-secondary",
-      "distance": 17.74,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-upper",
       "to": "ocon-1-room-114",
-      "distance": 18.02,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-114",
       "to": "ocon-1-room-114-west-door",
-      "distance": 18.02,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-114-west-door",
       "to": "ocon-1-room-114A",
-      "distance": 4.52,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-114",
       "to": "ocon-1-room-114B",
-      "distance": 9.11,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-upper",
       "to": "ocon-1-stairs-upper",
-      "distance": 10.35,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-lobby-upper",
       "to": "ocon-1-elevator-passenger",
-      "distance": 16.69,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-upper-junction",
       "to": "ocon-1-elevator-service",
-      "distance": 10.8,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-upper",
       "to": "ocon-1-room-118",
-      "distance": 26.4,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-119-120",
       "to": "ocon-1-room-119",
-      "distance": 8.63,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-119-120",
       "to": "ocon-1-room-120",
-      "distance": 8.37,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-121-133",
       "to": "ocon-1-room-121",
-      "distance": 8.7,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-123",
       "to": "ocon-1-room-123",
-      "distance": 7.96,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-124",
       "to": "ocon-1-room-124",
-      "distance": 7.04,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-lower",
       "to": "ocon-1-room-124-lobby-door",
-      "distance": 14.1,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-124",
       "to": "ocon-1-room-124-lobby-door",
-      "distance": 14.33,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-lower",
       "to": "ocon-1-room-127",
-      "distance": 12.63,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-127",
       "to": "ocon-1-room-127A",
-      "distance": 24.56,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-lower",
       "to": "ocon-1-stairs-lower",
-      "distance": 13.28,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-hall-130-131",
       "to": "ocon-1-room-130",
-      "distance": 9.26,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-130-131",
       "to": "ocon-1-room-131",
-      "distance": 9.26,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-130",
       "to": "ocon-1-room-130-turn",
-      "distance": 28.88,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-130-turn",
       "to": "ocon-1-room-130A",
-      "distance": 36.57,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-121-133",
       "to": "ocon-1-room-133",
-      "distance": 8.99,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-133",
       "to": "ocon-1-room-133A",
-      "distance": 7.26,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-133A",
       "to": "ocon-1-room-133A-west-door",
-      "distance": 5.64,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-133A-west-door",
       "to": "ocon-1-room-136",
-      "distance": 32.86,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-west-junction",
       "to": "ocon-1-room-136",
-      "distance": 5.92,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-west-junction",
       "to": "ocon-1-room-unlabeled-above-133A",
-      "distance": 6.93,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-west-junction",
       "to": "ocon-1-restroom-vestibule",
-      "distance": 17.47,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-restroom-vestibule",
       "to": "ocon-1-restroom-men",
-      "distance": 5.01,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-restroom-vestibule",
       "to": "ocon-1-restroom-women",
-      "distance": 4.89,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-west-junction",
       "to": "ocon-1-custodial",
-      "distance": 5.31,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-custodial",
       "to": "ocon-1-room-106",
-      "distance": 7.3,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-hall-west-junction",
       "to": "ocon-1-hall-west",
-      "distance": 34.07,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-hall-west",
       "to": "ocon-1-exit-west-ao",
-      "distance": 4.26,
       "weight": 1,
       "type": "door",
       "isAccessible": true
@@ -837,70 +792,60 @@
     {
       "from": "ocon-1-exit-west-ao",
       "to": "ocon-1-stairs-west-exterior-door",
-      "distance": 5.25,
       "weight": 1,
       "type": "outdoor"
     },
     {
       "from": "ocon-1-hall-west",
       "to": "ocon-1-room-102",
-      "distance": 9.45,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-102",
       "to": "ocon-1-room-102-turn",
-      "distance": 37.03,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-102-turn",
       "to": "ocon-1-room-102-junction",
-      "distance": 17.59,
       "weight": 1,
       "type": "corridor"
     },
     {
       "from": "ocon-1-room-102-junction",
       "to": "ocon-1-room-102A",
-      "distance": 6.37,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-102-junction",
       "to": "ocon-1-room-102B",
-      "distance": 3.92,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-102-junction",
       "to": "ocon-1-room-102C",
-      "distance": 3.67,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-room-102-junction",
       "to": "ocon-1-room-114-west-door",
-      "distance": 10.93,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-lower",
       "to": "ocon-1-hall-124",
-      "distance": 26.35,
       "weight": 1,
       "type": "door"
     },
     {
       "from": "ocon-1-lobby-upper-junction",
       "to": "ocon-1-hall-west-junction",
-      "distance": 20.19,
       "weight": 1,
       "type": "door"
     }
