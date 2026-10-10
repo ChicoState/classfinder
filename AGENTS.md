@@ -2,7 +2,7 @@
 
 ## Project status
 
-This repository has an infrastructure foundation for the planned ClassFinder web application. `infrastructure_plan.md` is the source of truth for platform and tooling decisions; production application source, routes, data, and user flows are not created yet.
+This repository has an infrastructure foundation, a React application shell, and initial graph loading and routing logic. `infrastructure_plan.md` is the source of truth for platform and tooling decisions; class-entry and navigation user flows are not implemented yet.
 
 ## Repository map
 
@@ -10,9 +10,14 @@ This repository has an infrastructure foundation for the planned ClassFinder web
 - `package.json`, `tsconfig.json`, `eslint.config.js`, `.prettierrc.json`: TypeScript tooling.
 - `Dockerfile`, `compose.yml`, `.dockerignore`: development container setup.
 - `scripts/`: infrastructure smoke checks only.
-- `tests/unit`, `tests/ui`, `tests/e2e`: reserved for future product tests.
+- `tests/unit`: graph loading, assembly, and Dijkstra tests. `tests/ui` and `tests/e2e`: reserved for future user-flow tests.
 - `.github/workflows/`: pull-request and GitHub Pages release automation.
-- `src/`: not created yet; future frontend implementation location.
+- `src/`: React application source, graph contracts and Dijkstra in `lib/`, and the graph loader in `graph/`.
+- `src/data/<building-id>/*.json`: automatically discovered at build time by the loader; each file has `edges` and may have `nodes` (connection files need no nodes). All nodes are initialized before two-way edges are added.
+- `src/data/ocon/floor-1.json` through `floor-4.json`: bundled O'Connell graphs in approximately aligned, shared coordinates measured in feet. Undirected edges are stored once; the loader returns fresh maps and expands both directions.
+- `src/data/ocon/connections.json`: adjacent-floor stairs and elevators, currently using user-selected provisional distances of 15 feet. Filter starting-node candidates by building and floor before coordinate-based routing.
+- `src/data/ocon/floor-*-preview.png`: local visual verification artifacts, not application imports or files to commit.
+- `csuc-floor-plans/`: original reference PDFs for digitization.
 - API/backend, database, and local services: not required by the plan.
 - `.agents/skills/`: local skill instructions.
 

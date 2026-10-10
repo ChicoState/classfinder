@@ -1,0 +1,853 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/ocon/ocon-1.pdf",
+    "sourceDate": "2009-09-16",
+    "building": "O'Connell Technology Center",
+    "floor": 1,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "origin": {
+      "nodeId": "ocon-1-exit-lower-ao",
+      "description": "AO-marked exterior doorway on the right-hand side of the lower lobby.",
+      "pdfPointFromTopLeft": {
+        "x": 443.4,
+        "y": 552.6
+      }
+    },
+    "axes": {
+      "x": "Positive toward the right of the PDF.",
+      "y": "Positive toward the top of the PDF; drawing axes, not geographic east/north."
+    },
+    "coordinateConversion": "x = (pdfX - 443.4) * 30 / 72; y = (552.6 - pdfY) * 30 / 72, with PDF coordinates measured from the top-left.",
+    "undirected": true,
+    "loading": "Index nodes by id to create Nodes. Initialize an empty Graph adjacency list for every node. For each edge, use from as the source, calculate distance from the endpoint positions, and add { to, distance, weight, type, isAccessible? } in both directions (for example, with connectBothWays). NodeId branding must be applied at the TypeScript loading boundary.",
+    "nodeConvention": "Room IDs locate doorways, not room centers. Additional nodes represent distinct doors, stair/elevator access points, and only junctions or turns needed to keep route segments in walkable space.",
+    "distanceConvention": "The loader calculates straight-line feet between adjacent node coordinates. Bend nodes preserve the walking route. Weight 1 means distance-only routing.",
+    "accessibility": "isAccessible is true only on the three entrance edges marked AO/wheelchair in the source. Omitted values mean unknown, not accessible. This does not certify a complete accessible route.",
+    "limitations": [
+      "Manually digitized from the dated floor plan; coordinates are approximate, not surveyed. Decimal precision is for reproducible calculations.",
+      "Stairs and elevators terminate at first-floor access points in this file. Inter-floor connections are stored separately in connections.json.",
+      "Door edges may span the approach to a doorway or travel inside a room between doors. Corridor edges include open lobby and circulation space.",
+      "Interior room connections follow visible openings, including 106 via custodial, 127A via 127, 130A via 130, and 133A between 136 and 133. Door access restrictions and furnishings are not shown.",
+      "The unnumbered enclosed space immediately above 133A is retained as an unlabeled destination.",
+      "Secondary exterior doors are retained. The short outdoor edge links the west stair exit and adjacent west corridor entrance. Langdon and unshown outdoor paths are excluded.",
+      "All two-way links are stored once; do not load this edge list as a directed graph."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "ocon-1-exit-lower-ao",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "ocon-1-exit-lower-secondary",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -5.42,
+        "y": -5.17
+      }
+    },
+    {
+      "id": "ocon-1-lobby-lower",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -13.08,
+        "y": 6.55
+      }
+    },
+    {
+      "id": "ocon-1-hall-124",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 32.66
+      }
+    },
+    {
+      "id": "ocon-1-hall-130-131",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 50.62
+      }
+    },
+    {
+      "id": "ocon-1-hall-123",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 73.58
+      }
+    },
+    {
+      "id": "ocon-1-hall-121-133",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 88.4
+      }
+    },
+    {
+      "id": "ocon-1-hall-119-120",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 115.99
+      }
+    },
+    {
+      "id": "ocon-1-lobby-upper-junction",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 132.47
+      }
+    },
+    {
+      "id": "ocon-1-lobby-upper",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -12.9,
+        "y": 163.58
+      }
+    },
+    {
+      "id": "ocon-1-exit-upper-ao",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -0.17,
+        "y": 174.33
+      }
+    },
+    {
+      "id": "ocon-1-exit-upper-secondary",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -5.42,
+        "y": 179.67
+      }
+    },
+    {
+      "id": "ocon-1-room-114",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -24.38,
+        "y": 177.47
+      }
+    },
+    {
+      "id": "ocon-1-room-114-west-door",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -42.34,
+        "y": 178.95
+      }
+    },
+    {
+      "id": "ocon-1-room-114A",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -38.64,
+        "y": 181.55
+      }
+    },
+    {
+      "id": "ocon-1-room-114B",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -32.53,
+        "y": 181.55
+      }
+    },
+    {
+      "id": "ocon-1-stairs-upper",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -23.08,
+        "y": 165.44
+      }
+    },
+    {
+      "id": "ocon-1-elevator-passenger",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -22.16,
+        "y": 149.69
+      }
+    },
+    {
+      "id": "ocon-1-elevator-service",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -22.16,
+        "y": 141.73
+      }
+    },
+    {
+      "id": "ocon-1-room-118",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": 1.36,
+        "y": 141.36
+      }
+    },
+    {
+      "id": "ocon-1-room-119",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -8.64,
+        "y": 119.32
+      }
+    },
+    {
+      "id": "ocon-1-room-120",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -8.64,
+        "y": 113.4
+      }
+    },
+    {
+      "id": "ocon-1-room-121",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -8.64,
+        "y": 91.92
+      }
+    },
+    {
+      "id": "ocon-1-room-123",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -8.64,
+        "y": 73.77
+      }
+    },
+    {
+      "id": "ocon-1-room-124",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -9.56,
+        "y": 32.66
+      }
+    },
+    {
+      "id": "ocon-1-room-124-lobby-door",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -6.05,
+        "y": 18.77
+      }
+    },
+    {
+      "id": "ocon-1-room-127",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -25.31,
+        "y": 3.4
+      }
+    },
+    {
+      "id": "ocon-1-room-127A",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -49.56,
+        "y": 7.29
+      }
+    },
+    {
+      "id": "ocon-1-stairs-lower",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -25.31,
+        "y": 11.73
+      }
+    },
+    {
+      "id": "ocon-1-room-130",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -25.31,
+        "y": 53.77
+      }
+    },
+    {
+      "id": "ocon-1-room-131",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -25.31,
+        "y": 47.47
+      }
+    },
+    {
+      "id": "ocon-1-room-130-turn",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -54.19,
+        "y": 53.77
+      }
+    },
+    {
+      "id": "ocon-1-room-130A",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -68.82,
+        "y": 20.25
+      }
+    },
+    {
+      "id": "ocon-1-room-133",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -25.31,
+        "y": 86.18
+      }
+    },
+    {
+      "id": "ocon-1-room-133A",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -32.16,
+        "y": 88.58
+      }
+    },
+    {
+      "id": "ocon-1-room-133A-west-door",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -34.38,
+        "y": 93.77
+      }
+    },
+    {
+      "id": "ocon-1-room-136",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -36.6,
+        "y": 126.55
+      }
+    },
+    {
+      "id": "ocon-1-room-unlabeled-above-133A",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -31.05,
+        "y": 128.58
+      }
+    },
+    {
+      "id": "ocon-1-hall-west-junction",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -36.79,
+        "y": 132.47
+      }
+    },
+    {
+      "id": "ocon-1-restroom-vestibule",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -53.64,
+        "y": 137.1
+      }
+    },
+    {
+      "id": "ocon-1-restroom-men",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -56.79,
+        "y": 140.99
+      }
+    },
+    {
+      "id": "ocon-1-restroom-women",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -50.68,
+        "y": 140.99
+      }
+    },
+    {
+      "id": "ocon-1-custodial",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -37.9,
+        "y": 137.66
+      }
+    },
+    {
+      "id": "ocon-1-room-106",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -36.79,
+        "y": 144.88
+      }
+    },
+    {
+      "id": "ocon-1-hall-west",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -70.86,
+        "y": 132.47
+      }
+    },
+    {
+      "id": "ocon-1-exit-west-ao",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -75.12,
+        "y": 132.66
+      }
+    },
+    {
+      "id": "ocon-1-stairs-west-exterior-door",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -78.64,
+        "y": 136.55
+      }
+    },
+    {
+      "id": "ocon-1-room-102",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -70.86,
+        "y": 141.92
+      }
+    },
+    {
+      "id": "ocon-1-room-102-turn",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -70.86,
+        "y": 178.95
+      }
+    },
+    {
+      "id": "ocon-1-room-102-junction",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -53.27,
+        "y": 178.95
+      }
+    },
+    {
+      "id": "ocon-1-room-102A",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -59.01,
+        "y": 176.18
+      }
+    },
+    {
+      "id": "ocon-1-room-102B",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -50.49,
+        "y": 176.18
+      }
+    },
+    {
+      "id": "ocon-1-room-102C",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -50.68,
+        "y": 181.55
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "ocon-1-exit-lower-ao",
+      "to": "ocon-1-lobby-lower",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "ocon-1-exit-lower-secondary",
+      "to": "ocon-1-lobby-lower",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-124",
+      "to": "ocon-1-hall-130-131",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-130-131",
+      "to": "ocon-1-hall-123",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-123",
+      "to": "ocon-1-hall-121-133",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-121-133",
+      "to": "ocon-1-hall-119-120",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-119-120",
+      "to": "ocon-1-lobby-upper-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-lobby-upper-junction",
+      "to": "ocon-1-lobby-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-lobby-upper",
+      "to": "ocon-1-exit-upper-ao",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "ocon-1-lobby-upper",
+      "to": "ocon-1-exit-upper-secondary",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-upper",
+      "to": "ocon-1-room-114",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-114",
+      "to": "ocon-1-room-114-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-114-west-door",
+      "to": "ocon-1-room-114A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-114",
+      "to": "ocon-1-room-114B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-upper",
+      "to": "ocon-1-stairs-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-lobby-upper",
+      "to": "ocon-1-elevator-passenger",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-upper-junction",
+      "to": "ocon-1-elevator-service",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-upper",
+      "to": "ocon-1-room-118",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-119-120",
+      "to": "ocon-1-room-119",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-119-120",
+      "to": "ocon-1-room-120",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-121-133",
+      "to": "ocon-1-room-121",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-123",
+      "to": "ocon-1-room-123",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-124",
+      "to": "ocon-1-room-124",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-lower",
+      "to": "ocon-1-room-124-lobby-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-124",
+      "to": "ocon-1-room-124-lobby-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-lower",
+      "to": "ocon-1-room-127",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-127",
+      "to": "ocon-1-room-127A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-lower",
+      "to": "ocon-1-stairs-lower",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-130-131",
+      "to": "ocon-1-room-130",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-130-131",
+      "to": "ocon-1-room-131",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-130",
+      "to": "ocon-1-room-130-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-130-turn",
+      "to": "ocon-1-room-130A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-121-133",
+      "to": "ocon-1-room-133",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-133",
+      "to": "ocon-1-room-133A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-133A",
+      "to": "ocon-1-room-133A-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-133A-west-door",
+      "to": "ocon-1-room-136",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-west-junction",
+      "to": "ocon-1-room-136",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-west-junction",
+      "to": "ocon-1-room-unlabeled-above-133A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-west-junction",
+      "to": "ocon-1-restroom-vestibule",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-restroom-vestibule",
+      "to": "ocon-1-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-restroom-vestibule",
+      "to": "ocon-1-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-west-junction",
+      "to": "ocon-1-custodial",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-custodial",
+      "to": "ocon-1-room-106",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-hall-west-junction",
+      "to": "ocon-1-hall-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-west",
+      "to": "ocon-1-exit-west-ao",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "ocon-1-exit-west-ao",
+      "to": "ocon-1-stairs-west-exterior-door",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ocon-1-hall-west",
+      "to": "ocon-1-room-102",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-102",
+      "to": "ocon-1-room-102-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-102-turn",
+      "to": "ocon-1-room-102-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-room-102-junction",
+      "to": "ocon-1-room-102A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-102-junction",
+      "to": "ocon-1-room-102B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-102-junction",
+      "to": "ocon-1-room-102C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-room-102-junction",
+      "to": "ocon-1-room-114-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-lower",
+      "to": "ocon-1-hall-124",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-lobby-upper-junction",
+      "to": "ocon-1-hall-west-junction",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

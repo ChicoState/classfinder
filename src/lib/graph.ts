@@ -1,5 +1,6 @@
+import type { Vector2 } from "./vector2";
+
 export type NodeId = string & { readonly __brand: 'NodeId' };
-export type FloorId = number;
 
 export type EdgeKind =
   | 'corridor'
@@ -12,11 +13,8 @@ export type EdgeKind =
 export type Node = {
   id: NodeId;
   buildingId: string | null;
-  floorId: FloorId | null;
-  position: {
-    x: number;
-    y: number;
-  };
+  floorId: number;
+  position: Vector2;
 };
 
 export type Edge = {
