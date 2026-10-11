@@ -137,3 +137,47 @@ h1 {
     padding: 2rem 1rem;
   }
 }
+
+.building-page {
+  width: min(100%, 68rem);
+}
+
+.floor-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.floor-tabs button[aria-selected='true'] {
+  background: #17624f;
+  color: white;
+}
+
+.floor-plan {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  border: 1px solid #dce7df;
+  background: white;
+}
+
+.route-line {
+  fill: none;
+  stroke: #d8493f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 12;
+}
+
+.route-start {
+  fill: #17624f;
+  stroke: white;
+  stroke-width: 5;
+}
+
+.route-destination {
+  fill: #d8493f;
+  stroke: white;
+  stroke-width: 5;
+}

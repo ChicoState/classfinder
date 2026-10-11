@@ -22,7 +22,7 @@ function HomePage()
         					<img
           						src={campusMap}
           						alt="Map of the campus used for ClassFinder directions"
-     	 						usemap="#workmap"
+     	 						useMap="#workmap"
         					/>
     						<map name="workmap">
       							<area shape="rect" coords="644, 606, 805, 644" href="#/buildings/oconnell"/>
