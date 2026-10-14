@@ -1,5 +1,4 @@
 import { Heap } from 'heap-js';
-
 import type { Edge, Graph, Node, NodeId, Nodes } from './graph';
 
 type OpenNode = {
@@ -12,7 +11,11 @@ type PreviousEdge = {
   edge: Edge;
 };
 
-type Path = Edge[];
+export type PathEdge = Edge & {
+  from: NodeId;
+};
+
+export type Path = PathEdge[];
 
 const openNodeComparer = (node1: OpenNode, node2: OpenNode): number => {
   return node1.cost - node2.cost;
@@ -25,7 +28,15 @@ function distanceSqr(x1: number, y1: number, x2: number, y2: number): number {
   return xDistance ** 2 + yDistance ** 2;
 }
 
-function getStartLocation(nodes: Nodes, x: number, y: number): Node | null {
+// inefficient but probably fine for this project
+// if it proves not to be, partition nodes by chunks to optimize
+// doesn't use vector2 path because this is more efficient, might be pointless
+export function findNodeNearPosition(
+  nodes: Nodes,
+  x: number,
+  y: number,
+  floor: number
+): Node | null {
   let closestNode: Node | null = null;
   let closestDistanceSqr = Number.POSITIVE_INFINITY;
 
@@ -36,7 +47,7 @@ function getStartLocation(nodes: Nodes, x: number, y: number): Node | null {
       node.position.x,
       node.position.y
     );
-    if (currentDistanceSqr < closestDistanceSqr) {
+    if (node.floorId == floor && currentDistanceSqr < closestDistanceSqr) {
       closestDistanceSqr = currentDistanceSqr;
       closestNode = node;
     }
@@ -59,7 +70,7 @@ function buildPath(
       return null;
     }
 
-    path.push(previousEdge.edge);
+    path.push({ ...previousEdge.edge, from: previousEdge.fromNodeId });
     currentNodeId = previousEdge.fromNodeId;
   }
 
@@ -68,21 +79,14 @@ function buildPath(
 
 export function calculatePath(
   graph: Graph,
-  nodes: Nodes,
-  startX: number,
-  startY: number,
+  start: Node,
   goal: Node
 ): Path | null {
-  const startNode = getStartLocation(nodes, startX, startY);
-  if (!startNode) {
-    return null;
-  }
-
   const openNodes = new Heap<OpenNode>(openNodeComparer);
-  const bestCosts = new Map<NodeId, number>([[startNode.id, 0]]);
+  const bestCosts = new Map<NodeId, number>([[start.id, 0]]);
   const previousEdges = new Map<NodeId, PreviousEdge>();
 
-  openNodes.push({ nodeId: startNode.id, cost: 0 });
+  openNodes.push({ nodeId: start.id, cost: 0 });
 
   while (true) {
     const currentNode = openNodes.pop();
@@ -96,7 +100,7 @@ export function calculatePath(
     }
 
     if (currentNode.nodeId === goal.id) {
-      return buildPath(previousEdges, startNode.id, goal.id);
+      return buildPath(previousEdges, start.id, goal.id);
     }
 
     const neighbors = graph.get(currentNode.nodeId);
