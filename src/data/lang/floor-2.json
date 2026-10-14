@@ -1,0 +1,912 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Langdon/lang-2.pdf",
+    "sourceDate": "2010-09-02",
+    "building": "Langdon Hall",
+    "buildingId": "lang",
+    "floor": 2,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "lang-1-exit-119-west",
+      "description": "West exterior doorway of room 119 on the reference first floor.",
+      "pdfPointFromTopLeft": {
+        "x": 104.0,
+        "y": -12.0
+      }
+    },
+    "axes": {
+      "x": "Drawing-right, not geographic east.",
+      "y": "Drawing-up, not geographic north."
+    },
+    "alignment": {
+      "method": "Translation using west elevator/shaft block, east stair core and exterior wall extents. Approximate manual alignment.",
+      "pdfToReferenceTranslation": {
+        "x": 1.3333333333333333,
+        "y": 172.0
+      },
+      "rotationDegrees": 0,
+      "scaleFactor": 1
+    },
+    "coordinateConversion": "x = (pdfX + 1.3333333333333333 - 105.33333333333333) * 30/72; y = (160.0 - pdfY - 172.0) * 30/72",
+    "undirected": true,
+    "loading": "Initialize every node, then expand each serialized edge in both directions. Runtime distance is Euclidean distance between saved coordinates; no distance overrides.",
+    "weightAssumptions": "All weights are 1. Stair costs omit vertical rise and effort.",
+    "accessibility": "Stairs are false; all other values omitted as unknown. Symbols at toilets/elevator do not establish accessible routes.",
+    "limitations": [
+      "Manual geometry from dated drawings, not surveyed or GPS-aligned. Current door permissions and elevator availability are unknown.",
+      "Elevator shaft is labelled but no doorway is drawn on any floor; elevator routing is omitted pending access evidence.",
+      "No unshown campus paths or links to other buildings are inferred.",
+      "This floor occupies the lower plan on source sheet 3.",
+      "The dotted west service corridor is circulation; numbered destinations use visible openings. Elevator and crossed shaft lack explicit access doors and are excluded.",
+      "Upper circulation strips and enclosed west service corridors are represented with corridor edges; no claim of indoor weather protection is made.",
+      "Two corresponding stair cores connect adjacent floors only. UP/DN arrows do not establish additional supplied floors."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "lang-2-hall-west",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -9.07,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-middle-west",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 36.3,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-206-303",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 60.93,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-205-302",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 73.7,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-204-300",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 125.0,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-203",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 137.41,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-202",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 149.63,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-200-west",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 160.19,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-200-east",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 171.85,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-hall-east",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 175.19,
+        "y": -151.3
+      }
+    },
+    {
+      "id": "lang-2-service-entry",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -9.07,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-service-west",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -9.07,
+        "y": -186.48
+      }
+    },
+    {
+      "id": "lang-2-service-middle",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 7.59,
+        "y": -186.48
+      }
+    },
+    {
+      "id": "lang-2-service-east",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 21.48,
+        "y": -186.48
+      }
+    },
+    {
+      "id": "lang-2-storage-north-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -12.22,
+        "y": -160.74
+      }
+    },
+    {
+      "id": "lang-2-storage-south-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -12.22,
+        "y": -171.3
+      }
+    },
+    {
+      "id": "lang-2-storage-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -14.07,
+        "y": -166.67
+      }
+    },
+    {
+      "id": "lang-2-electrical",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -0.37,
+        "y": -184.26
+      }
+    },
+    {
+      "id": "lang-2-telecom",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 6.11,
+        "y": -184.26
+      }
+    },
+    {
+      "id": "lang-2-custodial",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 10.74,
+        "y": -184.26
+      }
+    },
+    {
+      "id": "lang-2-women-vestibule",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 17.22,
+        "y": -184.26
+      }
+    },
+    {
+      "id": "lang-2-restroom-women",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 13.89,
+        "y": -178.33
+      }
+    },
+    {
+      "id": "lang-2-stairs-west",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -17.04,
+        "y": -157.59
+      }
+    },
+    {
+      "id": "lang-2-stairs-east",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 177.78,
+        "y": -151.48
+      }
+    },
+    {
+      "id": "lang-2-room-209A",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -6.3,
+        "y": -167.96
+      }
+    },
+    {
+      "id": "lang-2-restroom-men",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -14.26,
+        "y": -176.3
+      }
+    },
+    {
+      "id": "lang-2-room-209F",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -12.22,
+        "y": -185.93
+      }
+    },
+    {
+      "id": "lang-2-room-209G",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": -4.44,
+        "y": -188.89
+      }
+    },
+    {
+      "id": "lang-2-room-209H",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 11.3,
+        "y": -188.89
+      }
+    },
+    {
+      "id": "lang-2-room-209J",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 25.56,
+        "y": -184.26
+      }
+    },
+    {
+      "id": "lang-2-room-207B-service-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 25.56,
+        "y": -188.89
+      }
+    },
+    {
+      "id": "lang-2-room-207-entry",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 32.59,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-207-vestibule",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 36.85,
+        "y": -163.89
+      }
+    },
+    {
+      "id": "lang-2-room-207",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 34.07,
+        "y": -170.74
+      }
+    },
+    {
+      "id": "lang-2-room-207-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 40.0,
+        "y": -180.93
+      }
+    },
+    {
+      "id": "lang-2-room-207A",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 47.04,
+        "y": -188.89
+      }
+    },
+    {
+      "id": "lang-2-room-207B",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 37.04,
+        "y": -188.89
+      }
+    },
+    {
+      "id": "lang-2-room-207B-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 33.15,
+        "y": -192.04
+      }
+    },
+    {
+      "id": "lang-2-room-207D",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 52.59,
+        "y": -175.0
+      }
+    },
+    {
+      "id": "lang-2-room-206-south-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 49.26,
+        "y": -170.74
+      }
+    },
+    {
+      "id": "lang-2-room-206",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 60.93,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-205",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 73.7,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-205-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 72.41,
+        "y": -177.22
+      }
+    },
+    {
+      "id": "lang-2-room-205A",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 67.41,
+        "y": -181.11
+      }
+    },
+    {
+      "id": "lang-2-room-204",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 125.0,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-204-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 128.7,
+        "y": -172.22
+      }
+    },
+    {
+      "id": "lang-2-room-203-west-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 132.04,
+        "y": -166.11
+      }
+    },
+    {
+      "id": "lang-2-room-203A",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 132.04,
+        "y": -194.81
+      }
+    },
+    {
+      "id": "lang-2-room-203",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 137.41,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-202",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 149.63,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-200-west-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 160.19,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-200",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 171.85,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-room-200-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 164.07,
+        "y": -171.67
+      }
+    },
+    {
+      "id": "lang-2-room-203A-east-door",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 156.48,
+        "y": -194.81
+      }
+    },
+    {
+      "id": "lang-2-room-203A-turn",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 142.78,
+        "y": -192.04
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "lang-2-hall-west",
+      "to": "lang-2-hall-middle-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-middle-west",
+      "to": "lang-2-hall-206-303",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-206-303",
+      "to": "lang-2-hall-205-302",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-205-302",
+      "to": "lang-2-hall-204-300",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-204-300",
+      "to": "lang-2-hall-203",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-203",
+      "to": "lang-2-hall-202",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-202",
+      "to": "lang-2-hall-200-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-200-west",
+      "to": "lang-2-hall-200-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-200-east",
+      "to": "lang-2-hall-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-west",
+      "to": "lang-2-service-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-entry",
+      "to": "lang-2-service-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-service-west",
+      "to": "lang-2-service-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-service-middle",
+      "to": "lang-2-service-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-service-entry",
+      "to": "lang-2-storage-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-west",
+      "to": "lang-2-storage-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-storage-north-door",
+      "to": "lang-2-storage-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-storage-turn",
+      "to": "lang-2-storage-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-middle",
+      "to": "lang-2-electrical",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-middle",
+      "to": "lang-2-telecom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-middle",
+      "to": "lang-2-custodial",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-east",
+      "to": "lang-2-women-vestibule",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-women-vestibule",
+      "to": "lang-2-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-west",
+      "to": "lang-2-stairs-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-east",
+      "to": "lang-2-stairs-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-service-entry",
+      "to": "lang-2-room-209A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-west",
+      "to": "lang-2-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-west",
+      "to": "lang-2-room-209F",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-west",
+      "to": "lang-2-room-209G",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-middle",
+      "to": "lang-2-room-209H",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-east",
+      "to": "lang-2-room-209J",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-service-east",
+      "to": "lang-2-room-207B-service-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-middle-west",
+      "to": "lang-2-room-207-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207-entry",
+      "to": "lang-2-room-207-vestibule",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-room-207-vestibule",
+      "to": "lang-2-room-207",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207",
+      "to": "lang-2-room-207-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207-turn",
+      "to": "lang-2-room-207A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207-turn",
+      "to": "lang-2-room-207B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207B",
+      "to": "lang-2-room-207B-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207B-turn",
+      "to": "lang-2-room-207B-service-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207-turn",
+      "to": "lang-2-room-207D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-207",
+      "to": "lang-2-room-206-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-206-303",
+      "to": "lang-2-room-206",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-206",
+      "to": "lang-2-room-206-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-205-302",
+      "to": "lang-2-room-205",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-205",
+      "to": "lang-2-room-205-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-205-turn",
+      "to": "lang-2-room-205A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-204-300",
+      "to": "lang-2-room-204",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-204",
+      "to": "lang-2-room-204-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-204-turn",
+      "to": "lang-2-room-203-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-204-turn",
+      "to": "lang-2-room-203A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-203",
+      "to": "lang-2-room-203",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-203",
+      "to": "lang-2-room-203-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-202",
+      "to": "lang-2-room-202",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-200-west",
+      "to": "lang-2-room-200-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-hall-200-east",
+      "to": "lang-2-room-200",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-200-west-door",
+      "to": "lang-2-room-200-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-200",
+      "to": "lang-2-room-200-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-200-turn",
+      "to": "lang-2-room-203A-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-203A",
+      "to": "lang-2-room-203A-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-2-room-203A-turn",
+      "to": "lang-2-room-203A-east-door",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

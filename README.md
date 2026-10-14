@@ -27,7 +27,14 @@ shaft. The JSON metadata records the PDF scale and digitization limitations.
 The upper stair connects floors 1–2 only; the west and lower stairs
 and both elevators connect floors 1–4.
 
-Use `findNodeNearPosition` with the known starting floor, then pass the resulting
+Langdon Hall (`lang`) has three floor datasets in `src/data/lang/` and four
+adjacent-floor stair connections. Floors 2 and 3 share `Langdon/lang-2.pdf`;
+all sheets are dated September 2, 2010. The west exterior door of room 119 is
+the local origin. Elevator access is not drawn, so elevator links are omitted.
+Stair distances use aligned plan-view coordinates and omit vertical rise.
+
+Filter candidate nodes by building before using `findNodeNearPosition` with the
+known starting floor, then pass the resulting
 start node and the destination node to `calculatePath`. Each returned path edge
 contains both `from` and `to` node IDs so instruction code can derive the direction
 of consecutive segments. Nearest-node lookup uses only X/Y within the requested
@@ -36,7 +43,10 @@ floor.
 `src/pathingAdapter.ts` converts a computed path into ordered, generic navigation
 instructions. Corridors and outdoor paths use left/right/straight guidance; doors,
 ramps, stairs, and elevators use their movement type, with vertical transfers naming
-their destination floor.
+their destination floor. `getReadableInstructions` accepts an optional seventh
+argument, `buildingId` (`'lang'` for Langdon); it defaults to `'ocon'` for
+existing callers. Both endpoints are selected within that building. Unknown
+buildings return `null`.
 
 This data belongs in `src/data` because it is part of the application and is
 imported by the loader. A root-level data directory would make more sense for

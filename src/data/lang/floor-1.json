@@ -1,0 +1,1506 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Langdon/lang-1.pdf",
+    "sourceDate": "2010-09-02",
+    "building": "Langdon Hall",
+    "buildingId": "lang",
+    "floor": 1,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "lang-1-exit-119-west",
+      "description": "West exterior doorway of room 119 on the reference first floor.",
+      "pdfPointFromTopLeft": {
+        "x": 105.33333333333333,
+        "y": 160.0
+      }
+    },
+    "axes": {
+      "x": "Drawing-right, not geographic east.",
+      "y": "Drawing-up, not geographic north."
+    },
+    "alignment": {
+      "method": "Reference floor",
+      "pdfToReferenceTranslation": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "rotationDegrees": 0,
+      "scaleFactor": 1
+    },
+    "coordinateConversion": "x = (pdfX + 0.0 - 105.33333333333333) * 30/72; y = (160.0 - pdfY - 0.0) * 30/72",
+    "undirected": true,
+    "loading": "Initialize every node, then expand each serialized edge in both directions. Runtime distance is Euclidean distance between saved coordinates; no distance overrides.",
+    "weightAssumptions": "All weights are 1. Stair costs omit vertical rise and effort.",
+    "accessibility": "Stairs are false; all other values omitted as unknown. Symbols at toilets/elevator do not establish accessible routes.",
+    "limitations": [
+      "Manual geometry from dated drawings, not surveyed or GPS-aligned. Current door permissions and elevator availability are unknown.",
+      "Elevator shaft is labelled but no doorway is drawn on any floor; elevator routing is omitted pending access evidence.",
+      "No unshown campus paths or links to other buildings are inferred.",
+      "Room 115 has only the loading-dock exterior doorway shown, represented by exit-115-loading-dock. The depicted dock connects to the south circulation strip.",
+      "121A via 121; 122A/B via 122; 119A/B via 119 (119B also via 118); 118A via its vestibule in 118; 117A via 117.",
+      "The crossed square beside 115 and the large crossed shaft beside the elevator are not treated as destinations. No north-end doorway is inferred from the dashed line."
+    ],
+    "fences": {
+      "interpretation": "User-confirmed fences: only the three dashed sections immediately above rooms approximately 105\u2013103. Do not generalize to other dotted/dashed lines.",
+      "gatePlacement": "One gate per section; midpoint positions explicitly approved by the user. The PDF does not mark precise gate locations.",
+      "sections": [
+        {
+          "gateNodeId": "lang-1-fence-gate-west",
+          "startPdfPointFromTopLeft": {
+            "x": 335.55555555555554,
+            "y": 510.22222222222223
+          },
+          "endPdfPointFromTopLeft": {
+            "x": 392.8888888888889,
+            "y": 510.22222222222223
+          }
+        },
+        {
+          "gateNodeId": "lang-1-fence-gate-middle",
+          "startPdfPointFromTopLeft": {
+            "x": 392.8888888888889,
+            "y": 510.22222222222223
+          },
+          "endPdfPointFromTopLeft": {
+            "x": 450.6666666666667,
+            "y": 510.22222222222223
+          }
+        },
+        {
+          "gateNodeId": "lang-1-fence-gate-east",
+          "startPdfPointFromTopLeft": {
+            "x": 450.6666666666667,
+            "y": 510.22222222222223
+          },
+          "endPdfPointFromTopLeft": {
+            "x": 508.0,
+            "y": 510.22222222222223
+          }
+        }
+      ],
+      "routing": "Each gate is a doorway destination connected to the corridor on the drawing-south side. Fence spans have no other crossings. No unshown outdoor continuation or gate accessibility is inferred."
+    }
+  },
+  "nodes": [
+    {
+      "id": "lang-1-hall-north",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": 19.44
+      }
+    },
+    {
+      "id": "lang-1-hall-120",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -26.48
+      }
+    },
+    {
+      "id": "lang-1-hall-119",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -42.59
+      }
+    },
+    {
+      "id": "lang-1-hall-120-south",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -47.22
+      }
+    },
+    {
+      "id": "lang-1-hall-118",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -70.0
+      }
+    },
+    {
+      "id": "lang-1-hall-custodial",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -124.44
+      }
+    },
+    {
+      "id": "lang-1-hall-118B",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -129.26
+      }
+    },
+    {
+      "id": "lang-1-hall-116",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -138.52
+      }
+    },
+    {
+      "id": "lang-1-hall-south",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -145.74
+      }
+    },
+    {
+      "id": "lang-1-room-121",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 41.48,
+        "y": 19.44
+      }
+    },
+    {
+      "id": "lang-1-room-122",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 51.48,
+        "y": 19.44
+      }
+    },
+    {
+      "id": "lang-1-room-120",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 51.48,
+        "y": -26.48
+      }
+    },
+    {
+      "id": "lang-1-room-119",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 41.48,
+        "y": -42.59
+      }
+    },
+    {
+      "id": "lang-1-room-120-south-door",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 51.48,
+        "y": -47.22
+      }
+    },
+    {
+      "id": "lang-1-room-118",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 41.48,
+        "y": -69.07
+      }
+    },
+    {
+      "id": "lang-1-room-117",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 51.48,
+        "y": -72.22
+      }
+    },
+    {
+      "id": "lang-1-room-custodial-north",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 41.48,
+        "y": -124.44
+      }
+    },
+    {
+      "id": "lang-1-room-118B",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 41.48,
+        "y": -129.26
+      }
+    },
+    {
+      "id": "lang-1-room-116",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 51.48,
+        "y": -138.52
+      }
+    },
+    {
+      "id": "lang-1-room-121A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 36.48,
+        "y": 22.96
+      }
+    },
+    {
+      "id": "lang-1-room-122A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 55.19,
+        "y": 24.44
+      }
+    },
+    {
+      "id": "lang-1-room-122B",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 74.81,
+        "y": 19.44
+      }
+    },
+    {
+      "id": "lang-1-room-121-south-door",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 35.19,
+        "y": 7.41
+      }
+    },
+    {
+      "id": "lang-1-room-119A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 35.0,
+        "y": -45.0
+      }
+    },
+    {
+      "id": "lang-1-room-119B",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 20.56,
+        "y": -45.0
+      }
+    },
+    {
+      "id": "lang-1-exit-119-west",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "id": "lang-1-room-119B-south-door",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 4.63,
+        "y": -64.44
+      }
+    },
+    {
+      "id": "lang-1-exit-118-west",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -92.78
+      }
+    },
+    {
+      "id": "lang-1-room-118A-vestibule",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 27.41,
+        "y": -121.3
+      }
+    },
+    {
+      "id": "lang-1-room-118A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 25.56,
+        "y": -123.33
+      }
+    },
+    {
+      "id": "lang-1-room-117A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 74.63,
+        "y": -66.48
+      }
+    },
+    {
+      "id": "lang-1-room-117-south-door",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 67.41,
+        "y": -128.52
+      }
+    },
+    {
+      "id": "lang-1-hall-west",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -9.63,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-dock",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -3.15,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-north-wing",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 46.3,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-109",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 74.81,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-108",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 80.19,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-107-106",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 71.85,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-105",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 98.33,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-104",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 122.04,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-women",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 136.67,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-east-rooms",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 164.44,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-hall-stairs-east",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 174.63,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-room-109",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 74.81,
+        "y": -144.81
+      }
+    },
+    {
+      "id": "lang-1-room-108",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 80.19,
+        "y": -144.81
+      }
+    },
+    {
+      "id": "lang-1-loading-dock",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -5.0,
+        "y": -140.37
+      }
+    },
+    {
+      "id": "lang-1-loading-dock-south",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -5.0,
+        "y": -145.93
+      }
+    },
+    {
+      "id": "lang-1-exit-115-loading-dock",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -140.37
+      }
+    },
+    {
+      "id": "lang-1-room-113",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 55.19,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-room-111",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 58.7,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-room-107",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 69.07,
+        "y": -167.41
+      }
+    },
+    {
+      "id": "lang-1-room-106",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 74.63,
+        "y": -167.41
+      }
+    },
+    {
+      "id": "lang-1-room-105",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 98.52,
+        "y": -167.41
+      }
+    },
+    {
+      "id": "lang-1-room-104",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 121.85,
+        "y": -167.41
+      }
+    },
+    {
+      "id": "lang-1-restroom-women",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 136.67,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-room-unlabeled-west-of-women",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 125.0,
+        "y": -161.67
+      }
+    },
+    {
+      "id": "lang-1-restroom-men",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 37.59,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-custodial-south",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 42.59,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-room-114-entry",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -10.37,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-hall-114",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -9.63,
+        "y": -173.7
+      }
+    },
+    {
+      "id": "lang-1-room-114A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -5.19,
+        "y": -160.56
+      }
+    },
+    {
+      "id": "lang-1-room-114B",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -6.48,
+        "y": -175.74
+      }
+    },
+    {
+      "id": "lang-1-room-114",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -9.63,
+        "y": -178.15
+      }
+    },
+    {
+      "id": "lang-1-room-114C",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -16.67,
+        "y": -178.15
+      }
+    },
+    {
+      "id": "lang-1-room-114D",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 12.04,
+        "y": -178.15
+      }
+    },
+    {
+      "id": "lang-1-room-114E",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 18.89,
+        "y": -178.15
+      }
+    },
+    {
+      "id": "lang-1-room-114F",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 22.22,
+        "y": -186.3
+      }
+    },
+    {
+      "id": "lang-1-room-114G",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 18.33,
+        "y": -187.22
+      }
+    },
+    {
+      "id": "lang-1-stairs-west",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -17.22,
+        "y": -160.0
+      }
+    },
+    {
+      "id": "lang-1-east-vestibule-entry",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 164.44,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-east-vestibule",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 164.44,
+        "y": -165.74
+      }
+    },
+    {
+      "id": "lang-1-room-103",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 161.3,
+        "y": -165.19
+      }
+    },
+    {
+      "id": "lang-1-room-102",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 161.3,
+        "y": -172.78
+      }
+    },
+    {
+      "id": "lang-1-room-100",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 167.78,
+        "y": -165.37
+      }
+    },
+    {
+      "id": "lang-1-room-100A",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 167.78,
+        "y": -161.11
+      }
+    },
+    {
+      "id": "lang-1-room-100B",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 180.19,
+        "y": -163.15
+      }
+    },
+    {
+      "id": "lang-1-east-vestibule-south",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 164.44,
+        "y": -175.93
+      }
+    },
+    {
+      "id": "lang-1-room-101",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 164.44,
+        "y": -178.33
+      }
+    },
+    {
+      "id": "lang-1-room-101-west-door",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 143.89,
+        "y": -181.67
+      }
+    },
+    {
+      "id": "lang-1-room-101-east-door",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 167.78,
+        "y": -191.67
+      }
+    },
+    {
+      "id": "lang-1-stairs-east-entry",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 178.33,
+        "y": -150.0
+      }
+    },
+    {
+      "id": "lang-1-stairs-east",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 180.19,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-room-122-turn",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 57.96,
+        "y": 14.81
+      }
+    },
+    {
+      "id": "lang-1-room-120-turn",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 55.19,
+        "y": -36.11
+      }
+    },
+    {
+      "id": "lang-1-room-114-turn",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": -3.15,
+        "y": -183.33
+      }
+    },
+    {
+      "id": "lang-1-room-100-turn",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 174.63,
+        "y": -175.93
+      }
+    },
+    {
+      "id": "lang-1-fence-gate-west",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 107.87,
+        "y": -145.93
+      }
+    },
+    {
+      "id": "lang-1-hall-fence-west",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 107.87,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-fence-gate-middle",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 131.85,
+        "y": -145.93
+      }
+    },
+    {
+      "id": "lang-1-hall-fence-middle",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 131.85,
+        "y": -151.85
+      }
+    },
+    {
+      "id": "lang-1-fence-gate-east",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 155.83,
+        "y": -145.93
+      }
+    },
+    {
+      "id": "lang-1-hall-fence-east",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 155.83,
+        "y": -151.85
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "lang-1-hall-north",
+      "to": "lang-1-hall-120",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-120",
+      "to": "lang-1-hall-119",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-119",
+      "to": "lang-1-hall-120-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-120-south",
+      "to": "lang-1-hall-118",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-118",
+      "to": "lang-1-hall-custodial",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-custodial",
+      "to": "lang-1-hall-118B",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-118B",
+      "to": "lang-1-hall-116",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-116",
+      "to": "lang-1-hall-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-north",
+      "to": "lang-1-room-121",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-north",
+      "to": "lang-1-room-122",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-120",
+      "to": "lang-1-room-120",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-119",
+      "to": "lang-1-room-119",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-120-south",
+      "to": "lang-1-room-120-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-118",
+      "to": "lang-1-room-118",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-118",
+      "to": "lang-1-room-117",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-custodial",
+      "to": "lang-1-room-custodial-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-118B",
+      "to": "lang-1-room-118B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-116",
+      "to": "lang-1-room-116",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-121",
+      "to": "lang-1-room-121A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-122",
+      "to": "lang-1-room-122A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-121",
+      "to": "lang-1-room-121-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-121-south-door",
+      "to": "lang-1-room-119",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-119",
+      "to": "lang-1-room-119A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-119",
+      "to": "lang-1-room-119B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-119",
+      "to": "lang-1-exit-119-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-119B",
+      "to": "lang-1-room-119B-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-119B-south-door",
+      "to": "lang-1-room-118",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-118",
+      "to": "lang-1-exit-118-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-118",
+      "to": "lang-1-room-118A-vestibule",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-118A-vestibule",
+      "to": "lang-1-room-118A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-117",
+      "to": "lang-1-room-117A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-117",
+      "to": "lang-1-room-117-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-117-south-door",
+      "to": "lang-1-room-116",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-west",
+      "to": "lang-1-hall-dock",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-dock",
+      "to": "lang-1-hall-north-wing",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-north-wing",
+      "to": "lang-1-hall-107-106",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-107-106",
+      "to": "lang-1-hall-109",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-109",
+      "to": "lang-1-hall-108",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-108",
+      "to": "lang-1-hall-105",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-east-rooms",
+      "to": "lang-1-hall-stairs-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-south",
+      "to": "lang-1-hall-north-wing",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-109",
+      "to": "lang-1-room-109",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-108",
+      "to": "lang-1-room-108",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-dock",
+      "to": "lang-1-loading-dock-south",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "lang-1-loading-dock-south",
+      "to": "lang-1-loading-dock",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "lang-1-loading-dock",
+      "to": "lang-1-exit-115-loading-dock",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-north-wing",
+      "to": "lang-1-room-113",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-north-wing",
+      "to": "lang-1-room-111",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-107-106",
+      "to": "lang-1-room-107",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-107-106",
+      "to": "lang-1-room-106",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-105",
+      "to": "lang-1-room-105",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-104",
+      "to": "lang-1-room-104",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-women",
+      "to": "lang-1-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-104",
+      "to": "lang-1-room-unlabeled-west-of-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-north-wing",
+      "to": "lang-1-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-north-wing",
+      "to": "lang-1-custodial-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-west",
+      "to": "lang-1-room-114-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114-entry",
+      "to": "lang-1-hall-114",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-room-114-entry",
+      "to": "lang-1-room-114A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-114",
+      "to": "lang-1-room-114B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-114",
+      "to": "lang-1-room-114",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-west",
+      "to": "lang-1-stairs-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-east-rooms",
+      "to": "lang-1-east-vestibule-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-east-vestibule-entry",
+      "to": "lang-1-east-vestibule",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-east-vestibule",
+      "to": "lang-1-room-103",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-east-vestibule",
+      "to": "lang-1-room-102",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-east-vestibule",
+      "to": "lang-1-room-100",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-east-vestibule",
+      "to": "lang-1-room-100A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-100",
+      "to": "lang-1-room-100B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-east-vestibule",
+      "to": "lang-1-east-vestibule-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-east-vestibule-south",
+      "to": "lang-1-room-101",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-104",
+      "to": "lang-1-room-101-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-101-west-door",
+      "to": "lang-1-room-101",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-101",
+      "to": "lang-1-room-101-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-stairs-east",
+      "to": "lang-1-stairs-east-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-stairs-east-entry",
+      "to": "lang-1-stairs-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-room-122",
+      "to": "lang-1-room-122-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-122-turn",
+      "to": "lang-1-room-122B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-120",
+      "to": "lang-1-room-120-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-120-turn",
+      "to": "lang-1-room-120-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114",
+      "to": "lang-1-room-114-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114-turn",
+      "to": "lang-1-room-114C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114-turn",
+      "to": "lang-1-room-114D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114-turn",
+      "to": "lang-1-room-114E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114-turn",
+      "to": "lang-1-room-114F",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-114-turn",
+      "to": "lang-1-room-114G",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-100",
+      "to": "lang-1-room-100-turn",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-room-100-turn",
+      "to": "lang-1-room-101-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-105",
+      "to": "lang-1-hall-fence-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-fence-west",
+      "to": "lang-1-hall-104",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-fence-west",
+      "to": "lang-1-fence-gate-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-104",
+      "to": "lang-1-hall-fence-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-fence-middle",
+      "to": "lang-1-hall-women",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-fence-middle",
+      "to": "lang-1-fence-gate-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-hall-women",
+      "to": "lang-1-hall-fence-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-fence-east",
+      "to": "lang-1-hall-east-rooms",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-fence-east",
+      "to": "lang-1-fence-gate-east",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

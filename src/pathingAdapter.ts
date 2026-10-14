@@ -165,17 +165,26 @@ function createReadablePath(
   return readablePath;
 }
 
-/** Finds route endpoints from coordinates and returns one instruction per step. */
+/** Finds endpoints within one building; defaults to O'Connell for existing callers. */
 export function getReadableInstructions(
   startX: number,
   startY: number,
   startFloor: number,
   endX: number,
   endY: number,
-  endFloor: number
+  endFloor: number,
+  buildingId = 'ocon'
 ): ReadablePath | null {
-  const startNode = findNodeNearPosition(nodes, startX, startY, startFloor);
-  const endNode = findNodeNearPosition(nodes, endX, endY, endFloor);
+  const buildingNodes: Nodes = new Map(
+    [...nodes].filter(([, node]) => node.buildingId === buildingId)
+  );
+  const startNode = findNodeNearPosition(
+    buildingNodes,
+    startX,
+    startY,
+    startFloor
+  );
+  const endNode = findNodeNearPosition(buildingNodes, endX, endY, endFloor);
 
   if (!startNode || !endNode) {
     return null;

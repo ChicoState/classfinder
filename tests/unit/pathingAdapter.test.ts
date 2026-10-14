@@ -133,6 +133,16 @@ describe('getNextInstruction', () => {
 });
 
 describe('getReadableInstructions', () => {
+  it('selects Langdon explicitly when building origins overlap', () => {
+    const route = getReadableInstructions(0, 0, 1, 41.48, -42.59, 1, 'lang');
+    expect(route?.[0]?.position).toEqual({ x: 0, y: 0 });
+    expect(route?.at(-1)?.position).toEqual({ x: 41.48, y: -42.59 });
+  });
+
+  it('returns null for an unknown building', () => {
+    expect(getReadableInstructions(0, 0, 1, 0, 0, 1, 'unknown')).toBeNull();
+  });
+
   it('returns an instruction for each edge followed by the destination', () => {
     expect(getReadableInstructions(0, 0, 1, -13.08, 6.55, 1)).toEqual([
       {
@@ -159,6 +169,4 @@ describe('getReadableInstructions', () => {
   });
 });
 
-console.table(
-  getReadableInstructions(0, 0, 1, -24.38, 177.47, 4)
-);
+console.table(getReadableInstructions(0, 0, 1, -24.38, 177.47, 4));

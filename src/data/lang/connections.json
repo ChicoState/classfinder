@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "building": "Langdon Hall",
+    "buildingId": "lang",
+    "sources": [
+      "csuc-floor-plans/Langdon/lang-1.pdf",
+      "csuc-floor-plans/Langdon/lang-2.pdf"
+    ],
+    "sourceDate": "2010-09-02",
+    "undirected": true,
+    "units": "feet",
+    "weightAssumptions": "Weight 1; distance derived from aligned plan-view landing coordinates. Vertical rise and stair effort are not represented; these costs underestimate actual travel. No transfer override.",
+    "accessibility": "Stairs are explicitly false. Elevator links omitted because no access openings are drawn.",
+    "alignment": "See each floor metadata. Separate east and west cores, adjacent floors only."
+  },
+  "edges": [
+    {
+      "from": "lang-1-stairs-west",
+      "to": "lang-2-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-1-stairs-east",
+      "to": "lang-2-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-2-stairs-west",
+      "to": "lang-3-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-2-stairs-east",
+      "to": "lang-3-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    }
+  ]
+}

@@ -9,11 +9,20 @@ import { loadGraphFromData } from '../../src/graph/graphLoader';
 import { calculatePath } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
-const floors = [floor1, floor2, floor3, floor4];
+import lang1 from '../../src/data/lang/floor-1.json';
+import lang2 from '../../src/data/lang/floor-2.json';
+import lang3 from '../../src/data/lang/floor-3.json';
+import langConnections from '../../src/data/lang/connections.json';
+
+const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3];
 const data = {
   metadata: floor1.metadata,
   nodes: floors.flatMap((floor) => floor.nodes),
-  edges: [...floors.flatMap((floor) => floor.edges), ...connections.edges]
+  edges: [
+    ...floors.flatMap((floor) => floor.edges),
+    ...connections.edges,
+    ...langConnections.edges
+  ]
 };
 
 function distanceBetweenNodes(from: NodeId, to: NodeId): number {
@@ -77,6 +86,7 @@ describe('loadGraphFromData', () => {
     if (!entrance) throw new Error('Missing entrance');
 
     for (const goal of nodes.values()) {
+      if (goal.buildingId !== entrance.buildingId) continue;
       const outward = calculatePath(graph, entrance, goal);
       const inward = calculatePath(graph, goal, entrance);
       expect(outward, goal.id).not.toBeNull();
