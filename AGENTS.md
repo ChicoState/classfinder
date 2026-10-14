@@ -17,7 +17,7 @@ This repository has an infrastructure foundation, a React application shell, and
 - `src/data/ocon/floor-1.json` through `floor-4.json`: bundled O'Connell graphs in approximately aligned, shared coordinates measured in feet. Undirected edges are stored once; the loader returns fresh maps and expands both directions.
 - `src/data/ocon/connections.json`: adjacent-floor stairs and elevators, currently using user-selected provisional distances of 15 feet. Filter starting-node candidates by building and floor before coordinate-based routing.
 - `src/data/ocon/floor-*-preview.png`: local visual verification artifacts, not application imports or files to commit.
-- `src/data/lang/floor-1.json` through `floor-3.json` and `connections.json`: Langdon Hall, from two PDFs (the second contains floors 2 and 3). Shared local feet coordinates; both stair cores connect adjacent floors. Elevator doorways are not shown, so no elevator links are inferred.
+- `src/data/lang/floor-1.json` through `floor-3.json` and `connections.json`: Langdon Hall, from two PDFs (the second contains floors 2 and 3). Shared local feet coordinates; both stair cores connect adjacent floors. The elevator connects floors 1–2–3 with accessible transfers based on user confirmation (2026-10-14); entrance positions are approximate.
 - `src/pathingAdapter.ts`: coordinate-based instructions accept an optional building ID, defaulting to `ocon`; pass `lang` for Langdon. Filter nearest-node candidates by building before floor-aware snapping.
 - `csuc-floor-plans/`: original reference PDFs for digitization.
 - API/backend, database, and local services: not required by the plan.

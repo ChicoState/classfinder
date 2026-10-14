@@ -28,9 +28,10 @@ The upper stair connects floors 1–2 only; the west and lower stairs
 and both elevators connect floors 1–4.
 
 Langdon Hall (`lang`) has three floor datasets in `src/data/lang/` and four
-adjacent-floor stair connections. Floors 2 and 3 share `Langdon/lang-2.pdf`;
+adjacent-floor stair connections plus two elevator connections. Floors 2 and 3 share `Langdon/lang-2.pdf`;
 all sheets are dated September 2, 2010. The west exterior door of room 119 is
-the local origin. Elevator access is not drawn, so elevator links are omitted.
+the local origin. The elevator is connected across all three floors and marked accessible based on
+user confirmation (2026-10-14); corridor-facing entrance locations are approximate.
 Stair distances use aligned plan-view coordinates and omit vertical rise.
 
 Filter candidate nodes by building before using `findNodeNearPosition` with the

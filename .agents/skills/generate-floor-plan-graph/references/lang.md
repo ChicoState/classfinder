@@ -29,9 +29,9 @@ All use rotation 0 and scale factor 1. Negative projected Y on the upper-floor s
 
 ## Topology and access
 
-Separate east and west stair cores connect 1–2 and 2–3 only: four serialized transfer edges. Landings have their shown plan-view coordinates. No transfer-distance override is stored; runtime costs omit vertical rise and stair effort and can be very small. No accessibility claim is made: stair edges are false; other accessibility flags are omitted.
+Separate east and west stair cores connect 1–2 and 2–3 only: four stair transfer edges. The passenger elevator adds two adjacent-floor transfers (1–2 and 2–3). Landings have their shown plan-view coordinates. No transfer-distance override is stored; runtime costs omit vertical rise and stair effort and can be very small. Elevator doorway and transfer edges are accessible based on user confirmation dated 2026-10-14; stair edges are false and other flags remain unknown.
 
-Elevator shafts are labelled on all floors but enclosed without explicit drawn door openings. They and the crossed shaft beside them are excluded from routing pending doorway evidence. Wheelchair symbols at first-floor toilets/elevator do not establish accessible paths.
+Elevator shafts are labelled on all floors but the PDFs omit door symbols. The user confirmed on 2026-10-14 that the elevator works and is accessible. It is now connected on all three supplied floors, with approximate entrances at the midpoint of the corridor-facing (drawing-north) frontage. The crossed shaft beside it remains excluded. Wheelchair symbols at first-floor toilets/elevator do not establish accessible paths.
 
 First floor:
 
@@ -66,7 +66,7 @@ Initial inventory before the fence correction (2026-10-12): floor 1 had 86 nodes
 
 Independent read-only review inspected all three overlays, enlarged service areas, adapter changes, and tests; no required corrections were found. Unit tests: 34 passed. Lint, typecheck, coverage, smoke, production build, and `docker compose config` passed. Coverage: 92.25% statements, 89.70% branches, 85.71% functions, 92.02% lines. E2E command succeeded with no tests present. Repository-wide formatting failed on pre-existing `.github/workflows/pr-checks.yml` syntax and formatting in `src/lib/graph.ts`, `src/main.tsx`, and `src/styles.css`; unrelated files were left unchanged. No containers were started.
 
-Remaining uncertainty: current permissions, elevator entrances, stair vertical geometry, exact field dimensions, and outdoor/campus integration require additional evidence. No requested floors remain unfinished.
+Remaining uncertainty: other door permissions, exact elevator entrance positions, vertical geometry, exact field dimensions, and outdoor/campus integration require additional evidence. No requested floors remain unfinished.
 
 ## User-confirmed fence correction
 
@@ -74,4 +74,14 @@ The user identified only the three dashed sections above rooms approximately 105
 
 Added `lang-1-fence-gate-west`, `lang-1-fence-gate-middle`, and `lang-1-fence-gate-east`, each with one door edge to a new junction on the existing corridor. The corridor lies on the drawing-south side and runs parallel to the fences, so its east-west continuity remains valid. No other crossing or unshown exterior path was added. Gate accessibility and current permissions remain unknown.
 
-Current floor 1 inventory: **92 nodes / 97 edges**. Whole Langdon dataset: **183 nodes / 200 undirected edges**, including four stair transfers. Preview labels Gate 1–3 identify the approved approximate placements. All 35 tests pass, including the new regression for gate positions and doorway connections; lint, typecheck, coverage, build, changed-file formatting, and diff checks pass. Earlier repository-wide formatting failures remain unrelated.
+After the fence correction, floor 1 had **92 nodes / 97 edges**. Whole Langdon dataset: **183 nodes / 200 undirected edges**, including four stair transfers. Preview labels Gate 1–3 identify the approved approximate placements. All 35 tests pass, including the new regression for gate positions and doorway connections; lint, typecheck, coverage, build, changed-file formatting, and diff checks pass. Earlier repository-wide formatting failures remain unrelated.
+
+## User-confirmed elevator connection (2026-10-14)
+
+Added `lang-<floor>-elevator-passenger` and `lang-<floor>-hall-elevator` on each floor. Each accessible door edge joins the elevator to its corridor junction; each junction splits the existing corridor edge without changing other access. Corridor accessibility is not inferred from elevator accessibility. Adjacent-floor elevator links are also `isAccessible: true`. The router still uses distance costs and does not enforce accessibility preferences.
+
+Approximate entrance coordinates at 2.25 pixels per PDF point: floor 1 `(286, 1209)`, floor 2 `(283, 823)`, floor 3 `(283, 324)`. Divide by 2.25 for native PDF points. Existing origin and transforms are preserved. The user confirmed operation/accessibility, not exact door positions; frontage-midpoint placement is an explicit inference. Transfer distances remain coordinate-derived: aligned upper-floor elevator positions yield zero distance; vertical rise and waiting time are not modeled.
+
+Current inventory: floor 1 **94 nodes / 99 edges**, floor 2 **57 / 62**, floor 3 **38 / 41**; connections **6 edges** (4 stairs, 2 elevator). Total **189 nodes / 208 undirected edges**. All 36 unit tests pass, including accessible door/transfer preservation, two-way elevator-only routes between floors 1 and 3, and full destination reachability. The existing floor 1 preview predates the elevator addition; this request was for graph data, so it was not regenerated.
+
+Elevator-update validation: unit tests (36), coverage, smoke checks, Compose configuration, changed-file formatting and diff checks passed. E2E exited successfully with no tests. Repository-wide lint fails on an existing unused `Link` import in `src/App.tsx`; typecheck/build fail on unresolved `react-router`, with an additional existing `usemap` typo in `src/Appbackup.tsx`. Repository-wide formatting still fails on workflow YAML syntax and unrelated application formatting. These unrelated application files were not changed.

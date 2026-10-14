@@ -39,10 +39,10 @@
     "undirected": true,
     "loading": "Initialize every node, then expand each serialized edge in both directions. Runtime distance is Euclidean distance between saved coordinates; no distance overrides.",
     "weightAssumptions": "All weights are 1. Stair costs omit vertical rise and effort.",
-    "accessibility": "Stairs are false; all other values omitted as unknown. Symbols at toilets/elevator do not establish accessible routes.",
+    "accessibility": "Elevator doorway and transfer edges are true based on user confirmation on 2026-10-14 that the elevator works and is accessible. Stairs are false; other edges remain unknown. This does not establish a complete accessible route.",
     "limitations": [
-      "Manual geometry from dated drawings, not surveyed or GPS-aligned. Current door permissions and elevator availability are unknown.",
-      "Elevator shaft is labelled but no doorway is drawn on any floor; elevator routing is omitted pending access evidence.",
+      "Manual geometry from dated drawings, not surveyed or GPS-aligned. Other door permissions are unknown.",
+      "Elevator access is user-confirmed; entrance positions are approximate because the PDF omits doorway symbols.",
       "No unshown campus paths or links to other buildings are inferred.",
       "Room 115 has only the loading-dock exterior doorway shown, represented by exit-115-loading-dock. The depicted dock connects to the south circulation strip.",
       "121A via 121; 122A/B via 122; 119A/B via 119 (119B also via 118); 118A via its vestibule in 118; 117A via 117.",
@@ -87,6 +87,15 @@
         }
       ],
       "routing": "Each gate is a doorway destination connected to the corridor on the drawing-south side. Fence spans have no other crossings. No unshown outdoor continuation or gate accessibility is inferred."
+    },
+    "elevator": {
+      "evidence": "User confirmed on 2026-10-14 that the elevator works and is accessible; applied to the elevator serving the three supplied floors.",
+      "entrancePlacement": "Approximate midpoint of the corridor-facing (drawing-north) shaft frontage. Door symbols are absent from the PDF; position is inferred, not user-measured.",
+      "pdfPointFromTopLeft": {
+        "x": 127.11111111111111,
+        "y": 537.3333333333334
+      },
+      "cost": "Plan-view coordinate distance only; vertical rise and waiting time omitted. Aligned transfer endpoints can have zero distance."
     }
   },
   "nodes": [
@@ -917,6 +926,24 @@
         "x": 155.83,
         "y": -151.85
       }
+    },
+    {
+      "id": "lang-1-elevator-passenger",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 9.07,
+        "y": -157.22
+      }
+    },
+    {
+      "id": "lang-1-hall-elevator",
+      "buildingId": "lang",
+      "floorId": 1,
+      "position": {
+        "x": 9.07,
+        "y": -151.85
+      }
     }
   ],
   "edges": [
@@ -1121,12 +1148,6 @@
     {
       "from": "lang-1-hall-west",
       "to": "lang-1-hall-dock",
-      "weight": 1,
-      "type": "corridor"
-    },
-    {
-      "from": "lang-1-hall-dock",
-      "to": "lang-1-hall-north-wing",
       "weight": 1,
       "type": "corridor"
     },
@@ -1501,6 +1522,25 @@
       "to": "lang-1-fence-gate-east",
       "weight": 1,
       "type": "door"
+    },
+    {
+      "from": "lang-1-hall-dock",
+      "to": "lang-1-hall-elevator",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-elevator",
+      "to": "lang-1-hall-north-wing",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-1-hall-elevator",
+      "to": "lang-1-elevator-passenger",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
     }
   ]
 }

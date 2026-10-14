@@ -84,8 +84,9 @@ describe('Langdon floor plans', () => {
 
   it('connects both stair cores on adjacent floors and uses floor-aware start candidates', () => {
     const [graph, nodes] = loadGraphFromData();
-    expect(connections.edges).toHaveLength(4);
-    for (const edge of connections.edges) {
+    const stairs = connections.edges.filter((edge) => edge.type === 'stairs');
+    expect(stairs).toHaveLength(4);
+    for (const edge of stairs) {
       const from = nodes.get(edge.from as NodeId)!;
       const to = nodes.get(edge.to as NodeId)!;
       expect(to.floorId - from.floorId).toBe(1);
@@ -118,7 +119,9 @@ describe('Langdon floor plans', () => {
       target,
       nodes.get('lang-3-room-300' as NodeId)!
     );
-    expect(path?.filter((edge) => edge.type === 'stairs')).toHaveLength(1);
+    expect(
+      path?.filter((edge) => edge.type === 'stairs' || edge.type === 'elevator')
+    ).toHaveLength(1);
   });
 
   it('keeps inner rooms behind their shown parent-room doors', () => {
@@ -132,9 +135,6 @@ describe('Langdon floor plans', () => {
     expect(
       graph.get('lang-2-room-205A' as NodeId)?.map((edge) => edge.to)
     ).toEqual(['lang-2-room-205-turn']);
-    expect(
-      serializedEdges.some((edge) => (edge.type as string) === 'elevator')
-    ).toBe(false);
   });
   it('places one doorway at each user-confirmed fence section midpoint', () => {
     const [graph, nodes] = loadGraphFromData();
@@ -158,5 +158,53 @@ describe('Langdon floor plans', () => {
     expect(
       floor1.nodes.filter((node) => node.id.includes('-fence-gate-'))
     ).toHaveLength(3);
+  });
+  it('connects the confirmed accessible elevator on all three floors', () => {
+    const [graph, nodes] = loadGraphFromData();
+    const transfers = connections.edges.filter(
+      (edge) => edge.type === 'elevator'
+    );
+    expect(transfers.map((edge) => [edge.from, edge.to])).toEqual([
+      ['lang-1-elevator-passenger', 'lang-2-elevator-passenger'],
+      ['lang-2-elevator-passenger', 'lang-3-elevator-passenger']
+    ]);
+    for (const floor of [1, 2, 3]) {
+      const id = `lang-${floor}-elevator-passenger` as NodeId;
+      expect(nodes.get(id)?.floorId).toBe(floor);
+      expect(graph.get(id)).toContainEqual(
+        expect.objectContaining({
+          to: `lang-${floor}-hall-elevator`,
+          type: 'door',
+          isAccessible: true
+        })
+      );
+    }
+    for (const edge of transfers) {
+      expect(edge.isAccessible).toBe(true);
+      expect(graph.get(edge.from as NodeId)).toContainEqual(
+        expect.objectContaining({
+          to: edge.to,
+          type: 'elevator',
+          isAccessible: true
+        })
+      );
+      expect(graph.get(edge.to as NodeId)).toContainEqual(
+        expect.objectContaining({
+          to: edge.from,
+          type: 'elevator',
+          isAccessible: true
+        })
+      );
+    }
+    const start = nodes.get('lang-1-elevator-passenger' as NodeId)!;
+    const end = nodes.get('lang-3-elevator-passenger' as NodeId)!;
+    expect(calculatePath(graph, start, end)?.map((edge) => edge.type)).toEqual([
+      'elevator',
+      'elevator'
+    ]);
+    expect(calculatePath(graph, end, start)?.map((edge) => edge.type)).toEqual([
+      'elevator',
+      'elevator'
+    ]);
   });
 });

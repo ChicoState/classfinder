@@ -39,16 +39,25 @@
     "undirected": true,
     "loading": "Initialize every node, then expand each serialized edge in both directions. Runtime distance is Euclidean distance between saved coordinates; no distance overrides.",
     "weightAssumptions": "All weights are 1. Stair costs omit vertical rise and effort.",
-    "accessibility": "Stairs are false; all other values omitted as unknown. Symbols at toilets/elevator do not establish accessible routes.",
+    "accessibility": "Elevator doorway and transfer edges are true based on user confirmation on 2026-10-14 that the elevator works and is accessible. Stairs are false; other edges remain unknown. This does not establish a complete accessible route.",
     "limitations": [
-      "Manual geometry from dated drawings, not surveyed or GPS-aligned. Current door permissions and elevator availability are unknown.",
-      "Elevator shaft is labelled but no doorway is drawn on any floor; elevator routing is omitted pending access evidence.",
+      "Manual geometry from dated drawings, not surveyed or GPS-aligned. Other door permissions are unknown.",
+      "Elevator access is user-confirmed; entrance positions are approximate because the PDF omits doorway symbols.",
       "No unshown campus paths or links to other buildings are inferred.",
       "This floor occupies the lower plan on source sheet 3.",
-      "The dotted west service corridor is circulation; numbered destinations use visible openings. Elevator and crossed shaft lack explicit access doors and are excluded.",
+      "The dotted west service corridor is circulation; numbered destinations use visible openings. The crossed shaft remains excluded; the elevator is connected using user-confirmed access.",
       "Upper circulation strips and enclosed west service corridors are represented with corridor edges; no claim of indoor weather protection is made.",
       "Two corresponding stair cores connect adjacent floors only. UP/DN arrows do not establish additional supplied floors."
-    ]
+    ],
+    "elevator": {
+      "evidence": "User confirmed on 2026-10-14 that the elevator works and is accessible; applied to the elevator serving the three supplied floors.",
+      "entrancePlacement": "Approximate midpoint of the corridor-facing (drawing-north) shaft frontage. Door symbols are absent from the PDF; position is inferred, not user-measured.",
+      "pdfPointFromTopLeft": {
+        "x": 125.77777777777777,
+        "y": 365.77777777777777
+      },
+      "cost": "Plan-view coordinate distance only; vertical rise and waiting time omitted. Aligned transfer endpoints can have zero distance."
+    }
   },
   "nodes": [
     {
@@ -545,15 +554,27 @@
         "x": 142.78,
         "y": -192.04
       }
+    },
+    {
+      "id": "lang-2-elevator-passenger",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 9.07,
+        "y": -157.41
+      }
+    },
+    {
+      "id": "lang-2-hall-elevator",
+      "buildingId": "lang",
+      "floorId": 2,
+      "position": {
+        "x": 9.07,
+        "y": -151.3
+      }
     }
   ],
   "edges": [
-    {
-      "from": "lang-2-hall-west",
-      "to": "lang-2-hall-middle-west",
-      "weight": 1,
-      "type": "corridor"
-    },
     {
       "from": "lang-2-hall-middle-west",
       "to": "lang-2-hall-206-303",
@@ -907,6 +928,25 @@
       "to": "lang-2-room-203A-east-door",
       "weight": 1,
       "type": "door"
+    },
+    {
+      "from": "lang-2-hall-west",
+      "to": "lang-2-hall-elevator",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-elevator",
+      "to": "lang-2-hall-middle-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "lang-2-hall-elevator",
+      "to": "lang-2-elevator-passenger",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
     }
   ]
 }
