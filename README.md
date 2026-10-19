@@ -34,6 +34,16 @@ the local origin. The elevator is connected across all three floors and marked a
 user confirmation (2026-10-14); corridor-facing entrance locations are approximate.
 Stair distances use aligned plan-view coordinates and omit vertical rise.
 
+Holt Hall (`holt`) has a first-floor dataset at `src/data/holt/floor-1.json`,
+digitized from `Holt/holt-1.pdf` (February 17, 2011; 1 inch = 40 feet).
+The drawing-bottom AO entrance is its local origin. All numbered destinations
+are connected through the shown doorways. Walkable paths through the stair rooms,
+confirmed by the user on October 19, 2026, connect the east landings to the main
+circulation using corridor edges. No upper floors or vertical transfers are included yet. Only the
+two AO-marked end entrance edges are marked accessible. The requested
+`src/data/holt/floor-1-preview.png` overlays the saved graph on the source plan
+and is a local review artifact, not an application import or commit artifact.
+
 Filter candidate nodes by building before using `findNodeNearPosition` with the
 known starting floor, then pass the resulting
 start node and the destination node to `calculatePath`. Each returned path edge

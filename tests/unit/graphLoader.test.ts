@@ -13,8 +13,9 @@ import lang1 from '../../src/data/lang/floor-1.json';
 import lang2 from '../../src/data/lang/floor-2.json';
 import lang3 from '../../src/data/lang/floor-3.json';
 import langConnections from '../../src/data/lang/connections.json';
+import holt1 from '../../src/data/holt/floor-1.json';
 
-const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3];
+const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3, holt1];
 const data = {
   metadata: floor1.metadata,
   nodes: floors.flatMap((floor) => floor.nodes),

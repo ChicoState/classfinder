@@ -9,6 +9,8 @@ Create small, traceable routing datasets from architectural drawings. Preserve t
 
 ## Scope and source inspection
 
+- PDF inspection tools are already installed locally at `/home/eyebaian/.local/share/classfinder-pdf-tools/`: `pdfjs-dist` and `@napi-rs/canvas`. Reuse them before downloading or installing PDF tools again; they are independent of application dependencies. Run `node /home/eyebaian/.local/share/classfinder-pdf-tools/view-pdf.mjs <source.pdf> <output.png> [render-scale]` to print page metadata/text and render a page (default scale 4, page 1). For another page, append its 1-based page number after the scale. Keep source renderings in `/tmp`. Text extraction may be empty when labels are vector outlines; inspect the rendered image. This is a machine-local tool location, so check that it exists on a different machine.
+
 - Read `AGENTS.md`, `src/lib/graph.ts`, `src/lib/dijkstras.ts`, `src/graph/graphLoader.ts`, existing building data, and relevant tests. Preserve unrelated edits and existing IDs when extending a building.
 - Locate PDFs with `rg --files csuc-floor-plans`. Inspect every requested floor visually, including openings and small labels. Vector-outline labels may not appear in text extraction; an empty extraction does not mean the drawing is empty.
 - When working on a building, resolve its stable building ID and read this skill's `references/<building-id>.md` if it exists. Load only the corresponding building reference, not every building's notes. For GPS or outdoor integration, also read [references/geographic-alignment.md](references/geographic-alignment.md).
