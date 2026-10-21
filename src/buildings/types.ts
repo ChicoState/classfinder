@@ -1,3 +1,5 @@
+//Structs that are used in the other files like App.tsx
+
 export type FloorPlan = 
 {	
 	floor: number;
