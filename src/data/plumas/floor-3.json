@@ -1,0 +1,1345 @@
+{
+  "metadata": {
+    "building": "Plumas Hall",
+    "buildingId": "plumas",
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up; not geographic north."
+    },
+    "undirected": true,
+    "nodeConvention": "Room destinations are doorway nodes; extra nodes retain bends and actual parent-room access.",
+    "distanceConvention": "Each undirected edge is stored once. Loader expands both directions and derives distance in feet from positions. All weights are 1.",
+    "source": "csuc-floor-plans/Plumas/plms-3.pdf",
+    "sourceDate": "1999-11-08",
+    "floor": 3,
+    "origin": {
+      "nodeId": "plumas-1-exit-east-ao",
+      "description": "Floor 1 east AO entrance projected into floor 3 source coordinates; not a floor 3 exit.",
+      "pdfPointFromTopLeft": {
+        "x": 483.3,
+        "y": 499.8
+      },
+      "referenceFloorPdfPointFromTopLeft": {
+        "x": 480,
+        "y": 496.2
+      }
+    },
+    "alignment": {
+      "method": "Translation fitted to west/east stair access landings; printed scale and drawing orientation preserved. Approximate dated plans do not match exactly.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": -3.3,
+          "y": -3.6
+        }
+      },
+      "landmarks": [
+        "Floor 3 raster (248,844) west landing versus floor 1 (248,758).",
+        "Floor 3 raster (780,844) east landing versus floor 1 (769,758)."
+      ],
+      "residuals": "After translation: west/east landing X residuals -1.38/+1.37 ft and Y residuals 0 ft. Elevator doorway differs by approximately 7.64 ft; door positions and partitions vary."
+    },
+    "coordinateConversion": "Source cropped raster: pdfX = rasterX * 0.6; pdfY = (rasterY - 43) * 0.6. x = (pdfX - 483.3) * 30/72; y = (499.8 - pdfY) * 30/72.",
+    "accessibility": "Omitted values are unknown; no accessible-route or elevator-availability claim.",
+    "digitization": {
+      "date": "2026-10-26",
+      "method": "Manual doorway tracing from Firefox PDF rendering.",
+      "rasterToPdf": {
+        "pixelsPerPdfPoint": 1.6666666666666667,
+        "croppedImageOffset": {
+          "x": 0,
+          "y": 43
+        }
+      }
+    },
+    "limitations": [
+      "Dated plan; approximate geometry, not surveyed or geographically calibrated. Current access permissions unknown.",
+      "Floor 2 is absent from the project; no cross-floor edges skip the missing adjacent floor. Stair and elevator endpoints are retained for later connection.",
+      "317A/B open through 317. 321 has a north door from 317 and an east door from the west passage. 301A opens through 301. 309 opens through 309A. 312 has main-hall and north-passage doors.",
+      "325 opens from the west passage; 325A and 327 open through 325. 329 has a main-hall doorway and a west door through 325. 323 is custodial.",
+      "333A/B open through 333. 333C opens from 333B and passage 335; 333D opens from passage 335.",
+      "The unnumbered doorway between the women restroom and shaft is retained; no opening is invented into the enclosed shaft.",
+      "The northern dashed boundary is the floor 1 reference outline, not third-floor circulation. Stairs marked UP on this dated sheet do not establish another floor dataset."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "plumas-3-stairs-west",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -139.38,
+        "y": 8.0
+      }
+    },
+    {
+      "id": "plumas-3-stairs-west-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -137.62,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-stairs-east",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -6.38,
+        "y": 8.0
+      }
+    },
+    {
+      "id": "plumas-3-stairs-east-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -9.88,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-west",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -131.88,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-hall-east",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -5.13,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-hall-315",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -130.38,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-315",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -130.38,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-315-east",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -105.88,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-315-east-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -105.88,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-312",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -95.12,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-312",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -95.12,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-306",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -62.62,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-306",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -62.62,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-304",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -52.13,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-304",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -52.13,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-303",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -34.13,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-303",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -34.13,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-303-east",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -16.63,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-303-east-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -16.63,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "plumas-3-room-303-passage-east",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -31.63,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-passage-305",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -40.88,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-305",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -40.88,
+        "y": 26.25
+      }
+    },
+    {
+      "id": "plumas-3-room-302",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -52.38,
+        "y": 21.5
+      }
+    },
+    {
+      "id": "plumas-3-passage-307",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -52.13,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-307",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -52.13,
+        "y": 26.25
+      }
+    },
+    {
+      "id": "plumas-3-passage-309A",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -65.62,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-309A",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -65.62,
+        "y": 26.25
+      }
+    },
+    {
+      "id": "plumas-3-room-309",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -62.38,
+        "y": 29.5
+      }
+    },
+    {
+      "id": "plumas-3-passage-311",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -71.63,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-311",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -71.63,
+        "y": 26.25
+      }
+    },
+    {
+      "id": "plumas-3-passage-308",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -75.62,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-308",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -75.62,
+        "y": 21.5
+      }
+    },
+    {
+      "id": "plumas-3-passage-310",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -82.38,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-310",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -82.38,
+        "y": 21.5
+      }
+    },
+    {
+      "id": "plumas-3-room-312-east-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -86.38,
+        "y": 24.0
+      }
+    },
+    {
+      "id": "plumas-3-room-312-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -93.63,
+        "y": 18.5
+      }
+    },
+    {
+      "id": "plumas-3-room-317",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -145.62,
+        "y": 0.75
+      }
+    },
+    {
+      "id": "plumas-3-room-317A",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -157.12,
+        "y": 0.25
+      }
+    },
+    {
+      "id": "plumas-3-room-317B",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -157.12,
+        "y": 23.0
+      }
+    },
+    {
+      "id": "plumas-3-room-317-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -153.88,
+        "y": 11.5
+      }
+    },
+    {
+      "id": "plumas-3-room-301",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 0.87,
+        "y": 2.75
+      }
+    },
+    {
+      "id": "plumas-3-room-301-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 7.12,
+        "y": 1.25
+      }
+    },
+    {
+      "id": "plumas-3-room-301A",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 12.37,
+        "y": -2.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-elevator",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -5.13,
+        "y": -6.0
+      }
+    },
+    {
+      "id": "plumas-3-elevator",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -6.38,
+        "y": -6.0
+      }
+    },
+    {
+      "id": "plumas-3-room-335",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 0.12,
+        "y": -6.0
+      }
+    },
+    {
+      "id": "plumas-3-passage-335-south",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 1.87,
+        "y": -20.0
+      }
+    },
+    {
+      "id": "plumas-3-room-333C-north-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 5.12,
+        "y": -16.5
+      }
+    },
+    {
+      "id": "plumas-3-room-333D",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -1.38,
+        "y": -23.25
+      }
+    },
+    {
+      "id": "plumas-3-room-333B",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -9.63,
+        "y": -26.0
+      }
+    },
+    {
+      "id": "plumas-3-room-333B-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -2.38,
+        "y": -29.25
+      }
+    },
+    {
+      "id": "plumas-3-room-333C",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": 5.12,
+        "y": -29.25
+      }
+    },
+    {
+      "id": "plumas-3-room-333",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -16.63,
+        "y": -4.0
+      }
+    },
+    {
+      "id": "plumas-3-room-333-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -23.63,
+        "y": -28.25
+      }
+    },
+    {
+      "id": "plumas-3-room-333A",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -40.13,
+        "y": -33.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-331",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -49.88,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-331",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -49.88,
+        "y": -4.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-329",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -80.62,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-329",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -80.62,
+        "y": -4.0
+      }
+    },
+    {
+      "id": "plumas-3-room-329-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -77.13,
+        "y": -20.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-unnumbered",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -96.38,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-room-unnumbered",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -96.38,
+        "y": -4.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-restroom-women",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -105.12,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-restroom-women",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -105.12,
+        "y": -4.0
+      }
+    },
+    {
+      "id": "plumas-3-hall-restroom-men",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -122.38,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "plumas-3-restroom-men",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -122.38,
+        "y": -4.0
+      }
+    },
+    {
+      "id": "plumas-3-west-passage-319",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -132.38,
+        "y": -8.5
+      }
+    },
+    {
+      "id": "plumas-3-room-319",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -135.88,
+        "y": -8.5
+      }
+    },
+    {
+      "id": "plumas-3-west-passage-321",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -132.38,
+        "y": -18.5
+      }
+    },
+    {
+      "id": "plumas-3-room-321",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -135.88,
+        "y": -18.5
+      }
+    },
+    {
+      "id": "plumas-3-room-321-north-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -147.62,
+        "y": -9.5
+      }
+    },
+    {
+      "id": "plumas-3-room-321-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -147.62,
+        "y": -23.5
+      }
+    },
+    {
+      "id": "plumas-3-room-317-south-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -151.13,
+        "y": -4.5
+      }
+    },
+    {
+      "id": "plumas-3-west-passage-south",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -132.38,
+        "y": -19.0
+      }
+    },
+    {
+      "id": "plumas-3-room-323",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -127.88,
+        "y": -21.0
+      }
+    },
+    {
+      "id": "plumas-3-room-325",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -123.12,
+        "y": -19.0
+      }
+    },
+    {
+      "id": "plumas-3-room-325-interior",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -106.13,
+        "y": -26.25
+      }
+    },
+    {
+      "id": "plumas-3-room-325-northeast",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -101.38,
+        "y": -19.0
+      }
+    },
+    {
+      "id": "plumas-3-room-325A",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -123.12,
+        "y": -31.75
+      }
+    },
+    {
+      "id": "plumas-3-room-327",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -93.38,
+        "y": -22.5
+      }
+    },
+    {
+      "id": "plumas-3-room-329-west-door",
+      "buildingId": "plumas",
+      "floorId": 3,
+      "position": {
+        "x": -85.12,
+        "y": -19.0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "to": "plumas-3-hall-315",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-west"
+    },
+    {
+      "to": "plumas-3-hall-restroom-men",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-315"
+    },
+    {
+      "to": "plumas-3-hall-315-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-restroom-men"
+    },
+    {
+      "to": "plumas-3-hall-restroom-women",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-315-east"
+    },
+    {
+      "to": "plumas-3-hall-unnumbered",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-restroom-women"
+    },
+    {
+      "to": "plumas-3-hall-312",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-unnumbered"
+    },
+    {
+      "to": "plumas-3-hall-329",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-312"
+    },
+    {
+      "to": "plumas-3-hall-306",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-329"
+    },
+    {
+      "to": "plumas-3-hall-304",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-306"
+    },
+    {
+      "to": "plumas-3-hall-331",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-304"
+    },
+    {
+      "to": "plumas-3-hall-303",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-331"
+    },
+    {
+      "to": "plumas-3-hall-303-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-303"
+    },
+    {
+      "to": "plumas-3-hall-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-303-east"
+    },
+    {
+      "to": "plumas-3-room-315",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-315"
+    },
+    {
+      "to": "plumas-3-room-312",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-312"
+    },
+    {
+      "to": "plumas-3-room-306",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-306"
+    },
+    {
+      "to": "plumas-3-room-304",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-304"
+    },
+    {
+      "to": "plumas-3-room-303",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-303"
+    },
+    {
+      "to": "plumas-3-room-331",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-331"
+    },
+    {
+      "to": "plumas-3-room-329",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-329"
+    },
+    {
+      "to": "plumas-3-room-333",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-303-east"
+    },
+    {
+      "to": "plumas-3-room-303-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-303-east"
+    },
+    {
+      "to": "plumas-3-room-315-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-315-east"
+    },
+    {
+      "to": "plumas-3-room-315-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-315"
+    },
+    {
+      "to": "plumas-3-room-303-passage-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-room-303"
+    },
+    {
+      "to": "plumas-3-passage-305",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-room-303-passage-east"
+    },
+    {
+      "to": "plumas-3-passage-307",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-passage-305"
+    },
+    {
+      "to": "plumas-3-passage-309A",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-passage-307"
+    },
+    {
+      "to": "plumas-3-passage-311",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-passage-309A"
+    },
+    {
+      "to": "plumas-3-passage-308",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-passage-311"
+    },
+    {
+      "to": "plumas-3-passage-310",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-passage-308"
+    },
+    {
+      "to": "plumas-3-room-305",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-305"
+    },
+    {
+      "to": "plumas-3-room-302",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-307"
+    },
+    {
+      "to": "plumas-3-room-307",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-307"
+    },
+    {
+      "to": "plumas-3-room-309A",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-309A"
+    },
+    {
+      "to": "plumas-3-room-311",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-311"
+    },
+    {
+      "to": "plumas-3-room-308",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-308"
+    },
+    {
+      "to": "plumas-3-room-310",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-310"
+    },
+    {
+      "to": "plumas-3-room-309",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-309A"
+    },
+    {
+      "to": "plumas-3-room-312-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-310"
+    },
+    {
+      "to": "plumas-3-room-312-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-312-east-door"
+    },
+    {
+      "to": "plumas-3-room-312",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-312-interior"
+    },
+    {
+      "to": "plumas-3-room-303-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-303-passage-east"
+    },
+    {
+      "to": "plumas-3-stairs-west-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-west"
+    },
+    {
+      "to": "plumas-3-stairs-west",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-stairs-west-door"
+    },
+    {
+      "to": "plumas-3-stairs-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-east"
+    },
+    {
+      "to": "plumas-3-stairs-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-stairs-east-door"
+    },
+    {
+      "to": "plumas-3-room-317",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-west"
+    },
+    {
+      "to": "plumas-3-room-317-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-317"
+    },
+    {
+      "to": "plumas-3-room-317B",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-317-interior"
+    },
+    {
+      "to": "plumas-3-room-317A",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-317-interior"
+    },
+    {
+      "to": "plumas-3-room-317-south-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-317-interior"
+    },
+    {
+      "to": "plumas-3-room-321-north-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-317-south-interior"
+    },
+    {
+      "to": "plumas-3-room-321-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-321-north-door"
+    },
+    {
+      "to": "plumas-3-room-321",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-321-interior"
+    },
+    {
+      "to": "plumas-3-room-301",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-east"
+    },
+    {
+      "to": "plumas-3-room-301-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-301"
+    },
+    {
+      "to": "plumas-3-room-301A",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-301-interior"
+    },
+    {
+      "to": "plumas-3-hall-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-east"
+    },
+    {
+      "to": "plumas-3-elevator",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-elevator"
+    },
+    {
+      "to": "plumas-3-room-335",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-elevator"
+    },
+    {
+      "to": "plumas-3-passage-335-south",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-room-335"
+    },
+    {
+      "to": "plumas-3-room-333C-north-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-335-south"
+    },
+    {
+      "to": "plumas-3-room-333D",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-335-south"
+    },
+    {
+      "to": "plumas-3-room-333B",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-passage-335-south"
+    },
+    {
+      "to": "plumas-3-room-333-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-333"
+    },
+    {
+      "to": "plumas-3-room-333A",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-333-interior"
+    },
+    {
+      "to": "plumas-3-room-333B",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-333-interior"
+    },
+    {
+      "to": "plumas-3-room-333B-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-333B"
+    },
+    {
+      "to": "plumas-3-room-333C",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-333B-interior"
+    },
+    {
+      "to": "plumas-3-room-333C-north-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-333C"
+    },
+    {
+      "to": "plumas-3-room-unnumbered",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-unnumbered"
+    },
+    {
+      "to": "plumas-3-restroom-men",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-restroom-men"
+    },
+    {
+      "to": "plumas-3-restroom-women",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-hall-restroom-women"
+    },
+    {
+      "to": "plumas-3-west-passage-319",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-hall-west"
+    },
+    {
+      "to": "plumas-3-west-passage-321",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-west-passage-319"
+    },
+    {
+      "to": "plumas-3-west-passage-south",
+      "weight": 1,
+      "type": "corridor",
+      "from": "plumas-3-west-passage-321"
+    },
+    {
+      "to": "plumas-3-room-319",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-west-passage-319"
+    },
+    {
+      "to": "plumas-3-room-321",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-west-passage-321"
+    },
+    {
+      "to": "plumas-3-room-323",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-west-passage-south"
+    },
+    {
+      "to": "plumas-3-room-325",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-west-passage-south"
+    },
+    {
+      "to": "plumas-3-room-325-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-325"
+    },
+    {
+      "to": "plumas-3-room-325-northeast",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-325-interior"
+    },
+    {
+      "to": "plumas-3-room-329-west-door",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-325-northeast"
+    },
+    {
+      "to": "plumas-3-room-329-interior",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-329-west-door"
+    },
+    {
+      "to": "plumas-3-room-329",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-329-interior"
+    },
+    {
+      "to": "plumas-3-room-325A",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-325-interior"
+    },
+    {
+      "to": "plumas-3-room-327",
+      "weight": 1,
+      "type": "door",
+      "from": "plumas-3-room-325-northeast"
+    }
+  ]
+}

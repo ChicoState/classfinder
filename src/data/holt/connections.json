@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "building": "Holt Hall",
+    "buildingId": "holt",
+    "sources": [
+      "csuc-floor-plans/Holt/holt-1.pdf",
+      "csuc-floor-plans/Holt/holt-2.pdf",
+      "csuc-floor-plans/Holt/holt-3.pdf"
+    ],
+    "sourceDates": ["2011-02-17", "2008-07-24", "2009-09-15"],
+    "units": "feet",
+    "undirected": true,
+    "topology": "Four matching stair cores and one elevator connect adjacent floors 1–2 and 2–3. First-floor west descending stairs and auditorium east stairs are not extended to upper floors.",
+    "distanceConvention": "The loader derives every distance from endpoint X/Y. Matching landing positions are aligned, so these transfers have zero plan-view distance. Floor height, stair effort and elevator waiting time are unknown; no override or artificial coordinate offset is stored.",
+    "accessibility": "Stair traversal is false. Elevator accessibility, operation and access permissions are unknown and omitted."
+  },
+  "edges": [
+    {
+      "from": "holt-1-stairs-north",
+      "to": "holt-2-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-1-stairs-middle-north",
+      "to": "holt-2-stairs-middle-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-1-stairs-middle-south",
+      "to": "holt-2-stairs-middle-south",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-1-stairs-south",
+      "to": "holt-2-stairs-south",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-1-elevator",
+      "to": "holt-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "holt-2-stairs-north",
+      "to": "holt-3-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-2-stairs-middle-north",
+      "to": "holt-3-stairs-middle-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-2-stairs-middle-south",
+      "to": "holt-3-stairs-middle-south",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-2-stairs-south",
+      "to": "holt-3-stairs-south",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "holt-2-elevator",
+      "to": "holt-3-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}
