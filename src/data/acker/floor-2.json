@@ -1,0 +1,850 @@
+{
+  "metadata": {
+    "buildingId": "acker",
+    "buildingName": "Acker Gymnasium",
+    "floor": 2,
+    "sources": ["csuc-floor-plans/Acker/agym-3.pdf"],
+    "sourceDate": "2008-07-14",
+    "digitizedDate": "2026-10-27",
+    "units": "feet",
+    "printedScale": "1 inch = 40 feet",
+    "feetPerPdfPoint": 0.5555555555555556,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "acker-1-exit-lobby-east-ao",
+      "description": "East lobby AO exterior doorway",
+      "pdfPoint": {
+        "x": 427,
+        "y": 329.5
+      }
+    },
+    "axes": {
+      "x": "drawing-right",
+      "y": "drawing-up"
+    },
+    "alignment": {
+      "reference": "agym-1.pdf",
+      "transforms": [
+        {
+          "source": "agym-1.pdf",
+          "translationPdfPoints": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "source": "agym-2.pdf",
+          "translationPdfPoints": {
+            "x": 3,
+            "y": 499
+          }
+        },
+        {
+          "source": "agym-3.pdf",
+          "translationPdfPoints": {
+            "x": 13.5,
+            "y": 7
+          }
+        }
+      ],
+      "rotationDegrees": 0,
+      "scale": 1,
+      "method": "Sheet-2 match line and east wall; sheet-3 gym outline, corresponding stair cores. Sheet-2 west corridor wall differs approximately 1.5 PDF points after alignment."
+    },
+    "undirected": true,
+    "weightAssumption": "Weights 1; loader calculates all distances from positions. Vertical travel cost is horizontal landing displacement only.",
+    "accessibility": "Only source AO entrance edge true; stair edges false; all other accessibility unknown.",
+    "uncertainties": [
+      "Manual doorway positions from dated plans, rounded to two decimals; not surveyed or GPS calibrated.",
+      "Room 151\u2013156 doors face exterior north, with no shown connecting walkway: retained as six isolated doorway nodes.",
+      "West storage has an exterior-only door without a shown connecting path: retained as isolated doorway.",
+      "Floor-1 elevator shaft/approach is dashed across the sheet match line: no lower landing or vertical elevator edge inferred.",
+      "Floor-2 broadcasting booth stair goes UP beyond the supplied floor plans; no booth geometry invented.",
+      "Neighboring Shurmer Gymnasium outline is context only and excluded.",
+      "Small wall openings/unnumbered closets are included only where visible access is supported."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "acker-2-west-hall-north",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -72.78
+      }
+    },
+    {
+      "id": "acker-2-west-hall-201",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -95.83
+      }
+    },
+    {
+      "id": "acker-2-west-hall-202",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -109.44
+      }
+    },
+    {
+      "id": "acker-2-west-hall-204",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -145.28
+      }
+    },
+    {
+      "id": "acker-2-west-hall-203",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -167.22
+      }
+    },
+    {
+      "id": "acker-2-walkway-west",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -186.11
+      }
+    },
+    {
+      "id": "acker-2-room-203-north-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -143.61,
+        "y": -92.78
+      }
+    },
+    {
+      "id": "acker-2-room-203-middle-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -143.61,
+        "y": -113.33
+      }
+    },
+    {
+      "id": "acker-2-room-203-south-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -143.61,
+        "y": -167.22
+      }
+    },
+    {
+      "id": "acker-2-room-202",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -135.28,
+        "y": -109.44
+      }
+    },
+    {
+      "id": "acker-2-room-204",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -135.28,
+        "y": -145.28
+      }
+    },
+    {
+      "id": "acker-2-room-203-inner",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -154.72,
+        "y": -117.5
+      }
+    },
+    {
+      "id": "acker-2-room-203A",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -152.5,
+        "y": -109.72
+      }
+    },
+    {
+      "id": "acker-2-room-203B",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -173.06,
+        "y": -108.06
+      }
+    },
+    {
+      "id": "acker-2-room-203-south-approach",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -154.72,
+        "y": -167.22
+      }
+    },
+    {
+      "id": "acker-2-exit-203-walkway",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -141.11,
+        "y": -183.33
+      }
+    },
+    {
+      "id": "acker-2-north-hall-408",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -116.39,
+        "y": -72.78
+      }
+    },
+    {
+      "id": "acker-2-north-hall-447",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -105.56,
+        "y": -72.78
+      }
+    },
+    {
+      "id": "acker-2-north-hall-589",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -66.11,
+        "y": -72.78
+      }
+    },
+    {
+      "id": "acker-2-north-hall-630",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -54.72,
+        "y": -72.78
+      }
+    },
+    {
+      "id": "acker-2-room-201-northwest-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -105.56,
+        "y": -76.39
+      }
+    },
+    {
+      "id": "acker-2-room-201-northeast-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -66.11,
+        "y": -76.39
+      }
+    },
+    {
+      "id": "acker-2-stairs-north",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -54.72,
+        "y": -83.89
+      }
+    },
+    {
+      "id": "acker-2-room-201-inner",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -90.83,
+        "y": -90.28
+      }
+    },
+    {
+      "id": "acker-2-room-201-southeast-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -66.11,
+        "y": -105.28
+      }
+    },
+    {
+      "id": "acker-2-room-202-east-approach",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -70.0,
+        "y": -118.06
+      }
+    },
+    {
+      "id": "acker-2-room-201B",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -59.44,
+        "y": -98.61
+      }
+    },
+    {
+      "id": "acker-2-room-201A",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -113.89,
+        "y": -94.17
+      }
+    },
+    {
+      "id": "acker-2-stairs-broadcasting-up",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -118.89,
+        "y": -88.89
+      }
+    },
+    {
+      "id": "acker-2-restroom-men",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -128.33,
+        "y": -80.0
+      }
+    },
+    {
+      "id": "acker-2-custodial-northwest",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -135.56,
+        "y": -96.94
+      }
+    },
+    {
+      "id": "acker-2-restroom-women",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -135.56,
+        "y": -102.22
+      }
+    },
+    {
+      "id": "acker-2-room-204-inner",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -76.94,
+        "y": -162.5
+      }
+    },
+    {
+      "id": "acker-2-room-204A",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -55.0,
+        "y": -175.56
+      }
+    },
+    {
+      "id": "acker-2-room-204B",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -55.0,
+        "y": -161.94
+      }
+    },
+    {
+      "id": "acker-2-room-204C",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -55.0,
+        "y": -148.89
+      }
+    },
+    {
+      "id": "acker-2-walkway-east",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -49.17,
+        "y": -186.11
+      }
+    },
+    {
+      "id": "acker-2-east-south-landing",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -43.61,
+        "y": -183.61
+      }
+    },
+    {
+      "id": "acker-2-east-stair-approach",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -43.61,
+        "y": -165.28
+      }
+    },
+    {
+      "id": "acker-2-east-north-landing",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -43.61,
+        "y": -156.39
+      }
+    },
+    {
+      "id": "acker-2-room-204-walkway-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -57.22,
+        "y": -182.5
+      }
+    },
+    {
+      "id": "acker-2-room-205",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -42.78,
+        "y": -163.06
+      }
+    },
+    {
+      "id": "acker-2-room-206",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -44.72,
+        "y": -157.78
+      }
+    },
+    {
+      "id": "acker-2-room-205A",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -13.61,
+        "y": -165.28
+      }
+    },
+    {
+      "id": "acker-2-stairs-south",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -36.11,
+        "y": -172.22
+      }
+    },
+    {
+      "id": "acker-2-room-207",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -40.28,
+        "y": -183.89
+      }
+    },
+    {
+      "id": "acker-2-elevator",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -49.72,
+        "y": -194.17
+      }
+    },
+    {
+      "id": "acker-2-room-205-inner",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -26.94,
+        "y": -156.39
+      }
+    },
+    {
+      "id": "acker-2-west-hall-restroom-junction",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -139.44,
+        "y": -80.0
+      }
+    },
+    {
+      "id": "acker-2-mens-vestibule-door",
+      "buildingId": "acker",
+      "floorId": 2,
+      "position": {
+        "x": -135.56,
+        "y": -80.0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "acker-2-west-hall-201",
+      "to": "acker-2-west-hall-202",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-west-hall-202",
+      "to": "acker-2-west-hall-204",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-west-hall-204",
+      "to": "acker-2-west-hall-203",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-west-hall-203",
+      "to": "acker-2-walkway-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-west-hall-201",
+      "to": "acker-2-room-203-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-west-hall-202",
+      "to": "acker-2-room-203-middle-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-west-hall-203",
+      "to": "acker-2-room-203-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-west-hall-202",
+      "to": "acker-2-room-202",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-west-hall-204",
+      "to": "acker-2-room-204",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-203-middle-door",
+      "to": "acker-2-room-203-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-203-inner",
+      "to": "acker-2-room-203A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-203-inner",
+      "to": "acker-2-room-203B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-203-south-door",
+      "to": "acker-2-room-203-south-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-203-inner",
+      "to": "acker-2-room-203-south-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-walkway-west",
+      "to": "acker-2-exit-203-walkway",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-exit-203-walkway",
+      "to": "acker-2-room-203-south-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-north-hall-408",
+      "to": "acker-2-north-hall-447",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-north-hall-447",
+      "to": "acker-2-north-hall-589",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-north-hall-589",
+      "to": "acker-2-north-hall-630",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-north-hall-447",
+      "to": "acker-2-room-201-northwest-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-north-hall-589",
+      "to": "acker-2-room-201-northeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-north-hall-630",
+      "to": "acker-2-stairs-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-room-201-northwest-door",
+      "to": "acker-2-room-201-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-201-northeast-door",
+      "to": "acker-2-room-201-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-201-inner",
+      "to": "acker-2-room-201-southeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-201-southeast-door",
+      "to": "acker-2-room-202-east-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-202",
+      "to": "acker-2-room-202-east-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-201-inner",
+      "to": "acker-2-room-201B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-201-inner",
+      "to": "acker-2-room-201A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-201A",
+      "to": "acker-2-stairs-broadcasting-up",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "acker-2-west-hall-201",
+      "to": "acker-2-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-204",
+      "to": "acker-2-room-204-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-204-inner",
+      "to": "acker-2-room-204A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-204-inner",
+      "to": "acker-2-room-204B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-204-inner",
+      "to": "acker-2-room-204C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-walkway-west",
+      "to": "acker-2-walkway-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-walkway-east",
+      "to": "acker-2-east-south-landing",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-east-south-landing",
+      "to": "acker-2-east-stair-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-east-stair-approach",
+      "to": "acker-2-east-north-landing",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-walkway-east",
+      "to": "acker-2-room-204-walkway-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-204-walkway-door",
+      "to": "acker-2-room-204-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-east-stair-approach",
+      "to": "acker-2-room-205",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-east-north-landing",
+      "to": "acker-2-room-206",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-east-stair-approach",
+      "to": "acker-2-stairs-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-east-south-landing",
+      "to": "acker-2-room-207",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-east-south-landing",
+      "to": "acker-2-elevator",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-205",
+      "to": "acker-2-room-205-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-room-205-inner",
+      "to": "acker-2-room-205A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-west-hall-north",
+      "to": "acker-2-west-hall-restroom-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-west-hall-restroom-junction",
+      "to": "acker-2-west-hall-201",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "acker-2-west-hall-restroom-junction",
+      "to": "acker-2-mens-vestibule-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-mens-vestibule-door",
+      "to": "acker-2-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-west-hall-201",
+      "to": "acker-2-custodial-northwest",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "acker-2-north-hall-408",
+      "to": "acker-2-west-hall-north",
+      "type": "corridor",
+      "weight": 1
+    }
+  ]
+}
