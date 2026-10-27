@@ -1,9 +1,10 @@
 import { calculatePath, findNodeNearPosition } from './lib/dijkstras';
 import type { Path, PathEdge } from './lib/dijkstras';
 import type { EdgeKind, Node, NodeId, Nodes } from './lib/graph';
-import { dot, magnitude, subtract } from './lib/vector2';
+import { dot, cross, magnitude, subtract } from './lib/vector2';
 import type { Vector2 } from './lib/vector2';
 import { loadGraphFromData } from './graph/graphLoader';
+import { globalFrame } from './graph/campusAlignment.json';
 
 const [graph, nodes] = loadGraphFromData();
 
@@ -67,10 +68,7 @@ function requireNode(nodes: Nodes, nodeId: NodeId): Node {
   return node;
 }
 
-function cross(a: Vector2, b: Vector2): number {
-  return a.x * b.y - a.y * b.x;
-}
-
+// Classifies the turn between two edges in a path, based on the angle between them.
 function classifyTurn(
   previousEdge: PathEdge | null,
   edge: PathEdge,
@@ -112,21 +110,22 @@ function classifyTurn(
   return cross(incoming, outgoing) > 0 ? 'left' : 'right';
 }
 
-/** Builds the single instruction for the next edge in a computed path. */
+// Returns the next instruction for a given edge in a path, based on the previous edge and the nodes in the graph.
 export function getNextInstruction(
   previousEdge: PathEdge | null,
   edge: PathEdge,
   nodes: Nodes
-): Instruction {
+): [Instruction, number] {
   const fromNode = requireNode(nodes, edge.from);
-  const toNode = requireNode(nodes, edge.to);
+  let toNode = requireNode(nodes, edge.to);
+
   const formatter = instructionFormatters[edge.type];
 
-  return formatter({
+  return [formatter({
     fromNode,
     turn: classifyTurn(previousEdge, edge, nodes),
     toNode
-  });
+  }), 1];
 }
 
 function toReadableNode(node: Node, instruction: Instruction): ReadableNode {
@@ -137,6 +136,7 @@ function toReadableNode(node: Node, instruction: Instruction): ReadableNode {
   };
 }
 
+// Converts a path of edges into a readable path of nodes with instructions, based on the nodes in the graph and the destination node.
 function createReadablePath(
   path: Path,
   nodes: Nodes,
@@ -146,15 +146,31 @@ function createReadablePath(
     return [toReadableNode(destination, 'You have arrived.')];
   }
 
-  const readablePath = path.map((edge, index) => {
-    const fromNode = requireNode(nodes, edge.from);
-    return toReadableNode(
-      fromNode,
-      getNextInstruction(index === 0 ? null : path[index - 1], edge, nodes)
-    );
-  });
-  const lastEdge = path.at(-1);
+  const readablePath: ReadablePath = [];
+  let i = 0;
+  while (i < path.length) {
+    const edge = path[i];
+    const previousEdge = i > 0 ? path[i - 1] : null;
 
+    let nextEdgeIndex = i + 1;
+    while 
+
+    const instruction = getNextInstruction(previousEdge, edge, nodes);
+
+    const node = requireNode(nodes, edge.from);
+    readablePath.push(toReadableNode(node, instruction));
+    i++;
+  }
+
+  // const readablePath = path.map((edge, index) => {
+  //   const fromNode = requireNode(nodes, edge.from);
+  //   return toReadableNode(
+  //     fromNode,
+  //     getNextInstruction(index === 0 ? null : path[index - 1], edge, nodes)
+  //   );
+  // });
+
+  const lastEdge = path.at(-1);
   if (!lastEdge) {
     throw new Error('Expected a final edge for a non-empty path.');
   }
@@ -165,7 +181,9 @@ function createReadablePath(
   return readablePath;
 }
 
-/** Finds endpoints within one building; defaults to O'Connell for existing callers. */
+// Calculates a readable path of nodes with instructions from a starting position to an ending position, based on the nodes in the graph and the building ID.
+// start and end building ids are optional, used to help ensure the node found is in the correct building. By default it assumes you could be anywhere.
+// You can also pass 'outside' to filter out all building nodes.
 export function getReadableInstructions(
   startX: number,
   startY: number,
@@ -173,24 +191,42 @@ export function getReadableInstructions(
   endX: number,
   endY: number,
   endFloor: number,
-  buildingId = 'ocon'
+  startBuildingId = null,
+  endBuildingId = null
 ): ReadablePath | null {
-  const buildingNodes: Nodes = new Map(
-    [...nodes].filter(([, node]) => node.buildingId === buildingId)
-  );
-  const startNode = findNodeNearPosition(
-    buildingNodes,
-    startX,
-    startY,
-    startFloor
-  );
-  const endNode = findNodeNearPosition(buildingNodes, endX, endY, endFloor);
+  const startNodes: Nodes = startBuildingId ? new Map(
+    [...nodes].filter(([, node]) => node.buildingId === startBuildingId)
+  ) : nodes;
+  const endNodes: Nodes = endBuildingId ? new Map(
+    [...nodes].filter(([, node]) => node.buildingId === endBuildingId)
+  ) : nodes;
 
-  if (!startNode || !endNode) {
+  const startNode = findNodeNearPosition(startNodes, startX, startY, startFloor);
+  if (!startNode) {
+    return null;
+  }
+
+  const endNode = findNodeNearPosition(endNodes, endX, endY, endFloor);
+  if (!endNode) {
     return null;
   }
 
   const path = calculatePath(graph, startNode, endNode);
 
   return path ? createReadablePath(path, nodes, endNode) : null;
+}
+
+export function gpsToCampusPosition(latitude: number, longitude: number): Vector2 {
+  const projection = globalFrame.outdoorProjection;
+  const degreesToFeet = projection.radiansPerDegree * projection.feetPerMeter;
+  return {
+    x:
+      (longitude - globalFrame.longitude) *
+      projection.eastRadiusMeters *
+      degreesToFeet,
+    y:
+      (latitude - globalFrame.latitude) *
+      projection.northRadiusMeters *
+      degreesToFeet
+  };
 }

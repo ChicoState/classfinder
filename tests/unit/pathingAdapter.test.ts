@@ -2,10 +2,53 @@ import { describe, expect, it } from 'vitest';
 
 import {
   getNextInstruction,
-  getReadableInstructions
+  getReadableInstructions,
+  gpsToCampusPosition
 } from '../../src/pathingAdapter';
 import type { PathEdge } from '../../src/lib/dijkstras';
 import type { Node, NodeId, Nodes } from '../../src/lib/graph';
+import { loadGraphFromData } from '../../src/graph/graphLoader';
+
+const [, loadedNodes] = loadGraphFromData();
+
+describe('gpsToCampusPosition', () => {
+  it('maps the campus GPS origin to zero feet', () => {
+    expect(gpsToCampusPosition(39.7276776, -121.8456054)).toEqual({
+      x: 0,
+      y: 0
+    });
+  });
+
+  it.each([
+    [39.7275422, -121.8473296, -484.96, -49.32],
+    [39.727985, -121.847773, -609.67, 111.98]
+  ])(
+    'matches stored outdoor geometry for latitude %s, longitude %s',
+    (latitude, longitude, x, y) => {
+      const position = gpsToCampusPosition(latitude, longitude);
+      expect(position.x).toBeCloseTo(x, 2);
+      expect(position.y).toBeCloseTo(y, 2);
+    }
+  );
+});
+
+function instructionsBetween(
+  startId: string,
+  endId: string,
+  buildingId = 'ocon'
+) {
+  const start = loadedNodes.get(startId as NodeId)!;
+  const end = loadedNodes.get(endId as NodeId)!;
+  return getReadableInstructions(
+    start.position.x,
+    start.position.y,
+    start.floorId,
+    end.position.x,
+    end.position.y,
+    end.floorId,
+    buildingId
+  );
+}
 
 function createNode(id: NodeId, x: number, y: number, floorId = 1): Node {
   return {
@@ -133,10 +176,18 @@ describe('getNextInstruction', () => {
 });
 
 describe('getReadableInstructions', () => {
-  it('selects Langdon explicitly when building origins overlap', () => {
-    const route = getReadableInstructions(0, 0, 1, 41.48, -42.59, 1, 'lang');
-    expect(route?.[0]?.position).toEqual({ x: 0, y: 0 });
-    expect(route?.at(-1)?.position).toEqual({ x: 41.48, y: -42.59 });
+  it('selects Langdon explicitly using loaded global coordinates', () => {
+    const route = instructionsBetween(
+      'lang-1-exit-119-west',
+      'lang-1-room-119',
+      'lang'
+    );
+    expect(route?.[0]?.position).toEqual(
+      loadedNodes.get('lang-1-exit-119-west' as NodeId)!.position
+    );
+    expect(route?.at(-1)?.position).toEqual(
+      loadedNodes.get('lang-1-room-119' as NodeId)!.position
+    );
   });
 
   it('returns null for an unknown building', () => {
@@ -144,14 +195,16 @@ describe('getReadableInstructions', () => {
   });
 
   it('returns an instruction for each edge followed by the destination', () => {
-    expect(getReadableInstructions(0, 0, 1, -13.08, 6.55, 1)).toEqual([
+    expect(
+      instructionsBetween('ocon-1-exit-lower-ao', 'ocon-1-lobby-lower')
+    ).toEqual([
       {
-        position: { x: 0, y: 0 },
+        position: loadedNodes.get('ocon-1-exit-lower-ao' as NodeId)!.position,
         floorId: 1,
         instruction: 'Go through the doorway.'
       },
       {
-        position: { x: -13.08, y: 6.55 },
+        position: loadedNodes.get('ocon-1-lobby-lower' as NodeId)!.position,
         floorId: 1,
         instruction: 'You have arrived.'
       }
@@ -159,14 +212,14 @@ describe('getReadableInstructions', () => {
   });
 
   it('returns a destination instruction when the route has no edges', () => {
-    expect(getReadableInstructions(0, 0, 1, 0, 0, 1)).toEqual([
+    expect(
+      instructionsBetween('ocon-1-exit-lower-ao', 'ocon-1-exit-lower-ao')
+    ).toEqual([
       {
-        position: { x: 0, y: 0 },
+        position: loadedNodes.get('ocon-1-exit-lower-ao' as NodeId)!.position,
         floorId: 1,
         instruction: 'You have arrived.'
       }
     ]);
   });
 });
-
-console.table(getReadableInstructions(0, 0, 1, -24.38, 177.47, 4));

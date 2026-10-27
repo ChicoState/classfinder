@@ -85,3 +85,53 @@ Approximate entrance coordinates at 2.25 pixels per PDF point: floor 1 `(286, 12
 Current inventory: floor 1 **94 nodes / 99 edges**, floor 2 **57 / 62**, floor 3 **38 / 41**; connections **6 edges** (4 stairs, 2 elevator). Total **189 nodes / 208 undirected edges**. All 36 unit tests pass, including accessible door/transfer preservation, two-way elevator-only routes between floors 1 and 3, and full destination reachability. The existing floor 1 preview predates the elevator addition; this request was for graph data, so it was not regenerated.
 
 Elevator-update validation: unit tests (36), coverage, smoke checks, Compose configuration, changed-file formatting and diff checks passed. E2E exited successfully with no tests. Repository-wide lint fails on an existing unused `Link` import in `src/App.tsx`; typecheck/build fail on unresolved `react-router`, with an additional existing `usemap` typo in `src/Appbackup.tsx`. Repository-wide formatting still fails on workflow YAML syntax and unrelated application formatting. These unrelated application files were not changed.
+
+## Global campus registration (2026-10-25)
+
+User requested one global runtime frame and outdoor connection to O’Connell.
+Saved floor coordinates, local origin, fence interpretations and all upper-floor
+translations remain unchanged. The loader applies the same building similarity
+to all Langdon floors: scale 1.0039295498906253, rotation 41.35160768544255 degrees
+counterclockwise, translation (-692.6089971985898, -115.33773353994698) feet.
+Global zero is outdoor OSM node 4715296203 (39.7276776, -121.8456054); X east, Y north.
+
+Seven reference-floor architectural corners were measured in native PDF points
+and matched to OSM footprint way 453472915. Exact corners, node IDs, transforms,
+source hashes and residuals are stored in `src/graph/campusAlignment.json` and
+reproduced by `tools/outdoor/align-buildings.mjs`. RMS fitting error is 2.70 feet;
+maximum is 4.01 feet. The L-shaped stem/wing geometry disambiguates orientation.
+This is manual registration against the dated OSM snapshot, not survey precision.
+
+Initially only `lang-1-loading-dock-south` was linked outdoors, to OSM node 11938244697
+through an approximately 7.68-foot approach edge. This uses the shown loading
+dock circulation and mapped footway 1301833214 at the west wing. It does not add
+a new north corridor doorway, cross a fence, connect room 115 directly, or infer
+accessibility. Other doors/gates remain unconnected because the OSM export does
+not conclusively match them to existing source nodes.
+
+The initial loaded Dijkstra test connected O’Connell room 124 ↔ Langdon room 120,
+744.30 feet and 26 edges in each direction. The outdoor segment includes stairs
+and a longer route around the wing because other entrances remain unconnected.
+The explicitly requested combined graph-only preview and route report live at
+`src/data/outdoor/ocon-lang-preview.png` and `ocon-lang-route.md`. The individual
+Langdon PDF preview was not refreshed. Runtime instruction/snapping inputs are
+global campus feet; archived local-coordinate assertions are superseded.
+
+## User-confirmed gate courtyard (2026-10-25)
+
+The user confirmed that the entire section between the three Langdon gates and
+the O’Connell doors used in the test is walkable, explicitly authorizing gate
+connections. All three existing midpoint gate nodes now have exterior door
+links to `outdoor-0-lang-gate-<west|middle|east>-approach`, stored in outdoor
+`building-connections.json`. These three new null-building/floor-0 nodes lie five
+global feet toward positive drawing Y, outside the fence. The offset is a
+schematic routing choice within the confirmed open area, not a measured width.
+The approaches join in order parallel to the fence; west joins OSM 12217284216,
+east joins OSM 5862340697 beside the tested O’Connell doorway. Only the three
+existing gates cross the fence. The dock link remains available.
+
+No source floor JSON, global alignment, loader, Dijkstra, or runtime UI/display
+code changed. No accessibility flag was inferred. The updated loaded room-124
+to room-120 route uses the east gate, 387.97 feet / 27 edges, with the same cost
+in reverse and no stairs. The requested combined graph-only preview labels the
+three gates E–G and records confirmation/provenance in the route report.

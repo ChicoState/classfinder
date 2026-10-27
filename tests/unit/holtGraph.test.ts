@@ -1,12 +1,37 @@
 import { describe, expect, it } from 'vitest';
 import floor from '../../src/data/holt/floor-1.json';
-import { loadGraphFromData } from '../../src/graph/graphLoader';
+import { connectBothWays } from '../../src/graph/graphLoader';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
-import type { NodeId } from '../../src/lib/graph';
+import type { EdgeKind, Graph, Nodes, NodeId } from '../../src/lib/graph';
 
-describe('Holt first-floor graph', () => {
+// Validate preserved source topology independently; Holt is intentionally omitted
+// from the runtime campus graph until a geographic alignment is available.
+function loadHoltSourceGraph(): [Graph, Nodes] {
+  const nodes: Nodes = new Map(
+    floor.nodes.map((node) => [
+      node.id as NodeId,
+      { ...node, id: node.id as NodeId, position: { ...node.position } }
+    ])
+  );
+  const graph: Graph = new Map([...nodes.keys()].map((id) => [id, []]));
+  for (const { from, to, ...edge } of floor.edges) {
+    const a = nodes.get(from as NodeId)!;
+    const b = nodes.get(to as NodeId)!;
+    connectBothWays(graph, a.id, b.id, {
+      ...edge,
+      type: edge.type as EdgeKind,
+      distance: Math.hypot(
+        a.position.x - b.position.x,
+        a.position.y - b.position.y
+      )
+    });
+  }
+  return [graph, nodes];
+}
+
+describe('preserved Holt first-floor source graph', () => {
   it('loads unique, finite geometry and one pair of links per undirected edge', () => {
-    const [graph, nodes] = loadGraphFromData();
+    const [graph, nodes] = loadHoltSourceGraph();
     const ids = new Set(floor.nodes.map((node) => node.id));
     expect(ids.size).toBe(floor.nodes.length);
     expect(floor.metadata.undirected).toBe(true);
@@ -52,7 +77,7 @@ describe('Holt first-floor graph', () => {
   });
 
   it('reaches every doorway and stair landing from the reference entrance in both directions', () => {
-    const [graph, nodes] = loadGraphFromData();
+    const [graph, nodes] = loadHoltSourceGraph();
     const entrance = nodes.get(floor.metadata.origin.nodeId as NodeId)!;
     for (const node of floor.nodes) {
       const destination = nodes.get(node.id as NodeId)!;
@@ -67,17 +92,11 @@ describe('Holt first-floor graph', () => {
       )
     );
     expect(findNodeNearPosition(candidates, 0, 0, 1)?.id).toBe(entrance.id);
-    expect(
-      calculatePath(
-        graph,
-        entrance,
-        nodes.get('lang-1-exit-119-west' as NodeId)!
-      )
-    ).toBeNull();
+    expect(nodes.has('lang-1-exit-119-west' as NodeId)).toBe(false);
   });
 
   it('walks through the confirmed stair rooms without treating the level passages as stair traversal', () => {
-    const [graph, nodes] = loadGraphFromData();
+    const [graph, nodes] = loadHoltSourceGraph();
     for (const [from, to] of [
       ['stairs-middle-north-west-door-256', 'stairs-middle-north-east'],
       ['stairs-middle-north-west-door-265', 'stairs-middle-north-east'],
@@ -98,7 +117,7 @@ describe('Holt first-floor graph', () => {
   });
 
   it('preserves the parent-room access shown in the drawing', () => {
-    const [graph, nodes] = loadGraphFromData();
+    const [graph, nodes] = loadHoltSourceGraph();
     const entrance = nodes.get(floor.metadata.origin.nodeId as NodeId)!;
     for (const [room, parent] of [
       ['177', '181-turn'],

@@ -24,6 +24,10 @@ export function dot(a: Vector2, b: Vector2): number {
   return a.x * b.x + a.y * b.y;
 }
 
+export function cross(a: Vector2, b: Vector2): number {
+  return a.x * b.y - a.y * b.x;
+}
+
 export function unit(vector: Vector2): Vector2 {
   return divide(vector, magnitude(vector));
 }

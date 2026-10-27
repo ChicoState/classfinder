@@ -81,7 +81,7 @@ Omit `isAccessible` when unknown; omission is not true. Stair traversal is false
 - Follow visible openings. Interior-only rooms must be reached through their actual parent room. Retain multiple usable entrances and supported alternatives.
 - Door edges may include approaches or travel between room doors. Corridor edges include lobby/open circulation. Use ramp, stairs, elevator, and outdoor kinds for the movement actually represented.
 - Dashed equipment is not a walkway. Proximity is not connectivity. Do not invent doors for enclosed or ambiguous spaces; retain visible unnumbered entrances and document missing access evidence.
-- Include only shown, relevant outdoor segments, such as an exterior stair exit's approach to a nearby entrance. A neighboring building outline does not establish its indoor graph or a campus path.
+- During indoor-only digitization, include only source-shown, relevant outdoor segments, such as an exterior stair exit's approach to a nearby entrance. For campus outdoor work, use the user's map-informed walkability guidance in [references/geographic-alignment.md](references/geographic-alignment.md): missing OSM ways need not block plausible open-area connections, but each inferred location must be traceable and marked for review. A neighboring building outline does not establish its indoor graph.
 
 ## Scale, building origin, and floor alignment
 

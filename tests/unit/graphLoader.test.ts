@@ -13,16 +13,28 @@ import lang1 from '../../src/data/lang/floor-1.json';
 import lang2 from '../../src/data/lang/floor-2.json';
 import lang3 from '../../src/data/lang/floor-3.json';
 import langConnections from '../../src/data/lang/connections.json';
-import holt1 from '../../src/data/holt/floor-1.json';
+import outdoor from '../../src/data/outdoor/campus.json';
+import entranceLinks from '../../src/data/outdoor/building-connections.json';
+import { toGlobalPosition } from '../../src/graph/coordinates';
+import alignment from '../../src/graph/campusAlignment.json';
 
-const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3, holt1];
+const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3];
+const datasets = [...floors, outdoor];
 const data = {
   metadata: floor1.metadata,
-  nodes: floors.flatMap((floor) => floor.nodes),
+  nodes: [
+    ...floors.flatMap((floor) => floor.nodes),
+    ...outdoor.nodes,
+    ...entranceLinks.nodes
+  ].map((node) => ({
+    ...node,
+    position: toGlobalPosition(node.position, node.buildingId)
+  })),
   edges: [
-    ...floors.flatMap((floor) => floor.edges),
+    ...datasets.flatMap((dataset) => dataset.edges),
     ...connections.edges,
-    ...langConnections.edges
+    ...langConnections.edges,
+    ...entranceLinks.edges
   ]
 };
 
@@ -50,8 +62,8 @@ describe('loadGraphFromData', () => {
       expect(graph.has(node.id as NodeId)).toBe(true);
     }
     expect(nodes.get(data.metadata.origin.nodeId as NodeId)?.position).toEqual({
-      x: 0,
-      y: 0
+      x: alignment.buildings.ocon.tx,
+      y: alignment.buildings.ocon.ty
     });
   });
 
@@ -101,9 +113,13 @@ describe('loadGraphFromData', () => {
 
   it('connects only corresponding adjacent-floor stairs and elevators', () => {
     const [graph, nodes] = loadGraphFromData();
-    expect(new Set([...nodes.values()].map((node) => node.floorId))).toEqual(
-      new Set([1, 2, 3, 4])
-    );
+    expect(
+      new Set(
+        [...nodes.values()]
+          .filter((node) => node.buildingId !== null)
+          .map((node) => node.floorId)
+      )
+    ).toEqual(new Set([1, 2, 3, 4]));
     expect(connections.edges).toHaveLength(13);
     for (const edge of connections.edges) {
       const from = nodes.get(edge.from as NodeId)!;
@@ -138,7 +154,10 @@ describe('loadGraphFromData', () => {
 
     const [freshGraph, freshNodes] = loadGraphFromData();
     expect(freshNodes.size).toBe(data.nodes.length);
-    expect(freshNodes.get(entranceId)?.position).toEqual({ x: 0, y: 0 });
+    expect(freshNodes.get(entranceId)?.position).toEqual({
+      x: alignment.buildings.ocon.tx,
+      y: alignment.buildings.ocon.ty
+    });
     expect(freshGraph.get(entranceId)?.[0].weight).toBe(1);
   });
 });

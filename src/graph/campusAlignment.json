@@ -1,0 +1,238 @@
+{
+  "globalFrame": {
+    "id": "campus-feet",
+    "units": "feet",
+    "originNodeId": "outdoor-0-osm-4715296203",
+    "latitude": 39.7276776,
+    "longitude": -121.8456054,
+    "axes": "X east, Y north",
+    "outdoorProjection": {
+      "method": "Local WGS84 linearization at campus reference latitude; suitable for campus-scale approximate horizontal distances",
+      "referenceLatitude": 39.73,
+      "semiMajorAxisMeters": 6378137,
+      "eccentricitySquared": 0.0066943799901413165,
+      "radiansPerDegree": 0.017453292519943295,
+      "eastRadiusMeters": 4911923.324567512,
+      "northRadiusMeters": 6361518.800847165,
+      "feetPerMeter": 3.280839895013123,
+      "axes": "positive X east; positive Y north",
+      "formula": "x=(lon-origin.lon)*radiansPerDegree*eastRadiusMeters*feetPerMeter; y=(lat-origin.lat)*radiansPerDegree*northRadiusMeters*feetPerMeter; round to 0.01 ft"
+    }
+  },
+  "excludedBuildingIds": ["holt"],
+  "provenance": {
+    "date": "2026-10-25",
+    "osmSource": "campus-osm.json",
+    "osmSnapshot": "2026-10-21T19:49:22Z",
+    "floorSources": [
+      "src/data/ocon/floor-1.json",
+      "src/data/lang/floor-1.json"
+    ],
+    "license": {
+      "attribution": "© OpenStreetMap contributors",
+      "name": "ODbL-1.0",
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "copyrightUrl": "https://www.openstreetmap.org/copyright"
+    },
+    "uncertainties": [
+      "Manual landmark matching and dated PDFs; approximate, not surveyed.",
+      "O’Connell requires an approximately 12% scale correction to match the three outdoor doorway endpoints. The adjustment applies to all its loaded floor distances.",
+      "Langdon gate positions are approximate user-approved fence midpoints. Courtyard walkability and gate connections were confirmed by the user on 2026-10-25; exact approach geometry is inferred.",
+      "Entrance links span small registration residuals. Other door and building access permissions remain unverified; no wheelchair accessibility is inferred.",
+      "Indoor JSON stays in its traceable source coordinates; all returned runtime nodes use campus-feet. Holt is explicitly omitted until aligned."
+    ],
+    "oconSourceSha256": "3d04c80146a241a147c37905369b2406ed85d1b56781e4339e64b0a296a9665a",
+    "langSourceSha256": "899ad071f54e4eaa5ea768d823264385202b17f6022861e533652e07e0218059"
+  },
+  "buildings": {
+    "ocon": {
+      "a": 0.8673868800553385,
+      "b": 0.7032720973894988,
+      "tx": -483.96293239132564,
+      "ty": -47.85735564505134,
+      "scale": 1.1166698897430516,
+      "rotationDegrees": 39.03493252634291,
+      "rmsResidualFeet": 2.9415961411252938,
+      "maxResidualFeet": 3.5966563593056127,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Three spread entrance matches supported by ground-floor AO openings and OSM indoor corridors ending at outdoor footways (1320210552, 1320210554, 1334646833–1334646835). Indoor OSM corridors are evidence only; they are not imported as routing shortcuts.",
+      "anchors": [
+        {
+          "description": "Lower AO lobby doorway to the southeast covered OSM footway endpoint",
+          "localPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "osmNodeId": 5849825682,
+          "globalPosition": {
+            "x": -484.95520449568284,
+            "y": -49.32213689949589
+          },
+          "localNodeId": "ocon-1-exit-lower-ao",
+          "residualFeet": 1.769233747263939
+        },
+        {
+          "description": "Upper AO lobby doorway to the northwest covered OSM footway endpoint",
+          "localPosition": {
+            "x": -0.17,
+            "y": 174.33
+          },
+          "osmNodeId": 5849825683,
+          "globalPosition": {
+            "x": -609.3019716387901,
+            "y": 105.01899607394935
+          },
+          "localNodeId": "ocon-1-exit-upper-ao",
+          "residualFeet": 3.1452883100057067
+        },
+        {
+          "description": "West AO corridor doorway at the southwest covered OSM footway endpoint",
+          "localPosition": {
+            "x": -75.12,
+            "y": 132.66
+          },
+          "osmNodeId": 11938244696,
+          "globalPosition": {
+            "x": -638.8346804164725,
+            "y": 14.060815986125503
+          },
+          "localNodeId": "ocon-1-exit-west-ao",
+          "residualFeet": 3.5966563593056127
+        }
+      ]
+    },
+    "lang": {
+      "a": 0.7536191421299308,
+      "b": 0.6632742492807485,
+      "tx": -692.6089971985898,
+      "ty": -115.33773353994698,
+      "scale": 1.0039295498906253,
+      "rotationDegrees": 41.35160768544255,
+      "rmsResidualFeet": 2.704777028238395,
+      "maxResidualFeet": 4.011987617044581,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Seven ground-floor architectural corners matched to OSM footprint way 453472915. Source PDF csuc-floor-plans/Langdon/lang-1.pdf, 612×792 points, scale 30/72 feet per point. The long stem and perpendicular east-west wing disambiguate orientation.",
+      "anchors": [
+        {
+          "description": "northwest stem corner",
+          "localPosition": {
+            "x": -0.13888888888888692,
+            "y": 39.375
+          },
+          "osmNodeId": 4502036602,
+          "globalPosition": {
+            "x": -720.2605774694011,
+            "y": -85.9312562390957
+          },
+          "pdfPointFromTopLeft": {
+            "x": 105,
+            "y": 65.5
+          },
+          "residualFeet": 1.4411708495388718
+        },
+        {
+          "description": "northeast stem corner",
+          "localPosition": {
+            "x": 95.90277777777779,
+            "y": 39.375
+          },
+          "osmNodeId": 4502036601,
+          "globalPosition": {
+            "x": -646.175668026434,
+            "y": -21.309785884360547
+          },
+          "pdfPointFromTopLeft": {
+            "x": 335.5,
+            "y": 65.5
+          },
+          "residualFeet": 0.7937283810330885
+        },
+        {
+          "description": "inside elbow",
+          "localPosition": {
+            "x": 95.90277777777779,
+            "y": -146.04166666666669
+          },
+          "osmNodeId": 4502036600,
+          "globalPosition": {
+            "x": -524.2196439766997,
+            "y": -159.95088857447615
+          },
+          "pdfPointFromTopLeft": {
+            "x": 335.5,
+            "y": 510.5
+          },
+          "residualFeet": 1.9842037864936233
+        },
+        {
+          "description": "east wing north corner",
+          "localPosition": {
+            "x": 191.94444444444446,
+            "y": -146.04166666666669
+          },
+          "osmNodeId": 4502036599,
+          "globalPosition": {
+            "x": -453.6786595843364,
+            "y": -97.84288014281093
+          },
+          "pdfPointFromTopLeft": {
+            "x": 566,
+            "y": 510.5
+          },
+          "residualFeet": 2.5997136482287164
+        },
+        {
+          "description": "east wing south corner",
+          "localPosition": {
+            "x": 191.94444444444446,
+            "y": -199.375
+          },
+          "osmNodeId": 4502036598,
+          "globalPosition": {
+            "x": -414.4985992742365,
+            "y": -142.1016662087362
+          },
+          "pdfPointFromTopLeft": {
+            "x": 566,
+            "y": 638.5
+          },
+          "residualFeet": 4.011987617044581
+        },
+        {
+          "description": "west wing south corner",
+          "localPosition": {
+            "x": -24.09722222222222,
+            "y": -199.375
+          },
+          "osmNodeId": 4502036605,
+          "globalPosition": {
+            "x": -574.9877766823557,
+            "y": -283.03766891804355
+          },
+          "pdfPointFromTopLeft": {
+            "x": 47.5,
+            "y": 638.5
+          },
+          "residualFeet": 3.8317682339714043
+        },
+        {
+          "description": "west wing north corner",
+          "localPosition": {
+            "x": -24.09722222222222,
+            "y": -146.04166666666669
+          },
+          "osmNodeId": 4502036604,
+          "globalPosition": {
+            "x": -614.1678369924556,
+            "y": -238.74245586727588
+          },
+          "pdfPointFromTopLeft": {
+            "x": 47.5,
+            "y": 510.5
+          },
+          "residualFeet": 2.651355330707519
+        }
+      ]
+    }
+  }
+}

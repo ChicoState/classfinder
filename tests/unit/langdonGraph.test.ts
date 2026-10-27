@@ -6,6 +6,7 @@ import connections from '../../src/data/lang/connections.json';
 import { loadGraphFromData } from '../../src/graph/graphLoader';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
+import { toGlobalPosition } from '../../src/graph/coordinates';
 
 const floors = [floor1, floor2, floor3];
 const serializedNodes = floors.flatMap((floor) => floor.nodes);
@@ -25,10 +26,9 @@ describe('Langdon floor plans', () => {
         serializedEdges.map(({ from, to }) => [from, to].sort().join('|'))
       ).size
     ).toBe(serializedEdges.length);
-    expect(nodes.get('lang-1-exit-119-west' as NodeId)?.position).toEqual({
-      x: 0,
-      y: 0
-    });
+    expect(nodes.get('lang-1-exit-119-west' as NodeId)?.position).toEqual(
+      toGlobalPosition({ x: 0, y: 0 }, 'lang')
+    );
     for (const floor of floors) {
       expect(floor.metadata.undirected).toBe(true);
       for (const node of floor.nodes) {
@@ -54,8 +54,10 @@ describe('Langdon floor plans', () => {
         nodes.has(edge.from as NodeId) && nodes.has(edge.to as NodeId)
       ).toBe(true);
     }
-    const loaded = serializedNodes.flatMap(
-      (node) => graph.get(node.id as NodeId) ?? []
+    const loaded = serializedNodes.flatMap((node) =>
+      (graph.get(node.id as NodeId) ?? []).filter(
+        (edge) => nodes.get(edge.to)?.buildingId === 'lang'
+      )
     );
     expect(loaded).toHaveLength(serializedEdges.length * 2);
     expect(
@@ -65,7 +67,7 @@ describe('Langdon floor plans', () => {
     ).toBe(true);
   });
 
-  it('routes from the reference entrance to every destination and back, without connecting other buildings', () => {
+  it('routes from the reference entrance to every destination and to O’Connell through outdoors', () => {
     const [graph, nodes] = loadGraphFromData();
     const entrance = nodes.get('lang-1-exit-119-west' as NodeId)!;
     for (const serialized of serializedNodes) {
@@ -79,7 +81,7 @@ describe('Langdon floor plans', () => {
         entrance,
         nodes.get('ocon-1-exit-lower-ao' as NodeId)!
       )
-    ).toBeNull();
+    ).not.toBeNull();
   });
 
   it('connects both stair cores on adjacent floors and uses floor-aware start candidates', () => {
@@ -145,15 +147,24 @@ describe('Langdon floor plans', () => {
     ] as const;
     for (const [section, x] of gates) {
       const id = `lang-1-fence-gate-${section}` as NodeId;
-      expect(nodes.get(id)?.position).toEqual({ x, y: -145.93 });
+      expect(nodes.get(id)?.position).toEqual(
+        toGlobalPosition({ x, y: -145.93 }, 'lang')
+      );
       const edges = graph.get(id);
-      expect(edges).toHaveLength(1);
+      expect(edges).toHaveLength(2);
       expect(edges?.[0]).toMatchObject({
         to: `lang-1-hall-fence-${section}`,
         type: 'door',
         weight: 1
       });
       expect(edges?.[0]).not.toHaveProperty('isAccessible');
+      expect(edges).toContainEqual(
+        expect.objectContaining({
+          to: `outdoor-0-lang-gate-${section}-approach`,
+          type: 'door',
+          weight: 1
+        })
+      );
     }
     expect(
       floor1.nodes.filter((node) => node.id.includes('-fence-gate-'))

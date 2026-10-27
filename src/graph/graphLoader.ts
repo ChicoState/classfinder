@@ -1,5 +1,7 @@
 import type { Edge, Graph, Nodes, Node, NodeId } from '../lib/graph';
 import { distance } from '../lib/vector2';
+import alignment from './campusAlignment.json';
+import { toGlobalPosition } from './coordinates';
 
 type GraphData = {
   nodes?: Array<Omit<Node, 'id'> & { id: string }>;
@@ -44,19 +46,33 @@ function calculateEdgeDistance(nodes: Nodes, from: NodeId, to: NodeId): number {
   return distance(fromNode.position, toNode.position);
 }
 
-/** Loads all bundled buildings and their connections into mutable maps. */
+/** Loads aligned buildings and outdoors into fresh maps in global campus feet. */
 export function loadGraphFromData(): [Graph, Nodes] {
   const graph: Graph = new Map<NodeId, Edge[]>();
   const nodes: Nodes = new Map<NodeId, Node>();
+  const excludedNodeIds = new Set<string>();
 
   for (const node of datasets.flatMap((data) => data.nodes ?? [])) {
+    if (
+      node.buildingId !== null &&
+      alignment.excludedBuildingIds.includes(node.buildingId)
+    ) {
+      excludedNodeIds.add(node.id);
+      continue;
+    }
     const id = node.id as NodeId;
-    nodes.set(id, { ...node, id, position: { ...node.position } });
+    nodes.set(id, {
+      ...node,
+      id,
+      position: toGlobalPosition(node.position, node.buildingId),
+      buildingId: node.buildingId == null ? 'outside' : node.buildingId
+    });
     graph.set(id, []);
   }
 
   // Every node must exist before adding cross-floor or cross-building edges.
   for (const { from, to, ...edge } of datasets.flatMap((data) => data.edges)) {
+    if (excludedNodeIds.has(from) || excludedNodeIds.has(to)) continue;
     const fromId = from as NodeId;
     const toId = to as NodeId;
     connectBothWays(graph, fromId, toId, {
