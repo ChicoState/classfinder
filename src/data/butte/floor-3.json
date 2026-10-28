@@ -1,0 +1,893 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Butte/bute-3.pdf",
+    "sourceDate": "2008-08-04",
+    "building": "Butte Hall",
+    "buildingId": "butte",
+    "floor": 3,
+    "units": "feet",
+    "scale": "1 inch = 20 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.2777777777777778,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "butte-1-exit-north-east-ao",
+      "description": "First-floor north east AO-marked exterior doorway; projected reference origin on upper floors.",
+      "pdfPointFromTopLeft": {
+        "x": 326.0,
+        "y": 135.0
+      },
+      "referenceFloorPdfPointFromTopLeft": {
+        "x": 291,
+        "y": 135
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up, not geographic north."
+    },
+    "alignment": {
+      "method": "Translation preserving printed scale and orientation, using central shaft, elevator bank, west stair enclosure and southeast stair core.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": -35.0,
+          "y": 0.0
+        }
+      },
+      "uncertainty": "Manual alignment. Most shared core walls agree within approximately 0.5 feet; north stair drawings differ substantially on floors 1\u20133 and are not used as alignment anchors."
+    },
+    "coordinateConversion": "x = (pdfX + -35.0 - 291) * 20/72; y = (135 - pdfY - 0.0) * 20/72.",
+    "undirected": true,
+    "nodeConvention": "Destinations are shown doorways; necessary circulation bends and separate usable entrances retained.",
+    "distanceConvention": "Undirected edges stored once; weight 1. Loader derives Euclidean distance from saved coordinates, including transfers; no floor-height or waiting-time cost.",
+    "accessibility": "AO entrance edges marked true only where shown. Stair edges false. Other accessibility and elevator availability unknown.",
+    "digitization": {
+      "date": "2026-10-27",
+      "method": "Manual visual tracing of vector-outline PDF rendered at exactly 2 pixels per PDF point, with 4x detail inspection."
+    },
+    "limitations": [
+      "Dated plans and approximate manual geometry; current access permissions and partitions unknown.",
+      "Elevator drawing does not label individual shafts. One aggregate bank access node per floor is used; its approach side follows the sheet. Individual car identity, passenger/service designation and availability are unresolved.",
+      "No campus paths or neighboring-building connections are inferred.",
+      "Two northern flight chains connect floors 1\u20133 only. Their drawings differ in footprint; correspondence is west/east by drawing, not surveyed shaft coincidence."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "butte-3-hall-west-north",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -9.72
+      }
+    },
+    {
+      "id": "butte-3-hall-west-upper",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -26.11
+      }
+    },
+    {
+      "id": "butte-3-hall-west-elevator",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -50.0
+      }
+    },
+    {
+      "id": "butte-3-hall-west-stairs",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -56.11
+      }
+    },
+    {
+      "id": "butte-3-hall-west-lower",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -63.19
+      }
+    },
+    {
+      "id": "butte-3-hall-west-women",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -93.06
+      }
+    },
+    {
+      "id": "butte-3-hall-west-south",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.81,
+        "y": -111.11
+      }
+    },
+    {
+      "id": "butte-3-hall-east-north",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -9.72
+      }
+    },
+    {
+      "id": "butte-3-hall-east-upper",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -15.56
+      }
+    },
+    {
+      "id": "butte-3-hall-east-men",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -29.17
+      }
+    },
+    {
+      "id": "butte-3-hall-east-elevator",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -50.0
+      }
+    },
+    {
+      "id": "butte-3-hall-east-lower",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -63.19
+      }
+    },
+    {
+      "id": "butte-3-hall-east-east-doors",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -72.22
+      }
+    },
+    {
+      "id": "butte-3-hall-east-women",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -93.06
+      }
+    },
+    {
+      "id": "butte-3-hall-east-south",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -0.28,
+        "y": -111.11
+      }
+    },
+    {
+      "id": "butte-3-hall-north-center",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -10.69,
+        "y": -9.72
+      }
+    },
+    {
+      "id": "butte-3-hall-south-center",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -10.69,
+        "y": -111.11
+      }
+    },
+    {
+      "id": "butte-3-room-302",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -16.67,
+        "y": -15.69
+      }
+    },
+    {
+      "id": "butte-3-custodian-north",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -5.14,
+        "y": -22.5
+      }
+    },
+    {
+      "id": "butte-3-restroom-men",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -16.67,
+        "y": -22.92
+      }
+    },
+    {
+      "id": "butte-3-restroom-women",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -16.67,
+        "y": -104.72
+      }
+    },
+    {
+      "id": "butte-3-circulation-303",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -32.22,
+        "y": -25.69
+      }
+    },
+    {
+      "id": "butte-3-room-301",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -26.67,
+        "y": -7.5
+      }
+    },
+    {
+      "id": "butte-3-room-329",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 5.42,
+        "y": -7.5
+      }
+    },
+    {
+      "id": "butte-3-room-303",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -26.67,
+        "y": -26.11
+      }
+    },
+    {
+      "id": "butte-3-room-327",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 8.33,
+        "y": -15.56
+      }
+    },
+    {
+      "id": "butte-3-room-305",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -29.58,
+        "y": -48.33
+      }
+    },
+    {
+      "id": "butte-3-room-325",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 8.33,
+        "y": -35.69
+      }
+    },
+    {
+      "id": "butte-3-room-307",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -29.58,
+        "y": -63.19
+      }
+    },
+    {
+      "id": "butte-3-room-323",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 8.33,
+        "y": -69.31
+      }
+    },
+    {
+      "id": "butte-3-room-321",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 8.33,
+        "y": -73.75
+      }
+    },
+    {
+      "id": "butte-3-room-309",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -29.58,
+        "y": -93.89
+      }
+    },
+    {
+      "id": "butte-3-room-319",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 8.33,
+        "y": -97.22
+      }
+    },
+    {
+      "id": "butte-3-room-311",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -26.67,
+        "y": -113.19
+      }
+    },
+    {
+      "id": "butte-3-room-313",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -21.11,
+        "y": -115.28
+      }
+    },
+    {
+      "id": "butte-3-room-315",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -11.53,
+        "y": -115.28
+      }
+    },
+    {
+      "id": "butte-3-room-317",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -8.19,
+        "y": -115.28
+      }
+    },
+    {
+      "id": "butte-3-room-303A",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -32.22,
+        "y": -22.78
+      }
+    },
+    {
+      "id": "butte-3-circulation-301-west",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -46.11,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "butte-3-circulation-305-west",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -44.72,
+        "y": -40.28
+      }
+    },
+    {
+      "id": "butte-3-circulation-311",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -32.22,
+        "y": -110.42
+      }
+    },
+    {
+      "id": "butte-3-room-311A",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -37.92,
+        "y": -115.28
+      }
+    },
+    {
+      "id": "butte-3-room-311B",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -42.36,
+        "y": -115.28
+      }
+    },
+    {
+      "id": "butte-3-room-315-west-door",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -19.03,
+        "y": -119.17
+      }
+    },
+    {
+      "id": "butte-3-door-west-stairs",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -26.67,
+        "y": -56.25
+      }
+    },
+    {
+      "id": "butte-3-stairs-west",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -33.61,
+        "y": -56.25
+      }
+    },
+    {
+      "id": "butte-3-door-southeast-stairs",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 5.42,
+        "y": -121.11
+      }
+    },
+    {
+      "id": "butte-3-stairs-southeast",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": 11.39,
+        "y": -121.11
+      }
+    },
+    {
+      "id": "butte-3-elevator-bank",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -4.17,
+        "y": -50.28
+      }
+    },
+    {
+      "id": "butte-3-stairs-north-west",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -12.08,
+        "y": -4.31
+      }
+    },
+    {
+      "id": "butte-3-stairs-north-east",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -9.31,
+        "y": -4.31
+      }
+    },
+    {
+      "id": "butte-3-room-301-south-door",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -50.0,
+        "y": -12.22
+      }
+    },
+    {
+      "id": "butte-3-room-305-north-door",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -50.0,
+        "y": -28.33
+      }
+    },
+    {
+      "id": "butte-3-circulation-303-west",
+      "buildingId": "butte",
+      "floorId": 3,
+      "position": {
+        "x": -44.72,
+        "y": -22.22
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "butte-3-hall-west-north",
+      "to": "butte-3-hall-west-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-elevator",
+      "to": "butte-3-hall-west-stairs",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-stairs",
+      "to": "butte-3-hall-west-lower",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-women",
+      "to": "butte-3-hall-west-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-north",
+      "to": "butte-3-hall-east-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-upper",
+      "to": "butte-3-hall-east-men",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-lower",
+      "to": "butte-3-hall-east-east-doors",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-east-doors",
+      "to": "butte-3-hall-east-women",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-women",
+      "to": "butte-3-hall-east-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-north",
+      "to": "butte-3-hall-north-center",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-north-center",
+      "to": "butte-3-hall-east-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-south",
+      "to": "butte-3-hall-south-center",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-south-center",
+      "to": "butte-3-hall-east-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-upper",
+      "to": "butte-3-room-302",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-upper",
+      "to": "butte-3-custodian-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-upper",
+      "to": "butte-3-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-south",
+      "to": "butte-3-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-north",
+      "to": "butte-3-room-301",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-north",
+      "to": "butte-3-room-329",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-upper",
+      "to": "butte-3-room-303",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-upper",
+      "to": "butte-3-room-327",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-elevator",
+      "to": "butte-3-room-305",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-men",
+      "to": "butte-3-room-325",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-lower",
+      "to": "butte-3-room-307",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-lower",
+      "to": "butte-3-room-323",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-east-doors",
+      "to": "butte-3-room-321",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-women",
+      "to": "butte-3-room-309",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-women",
+      "to": "butte-3-room-319",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-south",
+      "to": "butte-3-room-311",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-south",
+      "to": "butte-3-room-313",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-south-center",
+      "to": "butte-3-room-315",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-south-center",
+      "to": "butte-3-room-317",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-room-303",
+      "to": "butte-3-circulation-303",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-303",
+      "to": "butte-3-room-303A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-room-301",
+      "to": "butte-3-circulation-301-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-301-west",
+      "to": "butte-3-room-301-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-room-305",
+      "to": "butte-3-circulation-305-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-305-west",
+      "to": "butte-3-room-305-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-room-311",
+      "to": "butte-3-circulation-311",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-311",
+      "to": "butte-3-room-311A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-311",
+      "to": "butte-3-room-311B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-room-313",
+      "to": "butte-3-room-315-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-room-315",
+      "to": "butte-3-room-315-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-stairs",
+      "to": "butte-3-door-west-stairs",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-door-west-stairs",
+      "to": "butte-3-stairs-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-south",
+      "to": "butte-3-door-southeast-stairs",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-door-southeast-stairs",
+      "to": "butte-3-stairs-southeast",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-east-elevator",
+      "to": "butte-3-elevator-bank",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-north-center",
+      "to": "butte-3-stairs-north-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-north-center",
+      "to": "butte-3-stairs-north-east",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-303",
+      "to": "butte-3-circulation-303-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-303-west",
+      "to": "butte-3-room-301-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-circulation-303-west",
+      "to": "butte-3-room-305-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-3-hall-west-elevator",
+      "to": "butte-3-hall-west-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-west-lower",
+      "to": "butte-3-hall-west-women",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-men",
+      "to": "butte-3-hall-east-elevator",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-3-hall-east-elevator",
+      "to": "butte-3-hall-east-lower",
+      "weight": 1,
+      "type": "corridor"
+    }
+  ]
+}

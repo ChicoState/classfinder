@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "building": "Langdon Hall",
+    "buildingId": "langdon",
+    "sources": [
+      "csuc-floor-plans/Langdon/lang-1.pdf",
+      "csuc-floor-plans/Langdon/lang-2.pdf"
+    ],
+    "sourceDate": "2010-09-02",
+    "units": "feet",
+    "undirected": true,
+    "alignment": "See each floor metadata; two corresponding end stair cores and one elevator on floors 1\u20133.",
+    "distanceConvention": "Coordinate-derived horizontal distances, weight 1; vertical travel effort and elevator waiting are not modeled.",
+    "accessibility": "Stairs false; elevator status omitted because availability and access are unknown."
+  },
+  "edges": [
+    {
+      "from": "langdon-1-stairs-west",
+      "to": "langdon-2-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "langdon-1-stairs-east",
+      "to": "langdon-2-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "langdon-1-elevator",
+      "to": "langdon-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "langdon-2-stairs-west",
+      "to": "langdon-3-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "langdon-2-stairs-east",
+      "to": "langdon-3-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "langdon-2-elevator",
+      "to": "langdon-3-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}

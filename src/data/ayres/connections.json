@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "buildingId": "ayres",
+    "units": "feet",
+    "undirected": true,
+    "sourceDate": "2008-07-14",
+    "assumptions": [
+      "Adjacent floors only. Elevator shaft translation aligns west entrance center; landing offsets retained for stair endpoints.",
+      "No vertical-distance override. Runtime coordinate-derived distances omit floor height, stair effort, and elevator waiting.",
+      "Elevator availability and access permission unknown."
+    ]
+  },
+  "edges": [
+    {
+      "from": "ayres-1-stairs-north",
+      "to": "ayres-2-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ayres-1-stairs-southeast",
+      "to": "ayres-2-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "ayres-1-elevator",
+      "to": "ayres-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}

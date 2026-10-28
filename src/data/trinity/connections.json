@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "buildingId": "trinity",
+    "undirected": true,
+    "units": "feet",
+    "description": "Adjacent supplied floors only; coordinate-derived transfer distances, no vertical override. The floor-1 west DN stair and floor-2 east UP stair do not connect these two floors."
+  },
+  "edges": [
+    {
+      "to": "trinity-2-stairs-northwest",
+      "weight": 1,
+      "type": "stairs",
+      "from": "trinity-1-stairs-northwest",
+      "isAccessible": false
+    },
+    {
+      "to": "trinity-2-stairs-northeast",
+      "weight": 1,
+      "type": "stairs",
+      "from": "trinity-1-stairs-northeast",
+      "isAccessible": false
+    },
+    {
+      "to": "trinity-2-stairs-south",
+      "weight": 1,
+      "type": "stairs",
+      "from": "trinity-1-stairs-south",
+      "isAccessible": false
+    },
+    {
+      "to": "trinity-2-elevator",
+      "weight": 1,
+      "type": "elevator",
+      "from": "trinity-1-elevator"
+    }
+  ]
+}

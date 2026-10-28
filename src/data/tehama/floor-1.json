@@ -1,0 +1,1726 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Tehama/tehama-1.pdf",
+    "sourceDate": "2008-08-05",
+    "building": "Tehama Hall",
+    "buildingId": "tehama",
+    "floor": 1,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "tehama-1-exit-north-ao",
+      "description": "AO-marked northeast exterior double doorway beside room 106 on floor 1.",
+      "pdfPointFromTopLeft": {
+        "x": 362.0,
+        "y": 139.0
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up; not geographic north."
+    },
+    "alignment": {
+      "method": "Translation from north stair and twin elevator shafts; south stair is a secondary check with plan residual.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      },
+      "referenceOriginPdfPoint": {
+        "x": 362,
+        "y": 139
+      }
+    },
+    "undirected": true,
+    "nodeConvention": "Room destinations are doorway nodes; corridor junctions retain bends and branches.",
+    "distanceConvention": "Undirected edges stored once. Coordinate-derived feet, weight 1; no vertical distance override or waiting time.",
+    "accessibility": "Stairs false. Only the source AO entrance edge is true. Other accessibility unknown.",
+    "digitization": {
+      "date": "2026-10-27",
+      "method": "Manual tracing of vector PDF rendered at 2 pixels per PDF point."
+    },
+    "limitations": [
+      "Dated source and approximate manual tracing; current access permissions and elevator service unknown.",
+      "North shafts support translation; south stair has approximately 5 feet of residual plan displacement. Landing positions remain as drawn.",
+      "Two elevator shafts have separate chains; purpose and access restrictions unspecified.",
+      "No roof/basement graph inferred from UP/DN arrows or sheet numbering.",
+      "West exterior circulation follows shown building-edge doors and dashed canopy extent. No campus paths inferred.",
+      "Unnumbered storage above room 133 has a visible opening from 132; custodial opening is retained."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "tehama-1-hall-north-553",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-318",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-725",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 0.21,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-east-725",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 0.21,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-exit-north-ao",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-724",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-exit-west-north",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -82.08,
+        "y": -7.29
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-350",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -77.92,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-313",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -7.29
+      }
+    },
+    {
+      "id": "tehama-1-exit-west-south",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -82.08,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-350",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -77.92,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-1115",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-553",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1115",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-108",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -60.0,
+        "y": -1.88
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-436",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -60.0,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-106",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -32.5,
+        "y": -1.88
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-568",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -32.5,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-107",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -59.38,
+        "y": -12.92
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-439",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -59.38,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-105",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -11.88,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-667",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -11.88,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-104",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 6.46,
+        "y": -12.92
+      }
+    },
+    {
+      "id": "tehama-1-hall-east-755",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 6.46,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-103",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 16.04,
+        "y": -12.92
+      }
+    },
+    {
+      "id": "tehama-1-hall-east-801",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 16.04,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-102",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 25.42,
+        "y": -12.92
+      }
+    },
+    {
+      "id": "tehama-1-hall-east-846",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 25.42,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-room-101",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 45.0,
+        "y": -11.04
+      }
+    },
+    {
+      "id": "tehama-1-hall-east-940",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 45.0,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-suite-101-inside",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 40.0,
+        "y": -29.79
+      }
+    },
+    {
+      "id": "tehama-1-room-101A",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 48.12,
+        "y": -23.54
+      }
+    },
+    {
+      "id": "tehama-1-room-101B",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 48.12,
+        "y": -34.79
+      }
+    },
+    {
+      "id": "tehama-1-room-101C",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 48.12,
+        "y": -37.5
+      }
+    },
+    {
+      "id": "tehama-1-room-101E",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 32.71,
+        "y": -31.67
+      }
+    },
+    {
+      "id": "tehama-1-room-101D",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": 40.0,
+        "y": -40.62
+      }
+    },
+    {
+      "id": "tehama-1-stairs-west",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -51.46,
+        "y": -14.38
+      }
+    },
+    {
+      "id": "tehama-1-hall-north-477",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -51.46,
+        "y": -8.33
+      }
+    },
+    {
+      "id": "tehama-1-elevator-lobby",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -26.67,
+        "y": -31.04
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-427",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -31.04
+      }
+    },
+    {
+      "id": "tehama-1-stairs-north",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -28.12,
+        "y": -28.54
+      }
+    },
+    {
+      "id": "tehama-1-elevator-west",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -22.5,
+        "y": -36.04
+      }
+    },
+    {
+      "id": "tehama-1-elevator-east",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -14.17,
+        "y": -36.04
+      }
+    },
+    {
+      "id": "tehama-1-room-110",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -42.71,
+        "y": -45.62
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-497",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -45.62
+      }
+    },
+    {
+      "id": "tehama-1-room-men",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -41.88,
+        "y": -47.92
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-508",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -47.92
+      }
+    },
+    {
+      "id": "tehama-1-room-111",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -30.0,
+        "y": -46.67
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-502",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -46.67
+      }
+    },
+    {
+      "id": "tehama-1-room-113",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -30.0,
+        "y": -58.75
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-560",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -58.75
+      }
+    },
+    {
+      "id": "tehama-1-room-115",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -30.0,
+        "y": -89.17
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-706",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -89.17
+      }
+    },
+    {
+      "id": "tehama-1-room-117",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -30.0,
+        "y": -120.83
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-858",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -120.83
+      }
+    },
+    {
+      "id": "tehama-1-room-119",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -30.0,
+        "y": -143.96
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-969",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -143.96
+      }
+    },
+    {
+      "id": "tehama-1-room-121",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -30.0,
+        "y": -167.08
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1080",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -167.08
+      }
+    },
+    {
+      "id": "tehama-1-room-116",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -41.25,
+        "y": -105.0
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-782",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -105.0
+      }
+    },
+    {
+      "id": "tehama-1-room-118",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -41.46,
+        "y": -158.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1038",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -158.33
+      }
+    },
+    {
+      "id": "tehama-1-room-custodial",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -41.67,
+        "y": -168.33
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1086",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -168.33
+      }
+    },
+    {
+      "id": "tehama-1-room-130",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -95.21,
+        "y": -15.62
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-353",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -15.62
+      }
+    },
+    {
+      "id": "tehama-1-room-131",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -95.21,
+        "y": -68.75
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-608",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -68.75
+      }
+    },
+    {
+      "id": "tehama-1-room-132",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -95.21,
+        "y": -85.42
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-688",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -85.42
+      }
+    },
+    {
+      "id": "tehama-1-room-133",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -95.21,
+        "y": -131.67
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-910",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -131.67
+      }
+    },
+    {
+      "id": "tehama-1-room-134",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -95.21,
+        "y": -136.25
+      }
+    },
+    {
+      "id": "tehama-1-hall-west-932",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -100.42,
+        "y": -136.25
+      }
+    },
+    {
+      "id": "tehama-1-room-131A",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -55.42,
+        "y": -67.08
+      }
+    },
+    {
+      "id": "tehama-1-room-132B",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -41.25,
+        "y": -97.29
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-745",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -97.29
+      }
+    },
+    {
+      "id": "tehama-1-room-132A",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -50.42,
+        "y": -95.83
+      }
+    },
+    {
+      "id": "tehama-1-room-132-second-door",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -56.46,
+        "y": -97.29
+      }
+    },
+    {
+      "id": "tehama-1-room-116-north-door",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -49.38,
+        "y": -102.5
+      }
+    },
+    {
+      "id": "tehama-1-room-116-north-inside",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -48.75,
+        "y": -107.71
+      }
+    },
+    {
+      "id": "tehama-1-service-116-north",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -53.33,
+        "y": -106.25
+      }
+    },
+    {
+      "id": "tehama-1-room-133A",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -91.46,
+        "y": -108.96
+      }
+    },
+    {
+      "id": "tehama-1-storage",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -80.83,
+        "y": -101.25
+      }
+    },
+    {
+      "id": "tehama-1-room-133-interior-door",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -74.58,
+        "y": -118.54
+      }
+    },
+    {
+      "id": "tehama-1-room-134-interior-door",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -74.58,
+        "y": -158.33
+      }
+    },
+    {
+      "id": "tehama-1-room-126",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -71.04,
+        "y": -170.21
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-383",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -71.04,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-124",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -57.5,
+        "y": -170.21
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-448",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -57.5,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-122",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -54.17,
+        "y": -170.21
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-464",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -54.17,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-127",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -78.54,
+        "y": -177.71
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-347",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -78.54,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-125",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -74.17,
+        "y": -177.71
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-368",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -74.17,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-123",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -60.62,
+        "y": -177.71
+      }
+    },
+    {
+      "id": "tehama-1-hall-south-433",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -60.62,
+        "y": -174.38
+      }
+    },
+    {
+      "id": "tehama-1-room-women",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -42.08,
+        "y": -182.08
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1152",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -182.08
+      }
+    },
+    {
+      "id": "tehama-1-service-south-upper",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -183.54
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1169",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -185.62
+      }
+    },
+    {
+      "id": "tehama-1-service-south-lower",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -190.62
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1183",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -188.54
+      }
+    },
+    {
+      "id": "tehama-1-stairs-south",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -33.12,
+        "y": -193.54
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1207",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -193.54
+      }
+    },
+    {
+      "id": "tehama-1-exit-south",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -33.12,
+        "y": -204.17
+      }
+    },
+    {
+      "id": "tehama-1-hall-main-1235",
+      "buildingId": "tehama",
+      "floorId": 1,
+      "position": {
+        "x": -35.62,
+        "y": -199.38
+      }
+    }
+  ],
+  "edges": [
+    {
+      "to": "tehama-1-hall-main-318",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-553"
+    },
+    {
+      "to": "tehama-1-hall-east-725",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-725"
+    },
+    {
+      "to": "tehama-1-exit-north-ao",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-north-724",
+      "isAccessible": true
+    },
+    {
+      "to": "tehama-1-exit-west-north",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-north-350"
+    },
+    {
+      "to": "tehama-1-hall-west-313",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-exit-west-north"
+    },
+    {
+      "to": "tehama-1-exit-west-south",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-350"
+    },
+    {
+      "to": "tehama-1-hall-west-1115",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-exit-west-south"
+    },
+    {
+      "to": "tehama-1-hall-main-1115",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-553"
+    },
+    {
+      "to": "tehama-1-room-108",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-north-436"
+    },
+    {
+      "to": "tehama-1-room-106",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-north-568"
+    },
+    {
+      "to": "tehama-1-room-107",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-north-439"
+    },
+    {
+      "to": "tehama-1-room-105",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-north-667"
+    },
+    {
+      "to": "tehama-1-room-104",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-east-755"
+    },
+    {
+      "to": "tehama-1-room-103",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-east-801"
+    },
+    {
+      "to": "tehama-1-room-102",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-east-846"
+    },
+    {
+      "to": "tehama-1-room-101",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-east-940"
+    },
+    {
+      "to": "tehama-1-suite-101-inside",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-room-101"
+    },
+    {
+      "to": "tehama-1-room-101A",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-suite-101-inside"
+    },
+    {
+      "to": "tehama-1-room-101B",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-suite-101-inside"
+    },
+    {
+      "to": "tehama-1-room-101C",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-suite-101-inside"
+    },
+    {
+      "to": "tehama-1-room-101E",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-suite-101-inside"
+    },
+    {
+      "to": "tehama-1-room-101D",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-suite-101-inside"
+    },
+    {
+      "to": "tehama-1-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "from": "tehama-1-hall-north-477",
+      "isAccessible": false
+    },
+    {
+      "to": "tehama-1-elevator-lobby",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-427"
+    },
+    {
+      "to": "tehama-1-stairs-north",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-elevator-lobby"
+    },
+    {
+      "to": "tehama-1-elevator-west",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-elevator-lobby"
+    },
+    {
+      "to": "tehama-1-elevator-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-elevator-west"
+    },
+    {
+      "to": "tehama-1-room-110",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-497"
+    },
+    {
+      "to": "tehama-1-room-men",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-508"
+    },
+    {
+      "to": "tehama-1-room-111",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-502"
+    },
+    {
+      "to": "tehama-1-room-113",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-560"
+    },
+    {
+      "to": "tehama-1-room-115",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-706"
+    },
+    {
+      "to": "tehama-1-room-117",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-858"
+    },
+    {
+      "to": "tehama-1-room-119",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-969"
+    },
+    {
+      "to": "tehama-1-room-121",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1080"
+    },
+    {
+      "to": "tehama-1-room-116",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-782"
+    },
+    {
+      "to": "tehama-1-room-118",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1038"
+    },
+    {
+      "to": "tehama-1-room-custodial",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1086"
+    },
+    {
+      "to": "tehama-1-room-130",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-west-353"
+    },
+    {
+      "to": "tehama-1-room-131",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-west-608"
+    },
+    {
+      "to": "tehama-1-room-132",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-west-688"
+    },
+    {
+      "to": "tehama-1-room-133",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-west-910"
+    },
+    {
+      "to": "tehama-1-room-134",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-west-932"
+    },
+    {
+      "to": "tehama-1-room-131A",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-131"
+    },
+    {
+      "to": "tehama-1-room-132B",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-745"
+    },
+    {
+      "to": "tehama-1-room-132A",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-132B"
+    },
+    {
+      "to": "tehama-1-room-132-second-door",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-132B"
+    },
+    {
+      "to": "tehama-1-room-132",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-132-second-door"
+    },
+    {
+      "to": "tehama-1-room-116-north-door",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-132B"
+    },
+    {
+      "to": "tehama-1-room-116-north-inside",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-room-116-north-door"
+    },
+    {
+      "to": "tehama-1-room-116",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-room-116-north-inside"
+    },
+    {
+      "to": "tehama-1-service-116-north",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-116-north-inside"
+    },
+    {
+      "to": "tehama-1-room-133A",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-133"
+    },
+    {
+      "to": "tehama-1-storage",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-132"
+    },
+    {
+      "to": "tehama-1-room-133-interior-door",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-116"
+    },
+    {
+      "to": "tehama-1-room-133",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-room-133-interior-door"
+    },
+    {
+      "to": "tehama-1-room-134-interior-door",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-room-118"
+    },
+    {
+      "to": "tehama-1-room-134",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-room-134-interior-door"
+    },
+    {
+      "to": "tehama-1-room-126",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-383"
+    },
+    {
+      "to": "tehama-1-room-124",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-448"
+    },
+    {
+      "to": "tehama-1-room-122",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-464"
+    },
+    {
+      "to": "tehama-1-room-127",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-347"
+    },
+    {
+      "to": "tehama-1-room-125",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-368"
+    },
+    {
+      "to": "tehama-1-room-123",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-south-433"
+    },
+    {
+      "to": "tehama-1-room-women",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1152"
+    },
+    {
+      "to": "tehama-1-service-south-upper",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1169"
+    },
+    {
+      "to": "tehama-1-service-south-lower",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1183"
+    },
+    {
+      "to": "tehama-1-stairs-south",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1207"
+    },
+    {
+      "to": "tehama-1-exit-south",
+      "weight": 1,
+      "type": "door",
+      "from": "tehama-1-hall-main-1235"
+    },
+    {
+      "to": "tehama-1-hall-north-436",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-350"
+    },
+    {
+      "to": "tehama-1-hall-north-439",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-436"
+    },
+    {
+      "to": "tehama-1-hall-north-477",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-439"
+    },
+    {
+      "to": "tehama-1-hall-north-553",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-477"
+    },
+    {
+      "to": "tehama-1-hall-north-568",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-553"
+    },
+    {
+      "to": "tehama-1-hall-north-667",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-568"
+    },
+    {
+      "to": "tehama-1-hall-north-724",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-667"
+    },
+    {
+      "to": "tehama-1-hall-north-725",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-north-724"
+    },
+    {
+      "to": "tehama-1-hall-east-755",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-east-725"
+    },
+    {
+      "to": "tehama-1-hall-east-801",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-east-755"
+    },
+    {
+      "to": "tehama-1-hall-east-846",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-east-801"
+    },
+    {
+      "to": "tehama-1-hall-east-940",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-east-846"
+    },
+    {
+      "to": "tehama-1-hall-main-427",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-318"
+    },
+    {
+      "to": "tehama-1-hall-main-497",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-427"
+    },
+    {
+      "to": "tehama-1-hall-main-502",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-497"
+    },
+    {
+      "to": "tehama-1-hall-main-508",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-502"
+    },
+    {
+      "to": "tehama-1-hall-main-560",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-508"
+    },
+    {
+      "to": "tehama-1-hall-main-706",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-560"
+    },
+    {
+      "to": "tehama-1-hall-main-745",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-706"
+    },
+    {
+      "to": "tehama-1-hall-main-782",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-745"
+    },
+    {
+      "to": "tehama-1-hall-main-858",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-782"
+    },
+    {
+      "to": "tehama-1-hall-main-969",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-858"
+    },
+    {
+      "to": "tehama-1-hall-main-1038",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-969"
+    },
+    {
+      "to": "tehama-1-hall-main-1080",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1038"
+    },
+    {
+      "to": "tehama-1-hall-main-1086",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1080"
+    },
+    {
+      "to": "tehama-1-hall-main-1115",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1086"
+    },
+    {
+      "to": "tehama-1-hall-main-1152",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1115"
+    },
+    {
+      "to": "tehama-1-hall-main-1169",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1152"
+    },
+    {
+      "to": "tehama-1-hall-main-1183",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1169"
+    },
+    {
+      "to": "tehama-1-hall-main-1207",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1183"
+    },
+    {
+      "to": "tehama-1-hall-main-1235",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-main-1207"
+    },
+    {
+      "to": "tehama-1-hall-west-353",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-west-313"
+    },
+    {
+      "to": "tehama-1-hall-west-608",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-west-353"
+    },
+    {
+      "to": "tehama-1-hall-west-688",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-west-608"
+    },
+    {
+      "to": "tehama-1-hall-west-910",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-west-688"
+    },
+    {
+      "to": "tehama-1-hall-west-932",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-west-910"
+    },
+    {
+      "to": "tehama-1-hall-west-1115",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-west-932"
+    },
+    {
+      "to": "tehama-1-hall-south-350",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-347"
+    },
+    {
+      "to": "tehama-1-hall-south-368",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-350"
+    },
+    {
+      "to": "tehama-1-hall-south-383",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-368"
+    },
+    {
+      "to": "tehama-1-hall-south-433",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-383"
+    },
+    {
+      "to": "tehama-1-hall-south-448",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-433"
+    },
+    {
+      "to": "tehama-1-hall-south-464",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-448"
+    },
+    {
+      "to": "tehama-1-hall-south-553",
+      "weight": 1,
+      "type": "corridor",
+      "from": "tehama-1-hall-south-464"
+    }
+  ]
+}

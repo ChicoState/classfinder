@@ -1,0 +1,1814 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Plumas/plms-1.pdf",
+    "sourceDate": "2010-04-07",
+    "building": "Plumas Hall",
+    "buildingId": "plumas",
+    "floor": 1,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "plumas-1-exit-east-ao",
+      "description": "AO-marked east exterior doorway beside the elevator and east stair.",
+      "pdfPointFromTopLeft": {
+        "x": 480,
+        "y": 496.2
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up; not geographic north."
+    },
+    "alignment": {
+      "method": "Reference floor; identity transform.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "coordinateConversion": "x = (pdfX - 480) * 30 / 72; y = (496.2 - pdfY) * 30 / 72.",
+    "undirected": true,
+    "nodeConvention": "Room destinations are doorway nodes; extra nodes retain bends and actual parent-room access.",
+    "distanceConvention": "Each undirected edge is stored once. Loader expands both directions and derives distance in feet from positions. All weights are 1.",
+    "accessibility": "Only the AO-marked east entrance approach is marked true; central courtyard stairs are false. Omitted values are unknown.",
+    "digitization": {
+      "date": "2026-10-26",
+      "method": "Manual doorway tracing from vector PDF rendered by Firefox.",
+      "rasterToPdf": {
+        "pixelsPerPdfPoint": 1.6666666666666667,
+        "croppedImageOffset": {
+          "x": 0,
+          "y": -37
+        }
+      }
+    },
+    "limitations": [
+      "Dated plan; approximate manual coordinates, not surveyed or GPS aligned. Current door permissions are unknown.",
+      "Courtyard access from the south corridor uses the shown central stair; no ramp is assumed. Dashed line west of courtyard is not treated as a walkway.",
+      "112A/B/C/D are accessed through 112. 114A/B through 114; 116B through 116; 116A connects 114 to 116. 108 is reached through 110. 100 is reached through 102.",
+      "119D and 119E use the narrow western passage within 119. 119 connects to 117 through the east doorway. 117B is reached through 117A. 115A/B/D through 115; 115C opens into an unnumbered pocket below it; a solid wall separates that pocket from the southern service lobby.",
+      "102B and 102C are labelled small door openings on the southern perimeter; no separate enclosed room extents are assumed.",
+      "West and east stair nodes are first-floor access landings only; upper/lower floors and inter-floor transfers are outside this dataset. Stair flights are not used to connect 112 to the west corridor."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "plumas-1-exit-east-ao",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-exit-west",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -145,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-west",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -136.75,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-main",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-east",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -8.25,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-east-junction",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -16,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-elevator",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -16,
+        "y": -8.75
+      }
+    },
+    {
+      "id": "plumas-1-stairs-west-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -138.25,
+        "y": 4
+      }
+    },
+    {
+      "id": "plumas-1-stairs-west",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -138,
+        "y": 8
+      }
+    },
+    {
+      "id": "plumas-1-stairs-east-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7,
+        "y": 4
+      }
+    },
+    {
+      "id": "plumas-1-stairs-east",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7.75,
+        "y": 8
+      }
+    },
+    {
+      "id": "plumas-1-stairs-courtyard-bottom",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 4
+      }
+    },
+    {
+      "id": "plumas-1-stairs-courtyard-top",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 17.25
+      }
+    },
+    {
+      "id": "plumas-1-elevator",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -13.5,
+        "y": -8.75
+      }
+    },
+    {
+      "id": "plumas-1-room-113A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": 0,
+        "y": -18.75
+      }
+    },
+    {
+      "id": "plumas-1-room-113",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -13.5,
+        "y": -24.5
+      }
+    },
+    {
+      "id": "plumas-1-room-111",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -4.75,
+        "y": -28.75
+      }
+    },
+    {
+      "id": "plumas-1-room-111A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -4.75,
+        "y": -44
+      }
+    },
+    {
+      "id": "plumas-1-hall-east-south",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -16,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-113",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -16,
+        "y": -24.75
+      }
+    },
+    {
+      "id": "plumas-1-hall-109",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -13,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-room-111-west-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -13.5,
+        "y": -39
+      }
+    },
+    {
+      "id": "plumas-1-room-111-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7.5,
+        "y": -35
+      }
+    },
+    {
+      "id": "plumas-1-hall-106",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -44,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-106-east",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -21.25,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-room-106",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -44,
+        "y": -4.75
+      }
+    },
+    {
+      "id": "plumas-1-room-106-northeast-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -21.25,
+        "y": -4.75
+      }
+    },
+    {
+      "id": "plumas-1-room-106-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -31.25,
+        "y": -22.5
+      }
+    },
+    {
+      "id": "plumas-1-room-106-south-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -44,
+        "y": -39
+      }
+    },
+    {
+      "id": "plumas-1-room-106-southeast-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -22.25,
+        "y": -39
+      }
+    },
+    {
+      "id": "plumas-1-hall-south-east",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -23,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-south-center",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -44,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-south-west",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-south-exit",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": -54.25
+      }
+    },
+    {
+      "id": "plumas-1-exit-south",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": -54.75
+      }
+    },
+    {
+      "id": "plumas-1-hall-104",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": -33.75
+      }
+    },
+    {
+      "id": "plumas-1-hall-110",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": -15
+      }
+    },
+    {
+      "id": "plumas-1-room-110",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -68.25,
+        "y": -16.25
+      }
+    },
+    {
+      "id": "plumas-1-room-108",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -56.75,
+        "y": -12.75
+      }
+    },
+    {
+      "id": "plumas-1-room-104",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -68.25,
+        "y": -36.5
+      }
+    },
+    {
+      "id": "plumas-1-room-104-south-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -48.25,
+        "y": -39
+      }
+    },
+    {
+      "id": "plumas-1-room-101",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -58.75,
+        "y": -44
+      }
+    },
+    {
+      "id": "plumas-1-room-103",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -47.25,
+        "y": -44
+      }
+    },
+    {
+      "id": "plumas-1-room-105",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -36.75,
+        "y": -44
+      }
+    },
+    {
+      "id": "plumas-1-room-107",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -26.75,
+        "y": -44
+      }
+    },
+    {
+      "id": "plumas-1-room-109",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -16,
+        "y": -44
+      }
+    },
+    {
+      "id": "plumas-1-hall-101",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -58.75,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-103",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -47.25,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-105",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -36.75,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-hall-107",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -26.75,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-room-102",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -77.25,
+        "y": -27.5
+      }
+    },
+    {
+      "id": "plumas-1-room-102-south-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -77.25,
+        "y": -41.25
+      }
+    },
+    {
+      "id": "plumas-1-room-102-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -90,
+        "y": -38.25
+      }
+    },
+    {
+      "id": "plumas-1-room-102-west-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -125,
+        "y": -38.25
+      }
+    },
+    {
+      "id": "plumas-1-room-100",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -131.5,
+        "y": -46.25
+      }
+    },
+    {
+      "id": "plumas-1-room-102B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -122.25,
+        "y": -54.25
+      }
+    },
+    {
+      "id": "plumas-1-room-102C",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -87.75,
+        "y": -54.25
+      }
+    },
+    {
+      "id": "plumas-1-custodial",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -140,
+        "y": -8.75
+      }
+    },
+    {
+      "id": "plumas-1-restroom-men",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -122.75,
+        "y": -4.75
+      }
+    },
+    {
+      "id": "plumas-1-restroom-women",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -105,
+        "y": -4.75
+      }
+    },
+    {
+      "id": "plumas-1-hall-restroom-men",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -122.75,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-hall-restroom-women",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -105,
+        "y": 0
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-south",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 22.5
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-112",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 30.75
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-115",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 52.5
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-117",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 99.25
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-north",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -73,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-114",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -87.5,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-121",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -65,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-room-112",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -95.5,
+        "y": 30.75
+      }
+    },
+    {
+      "id": "plumas-1-room-112-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -123.5,
+        "y": 30.75
+      }
+    },
+    {
+      "id": "plumas-1-room-112C",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -126.5,
+        "y": 42.5
+      }
+    },
+    {
+      "id": "plumas-1-room-112B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -131.5,
+        "y": 39
+      }
+    },
+    {
+      "id": "plumas-1-room-112A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -131.5,
+        "y": 29.5
+      }
+    },
+    {
+      "id": "plumas-1-room-112D",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -129,
+        "y": 26.25
+      }
+    },
+    {
+      "id": "plumas-1-room-112-west-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -127.5,
+        "y": 27.25
+      }
+    },
+    {
+      "id": "plumas-1-room-114",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -95.5,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-room-114-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -125,
+        "y": 117.5
+      }
+    },
+    {
+      "id": "plumas-1-room-114A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -141.75,
+        "y": 108
+      }
+    },
+    {
+      "id": "plumas-1-room-114B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -137.5,
+        "y": 136.5
+      }
+    },
+    {
+      "id": "plumas-1-room-114-north-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -105,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-room-116A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -98.5,
+        "y": 136.5
+      }
+    },
+    {
+      "id": "plumas-1-room-116A-north-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -98.75,
+        "y": 152.5
+      }
+    },
+    {
+      "id": "plumas-1-room-116",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -77.5,
+        "y": 136.5
+      }
+    },
+    {
+      "id": "plumas-1-room-116-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -85,
+        "y": 157.5
+      }
+    },
+    {
+      "id": "plumas-1-room-116-west-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -127.5,
+        "y": 157.5
+      }
+    },
+    {
+      "id": "plumas-1-room-116B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -131.25,
+        "y": 148
+      }
+    },
+    {
+      "id": "plumas-1-room-121",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -65.25,
+        "y": 136.5
+      }
+    },
+    {
+      "id": "plumas-1-room-119",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -50,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-room-119-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -22.5,
+        "y": 127.5
+      }
+    },
+    {
+      "id": "plumas-1-room-119-west-passage",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -22.5,
+        "y": 140
+      }
+    },
+    {
+      "id": "plumas-1-room-119D-approach",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -22.5,
+        "y": 164.25
+      }
+    },
+    {
+      "id": "plumas-1-room-119D",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -15.5,
+        "y": 164.25
+      }
+    },
+    {
+      "id": "plumas-1-room-119E",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -15.5,
+        "y": 140
+      }
+    },
+    {
+      "id": "plumas-1-room-119A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -50,
+        "y": 115.25
+      }
+    },
+    {
+      "id": "plumas-1-room-119B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -38.5,
+        "y": 117.5
+      }
+    },
+    {
+      "id": "plumas-1-room-119C",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -26.25,
+        "y": 117.5
+      }
+    },
+    {
+      "id": "plumas-1-room-119-southeast-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": 0,
+        "y": 112
+      }
+    },
+    {
+      "id": "plumas-1-room-117",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -50,
+        "y": 99.25
+      }
+    },
+    {
+      "id": "plumas-1-room-117-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7.5,
+        "y": 90
+      }
+    },
+    {
+      "id": "plumas-1-room-117-north-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7.5,
+        "y": 102
+      }
+    },
+    {
+      "id": "plumas-1-room-117A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -15.5,
+        "y": 72
+      }
+    },
+    {
+      "id": "plumas-1-room-117B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -18,
+        "y": 63
+      }
+    },
+    {
+      "id": "plumas-1-room-115",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -50,
+        "y": 52.5
+      }
+    },
+    {
+      "id": "plumas-1-room-115-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -32.5,
+        "y": 47.5
+      }
+    },
+    {
+      "id": "plumas-1-room-115A",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -42.5,
+        "y": 56.75
+      }
+    },
+    {
+      "id": "plumas-1-room-115B",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -35,
+        "y": 56.75
+      }
+    },
+    {
+      "id": "plumas-1-room-115C",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -20.5,
+        "y": 52.5
+      }
+    },
+    {
+      "id": "plumas-1-room-115D",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -42.5,
+        "y": 35
+      }
+    },
+    {
+      "id": "plumas-1-room-unnumbered-below-115C",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -11.5,
+        "y": 29.25
+      }
+    },
+    {
+      "id": "plumas-1-room-115C-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7.5,
+        "y": 47.5
+      }
+    },
+    {
+      "id": "plumas-1-room-115C-south-interior",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -7.5,
+        "y": 29.25
+      }
+    },
+    {
+      "id": "plumas-1-courtyard-service-door",
+      "buildingId": "plumas",
+      "floorId": 1,
+      "position": {
+        "x": -50,
+        "y": 22.5
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "plumas-1-hall-west",
+      "to": "plumas-1-hall-restroom-men",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-restroom-men",
+      "to": "plumas-1-hall-restroom-women",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-restroom-women",
+      "to": "plumas-1-hall-main",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-main",
+      "to": "plumas-1-hall-106",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-106",
+      "to": "plumas-1-hall-106-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-106-east",
+      "to": "plumas-1-hall-east-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-east-junction",
+      "to": "plumas-1-hall-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-exit-east-ao",
+      "to": "plumas-1-hall-east",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "plumas-1-exit-west",
+      "to": "plumas-1-hall-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-west",
+      "to": "plumas-1-stairs-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-west",
+      "to": "plumas-1-custodial",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-stairs-west-door",
+      "to": "plumas-1-stairs-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-east",
+      "to": "plumas-1-stairs-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-elevator",
+      "to": "plumas-1-elevator",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-stairs-east-door",
+      "to": "plumas-1-stairs-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-east-junction",
+      "to": "plumas-1-hall-elevator",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-elevator",
+      "to": "plumas-1-hall-113",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-113",
+      "to": "plumas-1-hall-east-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-east-south",
+      "to": "plumas-1-hall-south-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-south-east",
+      "to": "plumas-1-hall-107",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-107",
+      "to": "plumas-1-hall-105",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-105",
+      "to": "plumas-1-hall-south-center",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-south-center",
+      "to": "plumas-1-hall-103",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-103",
+      "to": "plumas-1-hall-101",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-101",
+      "to": "plumas-1-hall-south-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-main",
+      "to": "plumas-1-hall-110",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-110",
+      "to": "plumas-1-hall-104",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-104",
+      "to": "plumas-1-hall-south-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-south-west",
+      "to": "plumas-1-hall-south-exit",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-hall-south-exit",
+      "to": "plumas-1-exit-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-110",
+      "to": "plumas-1-room-110",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-110",
+      "to": "plumas-1-room-108",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-104",
+      "to": "plumas-1-room-104",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-104",
+      "to": "plumas-1-room-102",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-south-center",
+      "to": "plumas-1-room-104-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-south-center",
+      "to": "plumas-1-room-106-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-104",
+      "to": "plumas-1-room-104-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-106",
+      "to": "plumas-1-room-106",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-106-east",
+      "to": "plumas-1-room-106-northeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-106-interior",
+      "to": "plumas-1-room-106",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-106-interior",
+      "to": "plumas-1-room-106-northeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-106-interior",
+      "to": "plumas-1-room-106-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-106-interior",
+      "to": "plumas-1-room-106-southeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-south-east",
+      "to": "plumas-1-room-106-southeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-101",
+      "to": "plumas-1-room-101",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-103",
+      "to": "plumas-1-room-103",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-105",
+      "to": "plumas-1-room-105",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-107",
+      "to": "plumas-1-room-107",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-east-south",
+      "to": "plumas-1-room-109",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-east-south",
+      "to": "plumas-1-room-111-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-east-south",
+      "to": "plumas-1-hall-109",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-room-111-west-door",
+      "to": "plumas-1-room-111-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-111-interior",
+      "to": "plumas-1-room-111",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-111-interior",
+      "to": "plumas-1-room-111A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-113",
+      "to": "plumas-1-room-111",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-113",
+      "to": "plumas-1-room-113",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-113",
+      "to": "plumas-1-room-113A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-south-west",
+      "to": "plumas-1-room-102-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-102",
+      "to": "plumas-1-room-102-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-102-interior",
+      "to": "plumas-1-room-102-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-102-interior",
+      "to": "plumas-1-room-102-west-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-102-west-interior",
+      "to": "plumas-1-room-100",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-102-west-interior",
+      "to": "plumas-1-room-102B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-102-interior",
+      "to": "plumas-1-room-102C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-restroom-men",
+      "to": "plumas-1-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-restroom-women",
+      "to": "plumas-1-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-hall-main",
+      "to": "plumas-1-stairs-courtyard-bottom",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-stairs-courtyard-bottom",
+      "to": "plumas-1-stairs-courtyard-top",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "plumas-1-stairs-courtyard-top",
+      "to": "plumas-1-courtyard-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-south",
+      "to": "plumas-1-courtyard-112",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-112",
+      "to": "plumas-1-courtyard-115",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-115",
+      "to": "plumas-1-courtyard-117",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-117",
+      "to": "plumas-1-courtyard-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-north",
+      "to": "plumas-1-courtyard-114",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-north",
+      "to": "plumas-1-courtyard-121",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "plumas-1-courtyard-112",
+      "to": "plumas-1-room-112",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-112",
+      "to": "plumas-1-room-112-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-112-interior",
+      "to": "plumas-1-room-112-west-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-112-interior",
+      "to": "plumas-1-room-112C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-112-interior",
+      "to": "plumas-1-room-112B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-112-west-interior",
+      "to": "plumas-1-room-112A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-112-west-interior",
+      "to": "plumas-1-room-112D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-114",
+      "to": "plumas-1-room-114",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-114",
+      "to": "plumas-1-room-114-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-114-interior",
+      "to": "plumas-1-room-114A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-114-interior",
+      "to": "plumas-1-room-114B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-114",
+      "to": "plumas-1-room-114-north-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-114-north-interior",
+      "to": "plumas-1-room-116A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-116A",
+      "to": "plumas-1-room-116A-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-116A-north-door",
+      "to": "plumas-1-room-116-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-north",
+      "to": "plumas-1-room-116",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-116",
+      "to": "plumas-1-room-116-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-116-interior",
+      "to": "plumas-1-room-116-west-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-116-west-interior",
+      "to": "plumas-1-room-116B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-121",
+      "to": "plumas-1-room-121",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-north",
+      "to": "plumas-1-room-119",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119",
+      "to": "plumas-1-room-119-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-interior",
+      "to": "plumas-1-room-119-west-passage",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-west-passage",
+      "to": "plumas-1-room-119D-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119D-approach",
+      "to": "plumas-1-room-119D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-west-passage",
+      "to": "plumas-1-room-119E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119",
+      "to": "plumas-1-room-119A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-interior",
+      "to": "plumas-1-room-119B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-interior",
+      "to": "plumas-1-room-119C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-interior",
+      "to": "plumas-1-room-119-southeast-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-119-southeast-door",
+      "to": "plumas-1-room-117-north-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-117-north-interior",
+      "to": "plumas-1-room-117-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-117-interior",
+      "to": "plumas-1-room-117",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-117",
+      "to": "plumas-1-room-117",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-117-interior",
+      "to": "plumas-1-room-117A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-117A",
+      "to": "plumas-1-room-117B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-115",
+      "to": "plumas-1-room-115",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115",
+      "to": "plumas-1-room-115-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115-interior",
+      "to": "plumas-1-room-115A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115-interior",
+      "to": "plumas-1-room-115B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115-interior",
+      "to": "plumas-1-room-115C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115-interior",
+      "to": "plumas-1-room-115D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115C",
+      "to": "plumas-1-room-115C-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115C-interior",
+      "to": "plumas-1-room-115C-south-interior",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-room-115C-south-interior",
+      "to": "plumas-1-room-unnumbered-below-115C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "plumas-1-courtyard-south",
+      "to": "plumas-1-courtyard-service-door",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

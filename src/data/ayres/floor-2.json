@@ -1,0 +1,854 @@
+{
+  "metadata": {
+    "buildingId": "ayres",
+    "buildingName": "Ayres Hall",
+    "floorId": 2,
+    "source": "csuc-floor-plans/Ayres/ayrs-2.pdf",
+    "sourceDate": "2008-07-14",
+    "digitizedDate": "2026-10-27",
+    "units": "feet",
+    "undirected": true,
+    "scale": {
+      "printed": "1 inch = 30 feet",
+      "feetPerPdfPoint": 0.4166666666666667,
+      "pageSizePdfPoints": [612, 792],
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "ayres-1-entrance-northwest",
+      "description": "Northwest AO-marked exterior door at north end of west hall",
+      "referenceFloor": 1,
+      "pdfPoint": [161.5, 70.5],
+      "projectedPdfPoint": [191, 69.5]
+    },
+    "axes": {
+      "x": "drawing-right",
+      "y": "drawing-up"
+    },
+    "alignment": {
+      "method": "Translation based on elevator shaft and south facade; west stair used as check",
+      "sourceToReferencePdfTranslation": [-29.5, 1]
+    },
+    "weightAssumption": "All weights 1; runtime distance is Euclidean distance between stored coordinates, including transfers.",
+    "accessibility": "Only explicit floor-1 AO entrance/theatre door edges marked true. Stairs false; other access unknown.",
+    "uncertainties": [
+      "Manual tracing from dated drawing, approximate doorway centers; not surveyed or GPS aligned.",
+      "Laxson Auditorium dashed continuation omitted; Ayres theatre stair continuation is not established on floor 2.",
+      "No basement/roof routes; central DN stair and studio-120 UP stair have no matching requested-floor continuation.",
+      "Floor 1 studio 120 suite and exterior-only 129A/129B doorway nodes are disconnected from main indoor graph; no exterior paths shown.",
+      "Rooms 207/209 have no solid internal separation on the sheet; doorway names follow the labels nearest the hall openings.",
+      "Closet-sized crossed boxes and unnumbered spaces without definite door openings omitted.",
+      "Roof outlines and dotted room equipment/seating outlines are not circulation."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "ayres-2-hall-north",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -86.04
+      }
+    },
+    {
+      "id": "ayres-2-hall-stairs-north",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -96.67
+      }
+    },
+    {
+      "id": "ayres-2-hall-203",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -101.25
+      }
+    },
+    {
+      "id": "ayres-2-hall-elevator",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -144.38
+      }
+    },
+    {
+      "id": "ayres-2-hall-205",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -145.21
+      }
+    },
+    {
+      "id": "ayres-2-hall-207A",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -160.21
+      }
+    },
+    {
+      "id": "ayres-2-hall-207",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -178.54
+      }
+    },
+    {
+      "id": "ayres-2-hall-207-south",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -205.42
+      }
+    },
+    {
+      "id": "ayres-2-room-201-east",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 3.33,
+        "y": -84.17
+      }
+    },
+    {
+      "id": "ayres-2-room-201-interior",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -13.12,
+        "y": -70.42
+      }
+    },
+    {
+      "id": "ayres-2-room-201A",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -19.17,
+        "y": -56.25
+      }
+    },
+    {
+      "id": "ayres-2-room-201-west",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -28.12,
+        "y": -84.17
+      }
+    },
+    {
+      "id": "ayres-2-stairs-north",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -5.21,
+        "y": -92.92
+      }
+    },
+    {
+      "id": "ayres-2-room-202",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 6.46,
+        "y": -90.62
+      }
+    },
+    {
+      "id": "ayres-2-room-202-interior",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 15.21,
+        "y": -85.21
+      }
+    },
+    {
+      "id": "ayres-2-room-202A",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 16.88,
+        "y": -76.04
+      }
+    },
+    {
+      "id": "ayres-2-room-203",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -6.04,
+        "y": -101.25
+      }
+    },
+    {
+      "id": "ayres-2-room-205-east",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -6.04,
+        "y": -145.21
+      }
+    },
+    {
+      "id": "ayres-2-room-205-interior",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -19.17,
+        "y": -135.0
+      }
+    },
+    {
+      "id": "ayres-2-room-205A",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -10.62,
+        "y": -148.12
+      }
+    },
+    {
+      "id": "ayres-2-room-205B",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -28.54,
+        "y": -148.12
+      }
+    },
+    {
+      "id": "ayres-2-room-205-southeast",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -10.83,
+        "y": -147.08
+      }
+    },
+    {
+      "id": "ayres-2-elevator",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 7.5,
+        "y": -146.04
+      }
+    },
+    {
+      "id": "ayres-2-room-207A",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -6.04,
+        "y": -160.21
+      }
+    },
+    {
+      "id": "ayres-2-room-207",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -6.04,
+        "y": -178.54
+      }
+    },
+    {
+      "id": "ayres-2-room-207-interior",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -22.08,
+        "y": -173.12
+      }
+    },
+    {
+      "id": "ayres-2-room-207B",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -28.54,
+        "y": -165.62
+      }
+    },
+    {
+      "id": "ayres-2-hall-southwest",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 0.21,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-211",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 11.67,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-212",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 38.12,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-213",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 47.5,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-214",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 57.5,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-216",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 72.29,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-216-east",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 103.96,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-hall-southeast",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 111.25,
+        "y": -203.96
+      }
+    },
+    {
+      "id": "ayres-2-room-211",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 11.67,
+        "y": -208.96
+      }
+    },
+    {
+      "id": "ayres-2-room-213",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 47.5,
+        "y": -208.96
+      }
+    },
+    {
+      "id": "ayres-2-room-214",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 44.17,
+        "y": -198.96
+      }
+    },
+    {
+      "id": "ayres-2-room-216-west",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 71.04,
+        "y": -198.96
+      }
+    },
+    {
+      "id": "ayres-2-room-216-east",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 103.96,
+        "y": -198.96
+      }
+    },
+    {
+      "id": "ayres-2-room-212",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 36.46,
+        "y": -198.96
+      }
+    },
+    {
+      "id": "ayres-2-room-209",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": -6.04,
+        "y": -205.42
+      }
+    },
+    {
+      "id": "ayres-2-hall-restroom-east",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 30.62,
+        "y": -196.04
+      }
+    },
+    {
+      "id": "ayres-2-hall-restroom-north",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 30.62,
+        "y": -183.54
+      }
+    },
+    {
+      "id": "ayres-2-restroom-men",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 26.67,
+        "y": -192.5
+      }
+    },
+    {
+      "id": "ayres-2-room-210",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 38.12,
+        "y": -182.5
+      }
+    },
+    {
+      "id": "ayres-2-room-206",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 28.96,
+        "y": -179.79
+      }
+    },
+    {
+      "id": "ayres-2-room-208",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 31.67,
+        "y": -179.79
+      }
+    },
+    {
+      "id": "ayres-2-room-204",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 6.46,
+        "y": -178.12
+      }
+    },
+    {
+      "id": "ayres-2-restroom-women",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 6.46,
+        "y": -186.04
+      }
+    },
+    {
+      "id": "ayres-2-room-213-interior",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 55.83,
+        "y": -223.96
+      }
+    },
+    {
+      "id": "ayres-2-room-213A",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 65.21,
+        "y": -228.33
+      }
+    },
+    {
+      "id": "ayres-2-room-215",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 105.0,
+        "y": -208.96
+      }
+    },
+    {
+      "id": "ayres-2-stairs-southeast",
+      "buildingId": "ayres",
+      "floorId": 2,
+      "position": {
+        "x": 110.42,
+        "y": -234.58
+      }
+    }
+  ],
+  "edges": [
+    {
+      "to": "ayres-2-hall-stairs-north",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-north"
+    },
+    {
+      "to": "ayres-2-hall-203",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-stairs-north"
+    },
+    {
+      "to": "ayres-2-hall-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-203"
+    },
+    {
+      "to": "ayres-2-hall-207A",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-205"
+    },
+    {
+      "to": "ayres-2-hall-207",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-207A"
+    },
+    {
+      "to": "ayres-2-hall-207-south",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-207"
+    },
+    {
+      "to": "ayres-2-hall-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-205"
+    },
+    {
+      "to": "ayres-2-room-201-east",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-north"
+    },
+    {
+      "to": "ayres-2-room-201-interior",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-room-201-east"
+    },
+    {
+      "to": "ayres-2-room-201A",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-room-201-interior"
+    },
+    {
+      "to": "ayres-2-room-201-west",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-north"
+    },
+    {
+      "to": "ayres-2-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "from": "ayres-2-hall-stairs-north",
+      "isAccessible": false
+    },
+    {
+      "to": "ayres-2-room-202",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-stairs-north"
+    },
+    {
+      "to": "ayres-2-room-202-interior",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-room-202"
+    },
+    {
+      "to": "ayres-2-room-202A",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-room-202-interior"
+    },
+    {
+      "to": "ayres-2-room-203",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-203"
+    },
+    {
+      "to": "ayres-2-room-205-east",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-205"
+    },
+    {
+      "to": "ayres-2-room-205-interior",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-room-205-east"
+    },
+    {
+      "to": "ayres-2-room-205A",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-room-205-interior"
+    },
+    {
+      "to": "ayres-2-room-205B",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-room-205-interior"
+    },
+    {
+      "to": "ayres-2-room-205-southeast",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-205"
+    },
+    {
+      "to": "ayres-2-elevator",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-elevator"
+    },
+    {
+      "to": "ayres-2-room-207A",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-207A"
+    },
+    {
+      "to": "ayres-2-room-207",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-207"
+    },
+    {
+      "to": "ayres-2-room-207-interior",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-room-207"
+    },
+    {
+      "to": "ayres-2-room-207B",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-room-207-interior"
+    },
+    {
+      "to": "ayres-2-hall-southwest",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-207-south"
+    },
+    {
+      "to": "ayres-2-hall-211",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-southwest"
+    },
+    {
+      "to": "ayres-2-hall-212",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-211"
+    },
+    {
+      "to": "ayres-2-hall-213",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-212"
+    },
+    {
+      "to": "ayres-2-hall-214",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-213"
+    },
+    {
+      "to": "ayres-2-hall-216",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-214"
+    },
+    {
+      "to": "ayres-2-hall-216-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-216"
+    },
+    {
+      "to": "ayres-2-hall-southeast",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-216-east"
+    },
+    {
+      "to": "ayres-2-room-211",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-211"
+    },
+    {
+      "to": "ayres-2-room-213",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-213"
+    },
+    {
+      "to": "ayres-2-room-214",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-214"
+    },
+    {
+      "to": "ayres-2-room-216-west",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-216"
+    },
+    {
+      "to": "ayres-2-room-216-east",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-216-east"
+    },
+    {
+      "to": "ayres-2-room-212",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-212"
+    },
+    {
+      "to": "ayres-2-room-209",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-southwest"
+    },
+    {
+      "to": "ayres-2-hall-restroom-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-212"
+    },
+    {
+      "to": "ayres-2-hall-restroom-north",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-hall-restroom-east"
+    },
+    {
+      "to": "ayres-2-restroom-men",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-restroom-east"
+    },
+    {
+      "to": "ayres-2-room-210",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-restroom-north"
+    },
+    {
+      "to": "ayres-2-room-206",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-restroom-north"
+    },
+    {
+      "to": "ayres-2-room-208",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-restroom-north"
+    },
+    {
+      "to": "ayres-2-room-204",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-207"
+    },
+    {
+      "to": "ayres-2-restroom-women",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-207"
+    },
+    {
+      "to": "ayres-2-room-213-interior",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-2-room-213"
+    },
+    {
+      "to": "ayres-2-room-213A",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-room-213-interior"
+    },
+    {
+      "to": "ayres-2-room-215",
+      "weight": 1,
+      "type": "door",
+      "from": "ayres-2-hall-southeast"
+    },
+    {
+      "to": "ayres-2-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "from": "ayres-2-hall-southeast",
+      "isAccessible": false
+    }
+  ]
+}

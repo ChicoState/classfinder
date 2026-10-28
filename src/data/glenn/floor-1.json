@@ -1,0 +1,1265 @@
+{
+  "metadata": {
+    "buildingId": "glenn",
+    "buildingName": "Glenn Hall",
+    "floorId": 1,
+    "source": "csuc-floor-plans/Glenn/glenn-1.pdf",
+    "sourceDate": "2009-09-15",
+    "digitizedDate": "2026-10-27",
+    "units": "feet",
+    "undirected": true,
+    "scale": {
+      "printed": "1 inch = 30 feet",
+      "feetPerPdfPoint": 0.4166666666666667,
+      "pageSizePdfPoints": [612, 792],
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "glenn-1-entrance-north",
+      "description": "Wheelchair-marked north exterior entrance",
+      "referenceFloor": 1,
+      "pdfPoint": [319, 66.5],
+      "projectedPdfPoint": [319.0, 66.5]
+    },
+    "axes": {
+      "x": "drawing-right",
+      "y": "drawing-up"
+    },
+    "alignment": {
+      "method": "Translation using elevator shaft and north/south structural outlines; stair cores as checks",
+      "sourceToReferencePdfTranslation": [0.0, 0.0]
+    },
+    "weightAssumption": "Undirected edges stored once, weight 1, all runtime distances derived from endpoint coordinates.",
+    "accessibility": "Only source-marked wheelchair/AO entrance edges true; stair edges false; other access unknown.",
+    "uncertainties": [
+      "Dated plans and manual doorway centers; not survey/GPS coordinates.",
+      "Unnumbered north facade entrances on floor 1 remain isolated; no exterior walkway shown.",
+      "Room 108C west exterior doorway is retained without an exterior network.",
+      "Crossed boxes, roof connections beyond floor 3, and non-door furniture are excluded.",
+      "Floor heights, stair effort, and elevator waiting are not represented by coordinate-derived transfer distances."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "glenn-1-hall-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -5.62
+      }
+    },
+    {
+      "id": "glenn-1-hall-101",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -23.75
+      }
+    },
+    {
+      "id": "glenn-1-hall-103",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -26.25
+      }
+    },
+    {
+      "id": "glenn-1-hall-105",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -36.67
+      }
+    },
+    {
+      "id": "glenn-1-hall-107",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -46.67
+      }
+    },
+    {
+      "id": "glenn-1-hall-109",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -57.92
+      }
+    },
+    {
+      "id": "glenn-1-hall-111",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -68.75
+      }
+    },
+    {
+      "id": "glenn-1-hall-113",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -80.21
+      }
+    },
+    {
+      "id": "glenn-1-hall-104-entry",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -88.12
+      }
+    },
+    {
+      "id": "glenn-1-hall-115",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -92.92
+      }
+    },
+    {
+      "id": "glenn-1-hall-west-exit",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -97.5
+      }
+    },
+    {
+      "id": "glenn-1-hall-elevator",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -104.58
+      }
+    },
+    {
+      "id": "glenn-1-hall-106",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -115.42
+      }
+    },
+    {
+      "id": "glenn-1-hall-117",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -122.08
+      }
+    },
+    {
+      "id": "glenn-1-hall-119",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -133.75
+      }
+    },
+    {
+      "id": "glenn-1-hall-108",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -162.71
+      }
+    },
+    {
+      "id": "glenn-1-hall-123-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -168.96
+      }
+    },
+    {
+      "id": "glenn-1-hall-men",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -181.25
+      }
+    },
+    {
+      "id": "glenn-1-hall-custodian",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -186.46
+      }
+    },
+    {
+      "id": "glenn-1-hall-123-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -195.62
+      }
+    },
+    {
+      "id": "glenn-1-hall-110",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -201.25
+      }
+    },
+    {
+      "id": "glenn-1-hall-112-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -208.96
+      }
+    },
+    {
+      "id": "glenn-1-hall-125",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -229.58
+      }
+    },
+    {
+      "id": "glenn-1-hall-112-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -232.71
+      }
+    },
+    {
+      "id": "glenn-1-hall-stairs-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -241.04
+      }
+    },
+    {
+      "id": "glenn-1-hall-south-exit",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -245.21
+      }
+    },
+    {
+      "id": "glenn-1-entrance-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "id": "glenn-1-stairs-north-up",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 2.5,
+        "y": -10.83
+      }
+    },
+    {
+      "id": "glenn-1-unnumbered-northwest-door",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -25.42,
+        "y": -1.67
+      }
+    },
+    {
+      "id": "glenn-1-unnumbered-north-middle-door",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -12.92,
+        "y": -1.67
+      }
+    },
+    {
+      "id": "glenn-1-room-101",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 7.5,
+        "y": -23.54
+      }
+    },
+    {
+      "id": "glenn-1-room-102",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -26.88
+      }
+    },
+    {
+      "id": "glenn-1-room-103",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 5.21,
+        "y": -25.83
+      }
+    },
+    {
+      "id": "glenn-1-room-105",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 6.67,
+        "y": -36.46
+      }
+    },
+    {
+      "id": "glenn-1-room-107",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 6.67,
+        "y": -46.67
+      }
+    },
+    {
+      "id": "glenn-1-room-109",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -57.92
+      }
+    },
+    {
+      "id": "glenn-1-room-111",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -68.54
+      }
+    },
+    {
+      "id": "glenn-1-room-113",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -80.21
+      }
+    },
+    {
+      "id": "glenn-1-room-115",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.33,
+        "y": -93.12
+      }
+    },
+    {
+      "id": "glenn-1-room-117",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -121.88
+      }
+    },
+    {
+      "id": "glenn-1-room-119",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -133.75
+      }
+    },
+    {
+      "id": "glenn-1-room-108",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -162.71
+      }
+    },
+    {
+      "id": "glenn-1-room-121",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -163.75
+      }
+    },
+    {
+      "id": "glenn-1-room-123-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -168.96
+      }
+    },
+    {
+      "id": "glenn-1-room-123-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -195.62
+      }
+    },
+    {
+      "id": "glenn-1-room-125-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -229.58
+      }
+    },
+    {
+      "id": "glenn-1-room-125-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 3.96,
+        "y": -201.46
+      }
+    },
+    {
+      "id": "glenn-1-room-112-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -209.17
+      }
+    },
+    {
+      "id": "glenn-1-room-112-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -232.71
+      }
+    },
+    {
+      "id": "glenn-1-room-121A",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 9.58,
+        "y": -151.88
+      }
+    },
+    {
+      "id": "glenn-1-room-104-entry",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -88.12
+      }
+    },
+    {
+      "id": "glenn-1-room-104",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -13.33,
+        "y": -83.54
+      }
+    },
+    {
+      "id": "glenn-1-room-104-interior",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -18.33,
+        "y": -78.54
+      }
+    },
+    {
+      "id": "glenn-1-room-104A",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -23.96,
+        "y": -83.54
+      }
+    },
+    {
+      "id": "glenn-1-hall-west-crossing",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -13.12,
+        "y": -97.5
+      }
+    },
+    {
+      "id": "glenn-1-entrance-west",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -33.54,
+        "y": -97.5
+      }
+    },
+    {
+      "id": "glenn-1-unnumbered-core-closet",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -12.5,
+        "y": -100.0
+      }
+    },
+    {
+      "id": "glenn-1-elevator",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -104.58
+      }
+    },
+    {
+      "id": "glenn-1-entrance-east",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 22.5,
+        "y": -104.58
+      }
+    },
+    {
+      "id": "glenn-1-stairs-middle-approach",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 7.71,
+        "y": -104.58
+      }
+    },
+    {
+      "id": "glenn-1-stairs-middle-up",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 7.71,
+        "y": -111.88
+      }
+    },
+    {
+      "id": "glenn-1-room-106",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -115.42
+      }
+    },
+    {
+      "id": "glenn-1-room-106B",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -21.46,
+        "y": -108.75
+      }
+    },
+    {
+      "id": "glenn-1-entrance-106B-west",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -33.54,
+        "y": -106.88
+      }
+    },
+    {
+      "id": "glenn-1-room-108A",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -8.33,
+        "y": -157.5
+      }
+    },
+    {
+      "id": "glenn-1-room-108A-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -12.08,
+        "y": -149.79
+      }
+    },
+    {
+      "id": "glenn-1-room-108D",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -16.04,
+        "y": -149.38
+      }
+    },
+    {
+      "id": "glenn-1-unnumbered-108A-north",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -7.71,
+        "y": -148.33
+      }
+    },
+    {
+      "id": "glenn-1-room-108C",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -16.04,
+        "y": -164.38
+      }
+    },
+    {
+      "id": "glenn-1-entrance-108C-west",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -33.54,
+        "y": -166.04
+      }
+    },
+    {
+      "id": "glenn-1-room-108B",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -14.17,
+        "y": -165.42
+      }
+    },
+    {
+      "id": "glenn-1-custodian-108",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -5.83,
+        "y": -167.08
+      }
+    },
+    {
+      "id": "glenn-1-restroom-men",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -181.25
+      }
+    },
+    {
+      "id": "glenn-1-custodian-middle",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -186.46
+      }
+    },
+    {
+      "id": "glenn-1-room-110",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -3.96,
+        "y": -201.25
+      }
+    },
+    {
+      "id": "glenn-1-restroom-women",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -9.17,
+        "y": -198.54
+      }
+    },
+    {
+      "id": "glenn-1-room-110-west-turn",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -20.42,
+        "y": -201.25
+      }
+    },
+    {
+      "id": "glenn-1-room-110C",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -23.12,
+        "y": -204.38
+      }
+    },
+    {
+      "id": "glenn-1-room-110B",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -20.42,
+        "y": -190.21
+      }
+    },
+    {
+      "id": "glenn-1-room-110A",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": -19.58,
+        "y": -178.12
+      }
+    },
+    {
+      "id": "glenn-1-stairs-south-up",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 5.62,
+        "y": -237.92
+      }
+    },
+    {
+      "id": "glenn-1-entrance-south",
+      "buildingId": "glenn",
+      "floorId": 1,
+      "position": {
+        "x": 0.0,
+        "y": -248.54
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "glenn-1-hall-north",
+      "to": "glenn-1-hall-101",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-101",
+      "to": "glenn-1-hall-103",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-103",
+      "to": "glenn-1-hall-105",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-105",
+      "to": "glenn-1-hall-107",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-107",
+      "to": "glenn-1-hall-109",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-109",
+      "to": "glenn-1-hall-111",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-111",
+      "to": "glenn-1-hall-113",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-113",
+      "to": "glenn-1-hall-104-entry",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-104-entry",
+      "to": "glenn-1-hall-115",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-115",
+      "to": "glenn-1-hall-west-exit",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-west-exit",
+      "to": "glenn-1-hall-elevator",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-elevator",
+      "to": "glenn-1-hall-106",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-106",
+      "to": "glenn-1-hall-117",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-117",
+      "to": "glenn-1-hall-119",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-119",
+      "to": "glenn-1-hall-108",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-108",
+      "to": "glenn-1-hall-123-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-123-north",
+      "to": "glenn-1-hall-men",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-men",
+      "to": "glenn-1-hall-custodian",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-custodian",
+      "to": "glenn-1-hall-123-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-123-south",
+      "to": "glenn-1-hall-110",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-110",
+      "to": "glenn-1-hall-112-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-112-north",
+      "to": "glenn-1-hall-125",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-125",
+      "to": "glenn-1-hall-112-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-112-south",
+      "to": "glenn-1-hall-stairs-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-stairs-south",
+      "to": "glenn-1-hall-south-exit",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-north",
+      "to": "glenn-1-entrance-north",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "glenn-1-hall-north",
+      "to": "glenn-1-stairs-north-up",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-1-hall-101",
+      "to": "glenn-1-room-101",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-103",
+      "to": "glenn-1-room-102",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-103",
+      "to": "glenn-1-room-103",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-105",
+      "to": "glenn-1-room-105",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-107",
+      "to": "glenn-1-room-107",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-109",
+      "to": "glenn-1-room-109",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-111",
+      "to": "glenn-1-room-111",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-113",
+      "to": "glenn-1-room-113",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-115",
+      "to": "glenn-1-room-115",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-117",
+      "to": "glenn-1-room-117",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-119",
+      "to": "glenn-1-room-119",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-108",
+      "to": "glenn-1-room-108",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-108",
+      "to": "glenn-1-room-121",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-123-north",
+      "to": "glenn-1-room-123-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-123-south",
+      "to": "glenn-1-room-123-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-125",
+      "to": "glenn-1-room-125-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-110",
+      "to": "glenn-1-room-125-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-112-north",
+      "to": "glenn-1-room-112-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-112-south",
+      "to": "glenn-1-room-112-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-121",
+      "to": "glenn-1-room-121A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-104-entry",
+      "to": "glenn-1-room-104-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-104-entry",
+      "to": "glenn-1-room-104",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-104",
+      "to": "glenn-1-room-104-interior",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-room-104-interior",
+      "to": "glenn-1-room-104A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-west-exit",
+      "to": "glenn-1-hall-west-crossing",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-hall-west-crossing",
+      "to": "glenn-1-entrance-west",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "glenn-1-hall-west-crossing",
+      "to": "glenn-1-unnumbered-core-closet",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-elevator",
+      "to": "glenn-1-elevator",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-elevator",
+      "to": "glenn-1-entrance-east",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    },
+    {
+      "from": "glenn-1-hall-elevator",
+      "to": "glenn-1-stairs-middle-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-stairs-middle-approach",
+      "to": "glenn-1-stairs-middle-up",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-1-hall-106",
+      "to": "glenn-1-room-106",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-106",
+      "to": "glenn-1-room-106B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-106B",
+      "to": "glenn-1-entrance-106B-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108",
+      "to": "glenn-1-room-108A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108A",
+      "to": "glenn-1-room-108A-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-room-108A-north",
+      "to": "glenn-1-room-108D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108A-north",
+      "to": "glenn-1-unnumbered-108A-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108",
+      "to": "glenn-1-room-108C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108C",
+      "to": "glenn-1-entrance-108C-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108",
+      "to": "glenn-1-room-108B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-108",
+      "to": "glenn-1-custodian-108",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-men",
+      "to": "glenn-1-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-custodian",
+      "to": "glenn-1-custodian-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-110",
+      "to": "glenn-1-room-110",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-110",
+      "to": "glenn-1-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-110",
+      "to": "glenn-1-room-110-west-turn",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "glenn-1-room-110-west-turn",
+      "to": "glenn-1-room-110C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-110-west-turn",
+      "to": "glenn-1-room-110B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-room-110B",
+      "to": "glenn-1-room-110A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "glenn-1-hall-stairs-south",
+      "to": "glenn-1-stairs-south-up",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-1-hall-south-exit",
+      "to": "glenn-1-entrance-south",
+      "weight": 1,
+      "type": "door",
+      "isAccessible": true
+    }
+  ]
+}

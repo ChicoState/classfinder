@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "building": "Modoc Hall",
+    "buildingId": "modoc",
+    "units": "feet",
+    "undirected": true,
+    "sources": [
+      "csuc-floor-plans/Modoc/modc-1.pdf",
+      "csuc-floor-plans/Modoc/modc-2.pdf"
+    ],
+    "sourceDates": ["2009-09-15", "2008-07-15"],
+    "alignment": "Floor 2 source translated +3 PDF points X and -3 PDF points Y into reference-floor drawing coordinates.",
+    "distanceConvention": "Coordinate-derived separation between actual plan-view landings; no vertical-distance override, elevator wait time, or stair effort.",
+    "limitations": [
+      "Three matching stair cores and one elevator connect the two supplied floors. The eastern yard stair is a first-floor exterior grade-change route only; no unsupported floor transfer.",
+      "Dated sheets differ by one year; current door layout and access permissions unknown."
+    ]
+  },
+  "edges": [
+    {
+      "from": "modoc-1-stairs-north",
+      "to": "modoc-2-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "modoc-1-stairs-southwest",
+      "to": "modoc-2-stairs-southwest",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "modoc-1-stairs-southeast",
+      "to": "modoc-2-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "modoc-1-elevator",
+      "to": "modoc-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}

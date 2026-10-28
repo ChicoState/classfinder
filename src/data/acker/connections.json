@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "buildingId": "acker",
+    "units": "feet",
+    "undirected": true,
+    "description": "Two stair cores between floors 1 and 2. Elevator lower landing is not resolved by supplied partial plans; no inferred transfer."
+  },
+  "edges": [
+    {
+      "from": "acker-1-stairs-north",
+      "to": "acker-2-stairs-north",
+      "type": "stairs",
+      "weight": 1,
+      "isAccessible": false
+    },
+    {
+      "from": "acker-1-stairs-south",
+      "to": "acker-2-stairs-south",
+      "type": "stairs",
+      "weight": 1,
+      "isAccessible": false
+    }
+  ]
+}

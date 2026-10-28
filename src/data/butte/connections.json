@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "building": "Butte Hall",
+    "buildingId": "butte",
+    "sources": [
+      "csuc-floor-plans/Butte/bute-1.pdf",
+      "csuc-floor-plans/Butte/bute-2.pdf",
+      "csuc-floor-plans/Butte/bute-3.pdf",
+      "csuc-floor-plans/Butte/bute-4.pdf",
+      "csuc-floor-plans/Butte/bute-5.pdf"
+    ],
+    "units": "feet",
+    "undirected": true,
+    "topology": "West and southeast stair cores and aggregate elevator bank connect floors 1\u20135; two north flight chains connect floors 1\u20133 only. Small first-floor east service stair has no supported transfer.",
+    "distanceConvention": "Weight 1; loader derives distance from endpoint positions. Vertical height, effort, elevator waiting and car identity are not modeled.",
+    "uncertainties": [
+      "North stair footprints differ substantially on sheets 1\u20133; flight correspondence is by west/east position, without asserting shaft coincidence.",
+      "Individual elevator shafts are not delineated or labeled; bank access is represented collectively, without passenger/service or availability claims."
+    ]
+  },
+  "edges": [
+    {
+      "from": "butte-1-stairs-west",
+      "to": "butte-2-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-1-stairs-southeast",
+      "to": "butte-2-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-1-elevator-bank",
+      "to": "butte-2-elevator-bank",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "butte-2-stairs-west",
+      "to": "butte-3-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-2-stairs-southeast",
+      "to": "butte-3-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-2-elevator-bank",
+      "to": "butte-3-elevator-bank",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "butte-3-stairs-west",
+      "to": "butte-4-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-3-stairs-southeast",
+      "to": "butte-4-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-3-elevator-bank",
+      "to": "butte-4-elevator-bank",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "butte-4-stairs-west",
+      "to": "butte-5-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-4-stairs-southeast",
+      "to": "butte-5-stairs-southeast",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-4-elevator-bank",
+      "to": "butte-5-elevator-bank",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "butte-1-stairs-north-west",
+      "to": "butte-2-stairs-north-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-1-stairs-north-east",
+      "to": "butte-2-stairs-north-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-2-stairs-north-west",
+      "to": "butte-3-stairs-north-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "butte-2-stairs-north-east",
+      "to": "butte-3-stairs-north-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    }
+  ]
+}
