@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "building": "Yolo Hall",
+    "buildingId": "yolo",
+    "units": "feet",
+    "undirected": true,
+    "sources": [
+      "csuc-floor-plans/Yolo/yolo-1.pdf",
+      "csuc-floor-plans/Yolo/yolo-2.pdf"
+    ],
+    "sourceDate": "2008-08-04",
+    "alignment": "Upper floor translated +14 PDF points X, +2 PDF points Y in source page coordinates.",
+    "distanceConvention": "Coordinate-derived endpoint separation; no vertical-distance override, stair effort, or elevator wait time.",
+    "limitations": [
+      "Only matching stairs and elevator on supplied adjacent floors 1 and 2. The second-floor stair above the elevator has no shown first-floor flight; no transfer invented.",
+      "Alignment is approximate. Shared shaft endpoints coincide; distinct landings can differ."
+    ]
+  },
+  "edges": [
+    {
+      "from": "yolo-1-stairs-north",
+      "to": "yolo-2-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "yolo-1-stairs-southwest",
+      "to": "yolo-2-stairs-southwest",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "yolo-1-stairs-east",
+      "to": "yolo-2-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "yolo-1-elevator",
+      "to": "yolo-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}

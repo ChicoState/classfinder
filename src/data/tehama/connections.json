@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "buildingId": "tehama",
+    "undirected": true,
+    "units": "feet",
+    "source": "csuc-floor-plans/Tehama/tehama-1.pdf through tehama-3.pdf",
+    "transferConvention": "Adjacent floors only. Two stair cores and two separate elevator shafts on 1\u20133; west stair on 1\u20132 only. Coordinate-derived distances omit vertical effort and waiting time."
+  },
+  "edges": [
+    {
+      "to": "tehama-2-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "from": "tehama-1-stairs-north",
+      "isAccessible": false
+    },
+    {
+      "to": "tehama-2-stairs-south",
+      "weight": 1,
+      "type": "stairs",
+      "from": "tehama-1-stairs-south",
+      "isAccessible": false
+    },
+    {
+      "to": "tehama-2-elevator-west",
+      "weight": 1,
+      "type": "elevator",
+      "from": "tehama-1-elevator-west"
+    },
+    {
+      "to": "tehama-2-elevator-east",
+      "weight": 1,
+      "type": "elevator",
+      "from": "tehama-1-elevator-east"
+    },
+    {
+      "to": "tehama-2-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "from": "tehama-1-stairs-west",
+      "isAccessible": false
+    },
+    {
+      "to": "tehama-3-stairs-north",
+      "weight": 1,
+      "type": "stairs",
+      "from": "tehama-2-stairs-north",
+      "isAccessible": false
+    },
+    {
+      "to": "tehama-3-stairs-south",
+      "weight": 1,
+      "type": "stairs",
+      "from": "tehama-2-stairs-south",
+      "isAccessible": false
+    },
+    {
+      "to": "tehama-3-elevator-west",
+      "weight": 1,
+      "type": "elevator",
+      "from": "tehama-2-elevator-west"
+    },
+    {
+      "to": "tehama-3-elevator-east",
+      "weight": 1,
+      "type": "elevator",
+      "from": "tehama-2-elevator-east"
+    }
+  ]
+}

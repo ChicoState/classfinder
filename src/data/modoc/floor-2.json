@@ -1,0 +1,1879 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Modoc/modc-2.pdf",
+    "sourceDate": "2008-07-15",
+    "building": "Modoc Hall",
+    "buildingId": "modoc",
+    "floor": 2,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "modoc-1-exit-southwest-ao",
+      "description": "AO-marked southwest exterior lobby door on floor 1. Upper-floor origin is its projection.",
+      "pdfPointFromTopLeft": {
+        "x": 189.0,
+        "y": 524.5
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up; not geographic north."
+    },
+    "alignment": {
+      "method": "Translation using elevator and three matching stair cores. Upper PDF shifted 3 points left and 3 points down.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": 3.0,
+          "y": -3.0
+        }
+      }
+    },
+    "undirected": true,
+    "nodeConvention": "Room destinations are doorways. Necessary corridor branches and parent-suite bends retained.",
+    "distanceConvention": "Undirected pairs stored once; loader derives distances in feet from rounded endpoint coordinates. Weight 1; no vertical effort or wait time.",
+    "accessibility": "Only source-marked AO or wheelchair exterior entrance approaches true. Stair edges false. Other edges omit unknown accessibility.",
+    "digitization": {
+      "date": "2026-10-27",
+      "method": "Manual tracing from vector PDF rendered at 2 pixels per native PDF point."
+    },
+    "limitations": [
+      "Approximate manual coordinates from dated plans, not survey or GPS alignment. Current door permissions and elevator operation unknown.",
+      "Source sheets have different dates. Matching fixed cores support alignment; current layout is unverified.",
+      "Only the two supplied floors are represented; no extra floor is inferred from the sheet numbering."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "modoc-2-room-225",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 9.58,
+        "y": 182.92
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-181",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 180.83
+      }
+    },
+    {
+      "id": "modoc-2-room-223",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 180.83
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-219",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 172.92
+      }
+    },
+    {
+      "id": "modoc-2-room-223C",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 172.92
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-439",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 127.08
+      }
+    },
+    {
+      "id": "modoc-2-room-221",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 127.08
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-615",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 90.42
+      }
+    },
+    {
+      "id": "modoc-2-room-217",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 90.42
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-755",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 61.25
+      }
+    },
+    {
+      "id": "modoc-2-room-217B",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 61.25
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-883",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 34.58
+      }
+    },
+    {
+      "id": "modoc-2-room-227",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 34.58
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-343",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 147.08
+      }
+    },
+    {
+      "id": "modoc-2-room-224",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 9.38,
+        "y": 147.08
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-501",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 114.17
+      }
+    },
+    {
+      "id": "modoc-2-room-222",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 9.38,
+        "y": 114.17
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-648",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 83.54
+      }
+    },
+    {
+      "id": "modoc-2-room-220",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 9.38,
+        "y": 83.54
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-834",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 44.79
+      }
+    },
+    {
+      "id": "modoc-2-room-218",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 9.38,
+        "y": 44.79
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-930",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 24.79
+      }
+    },
+    {
+      "id": "modoc-2-room-216",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 9.38,
+        "y": 24.79
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-222",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 172.29
+      }
+    },
+    {
+      "id": "modoc-2-stairs-north",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 5.62,
+        "y": 171.04
+      }
+    },
+    {
+      "id": "modoc-2-room-224-north-approach",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": -5.42,
+        "y": 161.46
+      }
+    },
+    {
+      "id": "modoc-2-room-224A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": -10.0,
+        "y": 170.83
+      }
+    },
+    {
+      "id": "modoc-2-room-223-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 36.88,
+        "y": 179.38
+      }
+    },
+    {
+      "id": "modoc-2-room-223A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 34.58,
+        "y": 183.12
+      }
+    },
+    {
+      "id": "modoc-2-room-223B",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 33.33,
+        "y": 187.08
+      }
+    },
+    {
+      "id": "modoc-2-room-223C-east-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 33.54,
+        "y": 173.96
+      }
+    },
+    {
+      "id": "modoc-2-room-223C-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 26.88,
+        "y": 170.42
+      }
+    },
+    {
+      "id": "modoc-2-hall-221-west",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 22.5,
+        "y": 151.46
+      }
+    },
+    {
+      "id": "modoc-2-hall-221-east",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 43.33,
+        "y": 151.46
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-322",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 151.46
+      }
+    },
+    {
+      "id": "modoc-2-room-221A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 20.21,
+        "y": 152.71
+      }
+    },
+    {
+      "id": "modoc-2-room-221B",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 30.21,
+        "y": 152.71
+      }
+    },
+    {
+      "id": "modoc-2-room-221C",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 40.21,
+        "y": 152.71
+      }
+    },
+    {
+      "id": "modoc-2-room-221D",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 44.38,
+        "y": 152.71
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-537",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 106.67
+      }
+    },
+    {
+      "id": "modoc-2-suite-219-west-entry",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 106.67
+      }
+    },
+    {
+      "id": "modoc-2-suite-219-west",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 23.12,
+        "y": 106.25
+      }
+    },
+    {
+      "id": "modoc-2-suite-219-east",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 35.42,
+        "y": 106.25
+      }
+    },
+    {
+      "id": "modoc-2-room-219F",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 26.88,
+        "y": 109.79
+      }
+    },
+    {
+      "id": "modoc-2-room-219E",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 36.88,
+        "y": 109.79
+      }
+    },
+    {
+      "id": "modoc-2-room-219A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 40.21,
+        "y": 109.79
+      }
+    },
+    {
+      "id": "modoc-2-room-219D",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 26.88,
+        "y": 105.21
+      }
+    },
+    {
+      "id": "modoc-2-room-219C",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 32.92,
+        "y": 105.21
+      }
+    },
+    {
+      "id": "modoc-2-room-219B",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 37.29,
+        "y": 106.88
+      }
+    },
+    {
+      "id": "modoc-2-room-217-north-approach",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 40.0,
+        "y": 87.08
+      }
+    },
+    {
+      "id": "modoc-2-room-219B-south-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 40.83,
+        "y": 92.5
+      }
+    },
+    {
+      "id": "modoc-2-room-219B-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 42.5,
+        "y": 99.79
+      }
+    },
+    {
+      "id": "modoc-2-room-216-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": -0.83,
+        "y": 21.88
+      }
+    },
+    {
+      "id": "modoc-2-room-216A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": -9.58,
+        "y": 24.79
+      }
+    },
+    {
+      "id": "modoc-2-room-216B",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": -8.12,
+        "y": 28.75
+      }
+    },
+    {
+      "id": "modoc-2-room-216C",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": -1.25,
+        "y": 28.75
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-986",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 13.12
+      }
+    },
+    {
+      "id": "modoc-2-room-214-north-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 5.62,
+        "y": 16.04
+      }
+    },
+    {
+      "id": "modoc-2-room-214",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 7.29,
+        "y": -1.67
+      }
+    },
+    {
+      "id": "modoc-2-room-214-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 4.17,
+        "y": 7.29
+      }
+    },
+    {
+      "id": "modoc-2-room-217-south-approach",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 33.54,
+        "y": 69.38
+      }
+    },
+    {
+      "id": "modoc-2-room-217A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 29.38,
+        "y": 62.08
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-825",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 46.67
+      }
+    },
+    {
+      "id": "modoc-2-restroom-women-entry",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 46.67
+      }
+    },
+    {
+      "id": "modoc-2-restroom-women-vestibule",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 22.92,
+        "y": 45.62
+      }
+    },
+    {
+      "id": "modoc-2-restroom-women",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 24.38,
+        "y": 44.58
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-941",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 22.5
+      }
+    },
+    {
+      "id": "modoc-2-elevator",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 17.71,
+        "y": 22.5
+      }
+    },
+    {
+      "id": "modoc-2-hall-service",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 24.79,
+        "y": 13.54
+      }
+    },
+    {
+      "id": "modoc-2-restroom-men",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 29.38,
+        "y": 25.42
+      }
+    },
+    {
+      "id": "modoc-2-unnumbered-service-south",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 31.88,
+        "y": 20.0
+      }
+    },
+    {
+      "id": "modoc-2-custodial-south",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 38.33,
+        "y": 17.29
+      }
+    },
+    {
+      "id": "modoc-2-unnumbered-central-room",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 58.33,
+        "y": 17.08
+      }
+    },
+    {
+      "id": "modoc-2-hall-west-stair-southwest",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 0.0
+      }
+    },
+    {
+      "id": "modoc-2-stairs-southwest",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 20.62,
+        "y": 0.0
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-986",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": 13.12
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-939",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": 22.92
+      }
+    },
+    {
+      "id": "modoc-2-room-213",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": 22.92
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-981",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": 14.17
+      }
+    },
+    {
+      "id": "modoc-2-room-211",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": 14.17
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1060",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -2.29
+      }
+    },
+    {
+      "id": "modoc-2-room-209",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": -2.29
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1109",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -12.5
+      }
+    },
+    {
+      "id": "modoc-2-room-207",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": -12.5
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1158",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -22.71
+      }
+    },
+    {
+      "id": "modoc-2-room-205",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": -22.71
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1208",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -33.12
+      }
+    },
+    {
+      "id": "modoc-2-room-203",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": -33.12
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1258",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -43.54
+      }
+    },
+    {
+      "id": "modoc-2-room-201",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": -43.54
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1011",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": 7.92
+      }
+    },
+    {
+      "id": "modoc-2-room-212",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 69.38,
+        "y": 7.92
+      }
+    },
+    {
+      "id": "modoc-2-room-210",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 69.38,
+        "y": -2.29
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1110",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -12.71
+      }
+    },
+    {
+      "id": "modoc-2-room-208",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 69.38,
+        "y": -12.71
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1159",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -22.92
+      }
+    },
+    {
+      "id": "modoc-2-room-206",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 69.38,
+        "y": -22.92
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1209",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -33.33
+      }
+    },
+    {
+      "id": "modoc-2-room-204",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 69.38,
+        "y": -33.33
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1259",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -43.75
+      }
+    },
+    {
+      "id": "modoc-2-room-202",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 69.38,
+        "y": -43.75
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-913",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": 28.33
+      }
+    },
+    {
+      "id": "modoc-2-room-215",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 72.71,
+        "y": 31.46
+      }
+    },
+    {
+      "id": "modoc-2-room-213-north-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.5,
+        "y": 29.38
+      }
+    },
+    {
+      "id": "modoc-2-room-213-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 83.54,
+        "y": 26.04
+      }
+    },
+    {
+      "id": "modoc-2-room-215-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.5,
+        "y": 40.0
+      }
+    },
+    {
+      "id": "modoc-2-room-215A",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 79.17,
+        "y": 46.25
+      }
+    },
+    {
+      "id": "modoc-2-room-215B",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 82.29,
+        "y": 43.75
+      }
+    },
+    {
+      "id": "modoc-2-room-215C",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 77.29,
+        "y": 53.12
+      }
+    },
+    {
+      "id": "modoc-2-room-211-north-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 85.42,
+        "y": 20.83
+      }
+    },
+    {
+      "id": "modoc-2-room-211-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 83.75,
+        "y": 8.54
+      }
+    },
+    {
+      "id": "modoc-2-room-209-north-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 85.42,
+        "y": 0.21
+      }
+    },
+    {
+      "id": "modoc-2-room-209-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 83.75,
+        "y": -6.88
+      }
+    },
+    {
+      "id": "modoc-2-room-212-south-door",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 64.38,
+        "y": 1.04
+      }
+    },
+    {
+      "id": "modoc-2-room-212-inside",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 62.08,
+        "y": 4.58
+      }
+    },
+    {
+      "id": "modoc-2-hall-east-1324",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 73.33,
+        "y": -57.29
+      }
+    },
+    {
+      "id": "modoc-2-stairs-southeast",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 78.75,
+        "y": -54.38
+      }
+    },
+    {
+      "id": "modoc-2-hall-225-approach",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 13.75,
+        "y": 178.96
+      }
+    },
+    {
+      "id": "modoc-2-room-219B-north-approach",
+      "buildingId": "modoc",
+      "floorId": 2,
+      "position": {
+        "x": 41.46,
+        "y": 106.25
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "modoc-2-hall-west-181",
+      "to": "modoc-2-room-223",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-219",
+      "to": "modoc-2-room-223C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-439",
+      "to": "modoc-2-room-221",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-615",
+      "to": "modoc-2-room-217",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-755",
+      "to": "modoc-2-room-217B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-883",
+      "to": "modoc-2-room-227",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-343",
+      "to": "modoc-2-room-224",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-501",
+      "to": "modoc-2-room-222",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-648",
+      "to": "modoc-2-room-220",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-834",
+      "to": "modoc-2-room-218",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-930",
+      "to": "modoc-2-room-216",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-222",
+      "to": "modoc-2-stairs-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-room-224",
+      "to": "modoc-2-room-224-north-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-224-north-approach",
+      "to": "modoc-2-room-224A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-223",
+      "to": "modoc-2-room-223-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-223-inside",
+      "to": "modoc-2-room-223A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-223A",
+      "to": "modoc-2-room-223B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-223-inside",
+      "to": "modoc-2-room-223C-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-223C",
+      "to": "modoc-2-room-223C-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-223C-inside",
+      "to": "modoc-2-room-223C-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-322",
+      "to": "modoc-2-hall-221-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-221-west",
+      "to": "modoc-2-hall-221-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-221-west",
+      "to": "modoc-2-room-221A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-221-west",
+      "to": "modoc-2-room-221B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-221-east",
+      "to": "modoc-2-room-221C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-221-east",
+      "to": "modoc-2-room-221D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-537",
+      "to": "modoc-2-suite-219-west-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-west-entry",
+      "to": "modoc-2-suite-219-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-west",
+      "to": "modoc-2-suite-219-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-suite-219-west",
+      "to": "modoc-2-room-219F",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-east",
+      "to": "modoc-2-room-219E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-east",
+      "to": "modoc-2-room-219A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-west",
+      "to": "modoc-2-room-219D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-east",
+      "to": "modoc-2-room-219C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-suite-219-east",
+      "to": "modoc-2-room-219B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-217",
+      "to": "modoc-2-room-217-north-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-217-north-approach",
+      "to": "modoc-2-room-219B-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-219B-south-door",
+      "to": "modoc-2-room-219B-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-216",
+      "to": "modoc-2-room-216-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-216-inside",
+      "to": "modoc-2-room-216A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-216-inside",
+      "to": "modoc-2-room-216B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-216-inside",
+      "to": "modoc-2-room-216C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-216-inside",
+      "to": "modoc-2-room-214-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-986",
+      "to": "modoc-2-room-214",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-214-north-door",
+      "to": "modoc-2-room-214-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-214-inside",
+      "to": "modoc-2-room-214",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-217",
+      "to": "modoc-2-room-217-south-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-217-south-approach",
+      "to": "modoc-2-room-217A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-825",
+      "to": "modoc-2-restroom-women-entry",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-restroom-women-entry",
+      "to": "modoc-2-restroom-women-vestibule",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-restroom-women-vestibule",
+      "to": "modoc-2-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-941",
+      "to": "modoc-2-elevator",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-986",
+      "to": "modoc-2-hall-service",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-service",
+      "to": "modoc-2-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-service",
+      "to": "modoc-2-unnumbered-service-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-service",
+      "to": "modoc-2-custodial-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-service",
+      "to": "modoc-2-unnumbered-central-room",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-west-986",
+      "to": "modoc-2-hall-west-stair-southwest",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-stair-southwest",
+      "to": "modoc-2-stairs-southwest",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-service",
+      "to": "modoc-2-hall-east-986",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-939",
+      "to": "modoc-2-room-213",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-981",
+      "to": "modoc-2-room-211",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1060",
+      "to": "modoc-2-room-209",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1109",
+      "to": "modoc-2-room-207",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1158",
+      "to": "modoc-2-room-205",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1208",
+      "to": "modoc-2-room-203",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1258",
+      "to": "modoc-2-room-201",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1011",
+      "to": "modoc-2-room-212",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1060",
+      "to": "modoc-2-room-210",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1110",
+      "to": "modoc-2-room-208",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1159",
+      "to": "modoc-2-room-206",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1209",
+      "to": "modoc-2-room-204",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1259",
+      "to": "modoc-2-room-202",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-913",
+      "to": "modoc-2-room-215",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-213",
+      "to": "modoc-2-room-213-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-213-north-door",
+      "to": "modoc-2-room-213-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-215",
+      "to": "modoc-2-room-215-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-215-inside",
+      "to": "modoc-2-room-215A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-215-inside",
+      "to": "modoc-2-room-215B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-215A",
+      "to": "modoc-2-room-215C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-213-inside",
+      "to": "modoc-2-room-211-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-211",
+      "to": "modoc-2-room-211-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-211-north-door",
+      "to": "modoc-2-room-211-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-211-inside",
+      "to": "modoc-2-room-209-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-209",
+      "to": "modoc-2-room-209-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-209-north-door",
+      "to": "modoc-2-room-209-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-210",
+      "to": "modoc-2-room-212-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-212",
+      "to": "modoc-2-room-212-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-212-inside",
+      "to": "modoc-2-room-212-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-east-1324",
+      "to": "modoc-2-stairs-southeast",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-219",
+      "to": "modoc-2-hall-west-222",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-222",
+      "to": "modoc-2-hall-west-322",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-322",
+      "to": "modoc-2-hall-west-343",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-343",
+      "to": "modoc-2-hall-west-439",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-439",
+      "to": "modoc-2-hall-west-501",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-501",
+      "to": "modoc-2-hall-west-537",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-537",
+      "to": "modoc-2-hall-west-615",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-615",
+      "to": "modoc-2-hall-west-648",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-648",
+      "to": "modoc-2-hall-west-755",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-755",
+      "to": "modoc-2-hall-west-825",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-825",
+      "to": "modoc-2-hall-west-834",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-834",
+      "to": "modoc-2-hall-west-883",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-883",
+      "to": "modoc-2-hall-west-930",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-930",
+      "to": "modoc-2-hall-west-941",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-941",
+      "to": "modoc-2-hall-west-986",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-913",
+      "to": "modoc-2-hall-east-939",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-939",
+      "to": "modoc-2-hall-east-981",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-981",
+      "to": "modoc-2-hall-east-986",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-986",
+      "to": "modoc-2-hall-east-1011",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1011",
+      "to": "modoc-2-hall-east-1060",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1060",
+      "to": "modoc-2-hall-east-1109",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1109",
+      "to": "modoc-2-hall-east-1110",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1110",
+      "to": "modoc-2-hall-east-1158",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1158",
+      "to": "modoc-2-hall-east-1159",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1159",
+      "to": "modoc-2-hall-east-1208",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1208",
+      "to": "modoc-2-hall-east-1209",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1209",
+      "to": "modoc-2-hall-east-1258",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1258",
+      "to": "modoc-2-hall-east-1259",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-east-1259",
+      "to": "modoc-2-hall-east-1324",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-west-181",
+      "to": "modoc-2-hall-225-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-hall-225-approach",
+      "to": "modoc-2-room-225",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-hall-225-approach",
+      "to": "modoc-2-hall-west-219",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "modoc-2-room-219B",
+      "to": "modoc-2-room-219B-north-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-219B-north-approach",
+      "to": "modoc-2-room-219B-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "modoc-2-room-215-inside",
+      "to": "modoc-2-room-213-north-door",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

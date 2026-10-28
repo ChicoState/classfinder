@@ -1,0 +1,1976 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Yolo/yolo-2.pdf",
+    "sourceDate": "2008-08-04",
+    "building": "Yolo Hall",
+    "buildingId": "yolo",
+    "floor": 2,
+    "units": "feet",
+    "scale": "1 inch = 40 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.5555555555555556,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "yolo-1-exit-south-ao",
+      "description": "AO-marked south exterior double doorway at the main lobby.",
+      "pdfPointFromTopLeft": {
+        "x": 223.0,
+        "y": 635.0
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up; not geographic north."
+    },
+    "alignment": {
+      "method": "Translation from matching elevator, east wing, and north stair outlines; upper source shifted 14 PDF points left and 2 points up.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": 14.0,
+          "y": 2.0
+        }
+      }
+    },
+    "undirected": true,
+    "nodeConvention": "Room nodes are doorways. Extra nodes preserve corridor bends, branches, and travel inside parent rooms.",
+    "distanceConvention": "One copy per undirected pair; loader derives distances from rounded coordinates. Weight 1. Aligned transfers can have zero distance; no vertical effort or wait time.",
+    "accessibility": "Only source AO-marked exterior entrance approaches are true. Stairs false; all other accessibility unknown.",
+    "digitization": {
+      "date": "2026-10-27",
+      "method": "Manual tracing from native vector PDF rendered at 2 pixels per PDF point."
+    },
+    "limitations": [
+      "Dated plan; approximate manual geometry, not survey or GPS coordinates. Current door permissions and elevator availability unknown.",
+      "Unnumbered visible spaces use spatial names. Roofs and open-to-below voids are excluded.",
+      "Floor 2 stair above elevator has no corresponding first-floor flight shown; retained as an unconnected transfer access, without inventing another floor.",
+      "Lab 224 paths skirt the south and west ends of the drawn shelving. Rooms 216/221 are reached through 218 as well as the visible north doorway of 216. Rooms 245/246/247/248 are reached through 243; 231 through 229."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "yolo-2-hall-west-north",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.56,
+        "y": 230.0
+      }
+    },
+    {
+      "id": "yolo-2-hall-west-218",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.56,
+        "y": 168.06
+      }
+    },
+    {
+      "id": "yolo-2-hall-west-229",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.56,
+        "y": 112.22
+      }
+    },
+    {
+      "id": "yolo-2-hall-west-south",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.56,
+        "y": 50.28
+      }
+    },
+    {
+      "id": "yolo-2-hall-southwest",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.56,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-southwest-stairs",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -11.39,
+        "y": 16.67
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-north",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 230.0
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-218",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 200.0
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-258",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 163.89
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-259",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 135.28
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-229",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 106.11
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-234",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 83.89
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-235",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 70.28
+      }
+    },
+    {
+      "id": "yolo-2-hall-east-south",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 50.28
+      }
+    },
+    {
+      "id": "yolo-2-hall-southeast",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-south-center",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 17.78,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-south-elevator",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 17.78,
+        "y": 49.17
+      }
+    },
+    {
+      "id": "yolo-2-elevator",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 26.39,
+        "y": 41.11
+      }
+    },
+    {
+      "id": "yolo-2-stairs-above-elevator",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 47.5,
+        "y": 49.44
+      }
+    },
+    {
+      "id": "yolo-2-stairs-north",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.0,
+        "y": 260.0
+      }
+    },
+    {
+      "id": "yolo-2-north-stair-approach",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -10.56,
+        "y": 250.56
+      }
+    },
+    {
+      "id": "yolo-2-room-unnumbered-northwest",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -19.17,
+        "y": 250.56
+      }
+    },
+    {
+      "id": "yolo-2-stairs-southwest",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -17.5,
+        "y": 14.44
+      }
+    },
+    {
+      "id": "yolo-2-room-206",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -19.72,
+        "y": 258.33
+      }
+    },
+    {
+      "id": "yolo-2-room-213",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 14.17,
+        "y": 235.83
+      }
+    },
+    {
+      "id": "yolo-2-room-210",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 34.44,
+        "y": 246.39
+      }
+    },
+    {
+      "id": "yolo-2-room-213-east-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 51.94,
+        "y": 235.83
+      }
+    },
+    {
+      "id": "yolo-2-room-216",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 20.0,
+        "y": 203.89
+      }
+    },
+    {
+      "id": "yolo-2-room-217",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 21.94,
+        "y": 223.89
+      }
+    },
+    {
+      "id": "yolo-2-room-218",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 14.72,
+        "y": 176.39
+      }
+    },
+    {
+      "id": "yolo-2-room-218-east-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 46.94,
+        "y": 199.44
+      }
+    },
+    {
+      "id": "yolo-2-room-219",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 45.28,
+        "y": 196.39
+      }
+    },
+    {
+      "id": "yolo-2-room-221",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 37.22,
+        "y": 172.22
+      }
+    },
+    {
+      "id": "yolo-2-room-224",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 10.83,
+        "y": 160.0
+      }
+    },
+    {
+      "id": "yolo-2-room-224-east-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 46.94,
+        "y": 138.89
+      }
+    },
+    {
+      "id": "yolo-2-room-226",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 13.06,
+        "y": 124.72
+      }
+    },
+    {
+      "id": "yolo-2-room-unnumbered-226-south",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 13.06,
+        "y": 121.67
+      }
+    },
+    {
+      "id": "yolo-2-room-229",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 34.17,
+        "y": 113.61
+      }
+    },
+    {
+      "id": "yolo-2-room-231",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 35.56,
+        "y": 120.56
+      }
+    },
+    {
+      "id": "yolo-2-room-234",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 46.94,
+        "y": 83.33
+      }
+    },
+    {
+      "id": "yolo-2-room-234-west-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 10.56,
+        "y": 83.89
+      }
+    },
+    {
+      "id": "yolo-2-room-235",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 46.94,
+        "y": 77.5
+      }
+    },
+    {
+      "id": "yolo-2-room-237",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 46.94,
+        "y": 36.94
+      }
+    },
+    {
+      "id": "yolo-2-restroom-south-women",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -17.78,
+        "y": 50.0
+      }
+    },
+    {
+      "id": "yolo-2-restroom-south-men",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": -17.78,
+        "y": 32.5
+      }
+    },
+    {
+      "id": "yolo-2-room-243",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 16.39,
+        "y": 25.83
+      }
+    },
+    {
+      "id": "yolo-2-room-244",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 11.67,
+        "y": 28.33
+      }
+    },
+    {
+      "id": "yolo-2-room-245",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 16.39,
+        "y": 17.5
+      }
+    },
+    {
+      "id": "yolo-2-room-246",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 32.22,
+        "y": 17.5
+      }
+    },
+    {
+      "id": "yolo-2-room-247",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 53.61,
+        "y": 17.5
+      }
+    },
+    {
+      "id": "yolo-2-room-248",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 56.67,
+        "y": 20.83
+      }
+    },
+    {
+      "id": "yolo-2-room-213-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 34.44,
+        "y": 258.06
+      }
+    },
+    {
+      "id": "yolo-2-room-218-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 22.22,
+        "y": 192.5
+      }
+    },
+    {
+      "id": "yolo-2-room-224-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 28.33,
+        "y": 141.11
+      }
+    },
+    {
+      "id": "yolo-2-room-229-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 28.89,
+        "y": 119.72
+      }
+    },
+    {
+      "id": "yolo-2-room-235-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 23.33,
+        "y": 73.33
+      }
+    },
+    {
+      "id": "yolo-2-room-243-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 34.72,
+        "y": 21.94
+      }
+    },
+    {
+      "id": "yolo-2-room-250",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 245.83
+      }
+    },
+    {
+      "id": "yolo-2-room-251",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 239.72
+      }
+    },
+    {
+      "id": "yolo-2-room-252",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 230.0
+      }
+    },
+    {
+      "id": "yolo-2-room-253",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 220.0
+      }
+    },
+    {
+      "id": "yolo-2-room-254",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 209.72
+      }
+    },
+    {
+      "id": "yolo-2-room-255",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 200.0
+      }
+    },
+    {
+      "id": "yolo-2-room-256",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 190.0
+      }
+    },
+    {
+      "id": "yolo-2-room-257",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 179.72
+      }
+    },
+    {
+      "id": "yolo-2-room-258",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 159.17
+      }
+    },
+    {
+      "id": "yolo-2-room-259",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 129.17
+      }
+    },
+    {
+      "id": "yolo-2-room-261",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 121.11
+      }
+    },
+    {
+      "id": "yolo-2-room-262",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 96.67
+      }
+    },
+    {
+      "id": "yolo-2-room-263",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 91.94
+      }
+    },
+    {
+      "id": "yolo-2-room-264",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 78.06
+      }
+    },
+    {
+      "id": "yolo-2-room-265",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 73.61
+      }
+    },
+    {
+      "id": "yolo-2-room-266",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 59.72
+      }
+    },
+    {
+      "id": "yolo-2-room-267",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 52.22
+      }
+    },
+    {
+      "id": "yolo-2-room-268",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 55.28,
+        "y": 36.67
+      }
+    },
+    {
+      "id": "yolo-2-hall-wing-west",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 70.56,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-wing-271",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 82.78,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-wing-273",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 101.67,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-wing-275",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 120.83,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-wing-277",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 139.72,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-wing-stair-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 150.0,
+        "y": 30.83
+      }
+    },
+    {
+      "id": "yolo-2-stairs-east",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 158.06,
+        "y": 23.33
+      }
+    },
+    {
+      "id": "yolo-2-room-271",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 83.06,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-279",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 83.06,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-272",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 87.78,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-281",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 87.78,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-273",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 102.22,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-282",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 102.22,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-274",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 106.94,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-283",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 106.94,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-275",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 121.39,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-284",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 121.39,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-276",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 126.11,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-285",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 126.11,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-277",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 140.28,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-286",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 140.28,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-room-278",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 145.28,
+        "y": 35.83
+      }
+    },
+    {
+      "id": "yolo-2-room-287",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 145.28,
+        "y": 25.56
+      }
+    },
+    {
+      "id": "yolo-2-hall-224-approach",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 9.44,
+        "y": 168.06
+      }
+    },
+    {
+      "id": "yolo-2-room-224-southwest",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 10.83,
+        "y": 142.22
+      }
+    },
+    {
+      "id": "yolo-2-hall-226-south",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 9.44,
+        "y": 116.11
+      }
+    },
+    {
+      "id": "yolo-2-hall-226-west",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 9.44,
+        "y": 124.72
+      }
+    },
+    {
+      "id": "yolo-2-room-229-north-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 42.22,
+        "y": 135.0
+      }
+    },
+    {
+      "id": "yolo-2-room-229-north-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 35.83,
+        "y": 128.89
+      }
+    },
+    {
+      "id": "yolo-2-room-235-west",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 10.28,
+        "y": 76.39
+      }
+    },
+    {
+      "id": "yolo-2-room-216-north-door",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 19.72,
+        "y": 223.89
+      }
+    },
+    {
+      "id": "yolo-2-room-213-west-pocket",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 13.89,
+        "y": 251.94
+      }
+    },
+    {
+      "id": "yolo-2-room-213-east-pocket",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 51.67,
+        "y": 251.94
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-250",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 245.83
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-251",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 239.72
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-253",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 220.0
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-254",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 209.72
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-256",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 190.0
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-257",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 179.72
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-258",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 159.17
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-259",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 129.17
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-261",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 121.11
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-262",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 96.67
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-263",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 91.94
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-264",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 78.06
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-265",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 73.61
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-266",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 59.72
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-267",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 52.22
+      }
+    },
+    {
+      "id": "yolo-2-hall-room-268",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 50.56,
+        "y": 36.67
+      }
+    },
+    {
+      "id": "yolo-2-room-243-west-inside",
+      "buildingId": "yolo",
+      "floorId": 2,
+      "position": {
+        "x": 16.39,
+        "y": 21.11
+      }
+    }
+  ],
+  "edges": [
+    {
+      "to": "yolo-2-hall-west-218",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-west-north"
+    },
+    {
+      "to": "yolo-2-hall-southwest",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-west-south"
+    },
+    {
+      "to": "yolo-2-hall-southwest-stairs",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-southwest"
+    },
+    {
+      "to": "yolo-2-hall-east-north",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-west-north"
+    },
+    {
+      "to": "yolo-2-hall-east-229",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-west-229"
+    },
+    {
+      "to": "yolo-2-hall-south-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-west-south"
+    },
+    {
+      "to": "yolo-2-hall-south-center",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-southwest"
+    },
+    {
+      "to": "yolo-2-hall-southeast",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-south-center"
+    },
+    {
+      "to": "yolo-2-hall-south-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-south-center"
+    },
+    {
+      "to": "yolo-2-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-south-elevator"
+    },
+    {
+      "to": "yolo-2-stairs-above-elevator",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-east-south"
+    },
+    {
+      "to": "yolo-2-north-stair-approach",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-west-north"
+    },
+    {
+      "to": "yolo-2-stairs-north",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-north-stair-approach"
+    },
+    {
+      "to": "yolo-2-stairs-southwest",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-southwest-stairs"
+    },
+    {
+      "to": "yolo-2-room-206",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-north-stair-approach"
+    },
+    {
+      "to": "yolo-2-room-unnumbered-northwest",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-north-stair-approach"
+    },
+    {
+      "to": "yolo-2-room-213",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-west-north"
+    },
+    {
+      "to": "yolo-2-room-210",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-213-inside"
+    },
+    {
+      "to": "yolo-2-room-213-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-north"
+    },
+    {
+      "to": "yolo-2-room-216",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-218-inside"
+    },
+    {
+      "to": "yolo-2-room-217",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-north"
+    },
+    {
+      "to": "yolo-2-room-218",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-west-218"
+    },
+    {
+      "to": "yolo-2-room-218-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-218"
+    },
+    {
+      "to": "yolo-2-room-219",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-218-east-door"
+    },
+    {
+      "to": "yolo-2-room-221",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-218-inside"
+    },
+    {
+      "to": "yolo-2-room-224-east-door",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-259"
+    },
+    {
+      "to": "yolo-2-room-229",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-229"
+    },
+    {
+      "to": "yolo-2-room-231",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-229-inside"
+    },
+    {
+      "to": "yolo-2-room-234",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-234"
+    },
+    {
+      "to": "yolo-2-room-235",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-east-235"
+    },
+    {
+      "to": "yolo-2-room-237",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-southeast"
+    },
+    {
+      "to": "yolo-2-restroom-south-women",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-west-south"
+    },
+    {
+      "to": "yolo-2-restroom-south-men",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-southwest"
+    },
+    {
+      "to": "yolo-2-room-243",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-south-center"
+    },
+    {
+      "to": "yolo-2-room-245",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-243-inside"
+    },
+    {
+      "to": "yolo-2-room-246",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-243-inside"
+    },
+    {
+      "to": "yolo-2-room-247",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-243-inside"
+    },
+    {
+      "to": "yolo-2-room-248",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-243-inside"
+    },
+    {
+      "to": "yolo-2-room-218-inside",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-218"
+    },
+    {
+      "to": "yolo-2-room-218-inside",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-218-east-door"
+    },
+    {
+      "to": "yolo-2-room-224-inside",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-224-east-door"
+    },
+    {
+      "to": "yolo-2-room-229-inside",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-229"
+    },
+    {
+      "to": "yolo-2-room-235-inside",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-room-235"
+    },
+    {
+      "to": "yolo-2-hall-wing-west",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-southeast"
+    },
+    {
+      "to": "yolo-2-hall-wing-271",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-wing-west"
+    },
+    {
+      "to": "yolo-2-hall-wing-273",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-wing-271"
+    },
+    {
+      "to": "yolo-2-hall-wing-275",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-wing-273"
+    },
+    {
+      "to": "yolo-2-hall-wing-277",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-wing-275"
+    },
+    {
+      "to": "yolo-2-wing-stair-door",
+      "weight": 1,
+      "type": "corridor",
+      "from": "yolo-2-hall-wing-277"
+    },
+    {
+      "to": "yolo-2-stairs-east",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-wing-stair-door"
+    },
+    {
+      "to": "yolo-2-room-271",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-271"
+    },
+    {
+      "to": "yolo-2-room-279",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-271"
+    },
+    {
+      "to": "yolo-2-room-272",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-271"
+    },
+    {
+      "to": "yolo-2-room-281",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-271"
+    },
+    {
+      "to": "yolo-2-room-273",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-273"
+    },
+    {
+      "to": "yolo-2-room-282",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-273"
+    },
+    {
+      "to": "yolo-2-room-274",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-273"
+    },
+    {
+      "to": "yolo-2-room-283",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-273"
+    },
+    {
+      "to": "yolo-2-room-275",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-275"
+    },
+    {
+      "to": "yolo-2-room-284",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-275"
+    },
+    {
+      "to": "yolo-2-room-276",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-275"
+    },
+    {
+      "to": "yolo-2-room-285",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-275"
+    },
+    {
+      "to": "yolo-2-room-277",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-277"
+    },
+    {
+      "to": "yolo-2-room-286",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-277"
+    },
+    {
+      "to": "yolo-2-room-278",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-277"
+    },
+    {
+      "to": "yolo-2-room-287",
+      "weight": 1,
+      "type": "door",
+      "from": "yolo-2-hall-wing-277"
+    },
+    {
+      "from": "yolo-2-hall-west-218",
+      "to": "yolo-2-hall-224-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-224-approach",
+      "to": "yolo-2-room-224",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-224",
+      "to": "yolo-2-room-224-southwest",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-224-southwest",
+      "to": "yolo-2-room-224-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-west-229",
+      "to": "yolo-2-hall-226-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-226-south",
+      "to": "yolo-2-hall-226-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-226-west",
+      "to": "yolo-2-room-226",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-226-west",
+      "to": "yolo-2-room-unnumbered-226-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-224-inside",
+      "to": "yolo-2-room-229-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-229-north-door",
+      "to": "yolo-2-room-229-north-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-229-north-inside",
+      "to": "yolo-2-room-229-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-south-center",
+      "to": "yolo-2-room-244",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-235-inside",
+      "to": "yolo-2-room-235-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-235-west",
+      "to": "yolo-2-room-234-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-east-north",
+      "to": "yolo-2-room-216-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-216-north-door",
+      "to": "yolo-2-room-216",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-213",
+      "to": "yolo-2-room-213-west-pocket",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-213-west-pocket",
+      "to": "yolo-2-room-213-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-213-east-door",
+      "to": "yolo-2-room-213-east-pocket",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-213-east-pocket",
+      "to": "yolo-2-room-213-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-250",
+      "to": "yolo-2-room-250",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-251",
+      "to": "yolo-2-room-251",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-east-north",
+      "to": "yolo-2-room-252",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-253",
+      "to": "yolo-2-room-253",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-254",
+      "to": "yolo-2-room-254",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-east-218",
+      "to": "yolo-2-room-255",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-256",
+      "to": "yolo-2-room-256",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-257",
+      "to": "yolo-2-room-257",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-258",
+      "to": "yolo-2-room-258",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-259",
+      "to": "yolo-2-room-259",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-261",
+      "to": "yolo-2-room-261",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-262",
+      "to": "yolo-2-room-262",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-263",
+      "to": "yolo-2-room-263",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-264",
+      "to": "yolo-2-room-264",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-265",
+      "to": "yolo-2-room-265",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-266",
+      "to": "yolo-2-room-266",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-267",
+      "to": "yolo-2-room-267",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-room-268",
+      "to": "yolo-2-room-268",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-hall-southeast",
+      "to": "yolo-2-hall-room-268",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-268",
+      "to": "yolo-2-hall-east-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-south",
+      "to": "yolo-2-hall-room-267",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-267",
+      "to": "yolo-2-hall-room-266",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-266",
+      "to": "yolo-2-hall-east-235",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-235",
+      "to": "yolo-2-hall-room-265",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-265",
+      "to": "yolo-2-hall-room-264",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-264",
+      "to": "yolo-2-hall-east-234",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-234",
+      "to": "yolo-2-hall-room-263",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-263",
+      "to": "yolo-2-hall-room-262",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-262",
+      "to": "yolo-2-hall-east-229",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-229",
+      "to": "yolo-2-hall-room-261",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-261",
+      "to": "yolo-2-hall-room-259",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-259",
+      "to": "yolo-2-hall-east-259",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-259",
+      "to": "yolo-2-hall-room-258",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-258",
+      "to": "yolo-2-hall-east-258",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-258",
+      "to": "yolo-2-hall-room-257",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-257",
+      "to": "yolo-2-hall-room-256",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-256",
+      "to": "yolo-2-hall-east-218",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-218",
+      "to": "yolo-2-hall-room-254",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-254",
+      "to": "yolo-2-hall-room-253",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-253",
+      "to": "yolo-2-hall-east-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-east-north",
+      "to": "yolo-2-hall-room-251",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-room-251",
+      "to": "yolo-2-hall-room-250",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-west-218",
+      "to": "yolo-2-hall-west-229",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-hall-west-229",
+      "to": "yolo-2-hall-west-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "yolo-2-room-243",
+      "to": "yolo-2-room-243-west-inside",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "yolo-2-room-243-west-inside",
+      "to": "yolo-2-room-243-inside",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

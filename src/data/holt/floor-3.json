@@ -1,0 +1,3316 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Holt/holt-3.pdf",
+    "sourceDate": "2009-09-15",
+    "building": "Holt Hall",
+    "buildingId": "holt",
+    "floor": 3,
+    "units": "feet",
+    "scale": "1 inch = 40 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.5555555555555556,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "holt-1-exit-south-ao",
+      "description": "AO-marked exterior doorway at the drawing-bottom east stair lobby on floor 1.",
+      "pdfPointFromTopLeft": {
+        "x": 355,
+        "y": 682
+      }
+    },
+    "axes": {
+      "x": "Drawing-right; not geographic east.",
+      "y": "Drawing-up; not geographic north."
+    },
+    "alignment": {
+      "method": "Identity alignment of matching page geometry; north/south stair shafts and central elevator shaft coincide across floors.",
+      "referenceFloor": 1,
+      "scale": 1,
+      "rotationDegrees": 0,
+      "translationPdfPoints": {
+        "x": 0,
+        "y": 0
+      },
+      "projectedOriginPdfPoint": {
+        "x": 355,
+        "y": 682
+      },
+      "landmarksPdfPoints": [
+        {
+          "description": "North stair shaft upper-left",
+          "x": 317,
+          "y": 73
+        },
+        {
+          "description": "South stair shaft upper-left",
+          "x": 317,
+          "y": 632
+        },
+        {
+          "description": "Elevator shaft upper-left",
+          "x": 231,
+          "y": 273
+        }
+      ]
+    },
+    "undirected": true,
+    "nodeConvention": "Room nodes are visible doorways. Additional nodes retain circulation bends, junctions and transfer approaches.",
+    "distanceConvention": "Euclidean feet from rounded endpoint positions; weight 1. No vertical-distance override. Aligned transfers may have zero distance; stair effort and elevator waiting are omitted.",
+    "accessibility": "Omitted means unknown. Only source-marked AO entrance edges are true; stairs are false. No accessibility or current access certification.",
+    "digitization": "Manual inspection of dated vector-outline PDF; two-pixel-per-PDF-point inspection coordinates converted using x=(pixelX-710)/3.6, y=(1364-pixelY)/3.6. Approximate, not surveyed.",
+    "uncertainties": [
+      "Room 301I uses capital I as printed; 301D, 347A, 325C, 335A and 337A retain parent-number suffixes shown on the plan.",
+      "Room 329D and 329E are reached through 329; 325F and 325G through the southern 325 suite.",
+      "Open-ended partitions within 301 and 325 require circulation bends; no routes cross courtyard voids.",
+      "Middle stairs show UP beyond floor 3, but no fourth-floor plan was supplied and no additional transfer is created."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "holt-3-south-east-bottom",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 32.78
+      }
+    },
+    {
+      "id": "holt-3-south-east-mid",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 46.11
+      }
+    },
+    {
+      "id": "holt-3-south-east-top",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 71.94
+      }
+    },
+    {
+      "id": "holt-3-south-ne",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 86.39
+      }
+    },
+    {
+      "id": "holt-3-south-nw",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 86.39
+      }
+    },
+    {
+      "id": "holt-3-south-west-top",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 71.94
+      }
+    },
+    {
+      "id": "holt-3-south-west-mid",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 46.11
+      }
+    },
+    {
+      "id": "holt-3-south-west-bottom",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 32.78
+      }
+    },
+    {
+      "id": "holt-3-south-lower-middle",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -28.33,
+        "y": 32.78
+      }
+    },
+    {
+      "id": "holt-3-south-upper-middle",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -28.33,
+        "y": 86.39
+      }
+    },
+    {
+      "id": "holt-3-south-bridge-west",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 114.44
+      }
+    },
+    {
+      "id": "holt-3-middle-west-bottom",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 147.78
+      }
+    },
+    {
+      "id": "holt-3-middle-west-mid",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 162.22
+      }
+    },
+    {
+      "id": "holt-3-middle-west-top",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 184.44
+      }
+    },
+    {
+      "id": "holt-3-middle-nw",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 199.44
+      }
+    },
+    {
+      "id": "holt-3-middle-ne",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -23.89,
+        "y": 199.44
+      }
+    },
+    {
+      "id": "holt-3-middle-east-top",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -23.89,
+        "y": 184.44
+      }
+    },
+    {
+      "id": "holt-3-middle-east-mid",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -23.89,
+        "y": 162.22
+      }
+    },
+    {
+      "id": "holt-3-middle-east-bottom",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -23.89,
+        "y": 147.78
+      }
+    },
+    {
+      "id": "holt-3-middle-south-link",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 147.78
+      }
+    },
+    {
+      "id": "holt-3-middle-north-link",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 199.44
+      }
+    },
+    {
+      "id": "holt-3-north-bridge-west",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 234.17
+      }
+    },
+    {
+      "id": "holt-3-north-sw",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 262.5
+      }
+    },
+    {
+      "id": "holt-3-north-se",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 262.5
+      }
+    },
+    {
+      "id": "holt-3-north-west-mid",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 284.44
+      }
+    },
+    {
+      "id": "holt-3-north-west-upper",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 303.89
+      }
+    },
+    {
+      "id": "holt-3-north-nw",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -56.11,
+        "y": 321.94
+      }
+    },
+    {
+      "id": "holt-3-north-ne",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 321.94
+      }
+    },
+    {
+      "id": "holt-3-north-east-upper",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 303.89
+      }
+    },
+    {
+      "id": "holt-3-north-east-mid",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 284.44
+      }
+    },
+    {
+      "id": "holt-3-north-upper-middle",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -27.78,
+        "y": 321.94
+      }
+    },
+    {
+      "id": "holt-3-north-lower-middle",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -27.78,
+        "y": 262.5
+      }
+    },
+    {
+      "id": "holt-3-stairs-north",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.5,
+        "y": 330
+      }
+    },
+    {
+      "id": "holt-3-stairs-south",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -6.67,
+        "y": 25.28
+      }
+    },
+    {
+      "id": "holt-3-stairs-middle-north",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -44.17,
+        "y": 232.22
+      }
+    },
+    {
+      "id": "holt-3-stairs-middle-south",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -44.17,
+        "y": 113.89
+      }
+    },
+    {
+      "id": "holt-3-north-stair-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -51.39,
+        "y": 231.39
+      }
+    },
+    {
+      "id": "holt-3-south-stair-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -51.39,
+        "y": 112.78
+      }
+    },
+    {
+      "id": "holt-3-elevator",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -65,
+        "y": 227.5
+      }
+    },
+    {
+      "id": "holt-3-elevator-approach",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -65,
+        "y": 231.67
+      }
+    },
+    {
+      "id": "holt-3-room-333",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.67,
+        "y": 203.61
+      }
+    },
+    {
+      "id": "holt-3-room-335",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -80.56,
+        "y": 203.61
+      }
+    },
+    {
+      "id": "holt-3-room-335A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -103.61,
+        "y": 221.11
+      }
+    },
+    {
+      "id": "holt-3-room-335-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -97.22,
+        "y": 210.83
+      }
+    },
+    {
+      "id": "holt-3-room-337",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -83.89,
+        "y": 201.94
+      }
+    },
+    {
+      "id": "holt-3-room-337A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -104.72,
+        "y": 203.61
+      }
+    },
+    {
+      "id": "holt-3-room-337-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -98.06,
+        "y": 192.5
+      }
+    },
+    {
+      "id": "holt-3-room-339",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -83.89,
+        "y": 155.56
+      }
+    },
+    {
+      "id": "holt-3-room-339A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -91.39,
+        "y": 161.67
+      }
+    },
+    {
+      "id": "holt-3-room-339C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -105.28,
+        "y": 161.67
+      }
+    },
+    {
+      "id": "holt-3-room-339-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -98.33,
+        "y": 156.94
+      }
+    },
+    {
+      "id": "holt-3-room-341",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -100.83,
+        "y": 143.61
+      }
+    },
+    {
+      "id": "holt-3-room-343",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -100.83,
+        "y": 134.17
+      }
+    },
+    {
+      "id": "holt-3-room-345",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -100.83,
+        "y": 129.17
+      }
+    },
+    {
+      "id": "holt-3-room-349",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.67,
+        "y": 120.28
+      }
+    },
+    {
+      "id": "holt-3-room-347",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -68.33,
+        "y": 144.17
+      }
+    },
+    {
+      "id": "holt-3-room-347A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.39,
+        "y": 135.28
+      }
+    },
+    {
+      "id": "holt-3-room-347B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -68.33,
+        "y": 134.17
+      }
+    },
+    {
+      "id": "holt-3-room-347C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -84.17,
+        "y": 137.78
+      }
+    },
+    {
+      "id": "holt-3-room-347D",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -84.17,
+        "y": 133.06
+      }
+    },
+    {
+      "id": "holt-3-room-347-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -74.72,
+        "y": 134.72
+      }
+    },
+    {
+      "id": "holt-3-west-suite-hall",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -97.5,
+        "y": 125
+      }
+    },
+    {
+      "id": "holt-3-west-suite-upper",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -97.5,
+        "y": 150
+      }
+    },
+    {
+      "id": "holt-3-west-suite-lower",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.67,
+        "y": 115.28
+      }
+    },
+    {
+      "id": "holt-3-room-331",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -36.67,
+        "y": 203.61
+      }
+    },
+    {
+      "id": "holt-3-room-329C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -35.56,
+        "y": 221.11
+      }
+    },
+    {
+      "id": "holt-3-room-329C-east-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -20,
+        "y": 221.11
+      }
+    },
+    {
+      "id": "holt-3-room-329B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -20,
+        "y": 216.11
+      }
+    },
+    {
+      "id": "holt-3-room-329A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -20,
+        "y": 208.33
+      }
+    },
+    {
+      "id": "holt-3-room-329",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -19.72,
+        "y": 199.44
+      }
+    },
+    {
+      "id": "holt-3-room-329D",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -17.5,
+        "y": 227.5
+      }
+    },
+    {
+      "id": "holt-3-room-329E",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.78,
+        "y": 227.5
+      }
+    },
+    {
+      "id": "holt-3-room-329-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -11.39,
+        "y": 217.22
+      }
+    },
+    {
+      "id": "holt-3-room-327",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -19.72,
+        "y": 169.44
+      }
+    },
+    {
+      "id": "holt-3-room-327A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -6.11,
+        "y": 169.44
+      }
+    },
+    {
+      "id": "holt-3-room-327B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -6.11,
+        "y": 173.06
+      }
+    },
+    {
+      "id": "holt-3-room-327C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -6.11,
+        "y": 181.67
+      }
+    },
+    {
+      "id": "holt-3-room-327-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -12.22,
+        "y": 172.78
+      }
+    },
+    {
+      "id": "holt-3-room-325",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -19.72,
+        "y": 154.44
+      }
+    },
+    {
+      "id": "holt-3-room-325B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -13.06,
+        "y": 157.22
+      }
+    },
+    {
+      "id": "holt-3-room-325C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -10.56,
+        "y": 160
+      }
+    },
+    {
+      "id": "holt-3-room-325C-east-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -4.44,
+        "y": 156.39
+      }
+    },
+    {
+      "id": "holt-3-room-325A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -13.33,
+        "y": 150.83
+      }
+    },
+    {
+      "id": "holt-3-room-325-inner-north",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 0.56,
+        "y": 150
+      }
+    },
+    {
+      "id": "holt-3-room-325-inner-south",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.5,
+        "y": 124.17
+      }
+    },
+    {
+      "id": "holt-3-room-325D",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -3.61,
+        "y": 126.39
+      }
+    },
+    {
+      "id": "holt-3-room-325E",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -19.72,
+        "y": 125.28
+      }
+    },
+    {
+      "id": "holt-3-room-325F",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -10.28,
+        "y": 118.33
+      }
+    },
+    {
+      "id": "holt-3-room-325G",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -10.28,
+        "y": 109.72
+      }
+    },
+    {
+      "id": "holt-3-room-325-lower-hall",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.22,
+        "y": 114.17
+      }
+    },
+    {
+      "id": "holt-3-room-321",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -37.22,
+        "y": 144.17
+      }
+    },
+    {
+      "id": "holt-3-room-323",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -22.78,
+        "y": 144.17
+      }
+    },
+    {
+      "id": "holt-3-room-330",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.78,
+        "y": 194.72
+      }
+    },
+    {
+      "id": "holt-3-room-328",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -49.72,
+        "y": 194.72
+      }
+    },
+    {
+      "id": "holt-3-room-332",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -74.72,
+        "y": 183.33
+      }
+    },
+    {
+      "id": "holt-3-room-334",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -74.72,
+        "y": 165.28
+      }
+    },
+    {
+      "id": "holt-3-room-336",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.78,
+        "y": 153.06
+      }
+    },
+    {
+      "id": "holt-3-room-322",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -49.72,
+        "y": 153.06
+      }
+    },
+    {
+      "id": "holt-3-room-324",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -28.89,
+        "y": 165.28
+      }
+    },
+    {
+      "id": "holt-3-room-326",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -28.89,
+        "y": 183.33
+      }
+    },
+    {
+      "id": "holt-3-room-317",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -46.94,
+        "y": 90.83
+      }
+    },
+    {
+      "id": "holt-3-restroom-south-men",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -32.78,
+        "y": 90.56
+      }
+    },
+    {
+      "id": "holt-3-restroom-south-women",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -10.56,
+        "y": 90.56
+      }
+    },
+    {
+      "id": "holt-3-custodial-south",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -23.61,
+        "y": 90.56
+      }
+    },
+    {
+      "id": "holt-3-room-320",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -48.89,
+        "y": 81.94
+      }
+    },
+    {
+      "id": "holt-3-room-318",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -33.61,
+        "y": 81.94
+      }
+    },
+    {
+      "id": "holt-3-room-316",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.22,
+        "y": 81.94
+      }
+    },
+    {
+      "id": "holt-3-room-314",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -5.56,
+        "y": 69.72
+      }
+    },
+    {
+      "id": "holt-3-room-312",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.22,
+        "y": 49.72
+      }
+    },
+    {
+      "id": "holt-3-room-310",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.22,
+        "y": 38.06
+      }
+    },
+    {
+      "id": "holt-3-room-308",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -33.61,
+        "y": 38.06
+      }
+    },
+    {
+      "id": "holt-3-room-306",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -48.89,
+        "y": 38.06
+      }
+    },
+    {
+      "id": "holt-3-room-304",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -51.39,
+        "y": 49.72
+      }
+    },
+    {
+      "id": "holt-3-room-302",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -51.39,
+        "y": 69.72
+      }
+    },
+    {
+      "id": "holt-3-room-315",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -1.67,
+        "y": 90.83
+      }
+    },
+    {
+      "id": "holt-3-room-313",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 10,
+        "y": 90.83
+      }
+    },
+    {
+      "id": "holt-3-room-311",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 14.17,
+        "y": 90.83
+      }
+    },
+    {
+      "id": "holt-3-room-309B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 27.78,
+        "y": 87.5
+      }
+    },
+    {
+      "id": "holt-3-south-office-hall",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 14.44,
+        "y": 88.33
+      }
+    },
+    {
+      "id": "holt-3-room-309",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 3.61,
+        "y": 52.78
+      }
+    },
+    {
+      "id": "holt-3-room-309-north-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 22.5,
+        "y": 87.5
+      }
+    },
+    {
+      "id": "holt-3-room-309-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 14.72,
+        "y": 64.44
+      }
+    },
+    {
+      "id": "holt-3-room-309A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 7.22,
+        "y": 48.06
+      }
+    },
+    {
+      "id": "holt-3-room-307",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 2.22,
+        "y": 30.28
+      }
+    },
+    {
+      "id": "holt-3-room-307C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 20.28,
+        "y": 35.56
+      }
+    },
+    {
+      "id": "holt-3-room-307B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 28.33,
+        "y": 35.56
+      }
+    },
+    {
+      "id": "holt-3-room-307-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 18.06,
+        "y": 28.89
+      }
+    },
+    {
+      "id": "holt-3-room-307A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -3.33,
+        "y": 5
+      }
+    },
+    {
+      "id": "holt-3-room-305",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -1.94,
+        "y": 29.17
+      }
+    },
+    {
+      "id": "holt-3-room-303",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -34.44,
+        "y": 28.33
+      }
+    },
+    {
+      "id": "holt-3-room-303B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -13.06,
+        "y": 12.78
+      }
+    },
+    {
+      "id": "holt-3-room-303-inner-east",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -21.39,
+        "y": 8.33
+      }
+    },
+    {
+      "id": "holt-3-room-303-inner-west",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -43.33,
+        "y": 13.89
+      }
+    },
+    {
+      "id": "holt-3-room-303A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -52.5,
+        "y": 6.94
+      }
+    },
+    {
+      "id": "holt-3-room-301K",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -58.61,
+        "y": 23.33
+      }
+    },
+    {
+      "id": "holt-3-room-301I",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.5,
+        "y": 18.61
+      }
+    },
+    {
+      "id": "holt-3-room-301J",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -75.28,
+        "y": 4.44
+      }
+    },
+    {
+      "id": "holt-3-room-301H",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -78.06,
+        "y": 23.89
+      }
+    },
+    {
+      "id": "holt-3-room-301B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -58.89,
+        "y": 28.89
+      }
+    },
+    {
+      "id": "holt-3-room-301G",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -64.17,
+        "y": 29.44
+      }
+    },
+    {
+      "id": "holt-3-room-301F",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.78,
+        "y": 29.44
+      }
+    },
+    {
+      "id": "holt-3-room-301E",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -75.56,
+        "y": 44.44
+      }
+    },
+    {
+      "id": "holt-3-room-301C",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -75.56,
+        "y": 50
+      }
+    },
+    {
+      "id": "holt-3-room-301D",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.39,
+        "y": 58.61
+      }
+    },
+    {
+      "id": "holt-3-room-301A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -75.28,
+        "y": 63.06
+      }
+    },
+    {
+      "id": "holt-3-room-301",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -60.28,
+        "y": 72.22
+      }
+    },
+    {
+      "id": "holt-3-room-301-west-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -82.22,
+        "y": 68.89
+      }
+    },
+    {
+      "id": "holt-3-room-301-south-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -63.06,
+        "y": 68.89
+      }
+    },
+    {
+      "id": "holt-3-room-301-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.22,
+        "y": 78.89
+      }
+    },
+    {
+      "id": "holt-3-suite-301-south",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 31.67
+      }
+    },
+    {
+      "id": "holt-3-suite-301-middle",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 46.39
+      }
+    },
+    {
+      "id": "holt-3-suite-301-north",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 65
+      }
+    },
+    {
+      "id": "holt-3-suite-301-lower",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.94,
+        "y": 23.61
+      }
+    },
+    {
+      "id": "holt-3-room-363",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 3.33,
+        "y": 316.39
+      }
+    },
+    {
+      "id": "holt-3-room-363A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 29.44,
+        "y": 310.83
+      }
+    },
+    {
+      "id": "holt-3-room-361",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 5.56,
+        "y": 307.5
+      }
+    },
+    {
+      "id": "holt-3-room-359",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 3.33,
+        "y": 298.89
+      }
+    },
+    {
+      "id": "holt-3-room-357",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 3.33,
+        "y": 267.78
+      }
+    },
+    {
+      "id": "holt-3-room-381",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -70.56,
+        "y": 239.72
+      }
+    },
+    {
+      "id": "holt-3-room-381A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -74.17,
+        "y": 267.22
+      }
+    },
+    {
+      "id": "holt-3-room-381-north-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.22,
+        "y": 269.17
+      }
+    },
+    {
+      "id": "holt-3-room-379",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -60,
+        "y": 281.11
+      }
+    },
+    {
+      "id": "holt-3-room-379-south-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -66.39,
+        "y": 268.06
+      }
+    },
+    {
+      "id": "holt-3-room-379-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -70,
+        "y": 275.28
+      }
+    },
+    {
+      "id": "holt-3-room-381-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -70,
+        "y": 254.44
+      }
+    },
+    {
+      "id": "holt-3-room-377",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -60,
+        "y": 293.89
+      }
+    },
+    {
+      "id": "holt-3-room-375",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -60,
+        "y": 304.44
+      }
+    },
+    {
+      "id": "holt-3-room-375-south-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -65.28,
+        "y": 301.39
+      }
+    },
+    {
+      "id": "holt-3-room-373A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -61.39,
+        "y": 317.22
+      }
+    },
+    {
+      "id": "holt-3-room-373B",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -68.06,
+        "y": 318.33
+      }
+    },
+    {
+      "id": "holt-3-room-373",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -58.61,
+        "y": 325.56
+      }
+    },
+    {
+      "id": "holt-3-room-373-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -68.06,
+        "y": 325
+      }
+    },
+    {
+      "id": "holt-3-room-371",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -42.22,
+        "y": 325.56
+      }
+    },
+    {
+      "id": "holt-3-room-369",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -29.17,
+        "y": 325.56
+      }
+    },
+    {
+      "id": "holt-3-room-369A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -40.28,
+        "y": 341.67
+      }
+    },
+    {
+      "id": "holt-3-room-367",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -26.39,
+        "y": 345.56
+      }
+    },
+    {
+      "id": "holt-3-room-367-south-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -24.44,
+        "y": 328.89
+      }
+    },
+    {
+      "id": "holt-3-room-365",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 0,
+        "y": 325.56
+      }
+    },
+    {
+      "id": "holt-3-room-350",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -51.67,
+        "y": 277.22
+      }
+    },
+    {
+      "id": "holt-3-room-350-south-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -32.22,
+        "y": 273.33
+      }
+    },
+    {
+      "id": "holt-3-room-350A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -49.17,
+        "y": 269.17
+      }
+    },
+    {
+      "id": "holt-3-room-352",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -5,
+        "y": 277.22
+      }
+    },
+    {
+      "id": "holt-3-room-352-south-door",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -24.44,
+        "y": 273.33
+      }
+    },
+    {
+      "id": "holt-3-room-352A",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.78,
+        "y": 269.17
+      }
+    },
+    {
+      "id": "holt-3-auditorium-south-lobby",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -28.33,
+        "y": 267.22
+      }
+    },
+    {
+      "id": "holt-3-room-351",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -48.89,
+        "y": 256.67
+      }
+    },
+    {
+      "id": "holt-3-room-353",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -15.56,
+        "y": 256.67
+      }
+    },
+    {
+      "id": "holt-3-room-355",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -6.67,
+        "y": 256.67
+      }
+    },
+    {
+      "id": "holt-3-restroom-north-men",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -38.89,
+        "y": 258.06
+      }
+    },
+    {
+      "id": "holt-3-restroom-north-women",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -17.22,
+        "y": 255.28
+      }
+    },
+    {
+      "id": "holt-3-custodial-north",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -28.33,
+        "y": 258.06
+      }
+    },
+    {
+      "id": "holt-3-north-stair-lobby",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 330
+      }
+    },
+    {
+      "id": "holt-3-room-363-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 29.44,
+        "y": 315.83
+      }
+    },
+    {
+      "id": "holt-3-west-suite-north-elbow",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 150.56
+      }
+    },
+    {
+      "id": "holt-3-west-suite-bottom-west",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -97.5,
+        "y": 122.5
+      }
+    },
+    {
+      "id": "holt-3-west-suite-bottom-east",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.5,
+        "y": 122.5
+      }
+    },
+    {
+      "id": "holt-3-west-suite-bottom-turn",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.5,
+        "y": 115.28
+      }
+    },
+    {
+      "id": "holt-3-room-325-entry-bend",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -15,
+        "y": 154.44
+      }
+    },
+    {
+      "id": "holt-3-room-325-partition-bend",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -6.11,
+        "y": 150
+      }
+    },
+    {
+      "id": "holt-3-room-325C-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -7.22,
+        "y": 159.44
+      }
+    },
+    {
+      "id": "holt-3-room-325-east-partition-bend",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": 0.56,
+        "y": 154.44
+      }
+    },
+    {
+      "id": "holt-3-room-369-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -33.33,
+        "y": 341.94
+      }
+    },
+    {
+      "id": "holt-3-room-367-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -23.06,
+        "y": 340.83
+      }
+    },
+    {
+      "id": "holt-3-south-office-hall-west",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -0.56,
+        "y": 88.33
+      }
+    },
+    {
+      "id": "holt-3-room-303-lower-east",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -10,
+        "y": 3.06
+      }
+    },
+    {
+      "id": "holt-3-room-301C-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -62.78,
+        "y": 51.67
+      }
+    },
+    {
+      "id": "holt-3-suite-301-exit-bend",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -58.33,
+        "y": 26.11
+      }
+    },
+    {
+      "id": "holt-3-suite-301-hall-east",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -64.17,
+        "y": 26.11
+      }
+    },
+    {
+      "id": "holt-3-suite-301-hall-middle",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.5,
+        "y": 26.11
+      }
+    },
+    {
+      "id": "holt-3-suite-301-hall-west",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -79.17,
+        "y": 26.11
+      }
+    },
+    {
+      "id": "holt-3-suite-301I-approach",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -72.5,
+        "y": 21.11
+      }
+    },
+    {
+      "id": "holt-3-room-301I-inner",
+      "buildingId": "holt",
+      "floorId": 3,
+      "position": {
+        "x": -68.06,
+        "y": 6.67
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "holt-3-south-east-bottom",
+      "to": "holt-3-south-east-mid",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-east-mid",
+      "to": "holt-3-south-east-top",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-east-top",
+      "to": "holt-3-south-ne",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-ne",
+      "to": "holt-3-south-upper-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-upper-middle",
+      "to": "holt-3-south-nw",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-nw",
+      "to": "holt-3-south-west-top",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-west-top",
+      "to": "holt-3-south-west-mid",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-west-mid",
+      "to": "holt-3-south-west-bottom",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-west-bottom",
+      "to": "holt-3-south-lower-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-lower-middle",
+      "to": "holt-3-south-east-bottom",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-nw",
+      "to": "holt-3-south-bridge-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-bridge-west",
+      "to": "holt-3-middle-south-link",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-north-link",
+      "to": "holt-3-north-bridge-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-bridge-west",
+      "to": "holt-3-north-sw",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-sw",
+      "to": "holt-3-north-west-mid",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-west-mid",
+      "to": "holt-3-north-west-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-west-upper",
+      "to": "holt-3-north-nw",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-nw",
+      "to": "holt-3-north-upper-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-upper-middle",
+      "to": "holt-3-north-ne",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-ne",
+      "to": "holt-3-north-east-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-east-upper",
+      "to": "holt-3-north-east-mid",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-east-mid",
+      "to": "holt-3-north-se",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-se",
+      "to": "holt-3-north-lower-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-north-lower-middle",
+      "to": "holt-3-north-sw",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-nw",
+      "to": "holt-3-middle-west-top",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-west-top",
+      "to": "holt-3-middle-west-mid",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-west-mid",
+      "to": "holt-3-middle-west-bottom",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-west-bottom",
+      "to": "holt-3-middle-south-link",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-south-link",
+      "to": "holt-3-middle-east-bottom",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-east-bottom",
+      "to": "holt-3-middle-east-mid",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-east-mid",
+      "to": "holt-3-middle-east-top",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-east-top",
+      "to": "holt-3-middle-ne",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-ne",
+      "to": "holt-3-middle-north-link",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-middle-north-link",
+      "to": "holt-3-middle-nw",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-upper",
+      "to": "holt-3-west-suite-hall",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-lower",
+      "to": "holt-3-south-bridge-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-suite-301-south",
+      "to": "holt-3-suite-301-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-suite-301-middle",
+      "to": "holt-3-suite-301-north",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-stairs-south",
+      "to": "holt-3-south-east-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-stair-door",
+      "to": "holt-3-north-bridge-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-south-stair-door",
+      "to": "holt-3-south-bridge-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-333",
+      "to": "holt-3-middle-north-link",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-335",
+      "to": "holt-3-middle-nw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-337",
+      "to": "holt-3-middle-nw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-339",
+      "to": "holt-3-middle-west-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-347",
+      "to": "holt-3-middle-west-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-331",
+      "to": "holt-3-middle-ne",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329C",
+      "to": "holt-3-room-331",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329",
+      "to": "holt-3-middle-ne",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-327",
+      "to": "holt-3-middle-east-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325",
+      "to": "holt-3-middle-east-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-321",
+      "to": "holt-3-middle-south-link",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-323",
+      "to": "holt-3-middle-east-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-330",
+      "to": "holt-3-middle-nw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-328",
+      "to": "holt-3-middle-north-link",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-332",
+      "to": "holt-3-middle-west-top",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-334",
+      "to": "holt-3-middle-west-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-336",
+      "to": "holt-3-middle-west-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-322",
+      "to": "holt-3-middle-south-link",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-324",
+      "to": "holt-3-middle-east-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-326",
+      "to": "holt-3-middle-east-top",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-317",
+      "to": "holt-3-south-nw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-restroom-south-men",
+      "to": "holt-3-south-upper-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-restroom-south-women",
+      "to": "holt-3-south-upper-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-custodial-south",
+      "to": "holt-3-south-upper-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-320",
+      "to": "holt-3-south-nw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-318",
+      "to": "holt-3-south-upper-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-316",
+      "to": "holt-3-south-ne",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-314",
+      "to": "holt-3-south-east-top",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-312",
+      "to": "holt-3-south-east-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-310",
+      "to": "holt-3-south-east-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-308",
+      "to": "holt-3-south-lower-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-306",
+      "to": "holt-3-south-west-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-304",
+      "to": "holt-3-south-west-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-302",
+      "to": "holt-3-south-west-top",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-315",
+      "to": "holt-3-south-ne",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-309",
+      "to": "holt-3-south-east-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-309-north-door",
+      "to": "holt-3-south-office-hall",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-309A",
+      "to": "holt-3-room-309-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-307",
+      "to": "holt-3-south-east-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-305",
+      "to": "holt-3-south-east-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-303",
+      "to": "holt-3-south-lower-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301B",
+      "to": "holt-3-south-west-bottom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301",
+      "to": "holt-3-south-west-top",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-363",
+      "to": "holt-3-north-ne",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-361",
+      "to": "holt-3-north-east-upper",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-359",
+      "to": "holt-3-north-east-upper",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-357",
+      "to": "holt-3-north-se",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-379",
+      "to": "holt-3-north-west-mid",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-377",
+      "to": "holt-3-north-west-upper",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-375",
+      "to": "holt-3-north-west-upper",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-373",
+      "to": "holt-3-north-nw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-365",
+      "to": "holt-3-north-ne",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-350A",
+      "to": "holt-3-north-sw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-352A",
+      "to": "holt-3-north-se",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-351",
+      "to": "holt-3-north-sw",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-353",
+      "to": "holt-3-north-se",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-355",
+      "to": "holt-3-north-se",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-restroom-north-men",
+      "to": "holt-3-north-lower-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-restroom-north-women",
+      "to": "holt-3-north-lower-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-custodial-north",
+      "to": "holt-3-north-lower-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-stair-door",
+      "to": "holt-3-stairs-middle-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-south-stair-door",
+      "to": "holt-3-stairs-middle-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-335",
+      "to": "holt-3-room-335-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-335-inner",
+      "to": "holt-3-room-335A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-337",
+      "to": "holt-3-room-337-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-337-inner",
+      "to": "holt-3-room-337A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-339",
+      "to": "holt-3-room-339-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-339-inner",
+      "to": "holt-3-room-339A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-339-inner",
+      "to": "holt-3-room-339C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-west-suite-upper",
+      "to": "holt-3-room-341",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-west-suite-hall",
+      "to": "holt-3-room-343",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-west-suite-hall",
+      "to": "holt-3-room-345",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-west-suite-lower",
+      "to": "holt-3-room-349",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-347",
+      "to": "holt-3-room-347-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-347-inner",
+      "to": "holt-3-room-347A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-347-inner",
+      "to": "holt-3-room-347B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-347-inner",
+      "to": "holt-3-room-347C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-347-inner",
+      "to": "holt-3-room-347D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329",
+      "to": "holt-3-room-329-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329-inner",
+      "to": "holt-3-room-329A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329-inner",
+      "to": "holt-3-room-329B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329-inner",
+      "to": "holt-3-room-329C-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329-inner",
+      "to": "holt-3-room-329D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-329-inner",
+      "to": "holt-3-room-329E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-327",
+      "to": "holt-3-room-327-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-327-inner",
+      "to": "holt-3-room-327A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-327-inner",
+      "to": "holt-3-room-327B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-327-inner",
+      "to": "holt-3-room-327C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325B",
+      "to": "holt-3-room-325C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-inner-north",
+      "to": "holt-3-room-325A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-inner-north",
+      "to": "holt-3-room-325-inner-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-inner-south",
+      "to": "holt-3-room-325D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-inner-south",
+      "to": "holt-3-room-325E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-inner-south",
+      "to": "holt-3-room-325-lower-hall",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-lower-hall",
+      "to": "holt-3-room-325F",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-lower-hall",
+      "to": "holt-3-room-325G",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-south-office-hall",
+      "to": "holt-3-room-313",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-south-office-hall",
+      "to": "holt-3-room-311",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-south-office-hall",
+      "to": "holt-3-room-309B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-309",
+      "to": "holt-3-room-309-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-309-inner",
+      "to": "holt-3-room-309-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-307",
+      "to": "holt-3-room-307-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-307-inner",
+      "to": "holt-3-room-307B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-307-inner",
+      "to": "holt-3-room-307C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-303",
+      "to": "holt-3-room-303-inner-east",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-303-inner-east",
+      "to": "holt-3-room-303B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-303-inner-east",
+      "to": "holt-3-room-303-inner-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-303-inner-west",
+      "to": "holt-3-room-303A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-middle",
+      "to": "holt-3-room-301E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-middle",
+      "to": "holt-3-room-301C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-north",
+      "to": "holt-3-room-301A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-north",
+      "to": "holt-3-room-301-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301-west-door",
+      "to": "holt-3-room-301-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301-inner",
+      "to": "holt-3-room-301",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301-inner",
+      "to": "holt-3-room-301-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-lower",
+      "to": "holt-3-room-301H",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-lower",
+      "to": "holt-3-room-301K",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-bridge-west",
+      "to": "holt-3-room-381",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-381",
+      "to": "holt-3-room-381-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-381-inner",
+      "to": "holt-3-room-381-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-379",
+      "to": "holt-3-room-379-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-379-inner",
+      "to": "holt-3-room-379-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-375",
+      "to": "holt-3-room-375-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-375-south-door",
+      "to": "holt-3-room-373B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-nw",
+      "to": "holt-3-room-373A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-373",
+      "to": "holt-3-room-373-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-373-inner",
+      "to": "holt-3-room-373B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-upper-middle",
+      "to": "holt-3-room-371",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-upper-middle",
+      "to": "holt-3-room-369",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-369",
+      "to": "holt-3-room-369A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-upper-middle",
+      "to": "holt-3-room-367-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-west-mid",
+      "to": "holt-3-room-350",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-east-mid",
+      "to": "holt-3-room-352",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-lower-middle",
+      "to": "holt-3-auditorium-south-lobby",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-auditorium-south-lobby",
+      "to": "holt-3-room-350-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-auditorium-south-lobby",
+      "to": "holt-3-room-352-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-bridge-west",
+      "to": "holt-3-elevator-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-elevator-approach",
+      "to": "holt-3-elevator",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-ne",
+      "to": "holt-3-north-stair-lobby",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-north-stair-lobby",
+      "to": "holt-3-stairs-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-363",
+      "to": "holt-3-room-363-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-363-inner",
+      "to": "holt-3-room-363A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-middle-west-bottom",
+      "to": "holt-3-west-suite-north-elbow",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-north-elbow",
+      "to": "holt-3-west-suite-upper",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-hall",
+      "to": "holt-3-west-suite-bottom-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-bottom-west",
+      "to": "holt-3-west-suite-bottom-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-bottom-east",
+      "to": "holt-3-west-suite-bottom-turn",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-west-suite-bottom-turn",
+      "to": "holt-3-west-suite-lower",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-room-329C",
+      "to": "holt-3-room-329C-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325",
+      "to": "holt-3-room-325-entry-bend",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-entry-bend",
+      "to": "holt-3-room-325-partition-bend",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-partition-bend",
+      "to": "holt-3-room-325-inner-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-entry-bend",
+      "to": "holt-3-room-325B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325C",
+      "to": "holt-3-room-325C-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325C-inner",
+      "to": "holt-3-room-325C-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325C-east-door",
+      "to": "holt-3-room-325-east-partition-bend",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-325-east-partition-bend",
+      "to": "holt-3-room-325-inner-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-369",
+      "to": "holt-3-room-369-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-369-inner",
+      "to": "holt-3-room-367",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-367",
+      "to": "holt-3-room-367-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-367-inner",
+      "to": "holt-3-room-367-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-379-inner",
+      "to": "holt-3-room-381A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-379-inner",
+      "to": "holt-3-room-381-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-south-ne",
+      "to": "holt-3-south-office-hall-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-south-office-hall-west",
+      "to": "holt-3-south-office-hall",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-3-room-303-inner-east",
+      "to": "holt-3-room-303-lower-east",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-303-lower-east",
+      "to": "holt-3-room-307A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301C",
+      "to": "holt-3-room-301C-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301C-inner",
+      "to": "holt-3-room-301D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301B",
+      "to": "holt-3-suite-301-exit-bend",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-exit-bend",
+      "to": "holt-3-suite-301-hall-east",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-hall-east",
+      "to": "holt-3-suite-301-hall-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-hall-middle",
+      "to": "holt-3-suite-301-hall-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-hall-west",
+      "to": "holt-3-suite-301-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-hall-middle",
+      "to": "holt-3-room-301F",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-hall-east",
+      "to": "holt-3-room-301G",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-hall-middle",
+      "to": "holt-3-suite-301-lower",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301-lower",
+      "to": "holt-3-suite-301I-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-suite-301I-approach",
+      "to": "holt-3-room-301I",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301I",
+      "to": "holt-3-room-301I-inner",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-3-room-301I-inner",
+      "to": "holt-3-room-301J",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

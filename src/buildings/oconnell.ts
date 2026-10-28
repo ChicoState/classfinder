@@ -4,6 +4,8 @@ import floor3 from '../data/ocon/floor-3-preview.png';
 import floor4 from '../data/ocon/floor-4-preview.png';
 import type { Building } from './types';
 
+//These values will likely have to be individually made for each building, but I was able to get ChatGPT to generate these values without trouble.
+//I am currently unsure if te pdfOrigin values need to be that exact, will check later.
 const imageWidth = 1377;
 const imageHeight = 1782;
 const feetPerPdfPoint = 30 / 72;

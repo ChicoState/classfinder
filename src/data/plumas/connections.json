@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "building": "Plumas Hall",
+    "buildingId": "plumas",
+    "units": "feet",
+    "undirected": true,
+    "source": [
+      "csuc-floor-plans/Plumas/plms-1.pdf",
+      "csuc-floor-plans/Plumas/plms-2.pdf"
+    ],
+    "alignment": "Floor 2 translated in PDF points by (-3.6,-1.2) into the floor 1 frame using both stair landings.",
+    "distanceConvention": "Runtime distance is derived from aligned endpoint coordinates; no vertical-distance override. Approximate stair links are 0.25 feet; elevator link is approximately 4.83 feet. Vertical rise, effort and waiting time are not represented.",
+    "accessibility": "Stairs false; elevator access unknown. Adjacent floors only."
+  },
+  "edges": [
+    {
+      "from": "plumas-1-stairs-west",
+      "to": "plumas-2-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "plumas-1-stairs-east",
+      "to": "plumas-2-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "plumas-1-elevator",
+      "to": "plumas-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}

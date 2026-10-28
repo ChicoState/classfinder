@@ -1,0 +1,717 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Langdon/lang-2.pdf",
+    "sourceDate": "2010-09-02",
+    "building": "Langdon Hall",
+    "buildingId": "langdon",
+    "floor": 3,
+    "units": "feet",
+    "scale": "1 inch = 30 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.4166666666666667,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "langdon-1-exit-north-wing",
+      "description": "Double doorway at south end of floor-1 north wing, opening onto the south-block gallery; projected reference point on upper drawings.",
+      "pdfPointFromTopLeft": {
+        "x": 215.0,
+        "y": 114.5
+      },
+      "referenceFloorPdfPointFromTopLeft": {
+        "x": 216.5,
+        "y": 508.5
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up, not geographic north."
+    },
+    "alignment": {
+      "method": "Translation using west/east stair cores, central shaft and south-block column grid; identical printed scale and orientation.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": 1.5,
+          "y": 394.0
+        }
+      },
+      "uncertainty": "Manual drawing alignment; approximately 0.6-foot residual at east core. Elevator enclosure differs between levels; doorway offsets retained."
+    },
+    "coordinateConversion": "x = (pdfX + 1.5 - 216.5) * 30/72; y = (508.5 - pdfY - 394.0) * 30/72.",
+    "undirected": true,
+    "nodeConvention": "Room nodes are doorways; interior circulation nodes preserve walls and door access. Multiple shown doors retained.",
+    "distanceConvention": "Each undirected pair stored once; weight 1, runtime distance derived from endpoint coordinates. Aligned transfers may have zero horizontal distance; no vertical effort or wait cost.",
+    "accessibility": "Unknown within-floor status omitted. Stair transfers false. Elevator symbol does not establish availability or a complete accessible route.",
+    "digitization": {
+      "date": "2026-10-27",
+      "method": "Manual visual tracing of vector-outline PDFs rendered at exactly 2 pixels per PDF point, with 4x detail inspection."
+    },
+    "limitations": [
+      "Dated source; manual geometry, current access and permissions unknown.",
+      "North gallery and service circulation follow visible openings. No campus paths or O\u2019Connell connections inferred.",
+      "lang-2.pdf contains separate second- and third-floor drawings, each digitized independently.",
+      "303A opens through 303. Secondary south doors connect 303/302/300.",
+      "Mechanical and electrical room destinations reflect drawn doors, without asserting public access."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "langdon-3-hall-west-stairs",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -65.0,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-west-junction",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.83,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-elevator",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -37.08,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-service-junction",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -9.38,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-classroom-west",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 20.83,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-classroom-middle",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 58.96,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-classroom-east",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 82.71,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-hall-east-room",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 118.12,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-stairs-east",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 131.67,
+        "y": -6.67
+      }
+    },
+    {
+      "id": "langdon-3-stairs-west",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -65.0,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-elevator",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -37.08,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-door-west-service-hall",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.83,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-hall-service-west",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.83,
+        "y": -41.46
+      }
+    },
+    {
+      "id": "langdon-3-storage-west-1",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -58.54,
+        "y": -18.54
+      }
+    },
+    {
+      "id": "langdon-3-storage-west-2",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -58.54,
+        "y": -23.33
+      }
+    },
+    {
+      "id": "langdon-3-storage-west-3",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -58.54,
+        "y": -28.12
+      }
+    },
+    {
+      "id": "langdon-3-hall-service-men",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.83,
+        "y": -31.04
+      }
+    },
+    {
+      "id": "langdon-3-restroom-men",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -50.42,
+        "y": -20.0
+      }
+    },
+    {
+      "id": "langdon-3-hall-electrical",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -43.75,
+        "y": -41.46
+      }
+    },
+    {
+      "id": "langdon-3-hall-telecom",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -38.54,
+        "y": -41.46
+      }
+    },
+    {
+      "id": "langdon-3-hall-custodian",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -33.33,
+        "y": -41.46
+      }
+    },
+    {
+      "id": "langdon-3-hall-service-south-east",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -25.0,
+        "y": -41.46
+      }
+    },
+    {
+      "id": "langdon-3-electrical",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -43.75,
+        "y": -39.38
+      }
+    },
+    {
+      "id": "langdon-3-telecom",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -38.54,
+        "y": -39.38
+      }
+    },
+    {
+      "id": "langdon-3-custodian",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -33.33,
+        "y": -39.38
+      }
+    },
+    {
+      "id": "langdon-3-restroom-women",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -29.38,
+        "y": -36.25
+      }
+    },
+    {
+      "id": "langdon-3-room-307D",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -61.25,
+        "y": -38.33
+      }
+    },
+    {
+      "id": "langdon-3-room-307E",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.62,
+        "y": -43.54
+      }
+    },
+    {
+      "id": "langdon-3-room-307F",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -46.46,
+        "y": -43.54
+      }
+    },
+    {
+      "id": "langdon-3-room-307G",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -30.21,
+        "y": -43.54
+      }
+    },
+    {
+      "id": "langdon-3-mechanical-room",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -26.25,
+        "y": -43.54
+      }
+    },
+    {
+      "id": "langdon-3-room-304",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -11.46,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-room-303",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 20.83,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-room-302",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 58.96,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-room-300",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 118.12,
+        "y": -12.29
+      }
+    },
+    {
+      "id": "langdon-3-circulation-303-west",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 10.42,
+        "y": -30.0
+      }
+    },
+    {
+      "id": "langdon-3-room-303A",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 5.83,
+        "y": -25.62
+      }
+    },
+    {
+      "id": "langdon-3-circulation-303-south",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 20.83,
+        "y": -45.62
+      }
+    },
+    {
+      "id": "langdon-3-room-302-west-door",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 25.62,
+        "y": -48.33
+      }
+    },
+    {
+      "id": "langdon-3-circulation-302-south",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 75.0,
+        "y": -45.62
+      }
+    },
+    {
+      "id": "langdon-3-room-300-west-door",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": 80.21,
+        "y": -48.33
+      }
+    },
+    {
+      "id": "langdon-3-hall-storage",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.83,
+        "y": -23.33
+      }
+    },
+    {
+      "id": "langdon-3-hall-men-door",
+      "buildingId": "langdon",
+      "floorId": 3,
+      "position": {
+        "x": -55.83,
+        "y": -20.0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "langdon-3-hall-west-stairs",
+      "to": "langdon-3-hall-west-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-west-junction",
+      "to": "langdon-3-hall-elevator",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-elevator",
+      "to": "langdon-3-hall-service-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-service-junction",
+      "to": "langdon-3-hall-classroom-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-classroom-west",
+      "to": "langdon-3-hall-classroom-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-classroom-middle",
+      "to": "langdon-3-hall-classroom-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-classroom-east",
+      "to": "langdon-3-hall-east-room",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-east-room",
+      "to": "langdon-3-stairs-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-west-stairs",
+      "to": "langdon-3-stairs-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-elevator",
+      "to": "langdon-3-elevator",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-west-junction",
+      "to": "langdon-3-door-west-service-hall",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-men",
+      "to": "langdon-3-hall-service-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-service-west",
+      "to": "langdon-3-hall-electrical",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-electrical",
+      "to": "langdon-3-hall-telecom",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-telecom",
+      "to": "langdon-3-hall-custodian",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-custodian",
+      "to": "langdon-3-hall-service-south-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-electrical",
+      "to": "langdon-3-electrical",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-telecom",
+      "to": "langdon-3-telecom",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-custodian",
+      "to": "langdon-3-custodian",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-south-east",
+      "to": "langdon-3-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-west",
+      "to": "langdon-3-room-307D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-electrical",
+      "to": "langdon-3-room-307F",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-south-east",
+      "to": "langdon-3-room-307G",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-south-east",
+      "to": "langdon-3-mechanical-room",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-junction",
+      "to": "langdon-3-room-304",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-classroom-west",
+      "to": "langdon-3-room-303",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-classroom-middle",
+      "to": "langdon-3-room-302",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-east-room",
+      "to": "langdon-3-room-300",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-room-303",
+      "to": "langdon-3-circulation-303-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-circulation-303-west",
+      "to": "langdon-3-room-303A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-room-303",
+      "to": "langdon-3-circulation-303-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-circulation-303-south",
+      "to": "langdon-3-room-302-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-room-302",
+      "to": "langdon-3-circulation-302-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-room-302-west-door",
+      "to": "langdon-3-circulation-302-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-circulation-302-south",
+      "to": "langdon-3-room-300-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-room-300",
+      "to": "langdon-3-room-300-west-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-service-west",
+      "to": "langdon-3-room-307E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-door-west-service-hall",
+      "to": "langdon-3-hall-storage",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-storage",
+      "to": "langdon-3-hall-service-men",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-storage",
+      "to": "langdon-3-storage-west-1",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-storage",
+      "to": "langdon-3-storage-west-2",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-storage",
+      "to": "langdon-3-storage-west-3",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "langdon-3-hall-storage",
+      "to": "langdon-3-hall-men-door",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "langdon-3-hall-men-door",
+      "to": "langdon-3-restroom-men",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

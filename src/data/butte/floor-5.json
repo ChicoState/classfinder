@@ -1,0 +1,1493 @@
+{
+  "metadata": {
+    "source": "csuc-floor-plans/Butte/bute-5.pdf",
+    "sourceDate": "2009-09-16",
+    "building": "Butte Hall",
+    "buildingId": "butte",
+    "floor": 5,
+    "units": "feet",
+    "scale": "1 inch = 20 feet",
+    "pdfPointsPerInch": 72,
+    "feetPerPdfPoint": 0.2777777777777778,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "butte-1-exit-north-east-ao",
+      "description": "First-floor north east AO-marked exterior doorway; projected reference origin on upper floors.",
+      "pdfPointFromTopLeft": {
+        "x": 334.0,
+        "y": 138.0
+      },
+      "referenceFloorPdfPointFromTopLeft": {
+        "x": 291,
+        "y": 135
+      }
+    },
+    "axes": {
+      "x": "Positive drawing-right.",
+      "y": "Positive drawing-up, not geographic north."
+    },
+    "alignment": {
+      "method": "Translation preserving printed scale and orientation, using central shaft, elevator bank, west stair enclosure and southeast stair core.",
+      "transform": {
+        "scale": 1,
+        "rotationDegrees": 0,
+        "translationPdfPoints": {
+          "x": -43.0,
+          "y": -3.0
+        }
+      },
+      "uncertainty": "Manual alignment. Most shared core walls agree within approximately 0.5 feet; north stair drawings differ substantially on floors 1\u20133 and are not used as alignment anchors."
+    },
+    "coordinateConversion": "x = (pdfX + -43.0 - 291) * 20/72; y = (135 - pdfY - -3.0) * 20/72.",
+    "undirected": true,
+    "nodeConvention": "Destinations are shown doorways; necessary circulation bends and separate usable entrances retained.",
+    "distanceConvention": "Undirected edges stored once; weight 1. Loader derives Euclidean distance from saved coordinates, including transfers; no floor-height or waiting-time cost.",
+    "accessibility": "AO entrance edges marked true only where shown. Stair edges false. Other accessibility and elevator availability unknown.",
+    "digitization": {
+      "date": "2026-10-27",
+      "method": "Manual visual tracing of vector-outline PDF rendered at exactly 2 pixels per PDF point, with 4x detail inspection."
+    },
+    "limitations": [
+      "Dated plans and approximate manual geometry; current access permissions and partitions unknown.",
+      "Elevator drawing does not label individual shafts. One aggregate bank access node per floor is used; its approach side follows the sheet. Individual car identity, passenger/service designation and availability are unresolved.",
+      "No campus paths or neighboring-building connections are inferred.",
+      "501 suffix rooms open from 501; 543 suffix rooms use 543. East-side numbered rooms open from the narrow east corridor; 518/512/508/504/506 are interior destinations alongside the core."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "butte-5-hall-north-west",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -17.22
+      }
+    },
+    {
+      "id": "butte-5-hall-north-center",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -9.44,
+        "y": -17.22
+      }
+    },
+    {
+      "id": "butte-5-hall-north-east",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -17.22
+      }
+    },
+    {
+      "id": "butte-5-hall-west-men",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -30.42
+      }
+    },
+    {
+      "id": "butte-5-hall-west-505",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -48.47
+      }
+    },
+    {
+      "id": "butte-5-hall-west-stairs",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -55.28
+      }
+    },
+    {
+      "id": "butte-5-hall-west-507",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -63.06
+      }
+    },
+    {
+      "id": "butte-5-hall-west-509",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -88.61
+      }
+    },
+    {
+      "id": "butte-5-hall-west-women",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -98.47
+      }
+    },
+    {
+      "id": "butte-5-hall-west-south",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -110.97
+      }
+    },
+    {
+      "id": "butte-5-hall-south-center",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -9.44,
+        "y": -110.97
+      }
+    },
+    {
+      "id": "butte-5-hall-east-south",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -110.97
+      }
+    },
+    {
+      "id": "butte-5-hall-east-541",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -20.0
+      }
+    },
+    {
+      "id": "butte-5-room-541",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -20.0
+      }
+    },
+    {
+      "id": "butte-5-hall-east-539",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -23.89
+      }
+    },
+    {
+      "id": "butte-5-room-539",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -23.89
+      }
+    },
+    {
+      "id": "butte-5-hall-east-537",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -36.67
+      }
+    },
+    {
+      "id": "butte-5-room-537",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -36.67
+      }
+    },
+    {
+      "id": "butte-5-hall-east-535",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -41.67
+      }
+    },
+    {
+      "id": "butte-5-room-535",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -41.67
+      }
+    },
+    {
+      "id": "butte-5-hall-east-533",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -53.75
+      }
+    },
+    {
+      "id": "butte-5-room-533",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -53.75
+      }
+    },
+    {
+      "id": "butte-5-hall-east-531",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -58.89
+      }
+    },
+    {
+      "id": "butte-5-room-531",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -58.89
+      }
+    },
+    {
+      "id": "butte-5-hall-east-529",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -71.11
+      }
+    },
+    {
+      "id": "butte-5-room-529",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -71.11
+      }
+    },
+    {
+      "id": "butte-5-hall-east-527",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -75.14
+      }
+    },
+    {
+      "id": "butte-5-room-527",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -75.14
+      }
+    },
+    {
+      "id": "butte-5-hall-east-525",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -88.06
+      }
+    },
+    {
+      "id": "butte-5-room-525",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -88.06
+      }
+    },
+    {
+      "id": "butte-5-hall-east-523",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -91.94
+      }
+    },
+    {
+      "id": "butte-5-room-523",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -91.94
+      }
+    },
+    {
+      "id": "butte-5-hall-east-521",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -105.28
+      }
+    },
+    {
+      "id": "butte-5-room-521",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -105.28
+      }
+    },
+    {
+      "id": "butte-5-hall-east-519",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -108.89
+      }
+    },
+    {
+      "id": "butte-5-room-519",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": -108.89
+      }
+    },
+    {
+      "id": "butte-5-room-503",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -28.61,
+        "y": -14.44
+      }
+    },
+    {
+      "id": "butte-5-room-501",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -20.56,
+        "y": -12.78
+      }
+    },
+    {
+      "id": "butte-5-circulation-501-west",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.94,
+        "y": -0.56
+      }
+    },
+    {
+      "id": "butte-5-room-503-east-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -26.67,
+        "y": 13.33
+      }
+    },
+    {
+      "id": "butte-5-circulation-503-east",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -30.97,
+        "y": -0.56
+      }
+    },
+    {
+      "id": "butte-5-circulation-501-north",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -2.5,
+        "y": 13.33
+      }
+    },
+    {
+      "id": "butte-5-circulation-501-middle",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -2.5,
+        "y": 1.25
+      }
+    },
+    {
+      "id": "butte-5-circulation-501-south",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -2.5,
+        "y": -8.89
+      }
+    },
+    {
+      "id": "butte-5-room-501A",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 1.39,
+        "y": 13.33
+      }
+    },
+    {
+      "id": "butte-5-room-501B",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 1.39,
+        "y": 7.08
+      }
+    },
+    {
+      "id": "butte-5-room-501C",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 1.39,
+        "y": 1.25
+      }
+    },
+    {
+      "id": "butte-5-room-501D",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 1.39,
+        "y": -4.58
+      }
+    },
+    {
+      "id": "butte-5-room-501E",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 1.39,
+        "y": -9.03
+      }
+    },
+    {
+      "id": "butte-5-room-543",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 12.78,
+        "y": -13.33
+      }
+    },
+    {
+      "id": "butte-5-circulation-543",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 18.06,
+        "y": -0.56
+      }
+    },
+    {
+      "id": "butte-5-room-543A",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 19.86,
+        "y": -5.83
+      }
+    },
+    {
+      "id": "butte-5-room-543B",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 19.86,
+        "y": 5.0
+      }
+    },
+    {
+      "id": "butte-5-room-543C",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 19.86,
+        "y": 8.47
+      }
+    },
+    {
+      "id": "butte-5-room-543D",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 16.39,
+        "y": 5.69
+      }
+    },
+    {
+      "id": "butte-5-room-502",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -10.14,
+        "y": -21.11
+      }
+    },
+    {
+      "id": "butte-5-restroom-men",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -16.67,
+        "y": -30.0
+      }
+    },
+    {
+      "id": "butte-5-room-505",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -29.58,
+        "y": -48.47
+      }
+    },
+    {
+      "id": "butte-5-room-507",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -29.58,
+        "y": -63.06
+      }
+    },
+    {
+      "id": "butte-5-room-509",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -26.67,
+        "y": -88.61
+      }
+    },
+    {
+      "id": "butte-5-circulation-507",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -38.61,
+        "y": -71.39
+      }
+    },
+    {
+      "id": "butte-5-room-509A",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -37.22,
+        "y": -75.14
+      }
+    },
+    {
+      "id": "butte-5-room-509B",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -41.53,
+        "y": -75.14
+      }
+    },
+    {
+      "id": "butte-5-circulation-509",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -35.83,
+        "y": -93.61
+      }
+    },
+    {
+      "id": "butte-5-room-509A-south-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -37.22,
+        "y": -86.67
+      }
+    },
+    {
+      "id": "butte-5-room-509B-south-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -41.53,
+        "y": -86.67
+      }
+    },
+    {
+      "id": "butte-5-room-511",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -26.67,
+        "y": -109.58
+      }
+    },
+    {
+      "id": "butte-5-room-511-north-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -37.22,
+        "y": -100.56
+      }
+    },
+    {
+      "id": "butte-5-circulation-511",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -34.44,
+        "y": -111.67
+      }
+    },
+    {
+      "id": "butte-5-room-511C",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -43.61,
+        "y": -111.67
+      }
+    },
+    {
+      "id": "butte-5-room-511A",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -36.25,
+        "y": -115.14
+      }
+    },
+    {
+      "id": "butte-5-room-511B",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -40.69,
+        "y": -115.14
+      }
+    },
+    {
+      "id": "butte-5-room-513",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -21.25,
+        "y": -115.14
+      }
+    },
+    {
+      "id": "butte-5-room-515",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -11.53,
+        "y": -115.14
+      }
+    },
+    {
+      "id": "butte-5-room-517",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -8.06,
+        "y": -115.14
+      }
+    },
+    {
+      "id": "butte-5-restroom-women",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -16.67,
+        "y": -98.47
+      }
+    },
+    {
+      "id": "butte-5-custodian-south",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -10.83,
+        "y": -106.11
+      }
+    },
+    {
+      "id": "butte-5-room-518",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -2.5,
+        "y": -21.11
+      }
+    },
+    {
+      "id": "butte-5-room-518-east-north-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 9.86,
+        "y": -51.94
+      }
+    },
+    {
+      "id": "butte-5-room-518-east-south-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 9.86,
+        "y": -60.28
+      }
+    },
+    {
+      "id": "butte-5-circulation-518",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 4.44,
+        "y": -46.39
+      }
+    },
+    {
+      "id": "butte-5-room-512",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 9.86,
+        "y": -76.67
+      }
+    },
+    {
+      "id": "butte-5-room-508",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 9.86,
+        "y": -79.58
+      }
+    },
+    {
+      "id": "butte-5-room-508-south-door",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 9.86,
+        "y": -92.5
+      }
+    },
+    {
+      "id": "butte-5-circulation-508",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 4.44,
+        "y": -86.67
+      }
+    },
+    {
+      "id": "butte-5-room-504",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 4.44,
+        "y": -106.11
+      }
+    },
+    {
+      "id": "butte-5-room-506",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 9.86,
+        "y": -95.97
+      }
+    },
+    {
+      "id": "butte-5-door-west-stairs",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -26.67,
+        "y": -55.42
+      }
+    },
+    {
+      "id": "butte-5-stairs-west",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -33.47,
+        "y": -55.42
+      }
+    },
+    {
+      "id": "butte-5-door-southeast-stairs",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 5.42,
+        "y": -121.11
+      }
+    },
+    {
+      "id": "butte-5-stairs-southeast",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": 11.39,
+        "y": -121.11
+      }
+    },
+    {
+      "id": "butte-5-elevator-bank",
+      "buildingId": "butte",
+      "floorId": 5,
+      "position": {
+        "x": -15.28,
+        "y": -53.33
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "butte-5-hall-north-west",
+      "to": "butte-5-hall-north-center",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-north-center",
+      "to": "butte-5-hall-north-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-north-west",
+      "to": "butte-5-hall-west-men",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-men",
+      "to": "butte-5-hall-west-505",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-505",
+      "to": "butte-5-hall-west-stairs",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-stairs",
+      "to": "butte-5-hall-west-507",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-507",
+      "to": "butte-5-hall-west-509",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-509",
+      "to": "butte-5-hall-west-women",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-women",
+      "to": "butte-5-hall-west-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-west-south",
+      "to": "butte-5-hall-south-center",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-south-center",
+      "to": "butte-5-hall-east-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-541",
+      "to": "butte-5-room-541",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-539",
+      "to": "butte-5-room-539",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-537",
+      "to": "butte-5-room-537",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-535",
+      "to": "butte-5-room-535",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-533",
+      "to": "butte-5-room-533",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-531",
+      "to": "butte-5-room-531",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-529",
+      "to": "butte-5-room-529",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-527",
+      "to": "butte-5-room-527",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-525",
+      "to": "butte-5-room-525",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-523",
+      "to": "butte-5-room-523",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-521",
+      "to": "butte-5-room-521",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-519",
+      "to": "butte-5-room-519",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-north-east",
+      "to": "butte-5-hall-east-541",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-541",
+      "to": "butte-5-hall-east-539",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-539",
+      "to": "butte-5-hall-east-537",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-537",
+      "to": "butte-5-hall-east-535",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-535",
+      "to": "butte-5-hall-east-533",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-533",
+      "to": "butte-5-hall-east-531",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-531",
+      "to": "butte-5-hall-east-529",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-529",
+      "to": "butte-5-hall-east-527",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-527",
+      "to": "butte-5-hall-east-525",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-525",
+      "to": "butte-5-hall-east-523",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-523",
+      "to": "butte-5-hall-east-521",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-521",
+      "to": "butte-5-hall-east-519",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-east-519",
+      "to": "butte-5-hall-east-south",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-hall-north-west",
+      "to": "butte-5-room-503",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-north-center",
+      "to": "butte-5-room-501",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-501",
+      "to": "butte-5-circulation-501-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-west",
+      "to": "butte-5-room-503-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-503",
+      "to": "butte-5-circulation-503-east",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-503-east",
+      "to": "butte-5-room-503-east-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-west",
+      "to": "butte-5-circulation-501-middle",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "butte-5-room-501",
+      "to": "butte-5-circulation-501-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-south",
+      "to": "butte-5-circulation-501-middle",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-middle",
+      "to": "butte-5-circulation-501-north",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-north",
+      "to": "butte-5-room-501A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-middle",
+      "to": "butte-5-room-501B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-middle",
+      "to": "butte-5-room-501C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-south",
+      "to": "butte-5-room-501D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-501-south",
+      "to": "butte-5-room-501E",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-north-east",
+      "to": "butte-5-room-543",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-543",
+      "to": "butte-5-circulation-543",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-543",
+      "to": "butte-5-room-543A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-543",
+      "to": "butte-5-room-543B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-543",
+      "to": "butte-5-room-543C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-543",
+      "to": "butte-5-room-543D",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-north-center",
+      "to": "butte-5-room-502",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-men",
+      "to": "butte-5-restroom-men",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-505",
+      "to": "butte-5-room-505",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-507",
+      "to": "butte-5-room-507",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-509",
+      "to": "butte-5-room-509",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-507",
+      "to": "butte-5-circulation-507",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-507",
+      "to": "butte-5-room-509A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-507",
+      "to": "butte-5-room-509B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-509",
+      "to": "butte-5-circulation-509",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-509",
+      "to": "butte-5-room-509A-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-509",
+      "to": "butte-5-room-509B-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-509A",
+      "to": "butte-5-room-509A-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-509B",
+      "to": "butte-5-room-509B-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-south",
+      "to": "butte-5-room-511",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-509",
+      "to": "butte-5-room-511-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-511",
+      "to": "butte-5-circulation-511",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-511",
+      "to": "butte-5-room-511-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-511",
+      "to": "butte-5-room-511C",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-511",
+      "to": "butte-5-room-511A",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-511",
+      "to": "butte-5-room-511B",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-south",
+      "to": "butte-5-room-513",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-south-center",
+      "to": "butte-5-room-515",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-south-center",
+      "to": "butte-5-room-517",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-women",
+      "to": "butte-5-restroom-women",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-south-center",
+      "to": "butte-5-custodian-south",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-north-center",
+      "to": "butte-5-room-518",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-533",
+      "to": "butte-5-room-518-east-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-531",
+      "to": "butte-5-room-518-east-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-518",
+      "to": "butte-5-circulation-518",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-518",
+      "to": "butte-5-room-518-east-north-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-518",
+      "to": "butte-5-room-518-east-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-527",
+      "to": "butte-5-room-512",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-527",
+      "to": "butte-5-room-508",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-523",
+      "to": "butte-5-room-508-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-room-508",
+      "to": "butte-5-circulation-508",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-circulation-508",
+      "to": "butte-5-room-508-south-door",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-south-center",
+      "to": "butte-5-room-504",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-523",
+      "to": "butte-5-room-506",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-stairs",
+      "to": "butte-5-door-west-stairs",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-door-west-stairs",
+      "to": "butte-5-stairs-west",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-east-south",
+      "to": "butte-5-door-southeast-stairs",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-door-southeast-stairs",
+      "to": "butte-5-stairs-southeast",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "butte-5-hall-west-stairs",
+      "to": "butte-5-elevator-bank",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

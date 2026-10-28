@@ -1,0 +1,1724 @@
+{
+  "metadata": {
+    "buildingId": "trinity",
+    "buildingName": "Trinity Hall",
+    "floor": 2,
+    "source": "csuc-floor-plans/Trinity/trnt-2.pdf",
+    "sourceDate": "2008-07-14",
+    "digitizedDate": "2026-10-27",
+    "units": "feet",
+    "printedScale": "1 inch = 20 feet",
+    "feetPerPdfPoint": 0.2777777777777778,
+    "pdfPage": {
+      "width": 612,
+      "height": 792,
+      "rotation": 0
+    },
+    "origin": {
+      "nodeId": "trinity-1-exit-south-ao",
+      "description": "South AO exterior doorway beside south stair",
+      "pdfPoint": {
+        "x": 349.5,
+        "y": 655.5
+      }
+    },
+    "axes": {
+      "x": "drawing-right",
+      "y": "drawing-up"
+    },
+    "alignment": {
+      "method": "identity: corresponding elevator shaft and exterior walls",
+      "pdfToReferenceTranslation": {
+        "x": 0,
+        "y": 0
+      },
+      "rotationDegrees": 0,
+      "scale": 1
+    },
+    "undirected": true,
+    "weightAssumption": "All weights 1; loader derives Euclidean feet, including vertical transfers.",
+    "accessibility": "Only source AO entrance edges marked true; stairs false; all other access unknown.",
+    "uncertainties": [
+      "Manual doorway digitization from dated plan.",
+      "East stair marked UP has no corresponding supplied third floor.",
+      "Ramp slope/compliance and elevator operating permissions are unknown.",
+      "Rooms 223, 223A/B/C share the visible suite entrance.",
+      "239A opens into 239; access is through room 239, not directly from the corridor."
+    ]
+  },
+  "nodes": [
+    {
+      "id": "trinity-2-north-hall-152",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -75.97,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-230",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -65.14,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-240",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -63.75,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-302",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -55.14,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-304",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -54.86,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-370",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -45.69,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-386",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -43.47,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-437",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -36.39,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-489",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -29.17,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-503",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -27.22,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-574",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -17.36,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-584",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -15.97,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-608",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -12.64,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-646",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -7.36,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-681",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -2.5,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-712",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 1.81,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-738",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 5.42,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-785",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 11.94,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-799",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 13.89,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-862",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 22.64,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-890",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 26.53,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-920",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 30.69,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-north-hall-932",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 32.36,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-room-201",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -65.14,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-203",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -55.14,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-205",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -43.47,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-207",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -29.17,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-209",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -15.97,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-211",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -12.64,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-213",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -2.5,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-215",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 5.42,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-217",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 13.89,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-219",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 22.64,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-221",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 30.69,
+        "y": 146.94
+      }
+    },
+    {
+      "id": "trinity-2-room-202",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -63.75,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-204",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -54.86,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-206",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -45.69,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-208",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -36.39,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-210",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -27.22,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-212",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -17.36,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-214",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -7.36,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-216",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 1.81,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-room-218",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 11.94,
+        "y": 141.94
+      }
+    },
+    {
+      "id": "trinity-2-stairs-northwest",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -72.08,
+        "y": 135.83
+      }
+    },
+    {
+      "id": "trinity-2-northwest-stair-approach",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -75.97,
+        "y": 140.28
+      }
+    },
+    {
+      "id": "trinity-2-northeast-hall",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 26.53,
+        "y": 133.47
+      }
+    },
+    {
+      "id": "trinity-2-stairs-northeast",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 15.97,
+        "y": 133.19
+      }
+    },
+    {
+      "id": "trinity-2-east-junction",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 23.61,
+        "y": 119.72
+      }
+    },
+    {
+      "id": "trinity-2-suite-223-entry",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 34.31,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-suite-223-junction",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 40.28,
+        "y": 144.44
+      }
+    },
+    {
+      "id": "trinity-2-room-223",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 36.53,
+        "y": 146.81
+      }
+    },
+    {
+      "id": "trinity-2-room-223A",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 45.56,
+        "y": 148.06
+      }
+    },
+    {
+      "id": "trinity-2-room-223B",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 45.56,
+        "y": 140.69
+      }
+    },
+    {
+      "id": "trinity-2-room-223C",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 37.22,
+        "y": 142.08
+      }
+    },
+    {
+      "id": "trinity-2-room-222",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 27.08,
+        "y": 124.17
+      }
+    },
+    {
+      "id": "trinity-2-east-stair-approach",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 34.58,
+        "y": 120.14
+      }
+    },
+    {
+      "id": "trinity-2-stairs-up-east",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 40.69,
+        "y": 120.28
+      }
+    },
+    {
+      "id": "trinity-2-custodial-east",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 37.36,
+        "y": 117.92
+      }
+    },
+    {
+      "id": "trinity-2-ramp-north",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 17.36,
+        "y": 115.42
+      }
+    },
+    {
+      "id": "trinity-2-room-220",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 23.61,
+        "y": 112.64
+      }
+    },
+    {
+      "id": "trinity-2-ramp-south",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 17.36,
+        "y": 80.14
+      }
+    },
+    {
+      "id": "trinity-2-ramp-bottom",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 17.36,
+        "y": 66.39
+      }
+    },
+    {
+      "id": "trinity-2-elevator-lobby-south",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 5.69,
+        "y": 70.69
+      }
+    },
+    {
+      "id": "trinity-2-elevator-lobby-north",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 5.56,
+        "y": 76.81
+      }
+    },
+    {
+      "id": "trinity-2-storage-elevator",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 8.06,
+        "y": 78.61
+      }
+    },
+    {
+      "id": "trinity-2-room-239A",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -11.81,
+        "y": 69.17
+      }
+    },
+    {
+      "id": "trinity-2-south-hall-top",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 24.44,
+        "y": 66.39
+      }
+    },
+    {
+      "id": "trinity-2-room-245",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 20.97,
+        "y": 69.86
+      }
+    },
+    {
+      "id": "trinity-2-elevator",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 9.58,
+        "y": 72.22
+      }
+    },
+    {
+      "id": "trinity-2-south-hall-west-top",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 66.39
+      }
+    },
+    {
+      "id": "trinity-2-south-west-830",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 66.81
+      }
+    },
+    {
+      "id": "trinity-2-south-west-833",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 66.39
+      }
+    },
+    {
+      "id": "trinity-2-south-west-920",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 54.31
+      }
+    },
+    {
+      "id": "trinity-2-south-west-945",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 50.83
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1010",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 41.81
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1026",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 39.58
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1102",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 29.03
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1112",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 27.64
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1194",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 16.25
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1196",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 15.97
+      }
+    },
+    {
+      "id": "trinity-2-south-west-1248",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 8.75
+      }
+    },
+    {
+      "id": "trinity-2-room-239",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -3.06,
+        "y": 66.81
+      }
+    },
+    {
+      "id": "trinity-2-room-237",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -3.06,
+        "y": 50.83
+      }
+    },
+    {
+      "id": "trinity-2-room-235",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -3.06,
+        "y": 39.58
+      }
+    },
+    {
+      "id": "trinity-2-room-233",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -3.06,
+        "y": 27.64
+      }
+    },
+    {
+      "id": "trinity-2-room-231",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -3.06,
+        "y": 16.25
+      }
+    },
+    {
+      "id": "trinity-2-room-238",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 0.83,
+        "y": 54.31
+      }
+    },
+    {
+      "id": "trinity-2-room-236",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 0.83,
+        "y": 41.81
+      }
+    },
+    {
+      "id": "trinity-2-room-234",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 0.83,
+        "y": 29.03
+      }
+    },
+    {
+      "id": "trinity-2-room-232",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 0.83,
+        "y": 15.97
+      }
+    },
+    {
+      "id": "trinity-2-south-east-830",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 66.81
+      }
+    },
+    {
+      "id": "trinity-2-south-east-833",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 66.39
+      }
+    },
+    {
+      "id": "trinity-2-south-east-920",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 54.31
+      }
+    },
+    {
+      "id": "trinity-2-south-east-1010",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 41.81
+      }
+    },
+    {
+      "id": "trinity-2-south-east-1102",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 29.03
+      }
+    },
+    {
+      "id": "trinity-2-south-east-1196",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 15.97
+      }
+    },
+    {
+      "id": "trinity-2-south-east-1248",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 25.42,
+        "y": 8.75
+      }
+    },
+    {
+      "id": "trinity-2-room-240",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 22.64,
+        "y": 54.31
+      }
+    },
+    {
+      "id": "trinity-2-room-242",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 22.64,
+        "y": 41.81
+      }
+    },
+    {
+      "id": "trinity-2-room-244",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 22.64,
+        "y": 29.03
+      }
+    },
+    {
+      "id": "trinity-2-room-246",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 22.64,
+        "y": 15.97
+      }
+    },
+    {
+      "id": "trinity-2-south-hall-bottom",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 5.69,
+        "y": 8.75
+      }
+    },
+    {
+      "id": "trinity-2-room-249",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 13.33,
+        "y": 9.03
+      }
+    },
+    {
+      "id": "trinity-2-room-247",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 17.78,
+        "y": 9.03
+      }
+    },
+    {
+      "id": "trinity-2-south-stair-approach",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -0.97,
+        "y": 1.53
+      }
+    },
+    {
+      "id": "trinity-2-stairs-south",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -11.11,
+        "y": 0.97
+      }
+    },
+    {
+      "id": "trinity-2-custodial-south",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 1.39,
+        "y": 6.39
+      }
+    },
+    {
+      "id": "trinity-2-elevator-lobby-south-door",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 6.67,
+        "y": 68.75
+      }
+    },
+    {
+      "id": "trinity-2-ramp-entry-door",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 19.58,
+        "y": 121.67
+      }
+    },
+    {
+      "id": "trinity-2-ramp-entry-turn",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 17.36,
+        "y": 120.56
+      }
+    },
+    {
+      "id": "trinity-2-room-239-inner-approach",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": -8.19,
+        "y": 64.03
+      }
+    }
+  ],
+  "edges": [
+    {
+      "to": "trinity-2-north-hall-230",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-152"
+    },
+    {
+      "to": "trinity-2-north-hall-240",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-230"
+    },
+    {
+      "to": "trinity-2-north-hall-302",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-240"
+    },
+    {
+      "to": "trinity-2-north-hall-304",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-302"
+    },
+    {
+      "to": "trinity-2-north-hall-370",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-304"
+    },
+    {
+      "to": "trinity-2-north-hall-386",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-370"
+    },
+    {
+      "to": "trinity-2-north-hall-437",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-386"
+    },
+    {
+      "to": "trinity-2-north-hall-489",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-437"
+    },
+    {
+      "to": "trinity-2-north-hall-503",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-489"
+    },
+    {
+      "to": "trinity-2-north-hall-574",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-503"
+    },
+    {
+      "to": "trinity-2-north-hall-584",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-574"
+    },
+    {
+      "to": "trinity-2-north-hall-608",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-584"
+    },
+    {
+      "to": "trinity-2-north-hall-646",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-608"
+    },
+    {
+      "to": "trinity-2-north-hall-681",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-646"
+    },
+    {
+      "to": "trinity-2-north-hall-712",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-681"
+    },
+    {
+      "to": "trinity-2-north-hall-738",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-712"
+    },
+    {
+      "to": "trinity-2-north-hall-785",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-738"
+    },
+    {
+      "to": "trinity-2-north-hall-799",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-785"
+    },
+    {
+      "to": "trinity-2-north-hall-862",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-799"
+    },
+    {
+      "to": "trinity-2-north-hall-890",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-862"
+    },
+    {
+      "to": "trinity-2-north-hall-920",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-890"
+    },
+    {
+      "to": "trinity-2-north-hall-932",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-920"
+    },
+    {
+      "to": "trinity-2-room-201",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-230"
+    },
+    {
+      "to": "trinity-2-room-203",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-302"
+    },
+    {
+      "to": "trinity-2-room-205",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-386"
+    },
+    {
+      "to": "trinity-2-room-207",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-489"
+    },
+    {
+      "to": "trinity-2-room-209",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-584"
+    },
+    {
+      "to": "trinity-2-room-211",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-608"
+    },
+    {
+      "to": "trinity-2-room-213",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-681"
+    },
+    {
+      "to": "trinity-2-room-215",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-738"
+    },
+    {
+      "to": "trinity-2-room-217",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-799"
+    },
+    {
+      "to": "trinity-2-room-219",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-862"
+    },
+    {
+      "to": "trinity-2-room-221",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-920"
+    },
+    {
+      "to": "trinity-2-room-202",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-240"
+    },
+    {
+      "to": "trinity-2-room-204",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-304"
+    },
+    {
+      "to": "trinity-2-room-206",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-370"
+    },
+    {
+      "to": "trinity-2-room-208",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-437"
+    },
+    {
+      "to": "trinity-2-room-210",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-503"
+    },
+    {
+      "to": "trinity-2-room-212",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-574"
+    },
+    {
+      "to": "trinity-2-room-214",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-646"
+    },
+    {
+      "to": "trinity-2-room-216",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-712"
+    },
+    {
+      "to": "trinity-2-room-218",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-785"
+    },
+    {
+      "to": "trinity-2-northwest-stair-approach",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-152"
+    },
+    {
+      "to": "trinity-2-stairs-northwest",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-northwest-stair-approach"
+    },
+    {
+      "to": "trinity-2-northeast-hall",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-north-hall-890"
+    },
+    {
+      "to": "trinity-2-stairs-northeast",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-northeast-hall"
+    },
+    {
+      "to": "trinity-2-east-junction",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-northeast-hall"
+    },
+    {
+      "to": "trinity-2-suite-223-entry",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-north-hall-932"
+    },
+    {
+      "to": "trinity-2-suite-223-junction",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-suite-223-entry"
+    },
+    {
+      "to": "trinity-2-room-223",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-suite-223-junction"
+    },
+    {
+      "to": "trinity-2-room-223A",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-suite-223-junction"
+    },
+    {
+      "to": "trinity-2-room-223B",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-suite-223-junction"
+    },
+    {
+      "to": "trinity-2-room-223C",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-suite-223-junction"
+    },
+    {
+      "to": "trinity-2-room-222",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-east-junction"
+    },
+    {
+      "to": "trinity-2-east-stair-approach",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-east-junction"
+    },
+    {
+      "to": "trinity-2-stairs-up-east",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-east-stair-approach"
+    },
+    {
+      "to": "trinity-2-custodial-east",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-east-stair-approach"
+    },
+    {
+      "to": "trinity-2-room-220",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-east-junction"
+    },
+    {
+      "to": "trinity-2-ramp-south",
+      "weight": 1,
+      "type": "ramp",
+      "from": "trinity-2-ramp-north"
+    },
+    {
+      "to": "trinity-2-ramp-bottom",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-ramp-south"
+    },
+    {
+      "to": "trinity-2-elevator-lobby-south",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-ramp-bottom"
+    },
+    {
+      "to": "trinity-2-elevator-lobby-north",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-elevator-lobby-south"
+    },
+    {
+      "to": "trinity-2-storage-elevator",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-elevator-lobby-north"
+    },
+    {
+      "to": "trinity-2-south-hall-top",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-ramp-bottom"
+    },
+    {
+      "to": "trinity-2-room-245",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-ramp-bottom"
+    },
+    {
+      "to": "trinity-2-elevator",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-elevator-lobby-south"
+    },
+    {
+      "to": "trinity-2-south-hall-top",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-hall-west-top"
+    },
+    {
+      "to": "trinity-2-south-west-833",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-830"
+    },
+    {
+      "to": "trinity-2-south-west-920",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-833"
+    },
+    {
+      "to": "trinity-2-south-west-945",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-920"
+    },
+    {
+      "to": "trinity-2-south-west-1010",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-945"
+    },
+    {
+      "to": "trinity-2-south-west-1026",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1010"
+    },
+    {
+      "to": "trinity-2-south-west-1102",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1026"
+    },
+    {
+      "to": "trinity-2-south-west-1112",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1102"
+    },
+    {
+      "to": "trinity-2-south-west-1194",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1112"
+    },
+    {
+      "to": "trinity-2-south-west-1196",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1194"
+    },
+    {
+      "to": "trinity-2-south-west-1248",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1196"
+    },
+    {
+      "to": "trinity-2-room-239",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-830"
+    },
+    {
+      "to": "trinity-2-room-237",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-945"
+    },
+    {
+      "to": "trinity-2-room-235",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-1026"
+    },
+    {
+      "to": "trinity-2-room-233",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-1112"
+    },
+    {
+      "to": "trinity-2-room-231",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-1194"
+    },
+    {
+      "to": "trinity-2-room-238",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-920"
+    },
+    {
+      "to": "trinity-2-room-236",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-1010"
+    },
+    {
+      "to": "trinity-2-room-234",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-1102"
+    },
+    {
+      "to": "trinity-2-room-232",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-west-1196"
+    },
+    {
+      "to": "trinity-2-south-east-833",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-east-830"
+    },
+    {
+      "to": "trinity-2-south-east-920",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-east-833"
+    },
+    {
+      "to": "trinity-2-south-east-1248",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-east-1196"
+    },
+    {
+      "to": "trinity-2-room-240",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-east-920"
+    },
+    {
+      "to": "trinity-2-room-242",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-east-1010"
+    },
+    {
+      "to": "trinity-2-room-244",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-east-1102"
+    },
+    {
+      "to": "trinity-2-room-246",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-east-1196"
+    },
+    {
+      "to": "trinity-2-south-west-833",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-hall-west-top"
+    },
+    {
+      "to": "trinity-2-south-east-833",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-hall-top"
+    },
+    {
+      "to": "trinity-2-south-hall-bottom",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1248"
+    },
+    {
+      "to": "trinity-2-south-east-1248",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-hall-bottom"
+    },
+    {
+      "to": "trinity-2-room-249",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-hall-bottom"
+    },
+    {
+      "to": "trinity-2-room-247",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-hall-bottom"
+    },
+    {
+      "to": "trinity-2-south-stair-approach",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-west-1248"
+    },
+    {
+      "to": "trinity-2-stairs-south",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-stair-approach"
+    },
+    {
+      "to": "trinity-2-custodial-south",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-south-hall-bottom"
+    },
+    {
+      "to": "trinity-2-elevator-lobby-south-door",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-elevator-lobby-south"
+    },
+    {
+      "to": "trinity-2-south-hall-west-top",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-elevator-lobby-south-door"
+    },
+    {
+      "to": "trinity-2-ramp-entry-door",
+      "weight": 1,
+      "type": "door",
+      "from": "trinity-2-east-junction"
+    },
+    {
+      "to": "trinity-2-ramp-entry-turn",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-ramp-entry-door"
+    },
+    {
+      "to": "trinity-2-ramp-north",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-ramp-entry-turn"
+    },
+    {
+      "to": "trinity-2-south-east-1010",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-east-920"
+    },
+    {
+      "to": "trinity-2-south-east-1102",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-east-1010"
+    },
+    {
+      "to": "trinity-2-south-east-1102",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-east-1196"
+    },
+    {
+      "from": "trinity-2-room-239",
+      "to": "trinity-2-room-239-inner-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "trinity-2-room-239-inner-approach",
+      "to": "trinity-2-room-239A",
+      "weight": 1,
+      "type": "door"
+    }
+  ]
+}

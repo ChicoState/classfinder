@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "buildingId": "glenn",
+    "units": "feet",
+    "undirected": true,
+    "sourceFiles": [
+      "csuc-floor-plans/Glenn/glenn-1.pdf",
+      "csuc-floor-plans/Glenn/glenn-2.pdf",
+      "csuc-floor-plans/Glenn/glenn-3.pdf"
+    ],
+    "assumptions": [
+      "Matching three stair cores and elevator on adjacent floors only.",
+      "No distance override; runtime uses plan-view endpoint separation. Elevator operation/access unknown."
+    ]
+  },
+  "edges": [
+    {
+      "from": "glenn-1-stairs-north-up",
+      "to": "glenn-2-stairs-north-down",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-1-stairs-middle-up",
+      "to": "glenn-2-stairs-middle-down",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-1-stairs-south-up",
+      "to": "glenn-2-stairs-south-down",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-1-elevator",
+      "to": "glenn-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "glenn-2-stairs-north-up",
+      "to": "glenn-3-stairs-north-down",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-2-stairs-middle-up",
+      "to": "glenn-3-stairs-middle-down",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-2-stairs-south-up",
+      "to": "glenn-3-stairs-south-down",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "glenn-2-elevator",
+      "to": "glenn-3-elevator",
+      "weight": 1,
+      "type": "elevator"
+    }
+  ]
+}
