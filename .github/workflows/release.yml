@@ -28,15 +28,11 @@ jobs:
       - run: npm run format:check
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm test
       - run: npm run coverage
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
-        env:
-          PLAYWRIGHT_WEB_SERVER: 'true'
       - name: Verify application entrypoint exists
         run: test -f index.html
-      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

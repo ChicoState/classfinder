@@ -1,4 +1,4 @@
-import type { Vector2 } from "./vector2";
+import type { Vector2 } from './vector2';
 
 export type NodeId = string & { readonly __brand: 'NodeId' };
 

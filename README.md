@@ -11,7 +11,7 @@ ClassFinder will help students enter classes and receive campus directions. The 
 - `index.html` — Vite's browser document shell.
 - `src/` — React application source, with `main.tsx` as the entrypoint, `App.tsx` as the root component, shared graph contracts in `lib/graph.ts`, and graph-assembly helpers in `graph/`.
 - `src/data/` — bundled floor-plan JSON and a local visual verification preview.
-- `tests/unit/` — graph loading, graph assembly, and Dijkstra tests; `tests/ui/` and `tests/e2e/` are reserved for future flows.
+- `tests/unit/` — graph data, routing, instructions, and vector math; `tests/ui/` — application and floor viewer behavior; `tests/e2e/` — built application navigation.
 - `.github/workflows/` — pull-request checks and GitHub Pages release deployment.
 - `.agents/skills/` — project-provided agent skills.
 
@@ -88,8 +88,18 @@ npm run test:smoke
 docker compose config
 ```
 
-Unit tests cover graph loading and routing. UI and end-to-end coverage must be
-added as application flows are implemented.
+Run `npm run check` before pushing. It checks formatting, lint, types, coverage,
+infrastructure, and the built app in Chromium. Install Chromium once with
+`npx playwright install chromium` (Linux CI uses `--with-deps`). No Git hooks or
+background test watchers are installed. PRs and pushes to `main` run the checks.
+
+For a fast local check, use `npm test`; use `npm run coverage` for the report.
+Coverage includes application source except the browser bootstrap and type-only
+files, with minimums of 80% statements, lines, and functions and 75% branches.
+`npm run test:e2e` builds and starts its own preview server on port 4173, then
+stops it. Browser checks avoid depending on external map tile availability.
+Bundled-data checks discover new JSON files automatically; instruction tests use
+small fixtures so nearby coordinates in unrelated buildings cannot alter them.
 
 ## GitHub configuration
 

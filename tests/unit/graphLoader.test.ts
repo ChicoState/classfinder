@@ -33,7 +33,9 @@ describe('loadGraphFromData', () => {
   it('loads the floor-plan nodes with their coordinates and building details', () => {
     const [graph, nodes] = loadGraphFromData();
 
-    expect(nodes.size).toBe(data.nodes.length);
+    expect(
+      [...nodes.values()].filter((node) => node.buildingId === 'ocon')
+    ).toHaveLength(data.nodes.length);
     expect(graph.size).toBe(nodes.size);
     for (const node of data.nodes) {
       expect(nodes.get(node.id as NodeId)).toEqual(node);
@@ -46,9 +48,13 @@ describe('loadGraphFromData', () => {
   });
 
   it('derives edge distances from endpoint positions while expanding connections', () => {
-    const [graph] = loadGraphFromData();
+    const [graph, nodes] = loadGraphFromData();
 
-    expect([...graph.values()].flat()).toHaveLength(data.edges.length * 2);
+    expect(
+      [...graph.entries()]
+        .filter(([id]) => nodes.get(id)?.buildingId === 'ocon')
+        .flatMap(([, edges]) => edges)
+    ).toHaveLength(data.edges.length * 2);
     for (const { from, ...edge } of data.edges) {
       expect(edge).not.toHaveProperty('distance');
       const distance = distanceBetweenNodes(from as NodeId, edge.to as NodeId);
@@ -77,6 +83,7 @@ describe('loadGraphFromData', () => {
     if (!entrance) throw new Error('Missing entrance');
 
     for (const goal of nodes.values()) {
+      if (goal.buildingId !== entrance.buildingId) continue;
       const outward = calculatePath(graph, entrance, goal);
       const inward = calculatePath(graph, goal, entrance);
       expect(outward, goal.id).not.toBeNull();
@@ -90,9 +97,13 @@ describe('loadGraphFromData', () => {
 
   it('connects only corresponding adjacent-floor stairs and elevators', () => {
     const [graph, nodes] = loadGraphFromData();
-    expect(new Set([...nodes.values()].map((node) => node.floorId))).toEqual(
-      new Set([1, 2, 3, 4])
-    );
+    expect(
+      new Set(
+        [...nodes.values()]
+          .filter((node) => node.buildingId === 'ocon')
+          .map((node) => node.floorId)
+      )
+    ).toEqual(new Set([1, 2, 3, 4]));
     expect(connections.edges).toHaveLength(13);
     for (const edge of connections.edges) {
       const from = nodes.get(edge.from as NodeId)!;
@@ -126,7 +137,9 @@ describe('loadGraphFromData', () => {
     nodes.clear();
 
     const [freshGraph, freshNodes] = loadGraphFromData();
-    expect(freshNodes.size).toBe(data.nodes.length);
+    expect(
+      [...freshNodes.values()].filter((node) => node.buildingId === 'ocon')
+    ).toHaveLength(data.nodes.length);
     expect(freshNodes.get(entranceId)?.position).toEqual({ x: 0, y: 0 });
     expect(freshGraph.get(entranceId)?.[0].weight).toBe(1);
   });
