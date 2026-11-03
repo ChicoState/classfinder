@@ -44,7 +44,7 @@ try {
   const colors = {
     ocon: '#2b67bc',
     lang: '#0c876e',
-    outdoor: '#8b969f',
+    outside: '#8b969f',
     link: '#d66a12',
     route: '#bc2878'
   };
@@ -106,7 +106,7 @@ try {
   });
   const isRelevant = (n) =>
     floorNodes.includes(n) ||
-    (n.buildingId === null &&
+    (n.buildingId === 'outside' &&
       n.position.x >= minX &&
       n.position.x <= maxX &&
       n.position.y >= minY &&
@@ -165,8 +165,14 @@ try {
         ? colors.route
         : line.isLink
           ? colors.link
-          : colors[line.a.buildingId ?? 'outdoor'],
-      line.isRoute ? 7 : line.isLink ? 6 : line.a.buildingId === null ? 3 : 2.5
+          : colors[line.a.buildingId],
+      line.isRoute
+        ? 7
+        : line.isLink
+          ? 6
+          : line.a.buildingId === 'outside'
+            ? 3
+            : 2.5
     );
   for (const node of relevant.values()) {
     const p = pixel(node.position);
@@ -174,7 +180,7 @@ try {
     ctx.arc(p.x, p.y, pathIds.has(node.id) ? 4 : 2.5, 0, Math.PI * 2);
     ctx.fillStyle = pathIds.has(node.id)
       ? colors.route
-      : colors[node.buildingId ?? 'outdoor'];
+      : colors[node.buildingId];
     ctx.fill();
   }
   const label = (id, value, dx, dy, color = '#142b43') => {
@@ -229,7 +235,7 @@ try {
   for (const [key, title] of [
     ['ocon', 'O’Connell'],
     ['lang', 'Langdon'],
-    ['outdoor', 'Outdoor'],
+    ['outside', 'Outdoor'],
     ['link', 'Entrance link'],
     ['route', 'Dijkstra route']
   ]) {

@@ -1,3 +1,4 @@
+import { fit } from './similarity.mjs';
 // Reproducible offline similarity fits from matched PDF/OSM landmarks.
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -85,62 +86,6 @@ const langAnchors = langCorners.map(([description, x, y, osmNodeId]) =>
   )
 );
 
-function fit(anchors, evidence) {
-  const average = (side, axis) =>
-    anchors.reduce((sum, item) => sum + item[side][axis], 0) / anchors.length;
-  const lx = average('localPosition', 'x');
-  const ly = average('localPosition', 'y');
-  const gx = average('globalPosition', 'x');
-  const gy = average('globalPosition', 'y');
-  let denominator = 0;
-  let real = 0;
-  let imaginary = 0;
-  for (const anchor of anchors) {
-    const x = anchor.localPosition.x - lx;
-    const y = anchor.localPosition.y - ly;
-    const u = anchor.globalPosition.x - gx;
-    const v = anchor.globalPosition.y - gy;
-    denominator += x * x + y * y;
-    real += x * u + y * v;
-    imaginary += x * v - y * u;
-  }
-  if (denominator === 0) throw new Error('Alignment needs separated landmarks');
-  const a = real / denominator;
-  const b = imaginary / denominator;
-  const tx = gx - a * lx + b * ly;
-  const ty = gy - b * lx - a * ly;
-  const errors = anchors.map((anchor) =>
-    Math.hypot(
-      a * anchor.localPosition.x -
-        b * anchor.localPosition.y +
-        tx -
-        anchor.globalPosition.x,
-      b * anchor.localPosition.x +
-        a * anchor.localPosition.y +
-        ty -
-        anchor.globalPosition.y
-    )
-  );
-  return {
-    a,
-    b,
-    tx,
-    ty,
-    scale: Math.hypot(a, b),
-    rotationDegrees: (Math.atan2(b, a) * 180) / Math.PI,
-    rmsResidualFeet: Math.sqrt(
-      errors.reduce((sum, error) => sum + error * error, 0) / errors.length
-    ),
-    maxResidualFeet: Math.max(...errors),
-    method:
-      'Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty',
-    evidence,
-    anchors: anchors.map((anchor, i) => ({
-      ...anchor,
-      residualFeet: errors[i]
-    }))
-  };
-}
 const alignment = {
   globalFrame: {
     id: 'campus-feet',
@@ -151,7 +96,7 @@ const alignment = {
     axes: 'X east, Y north',
     outdoorProjection: projection
   },
-  excludedBuildingIds: ['holt'],
+  excludedBuildingIds: [],
   provenance: {
     date: '2026-10-25',
     osmSource: 'campus-osm.json',
@@ -163,7 +108,7 @@ const alignment = {
       'O’Connell requires an approximately 12% scale correction to match the three outdoor doorway endpoints. The adjustment applies to all its loaded floor distances.',
       'Langdon gate positions are approximate user-approved fence midpoints. Courtyard walkability and gate connections were confirmed by the user on 2026-10-25; exact approach geometry is inferred.',
       'Entrance links span small registration residuals. Other door and building access permissions remain unverified; no wheelchair accessibility is inferred.',
-      'Indoor JSON stays in its traceable source coordinates; all returned runtime nodes use campus-feet. Holt is explicitly omitted until aligned.'
+      'Indoor JSON stays in its traceable source coordinates; all returned runtime nodes use campus-feet. Unregistered buildings require campus alignment before runtime loading.'
     ]
   },
   buildings: {
@@ -311,3 +256,6 @@ for (const [id, transform] of Object.entries(alignment.buildings))
     rmsFeet: transform.rmsResidualFeet,
     maxFeet: transform.maxResidualFeet
   });
+
+// Restore the four additional building registrations and their entrance links.
+await import('./align-campus-entrances.mjs');

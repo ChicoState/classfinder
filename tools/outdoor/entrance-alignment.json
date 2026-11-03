@@ -1,0 +1,641 @@
+{
+  "acker": {
+    "osmFootprintWayId": 39416768,
+    "anchors": [
+      {
+        "osmVertexIndex": 7,
+        "pdfPointFromTopLeft": {
+          "x": 187.33333333333334,
+          "y": 56.0
+        }
+      },
+      {
+        "osmVertexIndex": 8,
+        "pdfPointFromTopLeft": {
+          "x": 413.3333333333333,
+          "y": 56.0
+        }
+      },
+      {
+        "osmVertexIndex": 6,
+        "pdfPointFromTopLeft": {
+          "x": 187.33333333333334,
+          "y": 129.33333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 4,
+        "pdfPointFromTopLeft": {
+          "x": 136.66666666666666,
+          "y": 129.33333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 9,
+        "pdfPointFromTopLeft": {
+          "x": 413.3333333333333,
+          "y": 236.0
+        }
+      },
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 106.66666666666667,
+          "y": 454.0
+        }
+      },
+      {
+        "osmVertexIndex": 14,
+        "pdfPointFromTopLeft": {
+          "x": 378.6666666666667,
+          "y": 454.0
+        }
+      }
+    ],
+    "reviewLimitFeet": 8,
+    "entrances": [
+      {
+        "nodeId": "acker-1-exit-lobby-east-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-lobby-south-1",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-lobby-south-2",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-lobby-south-3",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-north-1",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-north-2",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-north-3",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-north-4",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-south-1",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-south-2",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-south-3",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-gym-west-south-4",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-storage-west-exterior-door",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-room-151",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "acker-1-room-152",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "acker-1-room-153",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "acker-1-room-154",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "acker-1-room-155",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "acker-1-room-156",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-southeast-ao",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-locker-south",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "acker-1-unnumbered-annex-northwest-exterior-door",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-annex-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-annex-south",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "acker-1-exit-127-north",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      }
+    ],
+    "upperFloorExterior": "acker-2-exit-203-walkway is on the covered upper walkway; existing adjacent-floor stairs provide outdoor access. No direct ground-level edge.",
+    "sourceObstacleOverride": {
+      "osmWayId": 1106265311,
+      "reason": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+      "referencePdfPolygons": [
+        [
+          [106.7, 454],
+          [378.7, 454],
+          [378.7, 594],
+          [409.3, 594],
+          [409.3, 649],
+          [355, 649],
+          [355, 672],
+          [106.7, 672]
+        ],
+        [
+          [313.7, 672],
+          [379.7, 672],
+          [379.7, 887],
+          [327, 887],
+          [327, 725],
+          [313.7, 725]
+        ]
+      ]
+    }
+  },
+  "ayres": {
+    "osmFootprintWayId": 28551760,
+    "anchors": [
+      {
+        "osmVertexIndex": 8,
+        "pdfPointFromTopLeft": {
+          "x": 86.66666666666667,
+          "y": 70.0
+        }
+      },
+      {
+        "osmVertexIndex": 10,
+        "pdfPointFromTopLeft": {
+          "x": 357.3333333333333,
+          "y": 70.0
+        }
+      },
+      {
+        "osmVertexIndex": 7,
+        "pdfPointFromTopLeft": {
+          "x": 86.66666666666667,
+          "y": 644.0
+        }
+      },
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 450.0,
+          "y": 644.0
+        }
+      },
+      {
+        "osmVertexIndex": 4,
+        "pdfPointFromTopLeft": {
+          "x": 146.66666666666666,
+          "y": 753.3333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 3,
+        "pdfPointFromTopLeft": {
+          "x": 266.6666666666667,
+          "y": 753.3333333333334
+        }
+      }
+    ],
+    "reviewLimitFeet": 8,
+    "entrances": [
+      {
+        "nodeId": "ayres-1-entrance-northwest",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "ayres-1-entrance-southwest",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "ayres-1-room-121-exterior",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "ayres-1-room-129-exterior",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "ayres-1-room-129A",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "ayres-1-room-129B",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "ayres-1-entrance-studio-south",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "ayres-1-entrance-southeast",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "ayres-1-entrance-studio-120B",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "ayres-1-room-130-east",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    ],
+    "courtyardNote": "Courtyard-facing doors retain existing source graph circulation; no links across enclosing north-court walls. hall-south-exit is an interior approach to entrance-southwest.",
+    "sourceObstacleOverride": {
+      "osmWayId": 28551760,
+      "reason": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+      "referencePdfPolygons": [
+        [
+          [86.7, 70],
+          [357.3, 70],
+          [357.3, 310.7],
+          [177.3, 310.7],
+          [177.3, 344],
+          [286.7, 344],
+          [286.7, 337.3],
+          [422, 337.3],
+          [422, 437],
+          [436.7, 437],
+          [436.7, 477.3],
+          [450, 477.3],
+          [450, 644],
+          [86.7, 644]
+        ],
+        [
+          [146.7, 670],
+          [260.7, 670],
+          [260.7, 753.3],
+          [146.7, 753.3]
+        ]
+      ]
+    }
+  },
+  "trinity": {
+    "osmFootprintWayId": 28551719,
+    "anchors": [
+      {
+        "osmVertexIndex": 8,
+        "pdfPointFromTopLeft": {
+          "x": 62,
+          "y": 81.3333
+        }
+      },
+      {
+        "osmVertexIndex": 11,
+        "pdfPointFromTopLeft": {
+          "x": 553.3333,
+          "y": 70.6667
+        }
+      },
+      {
+        "osmVertexIndex": 6,
+        "pdfPointFromTopLeft": {
+          "x": 62,
+          "y": 315.3333
+        }
+      },
+      {
+        "osmVertexIndex": 2,
+        "pdfPointFromTopLeft": {
+          "x": 290.6667,
+          "y": 670
+        }
+      },
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 457.3333,
+          "y": 670
+        }
+      }
+    ],
+    "reviewLimitFeet": 8,
+    "entrances": [
+      {
+        "nodeId": "trinity-1-exit-east-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "trinity-1-exit-west-middle",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "trinity-1-exit-west-north",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "trinity-1-exit-west-south",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "trinity-1-exit-west-stair",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "trinity-1-exit-main-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "trinity-1-exit-south-ao",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      }
+    ]
+  },
+  "yolo": {
+    "osmFootprintWayId": 39427535,
+    "anchors": [
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 140.0,
+          "y": 58.0
+        }
+      },
+      {
+        "osmVertexIndex": 48,
+        "pdfPointFromTopLeft": {
+          "x": 323.3333333333333,
+          "y": 58.0
+        }
+      },
+      {
+        "osmVertexIndex": 46,
+        "pdfPointFromTopLeft": {
+          "x": 358.0,
+          "y": 108.66666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 4,
+        "pdfPointFromTopLeft": {
+          "x": 134.0,
+          "y": 214.0
+        }
+      },
+      {
+        "osmVertexIndex": 8,
+        "pdfPointFromTopLeft": {
+          "x": 118.66666666666667,
+          "y": 374.6666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 10,
+        "pdfPointFromTopLeft": {
+          "x": 118.66666666666667,
+          "y": 494.0
+        }
+      },
+      {
+        "osmVertexIndex": 12,
+        "pdfPointFromTopLeft": {
+          "x": 134.0,
+          "y": 537.3333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 30,
+        "pdfPointFromTopLeft": {
+          "x": 535.3333333333334,
+          "y": 551.3333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 28,
+        "pdfPointFromTopLeft": {
+          "x": 535.3333333333334,
+          "y": 611.3333333333334
+        }
+      }
+    ],
+    "reviewLimitFeet": 8,
+    "entrances": [
+      {
+        "nodeId": "yolo-1-exit-north-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-142-north",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-east-wing-north",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-south-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-112-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-109-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-145-east",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-150-east",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-155-east",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "yolo-1-exit-166-east",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    ]
+  }
+}

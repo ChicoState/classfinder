@@ -4,8 +4,7 @@ import { connectBothWays } from '../../src/graph/graphLoader';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { EdgeKind, Graph, Nodes, NodeId } from '../../src/lib/graph';
 
-// Validate preserved source topology independently; Holt is intentionally omitted
-// from the runtime campus graph until a geographic alignment is available.
+// Validate local first-floor topology independently of outdoor and upper-floor links.
 function loadHoltSourceGraph(): [Graph, Nodes] {
   const nodes: Nodes = new Map(
     floor.nodes.map((node) => [
@@ -104,6 +103,8 @@ describe('preserved Holt first-floor source graph', () => {
       ['stairs-middle-south-west-door-481', 'stairs-middle-south-east'],
       ['stairs-north-east-upper', 'stairs-north-east-lower']
     ]) {
+      expect(nodes.has(`holt-1-${from}` as NodeId), from).toBe(true);
+      expect(nodes.has(`holt-1-${to}` as NodeId), to).toBe(true);
       const path = calculatePath(
         graph,
         nodes.get(`holt-1-${from}` as NodeId)!,
@@ -116,27 +117,50 @@ describe('preserved Holt first-floor source graph', () => {
     }
   });
 
+  it('places restored approaches at the source PDF openings using the current origin', () => {
+    const [, nodes] = loadHoltSourceGraph();
+    const expected = [
+      ['stairs-middle-north-west-door-256', 262, 256],
+      ['stairs-middle-north-west-door-265', 262, 265],
+      ['stairs-middle-north-east', 307, 260],
+      ['stairs-middle-south-west-door-472', 262, 472],
+      ['stairs-middle-south-west-door-481', 262, 481],
+      ['stairs-middle-south-east', 307, 477],
+      ['stairs-north-east-upper', 340, 224],
+      ['stairs-north-east-lower', 340, 244]
+    ] as const;
+    const factor = floor.metadata.feetPerPdfPoint;
+    const origin = floor.metadata.origin.pdfPointFromTopLeft;
+    for (const [id, pdfX, pdfY] of expected) {
+      const n = nodes.get(`holt-1-${id}` as NodeId)!;
+      expect(origin.x + n.position.x / factor, id).toBeCloseTo(pdfX, 1);
+      expect(origin.y - n.position.y / factor, id).toBeCloseTo(pdfY, 1);
+    }
+  });
+
   it('preserves the parent-room access shown in the drawing', () => {
     const [graph, nodes] = loadHoltSourceGraph();
     const entrance = nodes.get(floor.metadata.origin.nodeId as NodeId)!;
-    for (const [room, parent] of [
-      ['177', '181-turn'],
-      ['175A', '175-turn'],
-      ['171A', '171-turn'],
-      ['157A', '157-turn'],
-      ['131A', '131-turn'],
-      ['101A', '111-notch-turn'],
-      ['101B', '111-notch-turn'],
-      ['101C', '111-notch-turn'],
-      ['165A', '165-inner-turn']
-    ]) {
+    for (const [room, parents] of [
+      ['177', ['181']],
+      ['175A', ['175-inner']],
+      ['171A', ['171-inner']],
+      ['157A', ['157-inner']],
+      ['131A', ['131-inner']],
+      ['101A', ['101-inner-south', '111-north-door']],
+      ['101B', ['101-inner-south', '111-north-door']],
+      ['101C', ['101-inner-south', '111-north-door']],
+      ['165A', ['165-inner-lower']]
+    ] as const) {
       const path = calculatePath(
         graph,
         entrance,
         nodes.get(`holt-1-room-${room}` as NodeId)!
       );
       expect(
-        path?.some((edge) => edge.to === `holt-1-room-${parent}`),
+        path?.some((edge) =>
+          parents.some((parent) => edge.to === `holt-1-room-${parent}`)
+        ),
         room
       ).toBe(true);
     }

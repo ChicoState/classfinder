@@ -10,15 +10,12 @@ import { calculatePath } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
 describe('campus coordinate frame and entrance connections', () => {
-  it('uses the outdoor origin for every loaded position and omits unaligned Holt', () => {
+  it('uses the outdoor origin for every loaded position', () => {
     const [, nodes] = loadGraphFromData();
     expect(
       nodes.get(alignment.globalFrame.originNodeId as NodeId)?.position
     ).toEqual({ x: 0, y: 0 });
     expect(alignment.globalFrame.units).toBe('feet');
-    expect([...nodes.values()].some((node) => node.buildingId === 'holt')).toBe(
-      false
-    );
     for (const floor of [ocon, lang]) {
       const localOrigin = floor.nodes.find(
         (node) => node.id === floor.metadata.origin.nodeId
@@ -32,11 +29,20 @@ describe('campus coordinate frame and entrance connections', () => {
     }
     const outside = outdoor.nodes[0];
     expect(nodes.get(outside.id as NodeId)?.position).toEqual(outside.position);
-    expect(toGlobalPosition({ x: 12, y: -8 }, null)).toEqual({ x: 12, y: -8 });
     expect(() => toGlobalPosition({ x: 0, y: 0 }, 'unknown')).toThrow(
       /alignment/i
     );
   });
+
+  it.each([null, 'outside'])(
+    'preserves outdoor coordinates for %s in a fresh object',
+    (buildingId) => {
+      const position = { x: 12, y: -8 };
+      const result = toGlobalPosition(position, buildingId);
+      expect(result).toEqual(position);
+      expect(result).not.toBe(position);
+    }
+  );
 
   it('fits independently matched landmarks within the recorded uncertainty', () => {
     for (const [buildingId, transform] of Object.entries(alignment.buildings)) {
@@ -48,7 +54,9 @@ describe('campus coordinate frame and entrance connections', () => {
           calculated.y - anchor.globalPosition.y
         );
         expect(error).toBeLessThanOrEqual(transform.maxResidualFeet + 0.000001);
-        expect(error).toBeLessThan(5);
+        expect(error).toBeLessThan(
+          !['ocon', 'lang'].includes(buildingId) ? 8 : 5
+        );
       }
     }
   });
@@ -57,13 +65,13 @@ describe('campus coordinate frame and entrance connections', () => {
     const [graph, nodes] = loadGraphFromData();
     expect(links.metadata.connections.length).toBe(7);
     for (const edge of links.edges.filter(
-      (edge) => nodes.get(edge.from as NodeId)?.buildingId !== null
+      (edge) => nodes.get(edge.from as NodeId)?.buildingId !== 'outside'
     )) {
       const indoor = nodes.get(edge.from as NodeId)!;
       const outside = nodes.get(edge.to as NodeId)!;
       expect(['ocon', 'lang']).toContain(indoor.buildingId);
       expect(indoor.floorId).toBe(1);
-      expect(outside.buildingId).toBeNull();
+      expect(outside.buildingId).toBe('outside');
       expect(outside.floorId).toBe(0);
       const loaded = graph
         .get(indoor.id)!
@@ -104,7 +112,7 @@ describe('campus coordinate frame and entrance connections', () => {
         `outdoor-0-lang-gate-${section}-approach` as NodeId
       )!;
       expect(approach, section).toBeDefined();
-      expect(approach.buildingId).toBeNull();
+      expect(approach.buildingId).toBe('outside');
       expect(approach.floorId).toBe(0);
       const edge = graph.get(gate.id)!.find((edge) => edge.to === approach.id)!;
       expect(edge.type).toBe('door');
@@ -126,7 +134,7 @@ describe('campus coordinate frame and entrance connections', () => {
       );
       expect(route).not.toBeNull();
       expect(
-        route!.every((step) => nodes.get(step.to)!.buildingId === null)
+        route!.every((step) => nodes.get(step.to)!.buildingId === 'outside')
       ).toBe(true);
     }
     const route = calculatePath(
@@ -154,7 +162,7 @@ describe('campus coordinate frame and entrance connections', () => {
     expect(outward!.at(-1)?.to).toBe(end.id);
     expect(inward!.at(-1)?.to).toBe(start.id);
     const routeNodes = [start, ...outward!.map((edge) => nodes.get(edge.to)!)];
-    expect(routeNodes.some((node) => node.buildingId === null)).toBe(true);
+    expect(routeNodes.some((node) => node.buildingId === 'outside')).toBe(true);
     expect(routeNodes.some((node) => node.buildingId === 'ocon')).toBe(true);
     expect(routeNodes.some((node) => node.buildingId === 'lang')).toBe(true);
     const distance = outward!.reduce((sum, edge) => sum + edge.distance, 0);

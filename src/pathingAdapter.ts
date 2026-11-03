@@ -4,7 +4,6 @@ import type { EdgeKind, Node, NodeId, Nodes } from './lib/graph';
 import { dot, cross, magnitude, subtract } from './lib/vector2';
 import type { Vector2 } from './lib/vector2';
 import { loadGraphFromData } from './graph/graphLoader';
-import { globalFrame } from './graph/campusAlignment.json';
 
 const [graph, nodes] = loadGraphFromData();
 
@@ -68,18 +67,18 @@ function requireNode(nodes: Nodes, nodeId: NodeId): Node {
   return node;
 }
 
-// Classifies the turn between two edges in a path, based on the angle between them.
-function classifyTurn(
+// find edge turn angle and direction
+function findEdgeTurnAngle(
   previousEdge: PathEdge | null,
   edge: PathEdge,
   nodes: Nodes
-): Turn {
+): [number, number] {
   if (
     !previousEdge ||
     !directionalEdgeTypes.has(previousEdge.type) ||
     !directionalEdgeTypes.has(edge.type)
   ) {
-    return 'straight';
+    return [0, 0];
   }
 
   const previousFromNode = requireNode(nodes, previousEdge.from);
@@ -92,7 +91,7 @@ function classifyTurn(
   const outgoingMagnitude = magnitude(outgoing);
 
   if (incomingMagnitude === 0 || outgoingMagnitude === 0) {
-    return 'straight';
+    return [0, 0];
   }
 
   const cosine = Math.max(
@@ -102,30 +101,18 @@ function classifyTurn(
       dot(incoming, outgoing) / (incomingMagnitude * outgoingMagnitude)
     )
   );
-  const angle = (Math.acos(cosine) * 180) / Math.PI;
-
-  if (angle <= 30) return 'straight';
-  if (angle > 150) return 'around';
-
-  return cross(incoming, outgoing) > 0 ? 'left' : 'right';
+  return [
+    (Math.acos(cosine) * 180) / Math.PI,
+    cross(incoming, outgoing) > 0 ? 1 : -1
+  ];
 }
 
-// Returns the next instruction for a given edge in a path, based on the previous edge and the nodes in the graph.
-export function getNextInstruction(
-  previousEdge: PathEdge | null,
-  edge: PathEdge,
-  nodes: Nodes
-): [Instruction, number] {
-  const fromNode = requireNode(nodes, edge.from);
-  let toNode = requireNode(nodes, edge.to);
+// Classifies the turn between two edges in a path, based on the angle between them.
 
-  const formatter = instructionFormatters[edge.type];
-
-  return [formatter({
-    fromNode,
-    turn: classifyTurn(previousEdge, edge, nodes),
-    toNode
-  }), 1];
+function classifyTurn(angle: number, direction: number): Turn {
+  if (angle <= 30) return 'straight';
+  if (angle > 150) return 'around';
+  return direction > 0 ? 'left' : 'right';
 }
 
 function toReadableNode(node: Node, instruction: Instruction): ReadableNode {
@@ -150,25 +137,34 @@ function createReadablePath(
   let i = 0;
   while (i < path.length) {
     const edge = path[i];
-    const previousEdge = i > 0 ? path[i - 1] : null;
 
     let nextEdgeIndex = i + 1;
-    while 
+    while (nextEdgeIndex < path.length) {
+      const previousEdge = path[nextEdgeIndex - 1];
+      const nextEdge = path[nextEdgeIndex];
 
-    const instruction = getNextInstruction(previousEdge, edge, nodes);
+      const [turnAngle] = findEdgeTurnAngle(previousEdge, nextEdge, nodes);
+
+      if (nextEdge.type !== edge.type || turnAngle > 30 || edge.type === 'door') {
+        break;
+      }
+
+      nextEdgeIndex++;
+    }
+
+    const formatter = instructionFormatters[edge.type];
+    const instruction = formatter({
+      fromNode: requireNode(nodes, edge.from),
+      turn: classifyTurn(
+        ...findEdgeTurnAngle(i > 0 ? path[i - 1] : null, edge, nodes)
+      ),
+      toNode: requireNode(nodes, path[nextEdgeIndex - 1].to)
+    });
 
     const node = requireNode(nodes, edge.from);
     readablePath.push(toReadableNode(node, instruction));
-    i++;
+    i = nextEdgeIndex;
   }
-
-  // const readablePath = path.map((edge, index) => {
-  //   const fromNode = requireNode(nodes, edge.from);
-  //   return toReadableNode(
-  //     fromNode,
-  //     getNextInstruction(index === 0 ? null : path[index - 1], edge, nodes)
-  //   );
-  // });
 
   const lastEdge = path.at(-1);
   if (!lastEdge) {
@@ -191,17 +187,26 @@ export function getReadableInstructions(
   endX: number,
   endY: number,
   endFloor: number,
-  startBuildingId = null,
-  endBuildingId = null
+  startBuildingId: string | null = null,
+  endBuildingId: string | null = null
 ): ReadablePath | null {
-  const startNodes: Nodes = startBuildingId ? new Map(
-    [...nodes].filter(([, node]) => node.buildingId === startBuildingId)
-  ) : nodes;
-  const endNodes: Nodes = endBuildingId ? new Map(
-    [...nodes].filter(([, node]) => node.buildingId === endBuildingId)
-  ) : nodes;
+  const startNodes: Nodes = startBuildingId
+    ? new Map(
+        [...nodes].filter(([, node]) => node.buildingId === startBuildingId)
+      )
+    : nodes;
+  const endNodes: Nodes = endBuildingId
+    ? new Map(
+        [...nodes].filter(([, node]) => node.buildingId === endBuildingId)
+      )
+    : nodes;
 
-  const startNode = findNodeNearPosition(startNodes, startX, startY, startFloor);
+  const startNode = findNodeNearPosition(
+    startNodes,
+    startX,
+    startY,
+    startFloor
+  );
   if (!startNode) {
     return null;
   }
@@ -214,19 +219,4 @@ export function getReadableInstructions(
   const path = calculatePath(graph, startNode, endNode);
 
   return path ? createReadablePath(path, nodes, endNode) : null;
-}
-
-export function gpsToCampusPosition(latitude: number, longitude: number): Vector2 {
-  const projection = globalFrame.outdoorProjection;
-  const degreesToFeet = projection.radiansPerDegree * projection.feetPerMeter;
-  return {
-    x:
-      (longitude - globalFrame.longitude) *
-      projection.eastRadiusMeters *
-      degreesToFeet,
-    y:
-      (latitude - globalFrame.latitude) *
-      projection.northRadiusMeters *
-      degreesToFeet
-  };
 }

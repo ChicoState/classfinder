@@ -19,14 +19,24 @@
       "formula": "x=(lon-origin.lon)*radiansPerDegree*eastRadiusMeters*feetPerMeter; y=(lat-origin.lat)*radiansPerDegree*northRadiusMeters*feetPerMeter; round to 0.01 ft"
     }
   },
-  "excludedBuildingIds": ["holt"],
+  "excludedBuildingIds": [],
   "provenance": {
     "date": "2026-10-25",
     "osmSource": "campus-osm.json",
     "osmSnapshot": "2026-10-21T19:49:22Z",
     "floorSources": [
       "src/data/ocon/floor-1.json",
-      "src/data/lang/floor-1.json"
+      "src/data/lang/floor-1.json",
+      "src/data/acker/floor-1.json",
+      "src/data/ayres/floor-1.json",
+      "src/data/trinity/floor-1.json",
+      "src/data/yolo/floor-1.json",
+      "src/data/butte/floor-1.json",
+      "src/data/glenn/floor-1.json",
+      "src/data/modoc/floor-1.json",
+      "src/data/tehama/floor-1.json",
+      "src/data/holt/floor-1.json",
+      "src/data/plumas/floor-1.json"
     ],
     "license": {
       "attribution": "© OpenStreetMap contributors",
@@ -39,10 +49,11 @@
       "O’Connell requires an approximately 12% scale correction to match the three outdoor doorway endpoints. The adjustment applies to all its loaded floor distances.",
       "Langdon gate positions are approximate user-approved fence midpoints. Courtyard walkability and gate connections were confirmed by the user on 2026-10-25; exact approach geometry is inferred.",
       "Entrance links span small registration residuals. Other door and building access permissions remain unverified; no wheelchair accessibility is inferred.",
-      "Indoor JSON stays in its traceable source coordinates; all returned runtime nodes use campus-feet. Holt is explicitly omitted until aligned."
+      "Indoor JSON stays in its traceable source coordinates; all returned runtime nodes use campus-feet. Unregistered buildings require campus alignment before runtime loading."
     ],
     "oconSourceSha256": "3d04c80146a241a147c37905369b2406ed85d1b56781e4339e64b0a296a9665a",
-    "langSourceSha256": "899ad071f54e4eaa5ea768d823264385202b17f6022861e533652e07e0218059"
+    "langSourceSha256": "899ad071f54e4eaa5ea768d823264385202b17f6022861e533652e07e0218059",
+    "entranceExtensionDate": "2026-10-28"
   },
   "buildings": {
     "ocon": {
@@ -59,10 +70,7 @@
       "anchors": [
         {
           "description": "Lower AO lobby doorway to the southeast covered OSM footway endpoint",
-          "localPosition": {
-            "x": 0,
-            "y": 0
-          },
+          "localPosition": { "x": 0, "y": 0 },
           "osmNodeId": 5849825682,
           "globalPosition": {
             "x": -484.95520449568284,
@@ -73,10 +81,7 @@
         },
         {
           "description": "Upper AO lobby doorway to the northwest covered OSM footway endpoint",
-          "localPosition": {
-            "x": -0.17,
-            "y": 174.33
-          },
+          "localPosition": { "x": -0.17, "y": 174.33 },
           "osmNodeId": 5849825683,
           "globalPosition": {
             "x": -609.3019716387901,
@@ -87,10 +92,7 @@
         },
         {
           "description": "West AO corridor doorway at the southwest covered OSM footway endpoint",
-          "localPosition": {
-            "x": -75.12,
-            "y": 132.66
-          },
+          "localPosition": { "x": -75.12, "y": 132.66 },
           "osmNodeId": 11938244696,
           "globalPosition": {
             "x": -638.8346804164725,
@@ -115,53 +117,32 @@
       "anchors": [
         {
           "description": "northwest stem corner",
-          "localPosition": {
-            "x": -0.13888888888888692,
-            "y": 39.375
-          },
+          "localPosition": { "x": -0.13888888888888692, "y": 39.375 },
           "osmNodeId": 4502036602,
-          "globalPosition": {
-            "x": -720.2605774694011,
-            "y": -85.9312562390957
-          },
-          "pdfPointFromTopLeft": {
-            "x": 105,
-            "y": 65.5
-          },
+          "globalPosition": { "x": -720.2605774694011, "y": -85.9312562390957 },
+          "pdfPointFromTopLeft": { "x": 105, "y": 65.5 },
           "residualFeet": 1.4411708495388718
         },
         {
           "description": "northeast stem corner",
-          "localPosition": {
-            "x": 95.90277777777779,
-            "y": 39.375
-          },
+          "localPosition": { "x": 95.90277777777779, "y": 39.375 },
           "osmNodeId": 4502036601,
           "globalPosition": {
             "x": -646.175668026434,
             "y": -21.309785884360547
           },
-          "pdfPointFromTopLeft": {
-            "x": 335.5,
-            "y": 65.5
-          },
+          "pdfPointFromTopLeft": { "x": 335.5, "y": 65.5 },
           "residualFeet": 0.7937283810330885
         },
         {
           "description": "inside elbow",
-          "localPosition": {
-            "x": 95.90277777777779,
-            "y": -146.04166666666669
-          },
+          "localPosition": { "x": 95.90277777777779, "y": -146.04166666666669 },
           "osmNodeId": 4502036600,
           "globalPosition": {
             "x": -524.2196439766997,
             "y": -159.95088857447615
           },
-          "pdfPointFromTopLeft": {
-            "x": 335.5,
-            "y": 510.5
-          },
+          "pdfPointFromTopLeft": { "x": 335.5, "y": 510.5 },
           "residualFeet": 1.9842037864936233
         },
         {
@@ -175,44 +156,29 @@
             "x": -453.6786595843364,
             "y": -97.84288014281093
           },
-          "pdfPointFromTopLeft": {
-            "x": 566,
-            "y": 510.5
-          },
+          "pdfPointFromTopLeft": { "x": 566, "y": 510.5 },
           "residualFeet": 2.5997136482287164
         },
         {
           "description": "east wing south corner",
-          "localPosition": {
-            "x": 191.94444444444446,
-            "y": -199.375
-          },
+          "localPosition": { "x": 191.94444444444446, "y": -199.375 },
           "osmNodeId": 4502036598,
           "globalPosition": {
             "x": -414.4985992742365,
             "y": -142.1016662087362
           },
-          "pdfPointFromTopLeft": {
-            "x": 566,
-            "y": 638.5
-          },
+          "pdfPointFromTopLeft": { "x": 566, "y": 638.5 },
           "residualFeet": 4.011987617044581
         },
         {
           "description": "west wing south corner",
-          "localPosition": {
-            "x": -24.09722222222222,
-            "y": -199.375
-          },
+          "localPosition": { "x": -24.09722222222222, "y": -199.375 },
           "osmNodeId": 4502036605,
           "globalPosition": {
             "x": -574.9877766823557,
             "y": -283.03766891804355
           },
-          "pdfPointFromTopLeft": {
-            "x": 47.5,
-            "y": 638.5
-          },
+          "pdfPointFromTopLeft": { "x": 47.5, "y": 638.5 },
           "residualFeet": 3.8317682339714043
         },
         {
@@ -226,13 +192,907 @@
             "x": -614.1678369924556,
             "y": -238.74245586727588
           },
-          "pdfPointFromTopLeft": {
-            "x": 47.5,
-            "y": 510.5
-          },
+          "pdfPointFromTopLeft": { "x": 47.5, "y": 510.5 },
           "residualFeet": 2.651355330707519
         }
       ]
+    },
+    "acker": {
+      "a": 0.8461318918919393,
+      "b": 0.49528400051200744,
+      "tx": -1118.0236153912356,
+      "ty": 890.8314390583289,
+      "scale": 0.9804312416685887,
+      "rotationDegrees": 30.342607530316172,
+      "rmsResidualFeet": 3.529649062301247,
+      "maxResidualFeet": 7.182680208558675,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 39416768; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 39416768 vertex 7; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 187.33333333333334, "y": 56 },
+          "osmNodeId": 1408783501,
+          "localPosition": {
+            "x": -133.14814814814815,
+            "y": 151.94444444444446
+          },
+          "globalPosition": {
+            "x": -1305.9926348661236,
+            "y": 952.6384964676574
+          },
+          "residualFeet": 0.8135293641675477
+        },
+        {
+          "description": "Footprint 39416768 vertex 8; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 413.3333333333333, "y": 56 },
+          "osmNodeId": 472226281,
+          "localPosition": { "x": -7.592592592592603, "y": 151.94444444444446 },
+          "globalPosition": {
+            "x": -1195.5121776533877,
+            "y": 1014.9650668032008
+          },
+          "residualFeet": 4.2447825752264245
+        },
+        {
+          "description": "Footprint 39416768 vertex 6; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 187.33333333333334,
+            "y": 129.33333333333334
+          },
+          "osmNodeId": 1408783340,
+          "localPosition": {
+            "x": -133.14814814814815,
+            "y": 111.20370370370371
+          },
+          "globalPosition": {
+            "x": -1285.5447498400606,
+            "y": 916.6486358626145
+          },
+          "residualFeet": 2.3397567849679897
+        },
+        {
+          "description": "Footprint 39416768 vertex 4; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 136.66666666666666,
+            "y": 129.33333333333334
+          },
+          "osmNodeId": 472226280,
+          "localPosition": {
+            "x": -161.29629629629633,
+            "y": 111.20370370370371
+          },
+          "globalPosition": {
+            "x": -1310.2115932640772,
+            "y": 902.7335278158588
+          },
+          "residualFeet": 2.3887299722628845
+        },
+        {
+          "description": "Footprint 39416768 vertex 9; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 413.3333333333333, "y": 236 },
+          "osmNodeId": 7037325162,
+          "localPosition": { "x": -7.592592592592603, "y": 51.94444444444445 },
+          "globalPosition": {
+            "x": -1151.7475158860166,
+            "y": 938.0312757166599
+          },
+          "residualFeet": 7.182680208558675
+        },
+        {
+          "description": "Footprint 39416768 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 106.66666666666667, "y": 454 },
+          "osmNodeId": 7037325167,
+          "localPosition": {
+            "x": -177.96296296296296,
+            "y": -69.16666666666667
+          },
+          "globalPosition": { "x": -1235.648535203235, "y": 744.931831323793 },
+          "residualFeet": 1.5109175935477643
+        },
+        {
+          "description": "Footprint 39416768 vertex 14; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 378.6666666666667, "y": 454 },
+          "osmNodeId": 10123191870,
+          "localPosition": {
+            "x": -26.851851851851844,
+            "y": -69.16666666666667
+          },
+          "globalPosition": {
+            "x": -1107.3359471669307,
+            "y": 817.3486763442233
+          },
+          "residualFeet": 1.8640516992874232
+        }
+      ],
+      "source": "src/data/acker/floor-1.json",
+      "sourceSha256": "b5728533822e1d8b73993c3a7ff3bbb0265f414c81ce4fe000bb42d80cb42dcd",
+      "date": "2026-10-28"
+    },
+    "ayres": {
+      "a": -0.7542559471424533,
+      "b": -0.6611547271613609,
+      "tx": 706.1601384294349,
+      "ty": 887.0074928948659,
+      "scale": 1.003009275653806,
+      "rotationDegrees": -138.7633132614206,
+      "rmsResidualFeet": 3.5264776430382665,
+      "maxResidualFeet": 6.50317811991199,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 28551760; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 28551760 vertex 8; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 86.66666666666667, "y": 70 },
+          "osmNodeId": 313658104,
+          "localPosition": {
+            "x": -31.180555555555554,
+            "y": 0.20833333333333334
+          },
+          "globalPosition": { "x": 729.6266651094211, "y": 907.5054627758665 },
+          "residualFeet": 0.19349911873938455
+        },
+        {
+          "description": "Footprint 28551760 vertex 10; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 357.3333333333333, "y": 70 },
+          "osmNodeId": 313658106,
+          "localPosition": { "x": 81.59722222222221, "y": 0.20833333333333334 },
+          "globalPosition": { "x": 645.3600027328853, "y": 834.6514939425031 },
+          "residualFeet": 1.8519380394994214
+        },
+        {
+          "description": "Footprint 28551760 vertex 7; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 86.66666666666667, "y": 644 },
+          "osmNodeId": 313658103,
+          "localPosition": {
+            "x": -31.180555555555554,
+            "y": -238.95833333333334
+          },
+          "globalPosition": { "x": 571.1063349560784, "y": 1089.3125419995752 },
+          "residualFeet": 1.5668330797363665
+        },
+        {
+          "description": "Footprint 28551760 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 450, "y": 644 },
+          "osmNodeId": 313658101,
+          "localPosition": {
+            "x": 120.20833333333334,
+            "y": -238.95833333333334
+          },
+          "globalPosition": { "x": 451.6254331626399, "y": 984.9856586298674 },
+          "residualFeet": 6.50317811991199
+        },
+        {
+          "description": "Footprint 28551760 vertex 4; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 146.66666666666666,
+            "y": 753.3333333333334
+          },
+          "osmNodeId": 4715296177,
+          "localPosition": { "x": -6.18055555555556, "y": -284.5138888888889 },
+          "globalPosition": { "x": 524.3321495312604, "y": 1104.0290437025114 },
+          "residualFeet": 2.3188300974496436
+        },
+        {
+          "description": "Footprint 28551760 vertex 3; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 266.6666666666667,
+            "y": 753.3333333333334
+          },
+          "osmNodeId": 4715296176,
+          "localPosition": { "x": 43.81944444444446, "y": -284.5138888888889 },
+          "globalPosition": { "x": 489.4273003943962, "y": 1073.8310736227118 },
+          "residualFeet": 4.585399263978871
+        }
+      ],
+      "source": "src/data/ayres/floor-1.json",
+      "sourceSha256": "bcf0a0415d0bfc4cfd08a8c2b3d42ad58b9f9294820516608967e362a0e352fd",
+      "date": "2026-10-28"
+    },
+    "trinity": {
+      "a": 0.6781265879733384,
+      "b": -0.7531774515650607,
+      "tx": -28.9988740540171,
+      "ty": 398.14869518528445,
+      "scale": 1.0134751811773197,
+      "rotationDegrees": -48.0015727746202,
+      "rmsResidualFeet": 4.0999820874157376,
+      "maxResidualFeet": 6.8817349697969945,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 28551719; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 28551719 vertex 8; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 62, "y": 81.3333 },
+          "osmNodeId": 313657503,
+          "localPosition": { "x": -79.86111111111111, "y": 159.49075 },
+          "globalPosition": { "x": 38.280015849631475, "y": 566.4760346641775 },
+          "residualFeet": 1.3101950363275352
+        },
+        {
+          "description": "Footprint 28551719 vertex 11; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 553.3333, "y": 70.6667 },
+          "osmNodeId": 313657506,
+          "localPosition": { "x": 56.620361111111116, "y": 162.45369444444447 },
+          "globalPosition": { "x": 128.5938519287019, "y": 465.60971481567884 },
+          "residualFeet": 3.160037663749786
+        },
+        {
+          "description": "Footprint 28551719 vertex 6; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 62, "y": 315.3333 },
+          "osmNodeId": 313657500,
+          "localPosition": { "x": -79.86111111111111, "y": 94.49075 },
+          "globalPosition": {
+            "x": -12.094347405069296,
+            "y": 523.4921930522084
+          },
+          "residualFeet": 1.122411719182126
+        },
+        {
+          "description": "Footprint 28551719 vertex 2; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 290.6667, "y": 670 },
+          "osmNodeId": 313657494,
+          "localPosition": {
+            "x": -16.342583333333337,
+            "y": -4.027777777777778
+          },
+          "globalPosition": {
+            "x": -45.536624296670055,
+            "y": 411.95276676910834
+          },
+          "residualFeet": 4.871214659017893
+        },
+        {
+          "description": "Footprint 28551719 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 457.3333, "y": 670 },
+          "osmNodeId": 313657490,
+          "localPosition": { "x": 29.953694444444448, "y": -4.027777777777778 },
+          "globalPosition": {
+            "x": -7.340987609961434,
+            "y": 367.54827276640157
+          },
+          "residualFeet": 6.8817349697969945
+        }
+      ],
+      "source": "src/data/trinity/floor-1.json",
+      "sourceSha256": "86b2f86e47892d9a11390c3e9b8bdd2982af669ba72443ba5831982f9beeb0da",
+      "date": "2026-10-28"
+    },
+    "yolo": {
+      "a": 0.8856535458334477,
+      "b": 0.48032352730351885,
+      "tx": -1197.6954818532233,
+      "ty": 283.1034774858408,
+      "scale": 1.0075181855076627,
+      "rotationDegrees": 28.472657039074925,
+      "rmsResidualFeet": 2.8462097396922132,
+      "maxResidualFeet": 6.084897701932747,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 39427535; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 39427535 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 140, "y": 58 },
+          "osmNodeId": 472309258,
+          "localPosition": { "x": -53.88888888888889, "y": 321.6666666666667 },
+          "globalPosition": {
+            "x": -1400.9754515693849,
+            "y": 542.3613709805957
+          },
+          "residualFeet": 1.0799844014789926
+        },
+        {
+          "description": "Footprint 39427535 vertex 48; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 323.3333333333333, "y": 58 },
+          "osmNodeId": 4714298365,
+          "localPosition": { "x": 47.962962962962955, "y": 321.6666666666667 },
+          "globalPosition": { "x": -1311.561659950783, "y": 591.6835078826799 },
+          "residualFeet": 1.9544395112443669
+        },
+        {
+          "description": "Footprint 39427535 vertex 46; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 358, "y": 108.66666666666667 },
+          "osmNodeId": 7037351463,
+          "localPosition": { "x": 67.22222222222223, "y": 293.51851851851853 },
+          "globalPosition": {
+            "x": -1280.7913900449525,
+            "y": 573.7978585320975
+          },
+          "residualFeet": 2.261968617747918
+        },
+        {
+          "description": "Footprint 39427535 vertex 4; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 134, "y": 214 },
+          "osmNodeId": 4714298358,
+          "localPosition": { "x": -57.22222222222222, "y": 235 },
+          "globalPosition": {
+            "x": -1362.1329079309612,
+            "y": 462.47699415546384
+          },
+          "residualFeet": 1.546326206749063
+        },
+        {
+          "description": "Footprint 39427535 vertex 8; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 118.66666666666667,
+            "y": 374.6666666666667
+          },
+          "osmNodeId": 4714298347,
+          "localPosition": { "x": -65.74074074074075, "y": 145.74074074074073 },
+          "globalPosition": {
+            "x": -1325.062326821837,
+            "y": 383.61257289297913
+          },
+          "residualFeet": 3.1303891046578607
+        },
+        {
+          "description": "Footprint 39427535 vertex 10; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 118.66666666666667, "y": 494 },
+          "osmNodeId": 4714298346,
+          "localPosition": { "x": -65.74074074074075, "y": 79.44444444444444 },
+          "globalPosition": {
+            "x": -1292.9138638376628,
+            "y": 324.7829930608989
+          },
+          "residualFeet": 3.1213163677363798
+        },
+        {
+          "description": "Footprint 39427535 vertex 12; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 134, "y": 537.3333333333334 },
+          "osmNodeId": 472309262,
+          "localPosition": { "x": -57.22222222222222, "y": 55.37037037037035 },
+          "globalPosition": {
+            "x": -1273.4785288226321,
+            "y": 305.2945563979548
+          },
+          "residualFeet": 1.6221399192167205
+        },
+        {
+          "description": "Footprint 39427535 vertex 30; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 535.3333333333334,
+            "y": 551.3333333333334
+          },
+          "osmNodeId": 5849828186,
+          "localPosition": { "x": 165.74074074074076, "y": 47.592592592592574 },
+          "globalPosition": {
+            "x": -1071.1935369019184,
+            "y": 399.34903016115123
+          },
+          "residualFeet": 6.084897701932747
+        },
+        {
+          "description": "Footprint 39427535 vertex 28; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 535.3333333333334,
+            "y": 611.3333333333334
+          },
+          "osmNodeId": 5849828185,
+          "localPosition": { "x": 165.74074074074076, "y": 14.259259259259238 },
+          "globalPosition": {
+            "x": -1058.4241561534961,
+            "y": 376.21789505537424
+          },
+          "residualFeet": 1.102312247233234
+        }
+      ],
+      "source": "src/data/yolo/floor-1.json",
+      "sourceSha256": "3dd763557c59ddc38bf8ff967d1c04c4c858d4dee90798a930dd5c6287a1bd79",
+      "date": "2026-10-28"
+    },
+    "butte": {
+      "a": 0.483588780369126,
+      "b": -0.8645239743511045,
+      "tx": -420.7537332609955,
+      "ty": 888.3915547958042,
+      "scale": 0.9905855898036918,
+      "rotationDegrees": -60.77865974353926,
+      "rmsResidualFeet": 1.332292761778124,
+      "maxResidualFeet": 1.3322927626531333,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 28551808; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 28551808 vertex 3; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 100.66666666666667,
+            "y": 63.333333333333336
+          },
+          "osmNodeId": 313659485,
+          "localPosition": { "x": -52.87037037037037, "y": 19.907407407407405 },
+          "globalPosition": {
+            "x": -430.27750367610844,
+            "y": 944.3695710041868
+          },
+          "residualFeet": 1.3322927609031088
+        },
+        {
+          "description": "Footprint 28551808 vertex 5; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 404.6666666666667,
+            "y": 63.333333333333336
+          },
+          "osmNodeId": 313659486,
+          "localPosition": { "x": 31.57407407407408, "y": 19.907407407407405 },
+          "globalPosition": { "x": -388.0879197125587, "y": 869.402837075844 },
+          "residualFeet": 1.3322927616382327
+        },
+        {
+          "description": "Footprint 28551808 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 404.6666666666667, "y": 672 },
+          "osmNodeId": 313659475,
+          "localPosition": { "x": 31.57407407407408, "y": -149.16666666666669 },
+          "globalPosition": { "x": -533.2763413326842, "y": 788.3163697638525 },
+          "residualFeet": 1.3322927626531333
+        },
+        {
+          "description": "Footprint 28551808 vertex 2; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 100.66666666666667, "y": 672 },
+          "osmNodeId": 313659483,
+          "localPosition": {
+            "x": -52.87037037037037,
+            "y": -149.16666666666669
+          },
+          "globalPosition": { "x": -575.465925300231, "y": 863.2831036921953 },
+          "residualFeet": 1.3322927619180214
+        }
+      ],
+      "source": "src/data/butte/floor-1.json",
+      "sourceSha256": "96a26770084a0c23edaf32290ffd6bd145b5c11ef0ce4849eb0f7ad59ada8a52",
+      "date": "2026-10-28"
+    },
+    "glenn": {
+      "a": 0.6540359539709727,
+      "b": -0.7550491842135276,
+      "tx": -116.58485857183594,
+      "ty": 612.6464653588918,
+      "scale": 0.9989305780024125,
+      "rotationDegrees": -49.100354036770916,
+      "rmsResidualFeet": 0.316500541217973,
+      "maxResidualFeet": 0.5155481161332087,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 28551720; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 28551720 vertex 7; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 238.66666666666666,
+            "y": 70.66666666666667
+          },
+          "osmNodeId": 313657518,
+          "localPosition": {
+            "x": -33.47222222222223,
+            "y": -1.7361111111111132
+          },
+          "globalPosition": { "x": -140.0975451573382, "y": 636.5615526831621 },
+          "residualFeet": 0.3814846450472679
+        },
+        {
+          "description": "Footprint 28551720 vertex 9; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 370, "y": 70.66666666666667 },
+          "osmNodeId": 313657521,
+          "localPosition": { "x": 21.25, "y": -1.7361111111111132 },
+          "globalPosition": {
+            "x": -103.53323905372977,
+            "y": 595.6904761661724
+          },
+          "residualFeet": 0.5155481161332087
+        },
+        {
+          "description": "Footprint 28551720 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 380, "y": 658 },
+          "osmNodeId": 313657513,
+          "localPosition": {
+            "x": 25.416666666666668,
+            "y": -246.45833333333334
+          },
+          "globalPosition": {
+            "x": -286.01725290409246,
+            "y": 432.1697431211366
+          },
+          "residualFeet": 0.09872988162027174
+        },
+        {
+          "description": "Footprint 28551720 vertex 2; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 238.66666666666666, "y": 658 },
+          "osmNodeId": 313657515,
+          "localPosition": {
+            "x": -33.47222222222223,
+            "y": -246.45833333333334
+          },
+          "globalPosition": { "x": -324.3253951453618, "y": 476.8656529999947 },
+          "residualFeet": 0.27686733660537094
+        },
+        {
+          "description": "Footprint 28551720 vertex 11; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 370, "y": 467.3333333333333 },
+          "osmNodeId": 7035469439,
+          "localPosition": { "x": 21.25, "y": -167.01388888888889 },
+          "globalPosition": {
+            "x": -229.0613145497029,
+            "y": 487.39305149522653
+          },
+          "residualFeet": 0.2721218324427231
+        },
+        {
+          "description": "Footprint 28551720 vertex 12; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 380, "y": 467.3333333333333 },
+          "osmNodeId": 7035469438,
+          "localPosition": {
+            "x": 25.416666666666668,
+            "y": -167.01388888888889
+          },
+          "globalPosition": {
+            "x": -226.22054922609578,
+            "y": 484.15104988307235
+          },
+          "residualFeet": 0.17106068454378504
+        }
+      ],
+      "source": "src/data/glenn/floor-1.json",
+      "sourceSha256": "acf79a1174a8831a8c3872284851bd9ca106f0a6d8eb15e3d527dc807f02fb6e",
+      "date": "2026-10-28"
+    },
+    "modoc": {
+      "a": 0.8869859013682257,
+      "b": 0.5089543901466693,
+      "tx": 251.1865820913294,
+      "ty": 1583.541616506655,
+      "scale": 1.0226331504872956,
+      "rotationDegrees": 29.847295243423495,
+      "rmsResidualFeet": 2.8970874207991506,
+      "maxResidualFeet": 4.24297540687763,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 30524539; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 30524539 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 305.3333333333333,
+            "y": 57.333333333333336
+          },
+          "osmNodeId": 337107508,
+          "localPosition": { "x": 47.222222222222214, "y": 193.4027777777778 },
+          "globalPosition": {
+            "x": 198.09415991439792,
+            "y": 1779.1667728834714
+          },
+          "residualFeet": 3.455626993462976
+        },
+        {
+          "description": "Footprint 30524539 vertex 1; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 212, "y": 57.333333333333336 },
+          "osmNodeId": 337107510,
+          "localPosition": { "x": 8.333333333333334, "y": 193.4027777777778 },
+          "globalPosition": {
+            "x": 158.99847877121783,
+            "y": 1757.6748520774868
+          },
+          "residualFeet": 2.0121440548045784
+        },
+        {
+          "description": "Footprint 30524539 vertex 6; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 147.33333333333334, "y": 92 },
+          "osmNodeId": 337107514,
+          "localPosition": {
+            "x": -18.611111111111107,
+            "y": 178.95833333333334
+          },
+          "globalPosition": { "x": 142.3757826881563, "y": 1731.9209740941126 },
+          "residualFeet": 1.5065207506839973
+        },
+        {
+          "description": "Footprint 30524539 vertex 7; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 147.33333333333334,
+            "y": 480.6666666666667
+          },
+          "osmNodeId": 337107515,
+          "localPosition": {
+            "x": -18.611111111111107,
+            "y": 17.013888888888882
+          },
+          "globalPosition": { "x": 221.8328324943023, "y": 1588.4715094617352 },
+          "residualFeet": 4.24297540687763
+        },
+        {
+          "description": "Footprint 30524539 vertex 20; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 420, "y": 672 },
+          "osmNodeId": 337107534,
+          "localPosition": { "x": 95, "y": -62.708333333333336 },
+          "globalPosition": {
+            "x": 367.55565551158185,
+            "y": 1578.3812347794365
+          },
+          "residualFeet": 2.118870476978206
+        },
+        {
+          "description": "Footprint 30524539 vertex 21; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 420, "y": 377.3333333333333 },
+          "osmNodeId": 337107535,
+          "localPosition": { "x": 95, "y": 60.06944444444446 },
+          "globalPosition": { "x": 307.7870782252231, "y": 1686.2415356374495 },
+          "residualFeet": 3.099444200733571
+        }
+      ],
+      "source": "src/data/modoc/floor-1.json",
+      "sourceSha256": "b74592412862e48f153752902e6a93b90c44e4b6597be2f40cc38cd4a16c022e",
+      "date": "2026-10-28"
+    },
+    "tehama": {
+      "a": 0.47364943531667525,
+      "b": -0.8514099300048058,
+      "tx": -721.9897525537244,
+      "ty": 850.2478199961506,
+      "scale": 0.9742908479948857,
+      "rotationDegrees": -60.91229387210497,
+      "rmsResidualFeet": 4.64735201427129,
+      "maxResidualFeet": 6.921724248252169,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 565655977; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 565655977 vertex 13; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 108, "y": 120.66666666666667 },
+          "osmNodeId": 5447256822,
+          "localPosition": {
+            "x": -105.83333333333334,
+            "y": 7.6388888888888875
+          },
+          "globalPosition": { "x": -764.0814920160511, "y": 946.4823361017545 },
+          "residualFeet": 2.9397570770394674
+        },
+        {
+          "description": "Footprint 565655977 vertex 14; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 108, "y": 581.3333333333334 },
+          "osmNodeId": 5849825675,
+          "localPosition": {
+            "x": -105.83333333333334,
+            "y": -184.30555555555557
+          },
+          "globalPosition": { "x": -926.1738736156326, "y": 857.1269433262923 },
+          "residualFeet": 4.9745121359628
+        },
+        {
+          "description": "Footprint 565655977 vertex 20; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 345.3333333333333,
+            "y": 629.3333333333334
+          },
+          "osmNodeId": 5447256828,
+          "localPosition": {
+            "x": -6.944444444444453,
+            "y": -204.30555555555557
+          },
+          "globalPosition": { "x": -900.9726287944617, "y": 758.5919504792397 },
+          "residualFeet": 1.9201068082647808
+        },
+        {
+          "description": "Footprint 565655977 vertex 22; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 345.3333333333333,
+            "y": 247.33333333333334
+          },
+          "osmNodeId": 4714298340,
+          "localPosition": { "x": -6.944444444444453, "y": -45.13888888888889 },
+          "globalPosition": { "x": -763.2939531181374, "y": 836.1085733180832 },
+          "residualFeet": 1.3920352013686939
+        },
+        {
+          "description": "Footprint 565655977 vertex 0; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 508.6666666666667,
+            "y": 247.33333333333334
+          },
+          "osmNodeId": 4714298334,
+          "localPosition": { "x": 61.11111111111112, "y": -45.13888888888889 },
+          "globalPosition": { "x": -729.0078845453471, "y": 775.1662283884351 },
+          "residualFeet": 2.980734395269163
+        },
+        {
+          "description": "Footprint 565655977 vertex 2; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 508.6666666666667, "y": 170 },
+          "osmNodeId": 5447255413,
+          "localPosition": { "x": 61.11111111111112, "y": -12.916666666666668 },
+          "globalPosition": { "x": -697.9000979678403, "y": 791.8133602673154 },
+          "residualFeet": 6.148439411168947
+        },
+        {
+          "description": "Footprint 565655977 vertex 10; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 156, "y": 73.33333333333333 },
+          "osmNodeId": 5447255420,
+          "localPosition": { "x": -85.83333333333334, "y": 27.361111111111114 },
+          "globalPosition": { "x": -746.1649820255627, "y": 935.0806899780689 },
+          "residualFeet": 6.921724248252169
+        },
+        {
+          "description": "Footprint 565655977 vertex 9; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 345.3333333333333,
+            "y": 73.33333333333333
+          },
+          "osmNodeId": 5447255419,
+          "localPosition": { "x": -6.944444444444453, "y": 27.361111111111114 },
+          "globalPosition": { "x": -706.844289769264, "y": 865.1773068832965 },
+          "residualFeet": 6.258768236624035
+        }
+      ],
+      "source": "src/data/tehama/floor-1.json",
+      "sourceSha256": "8a3e20cff5dfba41d6bd2e5ff8262b67575703b83ceedb66f5b0ed7abedb87ff",
+      "date": "2026-10-28"
+    },
+    "holt": {
+      "a": 0.48275424497931424,
+      "b": -0.86712644339325,
+      "tx": -62.992227451598396,
+      "ty": 1114.4398751439583,
+      "scale": 0.9924514748225098,
+      "rotationDegrees": -60.894054740077685,
+      "rmsResidualFeet": 0.9254875272610011,
+      "maxResidualFeet": 1.5285507467950512,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 478296315; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 478296315 vertex 19; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 197.33333333333334,
+            "y": 55.333333333333336
+          },
+          "osmNodeId": 4715296233,
+          "localPosition": { "x": -87.5925925925926, "y": 348.14814814814815 },
+          "globalPosition": { "x": 197.1659890662885, "y": 1357.5972822272513 },
+          "residualFeet": 1.0291958435921718
+        },
+        {
+          "description": "Footprint 478296315 vertex 21; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 414, "y": 55.333333333333336 },
+          "osmNodeId": 4715296235,
+          "localPosition": { "x": 32.77777777777778, "y": 348.14814814814815 },
+          "globalPosition": { "x": 254.7688343763899, "y": 1254.7274782357122 },
+          "residualFeet": 0.6419562062731864
+        },
+        {
+          "description": "Footprint 478296315 vertex 22; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 414, "y": 250.66666666666666 },
+          "osmNodeId": 4715296226,
+          "localPosition": { "x": 32.77777777777778, "y": 239.62962962962965 },
+          "globalPosition": {
+            "x": 161.52985381078952,
+            "y": 1202.9283063954006
+          },
+          "residualFeet": 1.5285507467950512
+        },
+        {
+          "description": "Footprint 478296315 vertex 14; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 154, "y": 272 },
+          "osmNodeId": 4715296231,
+          "localPosition": { "x": -111.66666666666667, "y": 227.7777777777778 },
+          "globalPosition": { "x": 80.72273732193483, "y": 1320.6967470140885 },
+          "residualFeet": 0.5442490920122071
+        },
+        {
+          "description": "Footprint 478296315 vertex 13; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 154, "y": 466.6666666666667 },
+          "osmNodeId": 4715296232,
+          "localPosition": {
+            "x": -111.66666666666667,
+            "y": 119.62962962962962
+          },
+          "globalPosition": {
+            "x": -13.135023807739515,
+            "y": 1268.5333053305287
+          },
+          "residualFeet": 0.4883696277892028
+        },
+        {
+          "description": "Footprint 478296315 vertex 7; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 197.33333333333334,
+            "y": 682.6666666666666
+          },
+          "osmNodeId": 4715296234,
+          "localPosition": { "x": -87.5925925925926, "y": -0.3703703703703493 },
+          "globalPosition": {
+            "x": -105.72709742162503,
+            "y": 1189.3046142222079
+          },
+          "residualFeet": 0.9192736041366052
+        },
+        {
+          "description": "Footprint 478296315 vertex 4; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 414, "y": 682.6666666666666 },
+          "osmNodeId": 4715296236,
+          "localPosition": { "x": 32.77777777777778, "y": -0.3703703703703493 },
+          "globalPosition": {
+            "x": -48.124252111523624,
+            "y": 1086.4348102306687
+          },
+          "residualFeet": 0.8706490565752437
+        },
+        {
+          "description": "Footprint 478296315 vertex 3; corresponding source exterior corner",
+          "pdfPointFromTopLeft": { "x": 414, "y": 488 },
+          "osmNodeId": 4715296225,
+          "localPosition": { "x": 32.77777777777778, "y": 107.77777777777779 },
+          "globalPosition": { "x": 45.39599234647429, "y": 1138.379690007762 },
+          "residualFeet": 0.952151436315119
+        }
+      ],
+      "source": "src/data/holt/floor-1.json",
+      "sourceSha256": "108fb54f17814b4fda4de7025dc904e61fef7e52793eefeca93bcaa3c55872d8",
+      "date": "2026-10-28",
+      "osmRelationId": 7031762,
+      "footprintSource": "tools/outdoor/remaining-footprints-osm.json"
+    },
+    "plumas": {
+      "a": 0.8786736668301531,
+      "b": 0.492024852367386,
+      "tx": -673.000991041601,
+      "ty": 670.1222100205736,
+      "scale": 1.0070530612276074,
+      "rotationDegrees": 29.24721792236612,
+      "rmsResidualFeet": 0.4450694827491566,
+      "maxResidualFeet": 0.5451279485536836,
+      "method": "Least-squares orientation-preserving similarity: xGlobal=a*xLocal-b*yLocal+tx; yGlobal=b*xLocal+a*yLocal+ty",
+      "evidence": "Manual source-PDF exterior corners matched to OSM footprint 39338227; drawing axes and printed scale checked. Approximate, not surveyed.",
+      "anchors": [
+        {
+          "description": "Footprint 39338227 vertex 17; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 125.33333333333333,
+            "y": 46.666666666666664
+          },
+          "osmNodeId": 471283383,
+          "localPosition": { "x": -147.7777777777778, "y": 187.30555555555554 },
+          "globalPosition": { "x": -894.7004439748115, "y": 761.5425362178308 },
+          "residualFeet": 0.5451279485536836
+        },
+        {
+          "description": "Footprint 39338227 vertex 18; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 485.3333333333333,
+            "y": 46.666666666666664
+          },
+          "osmNodeId": 4714298340,
+          "localPosition": { "x": 2.2222222222222143, "y": 187.30555555555554 },
+          "globalPosition": { "x": -763.2939531181374, "y": 836.1085733180832 },
+          "residualFeet": 0.32428739329216244
+        },
+        {
+          "description": "Footprint 39338227 vertex 7; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 125.33333333333333,
+            "y": 634.6666666666666
+          },
+          "osmNodeId": 471283392,
+          "localPosition": {
+            "x": -147.7777777777778,
+            "y": -57.694444444444436
+          },
+          "globalPosition": { "x": -774.9945310682544, "y": 546.8054630796095 },
+          "residualFeet": 0.5394547019916451
+        },
+        {
+          "description": "Footprint 39338227 vertex 5; corresponding source exterior corner",
+          "pdfPointFromTopLeft": {
+            "x": 485.3333333333333,
+            "y": 634.6666666666666
+          },
+          "osmNodeId": 4714298343,
+          "localPosition": {
+            "x": 2.2222222222222143,
+            "y": -57.694444444444436
+          },
+          "globalPosition": { "x": -642.3504790794354, "y": 620.570106523681 },
+          "residualFeet": 0.31465728762407424
+        }
+      ],
+      "source": "src/data/plumas/floor-1.json",
+      "sourceSha256": "23c1f52e1bd1468b86c3cd063fa2fc526dbc48279b5187299d0ce23009406bdf",
+      "date": "2026-10-28",
+      "osmRelationId": 7029746,
+      "footprintSource": "tools/outdoor/remaining-footprints-osm.json"
     }
   }
 }

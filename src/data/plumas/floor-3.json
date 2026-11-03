@@ -64,7 +64,7 @@
     },
     "limitations": [
       "Dated plan; approximate geometry, not surveyed or geographically calibrated. Current access permissions unknown.",
-      "Floor 2 is absent from the project; no cross-floor edges skip the missing adjacent floor. Stair and elevator endpoints are retained for later connection.",
+      "Floor 2 is present; corresponding west/east stairs and the east elevator connect adjacent floors 2\u20133 in connections.json, verified against both source plans on 2026-11-03. Elevator doorway offsets are approximate; availability and access remain unknown.",
       "317A/B open through 317. 321 has a north door from 317 and an east door from the west passage. 301A opens through 301. 309 opens through 309A. 312 has main-hall and north-passage doors.",
       "325 opens from the west passage; 325A and 327 open through 325. 329 has a main-hall doorway and a west door through 325. 323 is custodial.",
       "333A/B open through 333. 333C opens from 333B and passage 335; 333D opens from passage 335.",

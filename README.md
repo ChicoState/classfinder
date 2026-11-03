@@ -46,9 +46,8 @@ circulation using corridor edges. No upper floors or vertical transfers are incl
 two AO-marked end entrance edges are marked accessible. The requested
 `src/data/holt/floor-1-preview.png` overlays the saved graph on the source plan
 and is a local review artifact, not an application import or commit artifact.
-Holt is currently explicitly omitted from runtime loading at the user's request
-until it has a geographic alignment. Its saved source data and topology tests
-remain intact.
+Holt is no longer excluded from runtime loading (user request, October 28, 2026).
+It now has a geographic alignment and seven outdoor entrance links (October 28, 2026).
 
 Filter candidate nodes by building before using `findNodeNearPosition` with the
 known starting floor, then pass the resulting
@@ -116,19 +115,20 @@ npx prettier --write src/data/outdoor/campus.json src/data/outdoor/manual-review
 The preview tool reuses the machine-local `@napi-rs/canvas` installation documented
 in the floor-plan skill. Set `CLASSFINDER_PDF_TOOLS` to that tool directory on
 another machine; no application dependency was added. Filter outdoor snapping
-candidates by both `buildingId === null` and `floorId === 0`. The existing
+saved outdoor nodes use `buildingId: null`; loaded candidates use
+`buildingId === 'outside'` and `floorId === 0` under the current loader. The existing
 building-oriented instruction adapter is unchanged; use the graph and Dijkstra
 directly for outdoor-only paths.
 
 ### O’Connell–Langdon alignment and route verification
 
 `src/graph/campusAlignment.json` defines the global origin (existing outdoor OSM
-node 4715296203 at 39.7276776, -121.8456054), the two building similarity transforms,
+node 4715296203 at 39.7276776, -121.8456054), the building similarity transforms,
 matched landmarks, and fitting errors. `src/graph/coordinates.ts` applies each
 building's rotation, uniform scale and translation before the loader creates any
 edges. Runtime nodes contain only global positions; all floors of each building
 use the same transform. An unrecognized building alignment fails explicitly;
-Holt is deliberately excluded rather than loaded in an incompatible frame.
+all 12 building IDs, including Holt, are now registered with no exclusions.
 
 O’Connell uses three matched AO doorway endpoints: scale **1.11667**, rotation
 **39.03°**, maximum fitting error **3.60 feet**. Langdon uses seven matched
@@ -244,3 +244,56 @@ The release workflow deploys version tags to GitHub Pages. Before its first rele
   The `-v` removes only the local `node_modules` volume; dependencies will be installed again from `package-lock.json`.
 
 - **GitHub Pages deployment fails:** Confirm Pages is enabled for GitHub Actions and that the repository allows the workflow's `pages: write` and `id-token: write` permissions.
+
+### Additional campus entrance alignments
+
+Acker, Ayres, Trinity and Yolo now have campus transforms and 52 exterior doorway
+connections. Source coordinates remain local. These approximate registrations and
+map-inferred approaches are documented in
+[src/data/outdoor/entrance-alignment-review.md](src/data/outdoor/entrance-alignment-review.md).
+Regenerate with `node tools/outdoor/align-campus-entrances.mjs`;
+`node tools/outdoor/render-entrance-verification.mjs` creates temporary review
+overlays in `/tmp`. All 12 building IDs now have transforms and the full campus loader succeeds.
+No runtime exclusions are present.
+
+Butte, Glenn, Holt, Modoc, Plumas and Tehama are also aligned and connected through
+41 exterior doorways and two Modoc yard gates. The full graph has 4,915 nodes and
+10,774 directed edges. The linked review inventory documents all 92 direct added
+portal links, the three Modoc doors that use its gates, and approximate geometry.
+The new tests use the production loader and real Dijkstra in both directions.
+
+### Holt first-floor review
+
+The user-confirmed stair-room passages have been restored using the current
+PDF origin. First floor now has 193 nodes, 208 undirected edges and one indoor
+component. The [requested preview](src/data/holt/floor-1-preview.png) highlights
+restored regions H1–H3 and the former isolated southeast landing. Regenerate with
+`node tools/indoor/render-holt-first-floor.mjs`. The PNG is a local review artifact
+and should not be committed.
+
+### All-building route verification
+
+`npx vitest run tests/unit/dijkstras.test.ts` checks all 132 ordered pairs across
+12 buildings using fixed indoor endpoints, the production graph loader, and real
+Dijkstra. Each returned edge must exist in the loaded adjacency list, form a
+continuous route, and reach its destination through the outdoor graph.
+`tools/routing/campus-endpoints.json` records the representative endpoints; this
+check does not assert that every room belongs to the connected component.
+
+Run `node tools/routing/render-campus-routes.mjs` to generate the local
+[route gallery](artifacts/campus-routes/index.html), twelve PNGs (one starting
+building with eleven differently colored outgoing routes), and `routes.json`
+with every traversal and distance. The offline renderer uses the existing
+machine-local canvas installation (`CLASSFINDER_PDF_TOOLS` can override it).
+`tools/routing/map-registration.json` records the manual footprint landmarks used
+to fit `open-street-view-map.png`; this display registration does not modify graph
+coordinates. Shared routes use slight parallel offsets for visibility. Numbered
+review markers identify inferred entrance approaches. These are connectivity
+review artifacts, not assertions of current physical access or accessibility.
+Generated gallery files are ignored by git.
+
+Plumas floors 2–3 now connect through both stair cores and the east elevator,
+verified against their source PDFs. `tests/unit/plumasGraph.test.ts` checks all
+three two-way transfers and routes from campus to all 82 third-floor nodes and
+back. Elevator availability/access remains unknown; costs still omit vertical
+rise and waiting time.

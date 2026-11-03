@@ -55,7 +55,7 @@ export function loadGraphFromData(): [Graph, Nodes] {
   for (const node of datasets.flatMap((data) => data.nodes ?? [])) {
     if (
       node.buildingId !== null &&
-      alignment.excludedBuildingIds.includes(node.buildingId)
+      alignment.excludedBuildingIds.some((id) => id === node.buildingId)
     ) {
       excludedNodeIds.add(node.id);
       continue;

@@ -18,6 +18,14 @@ import entranceLinks from '../../src/data/outdoor/building-connections.json';
 import { toGlobalPosition } from '../../src/graph/coordinates';
 import alignment from '../../src/graph/campusAlignment.json';
 
+const allDatasets = Object.values(
+  import.meta.glob<{ nodes?: unknown[]; edges: unknown[] }>(
+    '../../src/data/*/*.json',
+    { eager: true, import: 'default' }
+  )
+);
+const totalNodes = allDatasets.reduce((n, d) => n + (d.nodes?.length ?? 0), 0);
+const totalEdges = allDatasets.reduce((n, d) => n + d.edges.length, 0);
 const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3];
 const datasets = [...floors, outdoor];
 const data = {
@@ -28,7 +36,8 @@ const data = {
     ...entranceLinks.nodes
   ].map((node) => ({
     ...node,
-    position: toGlobalPosition(node.position, node.buildingId)
+    position: toGlobalPosition(node.position, node.buildingId),
+    buildingId: node.buildingId ?? 'outside'
   })),
   edges: [
     ...datasets.flatMap((dataset) => dataset.edges),
@@ -55,7 +64,7 @@ describe('loadGraphFromData', () => {
   it('loads the floor-plan nodes with their coordinates and building details', () => {
     const [graph, nodes] = loadGraphFromData();
 
-    expect(nodes.size).toBe(data.nodes.length);
+    expect(nodes.size).toBe(totalNodes);
     expect(graph.size).toBe(nodes.size);
     for (const node of data.nodes) {
       expect(nodes.get(node.id as NodeId)).toEqual(node);
@@ -70,7 +79,7 @@ describe('loadGraphFromData', () => {
   it('derives edge distances from endpoint positions while expanding connections', () => {
     const [graph] = loadGraphFromData();
 
-    expect([...graph.values()].flat()).toHaveLength(data.edges.length * 2);
+    expect([...graph.values()].flat()).toHaveLength(totalEdges * 2);
     for (const { from, ...edge } of data.edges) {
       expect(edge).not.toHaveProperty('distance');
       const distance = distanceBetweenNodes(from as NodeId, edge.to as NodeId);
@@ -116,7 +125,7 @@ describe('loadGraphFromData', () => {
     expect(
       new Set(
         [...nodes.values()]
-          .filter((node) => node.buildingId !== null)
+          .filter((node) => node.buildingId === 'ocon')
           .map((node) => node.floorId)
       )
     ).toEqual(new Set([1, 2, 3, 4]));
@@ -153,7 +162,7 @@ describe('loadGraphFromData', () => {
     nodes.clear();
 
     const [freshGraph, freshNodes] = loadGraphFromData();
-    expect(freshNodes.size).toBe(data.nodes.length);
+    expect(freshNodes.size).toBe(totalNodes);
     expect(freshNodes.get(entranceId)?.position).toEqual({
       x: alignment.buildings.ocon.tx,
       y: alignment.buildings.ocon.ty

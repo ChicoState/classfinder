@@ -1,0 +1,4315 @@
+{
+  "metadata": {
+    "name": "Campus building entrance approaches",
+    "units": "feet",
+    "undirected": true,
+    "date": "2026-10-28",
+    "alignment": "src/graph/campusAlignment.json",
+    "sourceImage": "campusmap.png",
+    "osmSource": "campus-osm.json",
+    "method": "Explicit source doorway inventory; provisional open-area approaches inferred from campusmap.png under user campus walkability guidance. Visibility paths avoid OSM building footprints, mapped fences/walls and streams. Missing or dated geometry still needs review.",
+    "sourceBarriers": {
+      "modoc": {
+        "lines": [
+          [
+            { "x": 58.33, "y": 190.62 },
+            { "x": 119, "y": 190.62 },
+            { "x": 119, "y": 169.2 },
+            { "x": 144.44, "y": 169.2 },
+            { "x": 144.44, "y": 117.57 },
+            { "x": 119, "y": 117.57 },
+            { "x": 119, "y": 91.46 },
+            { "x": 58.33, "y": 91.46 }
+          ]
+        ],
+        "source": "src/data/modoc/floor-1.json",
+        "reason": "Dashed yard fence follows the supplied plan perimeter. Openings are limited to the existing north and southwest gate nodes; no playground/sandbox crossing."
+      }
+    },
+    "obstacleOverrides": {
+      "acker": {
+        "osmWayId": 1106265311,
+        "reason": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "referencePdfPolygons": [
+          [
+            [106.7, 454],
+            [378.7, 454],
+            [378.7, 594],
+            [409.3, 594],
+            [409.3, 649],
+            [355, 649],
+            [355, 672],
+            [106.7, 672]
+          ],
+          [
+            [313.7, 672],
+            [379.7, 672],
+            [379.7, 887],
+            [327, 887],
+            [327, 725],
+            [313.7, 725]
+          ]
+        ]
+      },
+      "ayres": {
+        "osmWayId": 28551760,
+        "reason": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "referencePdfPolygons": [
+          [
+            [86.7, 70],
+            [357.3, 70],
+            [357.3, 310.7],
+            [177.3, 310.7],
+            [177.3, 344],
+            [286.7, 344],
+            [286.7, 337.3],
+            [422, 337.3],
+            [422, 437],
+            [436.7, 437],
+            [436.7, 477.3],
+            [450, 477.3],
+            [450, 644],
+            [86.7, 644]
+          ],
+          [
+            [146.7, 670],
+            [260.7, 670],
+            [260.7, 753.3],
+            [146.7, 753.3]
+          ]
+        ]
+      }
+    },
+    "accessibility": "Unknown. No accessible flag is inferred from indoor AO markings.",
+    "connections": [
+      {
+        "indoorNodeId": "acker-1-exit-lobby-east-ao",
+        "outdoorNodeId": "outdoor-0-acker-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-5862340690",
+        "reviewId": "ENT-ACKER-01"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-lobby-south-1",
+        "outdoorNodeId": "outdoor-0-acker-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-5862340689",
+        "reviewId": "ENT-ACKER-02"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-lobby-south-2",
+        "outdoorNodeId": "outdoor-0-acker-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-5862340689",
+        "reviewId": "ENT-ACKER-03"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-lobby-south-3",
+        "outdoorNodeId": "outdoor-0-acker-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-5862340689",
+        "reviewId": "ENT-ACKER-04"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-north-1",
+        "outdoorNodeId": "outdoor-0-acker-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-12016040164",
+        "reviewId": "ENT-ACKER-05"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-north-2",
+        "outdoorNodeId": "outdoor-0-acker-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-12016040164",
+        "reviewId": "ENT-ACKER-06"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-north-3",
+        "outdoorNodeId": "outdoor-0-acker-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115813",
+        "reviewId": "ENT-ACKER-07"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-north-4",
+        "outdoorNodeId": "outdoor-0-acker-entrance-8-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115813",
+        "reviewId": "ENT-ACKER-08"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-south-1",
+        "outdoorNodeId": "outdoor-0-acker-entrance-9-0",
+        "osmTargetNodeId": "outdoor-0-osm-12847941565",
+        "reviewId": "ENT-ACKER-09"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-south-2",
+        "outdoorNodeId": "outdoor-0-acker-entrance-10-0",
+        "osmTargetNodeId": "outdoor-0-osm-12847941565",
+        "reviewId": "ENT-ACKER-10"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-south-3",
+        "outdoorNodeId": "outdoor-0-acker-entrance-11-0",
+        "osmTargetNodeId": "outdoor-0-osm-12847941565",
+        "reviewId": "ENT-ACKER-11"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-gym-west-south-4",
+        "outdoorNodeId": "outdoor-0-acker-entrance-12-0",
+        "osmTargetNodeId": "outdoor-0-osm-12847941565",
+        "reviewId": "ENT-ACKER-12"
+      },
+      {
+        "indoorNodeId": "acker-1-storage-west-exterior-door",
+        "outdoorNodeId": "outdoor-0-acker-entrance-13-0",
+        "osmTargetNodeId": "outdoor-0-osm-12847941565",
+        "reviewId": "ENT-ACKER-13"
+      },
+      {
+        "indoorNodeId": "acker-1-room-151",
+        "outdoorNodeId": "outdoor-0-acker-entrance-14-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849876256",
+        "reviewId": "ENT-ACKER-14"
+      },
+      {
+        "indoorNodeId": "acker-1-room-152",
+        "outdoorNodeId": "outdoor-0-acker-entrance-15-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849876256",
+        "reviewId": "ENT-ACKER-15"
+      },
+      {
+        "indoorNodeId": "acker-1-room-153",
+        "outdoorNodeId": "outdoor-0-acker-entrance-16-0",
+        "osmTargetNodeId": "outdoor-0-osm-12013138474",
+        "reviewId": "ENT-ACKER-16"
+      },
+      {
+        "indoorNodeId": "acker-1-room-154",
+        "outdoorNodeId": "outdoor-0-acker-entrance-17-0",
+        "osmTargetNodeId": "outdoor-0-osm-12013138474",
+        "reviewId": "ENT-ACKER-17"
+      },
+      {
+        "indoorNodeId": "acker-1-room-155",
+        "outdoorNodeId": "outdoor-0-acker-entrance-18-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115817",
+        "reviewId": "ENT-ACKER-18"
+      },
+      {
+        "indoorNodeId": "acker-1-room-156",
+        "outdoorNodeId": "outdoor-0-acker-entrance-19-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115817",
+        "reviewId": "ENT-ACKER-19"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-southeast-ao",
+        "outdoorNodeId": "outdoor-0-acker-entrance-20-0",
+        "osmTargetNodeId": "outdoor-0-osm-10123191877",
+        "reviewId": "ENT-ACKER-20"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-locker-south",
+        "outdoorNodeId": "outdoor-0-acker-entrance-21-0",
+        "osmTargetNodeId": "outdoor-0-osm-313659073",
+        "reviewId": "ENT-ACKER-21"
+      },
+      {
+        "indoorNodeId": "acker-1-unnumbered-annex-northwest-exterior-door",
+        "outdoorNodeId": "outdoor-0-acker-entrance-22-0",
+        "osmTargetNodeId": "outdoor-0-osm-313659073",
+        "reviewId": "ENT-ACKER-22"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-annex-west",
+        "outdoorNodeId": "outdoor-0-acker-entrance-23-0",
+        "osmTargetNodeId": "outdoor-0-osm-10123191881",
+        "reviewId": "ENT-ACKER-23"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-annex-south",
+        "outdoorNodeId": "outdoor-0-acker-entrance-24-0",
+        "osmTargetNodeId": "outdoor-0-osm-10123191881",
+        "reviewId": "ENT-ACKER-24"
+      },
+      {
+        "indoorNodeId": "acker-1-exit-127-north",
+        "outdoorNodeId": "outdoor-0-acker-entrance-25-0",
+        "osmTargetNodeId": "outdoor-0-osm-10123191877",
+        "reviewId": "ENT-ACKER-25"
+      },
+      {
+        "indoorNodeId": "ayres-1-entrance-northwest",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-5861595679",
+        "reviewId": "ENT-AYRES-01"
+      },
+      {
+        "indoorNodeId": "ayres-1-entrance-southwest",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825626",
+        "reviewId": "ENT-AYRES-02"
+      },
+      {
+        "indoorNodeId": "ayres-1-room-121-exterior",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825626",
+        "reviewId": "ENT-AYRES-03"
+      },
+      {
+        "indoorNodeId": "ayres-1-room-129-exterior",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062031833",
+        "reviewId": "ENT-AYRES-04"
+      },
+      {
+        "indoorNodeId": "ayres-1-room-129A",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062031833",
+        "reviewId": "ENT-AYRES-05"
+      },
+      {
+        "indoorNodeId": "ayres-1-room-129B",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062031833",
+        "reviewId": "ENT-AYRES-06"
+      },
+      {
+        "indoorNodeId": "ayres-1-entrance-studio-south",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-4715296150",
+        "reviewId": "ENT-AYRES-07"
+      },
+      {
+        "indoorNodeId": "ayres-1-entrance-southeast",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-8-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825627",
+        "reviewId": "ENT-AYRES-08"
+      },
+      {
+        "indoorNodeId": "ayres-1-entrance-studio-120B",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-9-0",
+        "osmTargetNodeId": "outdoor-0-osm-471730317",
+        "reviewId": "ENT-AYRES-09"
+      },
+      {
+        "indoorNodeId": "ayres-1-room-130-east",
+        "outdoorNodeId": "outdoor-0-ayres-entrance-10-0",
+        "osmTargetNodeId": "outdoor-0-osm-4715296178",
+        "reviewId": "ENT-AYRES-10"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-east-ao",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825649",
+        "reviewId": "ENT-TRINITY-01"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-west-middle",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062291671",
+        "reviewId": "ENT-TRINITY-02"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-west-north",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062291672",
+        "reviewId": "ENT-TRINITY-03"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-west-south",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062291671",
+        "reviewId": "ENT-TRINITY-04"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-west-stair",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062291670",
+        "reviewId": "ENT-TRINITY-05"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-main-west",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062291674",
+        "reviewId": "ENT-TRINITY-06"
+      },
+      {
+        "indoorNodeId": "trinity-1-exit-south-ao",
+        "outdoorNodeId": "outdoor-0-trinity-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-12291397691",
+        "reviewId": "ENT-TRINITY-07"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-north-ao",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-12847941558",
+        "reviewId": "ENT-YOLO-01"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-142-north",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115821",
+        "reviewId": "ENT-YOLO-02"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-east-wing-north",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115822",
+        "reviewId": "ENT-YOLO-03"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-south-ao",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-7701180205",
+        "reviewId": "ENT-YOLO-04"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-112-west",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-7700051609",
+        "reviewId": "ENT-YOLO-05"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-109-west",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-7700051607",
+        "reviewId": "ENT-YOLO-06"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-145-east",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-10123191883",
+        "reviewId": "ENT-YOLO-07"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-150-east",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-8-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115822",
+        "reviewId": "ENT-YOLO-08"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-155-east",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-9-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115822",
+        "reviewId": "ENT-YOLO-09"
+      },
+      {
+        "indoorNodeId": "yolo-1-exit-166-east",
+        "outdoorNodeId": "outdoor-0-yolo-entrance-10-0",
+        "osmTargetNodeId": "outdoor-0-osm-12012115822",
+        "reviewId": "ENT-YOLO-10"
+      },
+      {
+        "indoorNodeId": "butte-1-exit-north-east-ao",
+        "outdoorNodeId": "outdoor-0-butte-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-12217013243",
+        "reviewId": "ENT-BUTTE-01"
+      },
+      {
+        "indoorNodeId": "butte-1-exit-north-west",
+        "outdoorNodeId": "outdoor-0-butte-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-12217013243",
+        "reviewId": "ENT-BUTTE-02"
+      },
+      {
+        "indoorNodeId": "butte-1-room-101-exterior-door",
+        "outdoorNodeId": "outdoor-0-butte-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-12217013244",
+        "reviewId": "ENT-BUTTE-03"
+      },
+      {
+        "indoorNodeId": "butte-1-room-103-exterior-door",
+        "outdoorNodeId": "outdoor-0-butte-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-13043534417",
+        "reviewId": "ENT-BUTTE-04"
+      },
+      {
+        "indoorNodeId": "butte-1-exit-west-stairs",
+        "outdoorNodeId": "outdoor-0-butte-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-13043534416",
+        "reviewId": "ENT-BUTTE-05"
+      },
+      {
+        "indoorNodeId": "butte-1-room-102-exterior-door",
+        "outdoorNodeId": "outdoor-0-butte-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-12217013241",
+        "reviewId": "ENT-BUTTE-06"
+      },
+      {
+        "indoorNodeId": "butte-1-room-104-exterior-door",
+        "outdoorNodeId": "outdoor-0-butte-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-5447422344",
+        "reviewId": "ENT-BUTTE-07"
+      },
+      {
+        "indoorNodeId": "butte-1-exit-east-service",
+        "outdoorNodeId": "outdoor-0-butte-entrance-8-0",
+        "osmTargetNodeId": "outdoor-0-osm-5447422344",
+        "reviewId": "ENT-BUTTE-08"
+      },
+      {
+        "indoorNodeId": "butte-1-exit-southeast-stairs",
+        "outdoorNodeId": "outdoor-0-butte-entrance-9-0",
+        "osmTargetNodeId": "outdoor-0-osm-12016281796",
+        "reviewId": "ENT-BUTTE-09"
+      },
+      {
+        "indoorNodeId": "butte-1-exit-south-ao",
+        "outdoorNodeId": "outdoor-0-butte-entrance-10-0",
+        "osmTargetNodeId": "outdoor-0-osm-12333501185",
+        "reviewId": "ENT-BUTTE-10"
+      },
+      {
+        "indoorNodeId": "butte-1-room-150-south-west-door",
+        "outdoorNodeId": "outdoor-0-butte-entrance-11-0",
+        "osmTargetNodeId": "outdoor-0-osm-12333501189",
+        "reviewId": "ENT-BUTTE-11"
+      },
+      {
+        "indoorNodeId": "butte-1-room-150-south-east-door",
+        "outdoorNodeId": "outdoor-0-butte-entrance-12-0",
+        "osmTargetNodeId": "outdoor-0-osm-12333501188",
+        "reviewId": "ENT-BUTTE-12"
+      },
+      {
+        "indoorNodeId": "glenn-1-entrance-north",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849876274",
+        "reviewId": "ENT-GLENN-01"
+      },
+      {
+        "indoorNodeId": "glenn-1-unnumbered-northwest-door",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849876274",
+        "reviewId": "ENT-GLENN-02"
+      },
+      {
+        "indoorNodeId": "glenn-1-unnumbered-north-middle-door",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849876274",
+        "reviewId": "ENT-GLENN-03"
+      },
+      {
+        "indoorNodeId": "glenn-1-entrance-west",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-12141514200",
+        "reviewId": "ENT-GLENN-04"
+      },
+      {
+        "indoorNodeId": "glenn-1-entrance-106B-west",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-12141514200",
+        "reviewId": "ENT-GLENN-05"
+      },
+      {
+        "indoorNodeId": "glenn-1-entrance-108C-west",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-5447420618",
+        "reviewId": "ENT-GLENN-06"
+      },
+      {
+        "indoorNodeId": "glenn-1-entrance-east",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-3641807009",
+        "reviewId": "ENT-GLENN-07"
+      },
+      {
+        "indoorNodeId": "glenn-1-entrance-south",
+        "outdoorNodeId": "outdoor-0-glenn-entrance-8-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849876272",
+        "reviewId": "ENT-GLENN-08"
+      },
+      {
+        "indoorNodeId": "modoc-1-exit-north-wheelchair",
+        "outdoorNodeId": "outdoor-0-modoc-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825638",
+        "reviewId": "ENT-MODOC-01"
+      },
+      {
+        "indoorNodeId": "modoc-1-exit-southwest-ao",
+        "outdoorNodeId": "outdoor-0-modoc-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062170254",
+        "reviewId": "ENT-MODOC-02"
+      },
+      {
+        "indoorNodeId": "modoc-1-exit-southeast-wheelchair",
+        "outdoorNodeId": "outdoor-0-modoc-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062170239",
+        "reviewId": "ENT-MODOC-03"
+      },
+      {
+        "indoorNodeId": "modoc-1-exit-east-landing",
+        "outdoorNodeId": "outdoor-0-modoc-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-7698079280",
+        "reviewId": "ENT-MODOC-04"
+      },
+      {
+        "indoorNodeId": "modoc-1-gate-yard-north",
+        "outdoorNodeId": "outdoor-0-modoc-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-7708714098",
+        "reviewId": "ENT-MODOC-05"
+      },
+      {
+        "indoorNodeId": "modoc-1-gate-yard-southwest",
+        "outdoorNodeId": "outdoor-0-modoc-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-7698079280",
+        "reviewId": "ENT-MODOC-06"
+      },
+      {
+        "indoorNodeId": "tehama-1-exit-north-ao",
+        "outdoorNodeId": "outdoor-0-tehama-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062081754",
+        "reviewId": "ENT-TEHAMA-01"
+      },
+      {
+        "indoorNodeId": "tehama-1-exit-west-north",
+        "outdoorNodeId": "outdoor-0-tehama-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-5447257029",
+        "reviewId": "ENT-TEHAMA-02"
+      },
+      {
+        "indoorNodeId": "tehama-1-exit-west-south",
+        "outdoorNodeId": "outdoor-0-tehama-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849844046",
+        "reviewId": "ENT-TEHAMA-03"
+      },
+      {
+        "indoorNodeId": "tehama-1-exit-south",
+        "outdoorNodeId": "outdoor-0-tehama-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-5862340473",
+        "reviewId": "ENT-TEHAMA-04"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-south-ao",
+        "outdoorNodeId": "outdoor-0-holt-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849779141",
+        "reviewId": "ENT-HOLT-01"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-south-west",
+        "outdoorNodeId": "outdoor-0-holt-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849779141",
+        "reviewId": "ENT-HOLT-02"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-north-ao",
+        "outdoorNodeId": "outdoor-0-holt-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825631",
+        "reviewId": "ENT-HOLT-03"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-west-south",
+        "outdoorNodeId": "outdoor-0-holt-entrance-4-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825632",
+        "reviewId": "ENT-HOLT-04"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-west-north",
+        "outdoorNodeId": "outdoor-0-holt-entrance-5-0",
+        "osmTargetNodeId": "outdoor-0-osm-12057911483",
+        "reviewId": "ENT-HOLT-05"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-east-south",
+        "outdoorNodeId": "outdoor-0-holt-entrance-6-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825629",
+        "reviewId": "ENT-HOLT-06"
+      },
+      {
+        "indoorNodeId": "holt-1-exit-east-north",
+        "outdoorNodeId": "outdoor-0-holt-entrance-7-0",
+        "osmTargetNodeId": "outdoor-0-osm-5861595673",
+        "reviewId": "ENT-HOLT-07"
+      },
+      {
+        "indoorNodeId": "plumas-1-exit-east-ao",
+        "outdoorNodeId": "outdoor-0-plumas-entrance-1-0",
+        "osmTargetNodeId": "outdoor-0-osm-12062081747",
+        "reviewId": "ENT-PLUMAS-01"
+      },
+      {
+        "indoorNodeId": "plumas-1-exit-west",
+        "outdoorNodeId": "outdoor-0-plumas-entrance-2-0",
+        "osmTargetNodeId": "outdoor-0-osm-10123331542",
+        "reviewId": "ENT-PLUMAS-02"
+      },
+      {
+        "indoorNodeId": "plumas-1-exit-south",
+        "outdoorNodeId": "outdoor-0-plumas-entrance-3-0",
+        "osmTargetNodeId": "outdoor-0-osm-5849825660",
+        "reviewId": "ENT-PLUMAS-03"
+      }
+    ],
+    "doorwaysViaGates": [
+      {
+        "nodeId": "modoc-1-exit-125-yard",
+        "gateNodeIds": [
+          "modoc-1-gate-yard-north",
+          "modoc-1-gate-yard-southwest"
+        ],
+        "evidence": "Existing source-shown yard circulation and gates; no new shortcut through the yard fence."
+      },
+      {
+        "nodeId": "modoc-1-exit-129-yard",
+        "gateNodeIds": [
+          "modoc-1-gate-yard-north",
+          "modoc-1-gate-yard-southwest"
+        ],
+        "evidence": "Existing source-shown yard circulation and gates; no new shortcut through the yard fence."
+      },
+      {
+        "nodeId": "modoc-1-exit-131-yard",
+        "gateNodeIds": [
+          "modoc-1-gate-yard-north",
+          "modoc-1-gate-yard-southwest"
+        ],
+        "evidence": "Existing source-shown yard circulation and gates; no new shortcut through the yard fence."
+      }
+    ],
+    "reviewAreas": [
+      {
+        "id": "ENT-ACKER-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1118.02, "y": 890.83 },
+        "initialApproachFeet": 13,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-lobby-east-ao",
+          "outdoor-0-acker-entrance-1-0",
+          "outdoor-0-osm-5862340690"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-lobby-east-ao", "outdoor-0-acker-entrance-1-0"],
+          ["outdoor-0-acker-entrance-1-0", "outdoor-0-osm-5862340690"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1134.24, "y": 881.34 },
+        "initialApproachFeet": 13,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-lobby-south-1",
+          "outdoor-0-acker-entrance-2-0",
+          "outdoor-0-osm-5862340689"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-lobby-south-1", "outdoor-0-acker-entrance-2-0"],
+          ["outdoor-0-acker-entrance-2-0", "outdoor-0-osm-5862340689"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1128.6, "y": 884.64 },
+        "initialApproachFeet": 13,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-lobby-south-2",
+          "outdoor-0-acker-entrance-3-0",
+          "outdoor-0-osm-5862340689"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-lobby-south-2", "outdoor-0-acker-entrance-3-0"],
+          ["outdoor-0-acker-entrance-3-0", "outdoor-0-osm-5862340689"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1122.49, "y": 888.22 },
+        "initialApproachFeet": 13,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-lobby-south-3",
+          "outdoor-0-acker-entrance-4-0",
+          "outdoor-0-osm-5862340689"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-lobby-south-3", "outdoor-0-acker-entrance-4-0"],
+          ["outdoor-0-acker-entrance-4-0", "outdoor-0-osm-5862340689"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1284.75, "y": 862.98 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-north-1",
+          "outdoor-0-acker-entrance-5-0",
+          "outdoor-0-osm-12016040164"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-north-1", "outdoor-0-acker-entrance-5-0"],
+          ["outdoor-0-acker-entrance-5-0", "outdoor-0-osm-12016040164"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1282.82, "y": 859.69 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-north-2",
+          "outdoor-0-acker-entrance-6-0",
+          "outdoor-0-osm-12016040164"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-north-2", "outdoor-0-acker-entrance-6-0"],
+          ["outdoor-0-acker-entrance-6-0", "outdoor-0-osm-12016040164"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1278.15, "y": 851.7 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-north-3",
+          "outdoor-0-acker-entrance-7-0",
+          "outdoor-0-osm-12012115813"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-north-3", "outdoor-0-acker-entrance-7-0"],
+          ["outdoor-0-acker-entrance-7-0", "outdoor-0-osm-12012115813"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-08",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1276.35, "y": 848.64 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-north-4",
+          "outdoor-0-acker-entrance-8-0",
+          "outdoor-0-osm-12012115813"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-north-4", "outdoor-0-acker-entrance-8-0"],
+          ["outdoor-0-acker-entrance-8-0", "outdoor-0-osm-12012115813"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-09",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1252.97, "y": 808.68 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-south-1",
+          "outdoor-0-acker-entrance-9-0",
+          "outdoor-0-osm-12847941565"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-south-1", "outdoor-0-acker-entrance-9-0"],
+          ["outdoor-0-acker-entrance-9-0", "outdoor-0-osm-12847941565"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-10",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1251.18, "y": 805.63 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-south-2",
+          "outdoor-0-acker-entrance-10-0",
+          "outdoor-0-osm-12847941565"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-south-2", "outdoor-0-acker-entrance-10-0"],
+          ["outdoor-0-acker-entrance-10-0", "outdoor-0-osm-12847941565"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-11",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1246.09, "y": 796.93 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-south-3",
+          "outdoor-0-acker-entrance-11-0",
+          "outdoor-0-osm-12847941565"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-south-3", "outdoor-0-acker-entrance-11-0"],
+          ["outdoor-0-acker-entrance-11-0", "outdoor-0-osm-12847941565"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-12",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1244.3, "y": 793.88 },
+        "initialApproachFeet": 17,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-gym-west-south-4",
+          "outdoor-0-acker-entrance-12-0",
+          "outdoor-0-osm-12847941565"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-gym-west-south-4", "outdoor-0-acker-entrance-12-0"],
+          ["outdoor-0-acker-entrance-12-0", "outdoor-0-osm-12847941565"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-13",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1247.08, "y": 782.47 },
+        "initialApproachFeet": 9,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-storage-west-exterior-door",
+          "outdoor-0-acker-entrance-13-0",
+          "outdoor-0-osm-12847941565"
+        ],
+        "edgeIds": [
+          [
+            "acker-1-storage-west-exterior-door",
+            "outdoor-0-acker-entrance-13-0"
+          ],
+          ["outdoor-0-acker-entrance-13-0", "outdoor-0-osm-12847941565"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-14",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1208.32, "y": 1010.59 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-room-151",
+          "outdoor-0-acker-entrance-14-0",
+          "outdoor-0-osm-5849876256"
+        ],
+        "edgeIds": [
+          ["acker-1-room-151", "outdoor-0-acker-entrance-14-0"],
+          ["outdoor-0-acker-entrance-14-0", "outdoor-0-osm-5849876256"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-15",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1226.65, "y": 999.86 },
+        "initialApproachFeet": 4.99,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-room-152",
+          "outdoor-0-acker-entrance-15-0",
+          "outdoor-0-osm-5849876256"
+        ],
+        "edgeIds": [
+          ["acker-1-room-152", "outdoor-0-acker-entrance-15-0"],
+          ["outdoor-0-acker-entrance-15-0", "outdoor-0-osm-5849876256"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-16",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1243.81, "y": 989.81 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-room-153",
+          "outdoor-0-acker-entrance-16-0",
+          "outdoor-0-osm-12013138474"
+        ],
+        "edgeIds": [
+          ["acker-1-room-153", "outdoor-0-acker-entrance-16-0"],
+          ["outdoor-0-acker-entrance-16-0", "outdoor-0-osm-12013138474"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-17",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1261.2, "y": 979.63 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-room-154",
+          "outdoor-0-acker-entrance-17-0",
+          "outdoor-0-osm-12013138474"
+        ],
+        "edgeIds": [
+          ["acker-1-room-154", "outdoor-0-acker-entrance-17-0"],
+          ["outdoor-0-acker-entrance-17-0", "outdoor-0-osm-12013138474"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-18",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1279.07, "y": 969.18 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-room-155",
+          "outdoor-0-acker-entrance-18-0",
+          "outdoor-0-osm-12012115817"
+        ],
+        "edgeIds": [
+          ["acker-1-room-155", "outdoor-0-acker-entrance-18-0"],
+          ["outdoor-0-acker-entrance-18-0", "outdoor-0-osm-12012115817"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-19",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1296.93, "y": 958.72 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-room-156",
+          "outdoor-0-acker-entrance-19-0",
+          "outdoor-0-osm-12012115817"
+        ],
+        "edgeIds": [
+          ["acker-1-room-156", "outdoor-0-acker-entrance-19-0"],
+          ["outdoor-0-acker-entrance-19-0", "outdoor-0-osm-12012115817"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-20",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1035.86, "y": 727.81 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-southeast-ao",
+          "outdoor-0-acker-entrance-20-0",
+          "outdoor-0-osm-10123191877"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-southeast-ao", "outdoor-0-acker-entrance-20-0"],
+          ["outdoor-0-acker-entrance-20-0", "outdoor-0-osm-10123191877"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-21",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1125.55, "y": 670.26 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-locker-south",
+          "outdoor-0-acker-entrance-21-0",
+          "outdoor-0-acker-entrance-21-1",
+          "outdoor-0-osm-313659073"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-locker-south", "outdoor-0-acker-entrance-21-0"],
+          ["outdoor-0-acker-entrance-21-0", "outdoor-0-acker-entrance-21-1"],
+          ["outdoor-0-acker-entrance-21-1", "outdoor-0-osm-313659073"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-22",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1073.92, "y": 685.02 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-unnumbered-annex-northwest-exterior-door",
+          "outdoor-0-acker-entrance-22-0",
+          "outdoor-0-acker-entrance-22-1",
+          "outdoor-0-osm-313659073"
+        ],
+        "edgeIds": [
+          [
+            "acker-1-unnumbered-annex-northwest-exterior-door",
+            "outdoor-0-acker-entrance-22-0"
+          ],
+          ["outdoor-0-acker-entrance-22-0", "outdoor-0-acker-entrance-22-1"],
+          ["outdoor-0-acker-entrance-22-1", "outdoor-0-osm-313659073"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-23",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1020.24, "y": 617.04 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-annex-west",
+          "outdoor-0-acker-entrance-23-0",
+          "outdoor-0-acker-entrance-23-1",
+          "outdoor-0-acker-entrance-23-2",
+          "outdoor-0-osm-10123191881"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-annex-west", "outdoor-0-acker-entrance-23-0"],
+          ["outdoor-0-acker-entrance-23-0", "outdoor-0-acker-entrance-23-1"],
+          ["outdoor-0-acker-entrance-23-1", "outdoor-0-acker-entrance-23-2"],
+          ["outdoor-0-acker-entrance-23-2", "outdoor-0-osm-10123191881"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-24",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1002.84, "y": 606.72 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-annex-south",
+          "outdoor-0-acker-entrance-24-0",
+          "outdoor-0-osm-10123191881"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-annex-south", "outdoor-0-acker-entrance-24-0"],
+          ["outdoor-0-acker-entrance-24-0", "outdoor-0-osm-10123191881"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-ACKER-25",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/acker/floor-1.json",
+        "location": { "x": -1050.58, "y": 714.14 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "OSM Physical Education footprint fills the open courtyard west of the narrow Acker annex. Use source-shown locker block and narrow annex walls for entrance approach checks, not the filled OSM outline.",
+        "nodeIds": [
+          "acker-1-exit-127-north",
+          "outdoor-0-acker-entrance-25-0",
+          "outdoor-0-acker-entrance-25-1",
+          "outdoor-0-osm-10123191877"
+        ],
+        "edgeIds": [
+          ["acker-1-exit-127-north", "outdoor-0-acker-entrance-25-0"],
+          ["outdoor-0-acker-entrance-25-0", "outdoor-0-acker-entrance-25-1"],
+          ["outdoor-0-acker-entrance-25-1", "outdoor-0-osm-10123191877"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 706.16, "y": 887.01 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-entrance-northwest",
+          "outdoor-0-ayres-entrance-1-0",
+          "outdoor-0-osm-5861595679"
+        ],
+        "edgeIds": [
+          ["ayres-1-entrance-northwest", "outdoor-0-ayres-entrance-1-0"],
+          ["outdoor-0-ayres-entrance-1-0", "outdoor-0-osm-5861595679"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 548.87, "y": 1075.64 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-entrance-southwest",
+          "outdoor-0-ayres-entrance-2-0",
+          "outdoor-0-osm-5849825626"
+        ],
+        "edgeIds": [
+          ["ayres-1-entrance-southwest", "outdoor-0-ayres-entrance-2-0"],
+          ["outdoor-0-ayres-entrance-2-0", "outdoor-0-osm-5849825626"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 559.78, "y": 1077.14 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-room-121-exterior",
+          "outdoor-0-ayres-entrance-3-0",
+          "outdoor-0-osm-5849825626"
+        ],
+        "edgeIds": [
+          ["ayres-1-room-121-exterior", "outdoor-0-ayres-entrance-3-0"],
+          ["outdoor-0-ayres-entrance-3-0", "outdoor-0-osm-5849825626"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 512.95, "y": 1036.09 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-room-129-exterior",
+          "outdoor-0-ayres-entrance-4-0",
+          "outdoor-0-osm-12062031833"
+        ],
+        "edgeIds": [
+          ["ayres-1-room-129-exterior", "outdoor-0-ayres-entrance-4-0"],
+          ["outdoor-0-ayres-entrance-4-0", "outdoor-0-osm-12062031833"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 525.73, "y": 1038.95 },
+        "initialApproachFeet": 7,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-room-129A",
+          "outdoor-0-ayres-entrance-5-0",
+          "outdoor-0-osm-12062031833"
+        ],
+        "edgeIds": [
+          ["ayres-1-room-129A", "outdoor-0-ayres-entrance-5-0"],
+          ["outdoor-0-ayres-entrance-5-0", "outdoor-0-osm-12062031833"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 525.72, "y": 1045.62 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-room-129B",
+          "outdoor-0-ayres-entrance-6-0",
+          "outdoor-0-osm-12062031833"
+        ],
+        "edgeIds": [
+          ["ayres-1-room-129B", "outdoor-0-ayres-entrance-6-0"],
+          ["outdoor-0-ayres-entrance-6-0", "outdoor-0-osm-12062031833"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 511.88, "y": 1096.29 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-entrance-studio-south",
+          "outdoor-0-ayres-entrance-7-0",
+          "outdoor-0-osm-4715296150"
+        ],
+        "edgeIds": [
+          ["ayres-1-entrance-studio-south", "outdoor-0-ayres-entrance-7-0"],
+          ["outdoor-0-ayres-entrance-7-0", "outdoor-0-osm-4715296150"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-08",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 479.56, "y": 960.7 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-entrance-southeast",
+          "outdoor-0-ayres-entrance-8-0",
+          "outdoor-0-osm-5849825627"
+        ],
+        "edgeIds": [
+          ["ayres-1-entrance-southeast", "outdoor-0-ayres-entrance-8-0"],
+          ["outdoor-0-ayres-entrance-8-0", "outdoor-0-osm-5849825627"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-09",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 541.02, "y": 1089.04 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-entrance-studio-120B",
+          "outdoor-0-ayres-entrance-9-0",
+          "outdoor-0-osm-471730317"
+        ],
+        "edgeIds": [
+          ["ayres-1-entrance-studio-120B", "outdoor-0-ayres-entrance-9-0"],
+          ["outdoor-0-ayres-entrance-9-0", "outdoor-0-osm-471730317"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-AYRES-10",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/ayres/floor-1.json",
+        "location": { "x": 516.17, "y": 934.15 },
+        "initialApproachFeet": 5,
+        "obstacleOverride": "Dated OSM outline fills the exterior gap north of studio 120; use PDF main outline and separate studio outline to preserve the source-shown exterior doors. North court remains enclosed; lower courtyard paths retain source graph edges.",
+        "nodeIds": [
+          "ayres-1-room-130-east",
+          "outdoor-0-ayres-entrance-10-0",
+          "outdoor-0-osm-4715296178"
+        ],
+        "edgeIds": [
+          ["ayres-1-room-130-east", "outdoor-0-ayres-entrance-10-0"],
+          ["outdoor-0-ayres-entrance-10-0", "outdoor-0-osm-4715296178"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": 101.62, "y": 448.51 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "trinity-1-exit-east-ao",
+          "outdoor-0-trinity-entrance-1-0",
+          "outdoor-0-osm-5849825649"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-east-ao", "outdoor-0-trinity-entrance-1-0"],
+          ["outdoor-0-trinity-entrance-1-0", "outdoor-0-osm-5849825649"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": 15.4, "y": 532.07 },
+        "initialApproachFeet": 13,
+        "nodeIds": [
+          "trinity-1-exit-west-middle",
+          "outdoor-0-trinity-entrance-2-0",
+          "outdoor-0-osm-12062291671"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-west-middle", "outdoor-0-trinity-entrance-2-0"],
+          ["outdoor-0-trinity-entrance-2-0", "outdoor-0-osm-12062291671"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": 17.53, "y": 540.23 },
+        "initialApproachFeet": 7,
+        "nodeIds": [
+          "trinity-1-exit-west-north",
+          "outdoor-0-trinity-entrance-3-0",
+          "outdoor-0-osm-12062291672"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-west-north", "outdoor-0-trinity-entrance-3-0"],
+          ["outdoor-0-trinity-entrance-3-0", "outdoor-0-osm-12062291672"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": 6.13, "y": 530.16 },
+        "initialApproachFeet": 7,
+        "nodeIds": [
+          "trinity-1-exit-west-south",
+          "outdoor-0-trinity-entrance-4-0",
+          "outdoor-0-osm-12062291671"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-west-south", "outdoor-0-trinity-entrance-4-0"],
+          ["outdoor-0-trinity-entrance-4-0", "outdoor-0-osm-12062291671"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": 18.86, "y": 487.84 },
+        "initialApproachFeet": 11,
+        "nodeIds": [
+          "trinity-1-exit-west-stair",
+          "outdoor-0-trinity-entrance-5-0",
+          "outdoor-0-osm-12062291670"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-west-stair", "outdoor-0-trinity-entrance-5-0"],
+          ["outdoor-0-trinity-entrance-5-0", "outdoor-0-osm-12062291670"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": 33.08, "y": 464.27 },
+        "initialApproachFeet": 13,
+        "nodeIds": [
+          "trinity-1-exit-main-west",
+          "outdoor-0-trinity-entrance-6-0",
+          "outdoor-0-osm-12062291674"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-main-west", "outdoor-0-trinity-entrance-6-0"],
+          ["outdoor-0-trinity-entrance-6-0", "outdoor-0-osm-12062291674"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TRINITY-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/trinity/floor-1.json",
+        "location": { "x": -29, "y": 398.15 },
+        "initialApproachFeet": 23,
+        "nodeIds": [
+          "trinity-1-exit-south-ao",
+          "outdoor-0-trinity-entrance-7-0",
+          "outdoor-0-trinity-entrance-7-1",
+          "outdoor-0-osm-12291397691"
+        ],
+        "edgeIds": [
+          ["trinity-1-exit-south-ao", "outdoor-0-trinity-entrance-7-0"],
+          ["outdoor-0-trinity-entrance-7-0", "outdoor-0-trinity-entrance-7-1"],
+          ["outdoor-0-trinity-entrance-7-1", "outdoor-0-osm-12291397691"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1341.41, "y": 552.19 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-north-ao",
+          "outdoor-0-yolo-entrance-1-0",
+          "outdoor-0-yolo-entrance-1-1",
+          "outdoor-0-osm-12847941558"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-north-ao", "outdoor-0-yolo-entrance-1-0"],
+          ["outdoor-0-yolo-entrance-1-0", "outdoor-0-yolo-entrance-1-1"],
+          ["outdoor-0-yolo-entrance-1-1", "outdoor-0-osm-12847941558"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1293.23, "y": 568.45 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-142-north",
+          "outdoor-0-yolo-entrance-2-0",
+          "outdoor-0-osm-12012115821"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-142-north", "outdoor-0-yolo-entrance-2-0"],
+          ["outdoor-0-yolo-entrance-2-0", "outdoor-0-osm-12012115821"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1155.08, "y": 357.15 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-east-wing-north",
+          "outdoor-0-yolo-entrance-3-0",
+          "outdoor-0-osm-12012115822"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-east-wing-north", "outdoor-0-yolo-entrance-3-0"],
+          ["outdoor-0-yolo-entrance-3-0", "outdoor-0-osm-12012115822"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1197.7, "y": 283.1 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-south-ao",
+          "outdoor-0-yolo-entrance-4-0",
+          "outdoor-0-osm-7701180205"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-south-ao", "outdoor-0-yolo-entrance-4-0"],
+          ["outdoor-0-yolo-entrance-4-0", "outdoor-0-osm-7701180205"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1319.74, "y": 386.61 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-112-west",
+          "outdoor-0-yolo-entrance-5-0",
+          "outdoor-0-yolo-entrance-5-1",
+          "outdoor-0-osm-7700051609"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-112-west", "outdoor-0-yolo-entrance-5-0"],
+          ["outdoor-0-yolo-entrance-5-0", "outdoor-0-yolo-entrance-5-1"],
+          ["outdoor-0-yolo-entrance-5-1", "outdoor-0-osm-7700051609"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1285.85, "y": 324.12 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-109-west",
+          "outdoor-0-yolo-entrance-6-0",
+          "outdoor-0-osm-7700051607"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-109-west", "outdoor-0-yolo-entrance-6-0"],
+          ["outdoor-0-yolo-entrance-6-0", "outdoor-0-osm-7700051607"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1224.26, "y": 475.33 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-145-east",
+          "outdoor-0-yolo-entrance-7-0",
+          "outdoor-0-osm-10123191883"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-145-east", "outdoor-0-yolo-entrance-7-0"],
+          ["outdoor-0-yolo-entrance-7-0", "outdoor-0-osm-10123191883"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-08",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1206.16, "y": 458.39 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-150-east",
+          "outdoor-0-yolo-entrance-8-0",
+          "outdoor-0-osm-12012115822"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-150-east", "outdoor-0-yolo-entrance-8-0"],
+          ["outdoor-0-yolo-entrance-8-0", "outdoor-0-osm-12012115822"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-09",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1190.42, "y": 429.37 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-155-east",
+          "outdoor-0-yolo-entrance-9-0",
+          "outdoor-0-osm-12012115822"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-155-east", "outdoor-0-yolo-entrance-9-0"],
+          ["outdoor-0-yolo-entrance-9-0", "outdoor-0-osm-12012115822"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-YOLO-10",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/yolo/floor-1.json",
+        "location": { "x": -1165.84, "y": 368.2 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "yolo-1-exit-166-east",
+          "outdoor-0-yolo-entrance-10-0",
+          "outdoor-0-osm-12012115822"
+        ],
+        "edgeIds": [
+          ["yolo-1-exit-166-east", "outdoor-0-yolo-entrance-10-0"],
+          ["outdoor-0-yolo-entrance-10-0", "outdoor-0-osm-12012115822"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -420.75, "y": 888.39 },
+        "initialApproachFeet": 20.99,
+        "nodeIds": [
+          "butte-1-exit-north-east-ao",
+          "outdoor-0-butte-entrance-1-0",
+          "outdoor-0-osm-12217013243"
+        ],
+        "edgeIds": [
+          ["butte-1-exit-north-east-ao", "outdoor-0-butte-entrance-1-0"],
+          ["outdoor-0-butte-entrance-1-0", "outdoor-0-osm-12217013243"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -430.96, "y": 906.64 },
+        "initialApproachFeet": 21,
+        "nodeIds": [
+          "butte-1-exit-north-west",
+          "outdoor-0-butte-entrance-2-0",
+          "outdoor-0-osm-12217013243"
+        ],
+        "edgeIds": [
+          ["butte-1-exit-north-west", "outdoor-0-butte-entrance-2-0"],
+          ["outdoor-0-butte-entrance-2-0", "outdoor-0-osm-12217013243"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -434.39, "y": 940.67 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-room-101-exterior-door",
+          "outdoor-0-butte-entrance-3-0",
+          "outdoor-0-osm-12217013244"
+        ],
+        "edgeIds": [
+          ["butte-1-room-101-exterior-door", "outdoor-0-butte-entrance-3-0"],
+          ["outdoor-0-butte-entrance-3-0", "outdoor-0-osm-12217013244"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -458.65, "y": 927.1 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-room-103-exterior-door",
+          "outdoor-0-butte-entrance-4-0",
+          "outdoor-0-osm-13043534417"
+        ],
+        "edgeIds": [
+          ["butte-1-room-103-exterior-door", "outdoor-0-butte-entrance-4-0"],
+          ["outdoor-0-butte-entrance-4-0", "outdoor-0-osm-13043534417"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -494.66, "y": 906.95 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-exit-west-stairs",
+          "outdoor-0-butte-entrance-5-0",
+          "outdoor-0-osm-13043534416"
+        ],
+        "edgeIds": [
+          ["butte-1-exit-west-stairs", "outdoor-0-butte-entrance-5-0"],
+          ["outdoor-0-butte-entrance-5-0", "outdoor-0-osm-13043534416"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -393.62, "y": 867.78 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-room-102-exterior-door",
+          "outdoor-0-butte-entrance-6-0",
+          "outdoor-0-osm-12217013241"
+        ],
+        "edgeIds": [
+          ["butte-1-room-102-exterior-door", "outdoor-0-butte-entrance-6-0"],
+          ["outdoor-0-butte-entrance-6-0", "outdoor-0-osm-12217013241"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -417.88, "y": 854.21 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-room-104-exterior-door",
+          "outdoor-0-butte-entrance-7-0",
+          "outdoor-0-osm-5447422344"
+        ],
+        "edgeIds": [
+          ["butte-1-room-104-exterior-door", "outdoor-0-butte-entrance-7-0"],
+          ["outdoor-0-butte-entrance-7-0", "outdoor-0-osm-5447422344"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-08",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -446.33, "y": 838.3 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-exit-east-service",
+          "outdoor-0-butte-entrance-8-0",
+          "outdoor-0-osm-5447422344"
+        ],
+        "edgeIds": [
+          ["butte-1-exit-east-service", "outdoor-0-butte-entrance-8-0"],
+          ["outdoor-0-butte-entrance-8-0", "outdoor-0-osm-5447422344"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-09",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -511.85, "y": 804.64 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-exit-southeast-stairs",
+          "outdoor-0-butte-entrance-9-0",
+          "outdoor-0-osm-12016281796"
+        ],
+        "edgeIds": [
+          ["butte-1-exit-southeast-stairs", "outdoor-0-butte-entrance-9-0"],
+          ["outdoor-0-butte-entrance-9-0", "outdoor-0-osm-12016281796"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-10",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -539.27, "y": 846.06 },
+        "initialApproachFeet": 25,
+        "nodeIds": [
+          "butte-1-exit-south-ao",
+          "outdoor-0-butte-entrance-10-0",
+          "outdoor-0-osm-12333501185"
+        ],
+        "edgeIds": [
+          ["butte-1-exit-south-ao", "outdoor-0-butte-entrance-10-0"],
+          ["outdoor-0-butte-entrance-10-0", "outdoor-0-osm-12333501185"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-11",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -542.79, "y": 803.88 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-room-150-south-west-door",
+          "outdoor-0-butte-entrance-11-0",
+          "outdoor-0-osm-12333501189"
+        ],
+        "edgeIds": [
+          ["butte-1-room-150-south-west-door", "outdoor-0-butte-entrance-11-0"],
+          ["outdoor-0-butte-entrance-11-0", "outdoor-0-osm-12333501189"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-BUTTE-12",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/butte/floor-1.json",
+        "location": { "x": -538.77, "y": 796.68 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "butte-1-room-150-south-east-door",
+          "outdoor-0-butte-entrance-12-0",
+          "outdoor-0-osm-12333501188"
+        ],
+        "edgeIds": [
+          ["butte-1-room-150-south-east-door", "outdoor-0-butte-entrance-12-0"],
+          ["outdoor-0-butte-entrance-12-0", "outdoor-0-osm-12333501188"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -116.58, "y": 612.65 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-entrance-north",
+          "outdoor-0-glenn-entrance-1-0",
+          "outdoor-0-osm-5849876274"
+        ],
+        "edgeIds": [
+          ["glenn-1-entrance-north", "outdoor-0-glenn-entrance-1-0"],
+          ["outdoor-0-glenn-entrance-1-0", "outdoor-0-osm-5849876274"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -134.47, "y": 630.75 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-unnumbered-northwest-door",
+          "outdoor-0-glenn-entrance-2-0",
+          "outdoor-0-osm-5849876274"
+        ],
+        "edgeIds": [
+          ["glenn-1-unnumbered-northwest-door", "outdoor-0-glenn-entrance-2-0"],
+          ["outdoor-0-glenn-entrance-2-0", "outdoor-0-osm-5849876274"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -126.3, "y": 621.31 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-unnumbered-north-middle-door",
+          "outdoor-0-glenn-entrance-3-0",
+          "outdoor-0-osm-5849876274"
+        ],
+        "edgeIds": [
+          [
+            "glenn-1-unnumbered-north-middle-door",
+            "outdoor-0-glenn-entrance-3-0"
+          ],
+          ["outdoor-0-glenn-entrance-3-0", "outdoor-0-osm-5849876274"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -212.14, "y": 574.2 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-entrance-west",
+          "outdoor-0-glenn-entrance-4-0",
+          "outdoor-0-osm-12141514200"
+        ],
+        "edgeIds": [
+          ["glenn-1-entrance-west", "outdoor-0-glenn-entrance-4-0"],
+          ["outdoor-0-glenn-entrance-4-0", "outdoor-0-osm-12141514200"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -219.22, "y": 568.07 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-entrance-106B-west",
+          "outdoor-0-glenn-entrance-5-0",
+          "outdoor-0-osm-12141514200"
+        ],
+        "edgeIds": [
+          ["glenn-1-entrance-106B-west", "outdoor-0-glenn-entrance-5-0"],
+          ["outdoor-0-glenn-entrance-5-0", "outdoor-0-osm-12141514200"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -263.89, "y": 529.37 },
+        "initialApproachFeet": 4.99,
+        "nodeIds": [
+          "glenn-1-entrance-108C-west",
+          "outdoor-0-glenn-entrance-6-0",
+          "outdoor-0-osm-5447420618"
+        ],
+        "edgeIds": [
+          ["glenn-1-entrance-108C-west", "outdoor-0-glenn-entrance-6-0"],
+          ["outdoor-0-glenn-entrance-6-0", "outdoor-0-osm-5447420618"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -180.83, "y": 527.26 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-entrance-east",
+          "outdoor-0-glenn-entrance-7-0",
+          "outdoor-0-osm-3641807009"
+        ],
+        "edgeIds": [
+          ["glenn-1-entrance-east", "outdoor-0-glenn-entrance-7-0"],
+          ["outdoor-0-glenn-entrance-7-0", "outdoor-0-osm-3641807009"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-GLENN-08",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/glenn/floor-1.json",
+        "location": { "x": -304.24, "y": 450.09 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "glenn-1-entrance-south",
+          "outdoor-0-glenn-entrance-8-0",
+          "outdoor-0-osm-5849876272"
+        ],
+        "edgeIds": [
+          ["glenn-1-entrance-south", "outdoor-0-glenn-entrance-8-0"],
+          ["outdoor-0-glenn-entrance-8-0", "outdoor-0-osm-5849876272"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-MODOC-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/modoc/floor-1.json",
+        "location": { "x": 161.14, "y": 1755.89 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "modoc-1-exit-north-wheelchair",
+          "outdoor-0-modoc-entrance-1-0",
+          "outdoor-0-modoc-entrance-1-1",
+          "outdoor-0-osm-5849825638"
+        ],
+        "edgeIds": [
+          ["modoc-1-exit-north-wheelchair", "outdoor-0-modoc-entrance-1-0"],
+          ["outdoor-0-modoc-entrance-1-0", "outdoor-0-modoc-entrance-1-1"],
+          ["outdoor-0-modoc-entrance-1-1", "outdoor-0-osm-5849825638"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-MODOC-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/modoc/floor-1.json",
+        "location": { "x": 251.19, "y": 1583.54 },
+        "initialApproachFeet": 9,
+        "nodeIds": [
+          "modoc-1-exit-southwest-ao",
+          "outdoor-0-modoc-entrance-2-0",
+          "outdoor-0-osm-12062170254"
+        ],
+        "edgeIds": [
+          ["modoc-1-exit-southwest-ao", "outdoor-0-modoc-entrance-2-0"],
+          ["outdoor-0-modoc-entrance-2-0", "outdoor-0-osm-12062170254"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-MODOC-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/modoc/floor-1.json",
+        "location": { "x": 342.06, "y": 1568.14 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "modoc-1-exit-southeast-wheelchair",
+          "outdoor-0-modoc-entrance-3-0",
+          "outdoor-0-modoc-entrance-3-1",
+          "outdoor-0-modoc-entrance-3-2",
+          "outdoor-0-osm-12062170239"
+        ],
+        "edgeIds": [
+          ["modoc-1-exit-southeast-wheelchair", "outdoor-0-modoc-entrance-3-0"],
+          ["outdoor-0-modoc-entrance-3-0", "outdoor-0-modoc-entrance-3-1"],
+          ["outdoor-0-modoc-entrance-3-1", "outdoor-0-modoc-entrance-3-2"],
+          ["outdoor-0-modoc-entrance-3-2", "outdoor-0-osm-12062170239"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-MODOC-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/modoc/floor-1.json",
+        "location": { "x": 283.95, "y": 1674.55 },
+        "initialApproachFeet": 4.99,
+        "nodeIds": [
+          "modoc-1-exit-east-landing",
+          "outdoor-0-modoc-entrance-4-0",
+          "outdoor-0-modoc-entrance-4-1",
+          "outdoor-0-osm-7698079280"
+        ],
+        "edgeIds": [
+          ["modoc-1-exit-east-landing", "outdoor-0-modoc-entrance-4-0"],
+          ["outdoor-0-modoc-entrance-4-0", "outdoor-0-modoc-entrance-4-1"],
+          ["outdoor-0-modoc-entrance-4-1", "outdoor-0-osm-7698079280"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-MODOC-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/modoc/floor-1.json",
+        "location": { "x": 202.4, "y": 1780.3 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "modoc-1-gate-yard-north",
+          "outdoor-0-modoc-entrance-5-0",
+          "outdoor-0-osm-7708714098"
+        ],
+        "edgeIds": [
+          ["modoc-1-gate-yard-north", "outdoor-0-modoc-entrance-5-0"],
+          ["outdoor-0-modoc-entrance-5-0", "outdoor-0-osm-7708714098"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-MODOC-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/modoc/floor-1.json",
+        "location": { "x": 251.81, "y": 1694.19 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "modoc-1-gate-yard-southwest",
+          "outdoor-0-modoc-entrance-6-0",
+          "outdoor-0-osm-7698079280"
+        ],
+        "edgeIds": [
+          ["modoc-1-gate-yard-southwest", "outdoor-0-modoc-entrance-6-0"],
+          ["outdoor-0-modoc-entrance-6-0", "outdoor-0-osm-7698079280"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TEHAMA-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/tehama/floor-1.json",
+        "location": { "x": -721.99, "y": 850.25 },
+        "initialApproachFeet": 13,
+        "nodeIds": [
+          "tehama-1-exit-north-ao",
+          "outdoor-0-tehama-entrance-1-0",
+          "outdoor-0-tehama-entrance-1-1",
+          "outdoor-0-tehama-entrance-1-2",
+          "outdoor-0-osm-12062081754"
+        ],
+        "edgeIds": [
+          ["tehama-1-exit-north-ao", "outdoor-0-tehama-entrance-1-0"],
+          ["outdoor-0-tehama-entrance-1-0", "outdoor-0-tehama-entrance-1-1"],
+          ["outdoor-0-tehama-entrance-1-1", "outdoor-0-tehama-entrance-1-2"],
+          ["outdoor-0-tehama-entrance-1-2", "outdoor-0-osm-12062081754"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TEHAMA-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/tehama/floor-1.json",
+        "location": { "x": -767.07, "y": 916.68 },
+        "initialApproachFeet": 25.01,
+        "nodeIds": [
+          "tehama-1-exit-west-north",
+          "outdoor-0-tehama-entrance-2-0",
+          "outdoor-0-osm-5447257029"
+        ],
+        "edgeIds": [
+          ["tehama-1-exit-west-north", "outdoor-0-tehama-entrance-2-0"],
+          ["outdoor-0-tehama-entrance-2-0", "outdoor-0-osm-5447257029"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TEHAMA-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/tehama/floor-1.json",
+        "location": { "x": -909.34, "y": 837.54 },
+        "initialApproachFeet": 27,
+        "nodeIds": [
+          "tehama-1-exit-west-south",
+          "outdoor-0-tehama-entrance-3-0",
+          "outdoor-0-osm-5849844046"
+        ],
+        "edgeIds": [
+          ["tehama-1-exit-west-south", "outdoor-0-tehama-entrance-3-0"],
+          ["outdoor-0-tehama-entrance-3-0", "outdoor-0-osm-5849844046"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-TEHAMA-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/tehama/floor-1.json",
+        "location": { "x": -911.51, "y": 781.74 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "tehama-1-exit-south",
+          "outdoor-0-tehama-entrance-4-0",
+          "outdoor-0-osm-5862340473"
+        ],
+        "edgeIds": [
+          ["tehama-1-exit-south", "outdoor-0-tehama-entrance-4-0"],
+          ["outdoor-0-tehama-entrance-4-0", "outdoor-0-osm-5862340473"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": -62.99, "y": 1114.44 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-south-ao",
+          "outdoor-0-holt-entrance-1-0",
+          "outdoor-0-osm-5849779141"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-south-ao", "outdoor-0-holt-entrance-1-0"],
+          ["outdoor-0-holt-entrance-1-0", "outdoor-0-osm-5849779141"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": -66.75, "y": 1121.19 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-south-west",
+          "outdoor-0-holt-entrance-2-0",
+          "outdoor-0-osm-5849779141"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-south-west", "outdoor-0-holt-entrance-2-0"],
+          ["outdoor-0-holt-entrance-2-0", "outdoor-0-osm-5849779141"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": 239.05, "y": 1282.6 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-north-ao",
+          "outdoor-0-holt-entrance-3-0",
+          "outdoor-0-osm-5849825631"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-north-ao", "outdoor-0-holt-entrance-3-0"],
+          ["outdoor-0-holt-entrance-3-0", "outdoor-0-osm-5849825631"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-04",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": -0.1, "y": 1234.96 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-west-south",
+          "outdoor-0-holt-entrance-4-0",
+          "outdoor-0-osm-5849825632"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-west-south", "outdoor-0-holt-entrance-4-0"],
+          ["outdoor-0-holt-entrance-4-0", "outdoor-0-osm-5849825632"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-05",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": 103.72, "y": 1292.76 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-west-north",
+          "outdoor-0-holt-entrance-5-0",
+          "outdoor-0-osm-12057911483"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-west-north", "outdoor-0-holt-entrance-5-0"],
+          ["outdoor-0-holt-entrance-5-0", "outdoor-0-osm-12057911483"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-06",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": 34.36, "y": 1173.06 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-east-south",
+          "outdoor-0-holt-entrance-6-0",
+          "outdoor-0-osm-5849825629"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-east-south", "outdoor-0-holt-entrance-6-0"],
+          ["outdoor-0-holt-entrance-6-0", "outdoor-0-osm-5849825629"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-HOLT-07",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/holt/floor-1.json",
+        "location": { "x": 138.18, "y": 1230.86 },
+        "initialApproachFeet": 5,
+        "nodeIds": [
+          "holt-1-exit-east-north",
+          "outdoor-0-holt-entrance-7-0",
+          "outdoor-0-osm-5861595673"
+        ],
+        "edgeIds": [
+          ["holt-1-exit-east-north", "outdoor-0-holt-entrance-7-0"],
+          ["outdoor-0-holt-entrance-7-0", "outdoor-0-osm-5861595673"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-PLUMAS-01",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/plumas/floor-1.json",
+        "location": { "x": -673, "y": 670.12 },
+        "initialApproachFeet": 21,
+        "nodeIds": [
+          "plumas-1-exit-east-ao",
+          "outdoor-0-plumas-entrance-1-0",
+          "outdoor-0-osm-12062081747"
+        ],
+        "edgeIds": [
+          ["plumas-1-exit-east-ao", "outdoor-0-plumas-entrance-1-0"],
+          ["outdoor-0-plumas-entrance-1-0", "outdoor-0-osm-12062081747"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-PLUMAS-02",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/plumas/floor-1.json",
+        "location": { "x": -800.41, "y": 598.78 },
+        "initialApproachFeet": 19,
+        "nodeIds": [
+          "plumas-1-exit-west",
+          "outdoor-0-plumas-entrance-2-0",
+          "outdoor-0-osm-10123331542"
+        ],
+        "edgeIds": [
+          ["plumas-1-exit-west", "outdoor-0-plumas-entrance-2-0"],
+          ["outdoor-0-plumas-entrance-2-0", "outdoor-0-osm-10123331542"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      },
+      {
+        "id": "ENT-PLUMAS-03",
+        "status": "inferred; needs review",
+        "sourceImage": "campusmap.png",
+        "sourceFloor": "src/data/plumas/floor-1.json",
+        "location": { "x": -710.21, "y": 586.1 },
+        "initialApproachFeet": 5.01,
+        "nodeIds": [
+          "plumas-1-exit-south",
+          "outdoor-0-plumas-entrance-3-0",
+          "outdoor-0-osm-5849825660"
+        ],
+        "edgeIds": [
+          ["plumas-1-exit-south", "outdoor-0-plumas-entrance-3-0"],
+          ["outdoor-0-plumas-entrance-3-0", "outdoor-0-osm-5849825660"]
+        ],
+        "reasoning": "Source shows this exterior doorway; the campus map shows surrounding open circulation. Approach is inferred under user walkability guidance, with OSM footprint/barrier checks. The initial outward segment follows the source doorway side and includes registration/covered-approach differences; inspect it with the source plan.",
+        "date": "2026-10-28"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "outdoor-0-acker-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1111.46, "y": 879.61 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1127.68, "y": 870.12 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1122.03, "y": 873.42 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1115.92, "y": 877 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1299.42, "y": 854.39 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1297.49, "y": 851.1 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1292.82, "y": 843.11 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-8-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1291.03, "y": 840.05 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-9-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1267.64, "y": 800.1 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-10-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1265.85, "y": 797.04 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-11-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1260.76, "y": 788.34 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-12-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1258.97, "y": 785.29 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-13-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1254.85, "y": 777.92 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-14-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1210.85, "y": 1014.9 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-15-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1229.17, "y": 1004.17 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-16-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1246.33, "y": 994.13 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-17-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1263.73, "y": 983.95 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-18-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1281.59, "y": 973.49 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-19-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1299.45, "y": 963.04 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-20-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1031.54, "y": 730.34 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-21-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1123.03, "y": 665.94 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-21-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1169.35, "y": 636.7 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-22-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1078.23, "y": 682.49 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-22-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1169.35, "y": 636.7 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-23-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1024.56, "y": 614.51 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-23-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1016.63, "y": 606.25 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-23-2",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1006.63, "y": 596.25 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-24-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1000.31, "y": 602.4 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-25-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1053.1, "y": 718.46 }
+    },
+    {
+      "id": "outdoor-0-acker-entrance-25-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1033.43, "y": 730.77 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 709.46, "y": 883.25 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 552.63, "y": 1078.93 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 556.49, "y": 1080.9 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 509.65, "y": 1039.85 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 521.11, "y": 1044.22 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 522.43, "y": 1049.38 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 508.59, "y": 1100.05 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-8-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 475.8, "y": 957.4 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-9-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 544.78, "y": 1092.33 }
+    },
+    {
+      "id": "outdoor-0-ayres-entrance-10-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 512.41, "y": 930.86 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 97.91, "y": 445.16 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 6.7, "y": 541.73 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 12.84, "y": 545.43 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 1.45, "y": 535.37 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 11.5, "y": 496.01 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 24.38, "y": 473.93 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -44.39, "y": 415.24 }
+    },
+    {
+      "id": "outdoor-0-trinity-entrance-7-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -50.54, "y": 406.95 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1343.79, "y": 556.59 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-1-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1352.9, "y": 576.47 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1295.61, "y": 572.85 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1157.46, "y": 361.55 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1195.31, "y": 278.71 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1324.13, "y": 384.23 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-5-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1330.06, "y": 388.61 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1290.24, "y": 321.74 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1219.86, "y": 477.71 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-8-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1201.76, "y": 460.77 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-9-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1186.02, "y": 431.75 }
+    },
+    {
+      "id": "outdoor-0-yolo-entrance-10-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -1161.44, "y": 370.58 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -402.43, "y": 898.64 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -412.63, "y": 916.89 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -436.83, "y": 945.03 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -461.09, "y": 931.46 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -497.11, "y": 911.32 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -391.18, "y": 863.42 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -415.44, "y": 849.85 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-8-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -443.89, "y": 833.93 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-9-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -509.41, "y": 800.28 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-10-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -561.09, "y": 833.85 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-11-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -547.16, "y": 801.44 }
+    },
+    {
+      "id": "outdoor-0-butte-entrance-12-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -543.13, "y": 794.24 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -112.81, "y": 615.92 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -130.69, "y": 634.02 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -122.52, "y": 624.58 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -215.41, "y": 577.98 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -222.49, "y": 571.85 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -267.16, "y": 533.15 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -177.56, "y": 523.48 }
+    },
+    {
+      "id": "outdoor-0-glenn-entrance-8-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -308.02, "y": 446.82 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 158.65, "y": 1760.22 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-1-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 157.88, "y": 1755.64 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 243.38, "y": 1579.06 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 344.55, "y": 1563.8 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-3-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 341.25, "y": 1562.34 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-3-2",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 331.25, "y": 1562.34 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 288.28, "y": 1677.04 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-4-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 312.79, "y": 1691.24 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 199.92, "y": 1784.63 }
+    },
+    {
+      "id": "outdoor-0-modoc-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 254.3, "y": 1689.85 }
+    },
+    {
+      "id": "outdoor-0-tehama-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -710.63, "y": 856.57 }
+    },
+    {
+      "id": "outdoor-0-tehama-entrance-1-1",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -697.96, "y": 834.13 }
+    },
+    {
+      "id": "outdoor-0-tehama-entrance-1-2",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -688.4, "y": 800.69 }
+    },
+    {
+      "id": "outdoor-0-tehama-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -779.23, "y": 938.53 }
+    },
+    {
+      "id": "outdoor-0-tehama-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -922.46, "y": 861.13 }
+    },
+    {
+      "id": "outdoor-0-tehama-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -915.88, "y": 779.31 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -67.36, "y": 1112.01 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -71.12, "y": 1118.75 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 243.42, "y": 1285.03 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-4-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -2.53, "y": 1239.33 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-5-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 101.29, "y": 1297.13 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-6-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 36.8, "y": 1168.69 }
+    },
+    {
+      "id": "outdoor-0-holt-entrance-7-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": 140.62, "y": 1226.49 }
+    },
+    {
+      "id": "outdoor-0-plumas-entrance-1-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -654.68, "y": 680.38 }
+    },
+    {
+      "id": "outdoor-0-plumas-entrance-2-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -816.99, "y": 589.5 }
+    },
+    {
+      "id": "outdoor-0-plumas-entrance-3-0",
+      "buildingId": null,
+      "floorId": 0,
+      "position": { "x": -707.76, "y": 581.73 }
+    }
+  ],
+  "edges": [
+    {
+      "from": "acker-1-exit-lobby-east-ao",
+      "to": "outdoor-0-acker-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-1-0",
+      "to": "outdoor-0-osm-5862340690",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-lobby-south-1",
+      "to": "outdoor-0-acker-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-2-0",
+      "to": "outdoor-0-osm-5862340689",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-lobby-south-2",
+      "to": "outdoor-0-acker-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-3-0",
+      "to": "outdoor-0-osm-5862340689",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-lobby-south-3",
+      "to": "outdoor-0-acker-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-4-0",
+      "to": "outdoor-0-osm-5862340689",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-north-1",
+      "to": "outdoor-0-acker-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-5-0",
+      "to": "outdoor-0-osm-12016040164",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-north-2",
+      "to": "outdoor-0-acker-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-6-0",
+      "to": "outdoor-0-osm-12016040164",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-north-3",
+      "to": "outdoor-0-acker-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-7-0",
+      "to": "outdoor-0-osm-12012115813",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-north-4",
+      "to": "outdoor-0-acker-entrance-8-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-8-0",
+      "to": "outdoor-0-osm-12012115813",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-south-1",
+      "to": "outdoor-0-acker-entrance-9-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-9-0",
+      "to": "outdoor-0-osm-12847941565",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-south-2",
+      "to": "outdoor-0-acker-entrance-10-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-10-0",
+      "to": "outdoor-0-osm-12847941565",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-south-3",
+      "to": "outdoor-0-acker-entrance-11-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-11-0",
+      "to": "outdoor-0-osm-12847941565",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-gym-west-south-4",
+      "to": "outdoor-0-acker-entrance-12-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-12-0",
+      "to": "outdoor-0-osm-12847941565",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-storage-west-exterior-door",
+      "to": "outdoor-0-acker-entrance-13-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-13-0",
+      "to": "outdoor-0-osm-12847941565",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-room-151",
+      "to": "outdoor-0-acker-entrance-14-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-14-0",
+      "to": "outdoor-0-osm-5849876256",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-room-152",
+      "to": "outdoor-0-acker-entrance-15-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-15-0",
+      "to": "outdoor-0-osm-5849876256",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-room-153",
+      "to": "outdoor-0-acker-entrance-16-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-16-0",
+      "to": "outdoor-0-osm-12013138474",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-room-154",
+      "to": "outdoor-0-acker-entrance-17-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-17-0",
+      "to": "outdoor-0-osm-12013138474",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-room-155",
+      "to": "outdoor-0-acker-entrance-18-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-18-0",
+      "to": "outdoor-0-osm-12012115817",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-room-156",
+      "to": "outdoor-0-acker-entrance-19-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-19-0",
+      "to": "outdoor-0-osm-12012115817",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-southeast-ao",
+      "to": "outdoor-0-acker-entrance-20-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-20-0",
+      "to": "outdoor-0-osm-10123191877",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-locker-south",
+      "to": "outdoor-0-acker-entrance-21-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-21-0",
+      "to": "outdoor-0-acker-entrance-21-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-21-1",
+      "to": "outdoor-0-osm-313659073",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-unnumbered-annex-northwest-exterior-door",
+      "to": "outdoor-0-acker-entrance-22-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-22-0",
+      "to": "outdoor-0-acker-entrance-22-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-22-1",
+      "to": "outdoor-0-osm-313659073",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-annex-west",
+      "to": "outdoor-0-acker-entrance-23-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-23-0",
+      "to": "outdoor-0-acker-entrance-23-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-23-1",
+      "to": "outdoor-0-acker-entrance-23-2",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-23-2",
+      "to": "outdoor-0-osm-10123191881",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-annex-south",
+      "to": "outdoor-0-acker-entrance-24-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-24-0",
+      "to": "outdoor-0-osm-10123191881",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "acker-1-exit-127-north",
+      "to": "outdoor-0-acker-entrance-25-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-25-0",
+      "to": "outdoor-0-acker-entrance-25-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-acker-entrance-25-1",
+      "to": "outdoor-0-osm-10123191877",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-entrance-northwest",
+      "to": "outdoor-0-ayres-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-1-0",
+      "to": "outdoor-0-osm-5861595679",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-entrance-southwest",
+      "to": "outdoor-0-ayres-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-2-0",
+      "to": "outdoor-0-osm-5849825626",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-room-121-exterior",
+      "to": "outdoor-0-ayres-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-3-0",
+      "to": "outdoor-0-osm-5849825626",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-room-129-exterior",
+      "to": "outdoor-0-ayres-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-4-0",
+      "to": "outdoor-0-osm-12062031833",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-room-129A",
+      "to": "outdoor-0-ayres-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-5-0",
+      "to": "outdoor-0-osm-12062031833",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-room-129B",
+      "to": "outdoor-0-ayres-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-6-0",
+      "to": "outdoor-0-osm-12062031833",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-entrance-studio-south",
+      "to": "outdoor-0-ayres-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-7-0",
+      "to": "outdoor-0-osm-4715296150",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-entrance-southeast",
+      "to": "outdoor-0-ayres-entrance-8-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-8-0",
+      "to": "outdoor-0-osm-5849825627",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-entrance-studio-120B",
+      "to": "outdoor-0-ayres-entrance-9-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-9-0",
+      "to": "outdoor-0-osm-471730317",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "ayres-1-room-130-east",
+      "to": "outdoor-0-ayres-entrance-10-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-ayres-entrance-10-0",
+      "to": "outdoor-0-osm-4715296178",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-east-ao",
+      "to": "outdoor-0-trinity-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-1-0",
+      "to": "outdoor-0-osm-5849825649",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-west-middle",
+      "to": "outdoor-0-trinity-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-2-0",
+      "to": "outdoor-0-osm-12062291671",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-west-north",
+      "to": "outdoor-0-trinity-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-3-0",
+      "to": "outdoor-0-osm-12062291672",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-west-south",
+      "to": "outdoor-0-trinity-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-4-0",
+      "to": "outdoor-0-osm-12062291671",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-west-stair",
+      "to": "outdoor-0-trinity-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-5-0",
+      "to": "outdoor-0-osm-12062291670",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-main-west",
+      "to": "outdoor-0-trinity-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-6-0",
+      "to": "outdoor-0-osm-12062291674",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "trinity-1-exit-south-ao",
+      "to": "outdoor-0-trinity-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-7-0",
+      "to": "outdoor-0-trinity-entrance-7-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-trinity-entrance-7-1",
+      "to": "outdoor-0-osm-12291397691",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-north-ao",
+      "to": "outdoor-0-yolo-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-1-0",
+      "to": "outdoor-0-yolo-entrance-1-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-1-1",
+      "to": "outdoor-0-osm-12847941558",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-142-north",
+      "to": "outdoor-0-yolo-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-2-0",
+      "to": "outdoor-0-osm-12012115821",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-east-wing-north",
+      "to": "outdoor-0-yolo-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-3-0",
+      "to": "outdoor-0-osm-12012115822",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-south-ao",
+      "to": "outdoor-0-yolo-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-4-0",
+      "to": "outdoor-0-osm-7701180205",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-112-west",
+      "to": "outdoor-0-yolo-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-5-0",
+      "to": "outdoor-0-yolo-entrance-5-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-5-1",
+      "to": "outdoor-0-osm-7700051609",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-109-west",
+      "to": "outdoor-0-yolo-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-6-0",
+      "to": "outdoor-0-osm-7700051607",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-145-east",
+      "to": "outdoor-0-yolo-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-7-0",
+      "to": "outdoor-0-osm-10123191883",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-150-east",
+      "to": "outdoor-0-yolo-entrance-8-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-8-0",
+      "to": "outdoor-0-osm-12012115822",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-155-east",
+      "to": "outdoor-0-yolo-entrance-9-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-9-0",
+      "to": "outdoor-0-osm-12012115822",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "yolo-1-exit-166-east",
+      "to": "outdoor-0-yolo-entrance-10-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-yolo-entrance-10-0",
+      "to": "outdoor-0-osm-12012115822",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-exit-north-east-ao",
+      "to": "outdoor-0-butte-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-1-0",
+      "to": "outdoor-0-osm-12217013243",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-exit-north-west",
+      "to": "outdoor-0-butte-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-2-0",
+      "to": "outdoor-0-osm-12217013243",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-room-101-exterior-door",
+      "to": "outdoor-0-butte-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-3-0",
+      "to": "outdoor-0-osm-12217013244",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-room-103-exterior-door",
+      "to": "outdoor-0-butte-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-4-0",
+      "to": "outdoor-0-osm-13043534417",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-exit-west-stairs",
+      "to": "outdoor-0-butte-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-5-0",
+      "to": "outdoor-0-osm-13043534416",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-room-102-exterior-door",
+      "to": "outdoor-0-butte-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-6-0",
+      "to": "outdoor-0-osm-12217013241",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-room-104-exterior-door",
+      "to": "outdoor-0-butte-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-7-0",
+      "to": "outdoor-0-osm-5447422344",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-exit-east-service",
+      "to": "outdoor-0-butte-entrance-8-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-8-0",
+      "to": "outdoor-0-osm-5447422344",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-exit-southeast-stairs",
+      "to": "outdoor-0-butte-entrance-9-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-9-0",
+      "to": "outdoor-0-osm-12016281796",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-exit-south-ao",
+      "to": "outdoor-0-butte-entrance-10-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-10-0",
+      "to": "outdoor-0-osm-12333501185",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-room-150-south-west-door",
+      "to": "outdoor-0-butte-entrance-11-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-11-0",
+      "to": "outdoor-0-osm-12333501189",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "butte-1-room-150-south-east-door",
+      "to": "outdoor-0-butte-entrance-12-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-butte-entrance-12-0",
+      "to": "outdoor-0-osm-12333501188",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-entrance-north",
+      "to": "outdoor-0-glenn-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-1-0",
+      "to": "outdoor-0-osm-5849876274",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-unnumbered-northwest-door",
+      "to": "outdoor-0-glenn-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-2-0",
+      "to": "outdoor-0-osm-5849876274",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-unnumbered-north-middle-door",
+      "to": "outdoor-0-glenn-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-3-0",
+      "to": "outdoor-0-osm-5849876274",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-entrance-west",
+      "to": "outdoor-0-glenn-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-4-0",
+      "to": "outdoor-0-osm-12141514200",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-entrance-106B-west",
+      "to": "outdoor-0-glenn-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-5-0",
+      "to": "outdoor-0-osm-12141514200",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-entrance-108C-west",
+      "to": "outdoor-0-glenn-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-6-0",
+      "to": "outdoor-0-osm-5447420618",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-entrance-east",
+      "to": "outdoor-0-glenn-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-7-0",
+      "to": "outdoor-0-osm-3641807009",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "glenn-1-entrance-south",
+      "to": "outdoor-0-glenn-entrance-8-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-glenn-entrance-8-0",
+      "to": "outdoor-0-osm-5849876272",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "modoc-1-exit-north-wheelchair",
+      "to": "outdoor-0-modoc-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-1-0",
+      "to": "outdoor-0-modoc-entrance-1-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-1-1",
+      "to": "outdoor-0-osm-5849825638",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "modoc-1-exit-southwest-ao",
+      "to": "outdoor-0-modoc-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-2-0",
+      "to": "outdoor-0-osm-12062170254",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "modoc-1-exit-southeast-wheelchair",
+      "to": "outdoor-0-modoc-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-3-0",
+      "to": "outdoor-0-modoc-entrance-3-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-3-1",
+      "to": "outdoor-0-modoc-entrance-3-2",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-3-2",
+      "to": "outdoor-0-osm-12062170239",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "modoc-1-exit-east-landing",
+      "to": "outdoor-0-modoc-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-4-0",
+      "to": "outdoor-0-modoc-entrance-4-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-4-1",
+      "to": "outdoor-0-osm-7698079280",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "modoc-1-gate-yard-north",
+      "to": "outdoor-0-modoc-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-5-0",
+      "to": "outdoor-0-osm-7708714098",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "modoc-1-gate-yard-southwest",
+      "to": "outdoor-0-modoc-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-modoc-entrance-6-0",
+      "to": "outdoor-0-osm-7698079280",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "tehama-1-exit-north-ao",
+      "to": "outdoor-0-tehama-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-tehama-entrance-1-0",
+      "to": "outdoor-0-tehama-entrance-1-1",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-tehama-entrance-1-1",
+      "to": "outdoor-0-tehama-entrance-1-2",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-tehama-entrance-1-2",
+      "to": "outdoor-0-osm-12062081754",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "tehama-1-exit-west-north",
+      "to": "outdoor-0-tehama-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-tehama-entrance-2-0",
+      "to": "outdoor-0-osm-5447257029",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "tehama-1-exit-west-south",
+      "to": "outdoor-0-tehama-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-tehama-entrance-3-0",
+      "to": "outdoor-0-osm-5849844046",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "tehama-1-exit-south",
+      "to": "outdoor-0-tehama-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-tehama-entrance-4-0",
+      "to": "outdoor-0-osm-5862340473",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-south-ao",
+      "to": "outdoor-0-holt-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-1-0",
+      "to": "outdoor-0-osm-5849779141",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-south-west",
+      "to": "outdoor-0-holt-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-2-0",
+      "to": "outdoor-0-osm-5849779141",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-north-ao",
+      "to": "outdoor-0-holt-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-3-0",
+      "to": "outdoor-0-osm-5849825631",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-west-south",
+      "to": "outdoor-0-holt-entrance-4-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-4-0",
+      "to": "outdoor-0-osm-5849825632",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-west-north",
+      "to": "outdoor-0-holt-entrance-5-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-5-0",
+      "to": "outdoor-0-osm-12057911483",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-east-south",
+      "to": "outdoor-0-holt-entrance-6-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-6-0",
+      "to": "outdoor-0-osm-5849825629",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "holt-1-exit-east-north",
+      "to": "outdoor-0-holt-entrance-7-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-holt-entrance-7-0",
+      "to": "outdoor-0-osm-5861595673",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "plumas-1-exit-east-ao",
+      "to": "outdoor-0-plumas-entrance-1-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-plumas-entrance-1-0",
+      "to": "outdoor-0-osm-12062081747",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "plumas-1-exit-west",
+      "to": "outdoor-0-plumas-entrance-2-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-plumas-entrance-2-0",
+      "to": "outdoor-0-osm-10123331542",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "plumas-1-exit-south",
+      "to": "outdoor-0-plumas-entrance-3-0",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-plumas-entrance-3-0",
+      "to": "outdoor-0-osm-5849825660",
+      "weight": 1,
+      "type": "outdoor"
+    }
+  ]
+}

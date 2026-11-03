@@ -1,0 +1,292 @@
+{
+  "butte": {
+    "osmFootprintWayId": 28551808,
+    "reviewLimitFeet": 8,
+    "anchors": [
+      {
+        "osmVertexIndex": 3,
+        "pdfPointFromTopLeft": {
+          "x": 100.66666666666667,
+          "y": 63.333333333333336
+        }
+      },
+      {
+        "osmVertexIndex": 5,
+        "pdfPointFromTopLeft": {
+          "x": 404.6666666666667,
+          "y": 63.333333333333336
+        }
+      },
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 404.6666666666667,
+          "y": 672.0
+        }
+      },
+      {
+        "osmVertexIndex": 2,
+        "pdfPointFromTopLeft": {
+          "x": 100.66666666666667,
+          "y": 672.0
+        }
+      }
+    ]
+  },
+  "glenn": {
+    "osmFootprintWayId": 28551720,
+    "reviewLimitFeet": 8,
+    "anchors": [
+      {
+        "osmVertexIndex": 7,
+        "pdfPointFromTopLeft": {
+          "x": 238.66666666666666,
+          "y": 70.66666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 9,
+        "pdfPointFromTopLeft": {
+          "x": 370.0,
+          "y": 70.66666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 380.0,
+          "y": 658.0
+        }
+      },
+      {
+        "osmVertexIndex": 2,
+        "pdfPointFromTopLeft": {
+          "x": 238.66666666666666,
+          "y": 658.0
+        }
+      },
+      {
+        "osmVertexIndex": 11,
+        "pdfPointFromTopLeft": {
+          "x": 370.0,
+          "y": 467.3333333333333
+        }
+      },
+      {
+        "osmVertexIndex": 12,
+        "pdfPointFromTopLeft": {
+          "x": 380.0,
+          "y": 467.3333333333333
+        }
+      }
+    ]
+  },
+  "modoc": {
+    "osmFootprintWayId": 30524539,
+    "reviewLimitFeet": 8,
+    "anchors": [
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 305.3333333333333,
+          "y": 57.333333333333336
+        }
+      },
+      {
+        "osmVertexIndex": 1,
+        "pdfPointFromTopLeft": {
+          "x": 212.0,
+          "y": 57.333333333333336
+        }
+      },
+      {
+        "osmVertexIndex": 6,
+        "pdfPointFromTopLeft": {
+          "x": 147.33333333333334,
+          "y": 92.0
+        }
+      },
+      {
+        "osmVertexIndex": 7,
+        "pdfPointFromTopLeft": {
+          "x": 147.33333333333334,
+          "y": 480.6666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 20,
+        "pdfPointFromTopLeft": {
+          "x": 420.0,
+          "y": 672.0
+        }
+      },
+      {
+        "osmVertexIndex": 21,
+        "pdfPointFromTopLeft": {
+          "x": 420.0,
+          "y": 377.3333333333333
+        }
+      }
+    ]
+  },
+  "tehama": {
+    "osmFootprintWayId": 565655977,
+    "reviewLimitFeet": 8,
+    "anchors": [
+      {
+        "osmVertexIndex": 13,
+        "pdfPointFromTopLeft": {
+          "x": 108.0,
+          "y": 120.66666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 14,
+        "pdfPointFromTopLeft": {
+          "x": 108.0,
+          "y": 581.3333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 20,
+        "pdfPointFromTopLeft": {
+          "x": 345.3333333333333,
+          "y": 629.3333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 22,
+        "pdfPointFromTopLeft": {
+          "x": 345.3333333333333,
+          "y": 247.33333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 0,
+        "pdfPointFromTopLeft": {
+          "x": 508.6666666666667,
+          "y": 247.33333333333334
+        }
+      },
+      {
+        "osmVertexIndex": 2,
+        "pdfPointFromTopLeft": {
+          "x": 508.6666666666667,
+          "y": 170.0
+        }
+      },
+      {
+        "osmVertexIndex": 10,
+        "pdfPointFromTopLeft": {
+          "x": 156.0,
+          "y": 73.33333333333333
+        }
+      },
+      {
+        "osmVertexIndex": 9,
+        "pdfPointFromTopLeft": {
+          "x": 345.3333333333333,
+          "y": 73.33333333333333
+        }
+      }
+    ]
+  },
+  "holt": {
+    "osmFootprintWayId": 478296315,
+    "osmRelationId": 7031762,
+    "reviewLimitFeet": 8,
+    "anchors": [
+      {
+        "osmVertexIndex": 19,
+        "pdfPointFromTopLeft": {
+          "x": 197.33333333333334,
+          "y": 55.333333333333336
+        }
+      },
+      {
+        "osmVertexIndex": 21,
+        "pdfPointFromTopLeft": {
+          "x": 414.0,
+          "y": 55.333333333333336
+        }
+      },
+      {
+        "osmVertexIndex": 22,
+        "pdfPointFromTopLeft": {
+          "x": 414.0,
+          "y": 250.66666666666666
+        }
+      },
+      {
+        "osmVertexIndex": 14,
+        "pdfPointFromTopLeft": {
+          "x": 154.0,
+          "y": 272.0
+        }
+      },
+      {
+        "osmVertexIndex": 13,
+        "pdfPointFromTopLeft": {
+          "x": 154.0,
+          "y": 466.6666666666667
+        }
+      },
+      {
+        "osmVertexIndex": 7,
+        "pdfPointFromTopLeft": {
+          "x": 197.33333333333334,
+          "y": 682.6666666666666
+        }
+      },
+      {
+        "osmVertexIndex": 4,
+        "pdfPointFromTopLeft": {
+          "x": 414.0,
+          "y": 682.6666666666666
+        }
+      },
+      {
+        "osmVertexIndex": 3,
+        "pdfPointFromTopLeft": {
+          "x": 414.0,
+          "y": 488.0
+        }
+      }
+    ]
+  },
+  "plumas": {
+    "osmFootprintWayId": 39338227,
+    "osmRelationId": 7029746,
+    "reviewLimitFeet": 8,
+    "anchors": [
+      {
+        "osmVertexIndex": 17,
+        "pdfPointFromTopLeft": {
+          "x": 125.33333333333333,
+          "y": 46.666666666666664
+        }
+      },
+      {
+        "osmVertexIndex": 18,
+        "pdfPointFromTopLeft": {
+          "x": 485.3333333333333,
+          "y": 46.666666666666664
+        }
+      },
+      {
+        "osmVertexIndex": 7,
+        "pdfPointFromTopLeft": {
+          "x": 125.33333333333333,
+          "y": 634.6666666666666
+        }
+      },
+      {
+        "osmVertexIndex": 5,
+        "pdfPointFromTopLeft": {
+          "x": 485.3333333333333,
+          "y": 634.6666666666666
+        }
+      }
+    ]
+  }
+}

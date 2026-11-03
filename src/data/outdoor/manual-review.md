@@ -296,3 +296,15 @@ Approximate center: 39.728140, -121.844190.
 Map data © OpenStreetMap contributors, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). See [OSM copyright](https://www.openstreetmap.org/copyright). The outdoor derived dataset is ODbL-1.0; it does not relicense application code or independent indoor data.
 
 The one-off supplemental request used Overpass, a named User-Agent, a 25-second server timeout, a 16 MiB resource limit, one request and no automatic retries. No map tiles were downloaded. See [Overpass usage guidance](https://dev.overpass-api.de/overpass-doc/en/preface/commons.html).
+
+## Campus entrance approaches (2026-10-28)
+
+See [entrance-alignment-review.md](entrance-alignment-review.md) for 92 additional
+`ENT-*` review areas. Exact locations and affected node/edge IDs are recorded in
+`entrance-connections.json`; source image is `campusmap.png`. These inferred
+approaches need review, especially the Acker annex and Ayres studio footprint
+corrections. They are separate from the 37 original numbered areas.
+
+The later six-building extension includes Holt/Plumas relation footprints and
+Modoc source fence barriers. All 92 `ENT-*` areas remain inferred and reviewable;
+three Modoc yard doors use the existing gates instead of new fence crossings.

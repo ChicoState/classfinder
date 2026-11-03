@@ -94,7 +94,10 @@ describe('standalone campus outdoor graph', () => {
       expect(
         Number.isFinite(node.position.x) && Number.isFinite(node.position.y)
       ).toBe(true);
-      expect(nodes.get(node.id as NodeId)).toEqual(node);
+      expect(nodes.get(node.id as NodeId)).toEqual({
+        ...node,
+        buildingId: 'outside'
+      });
     }
     for (const edge of outdoor.edges) {
       expect(edge.from).not.toBe(edge.to);
@@ -155,11 +158,11 @@ describe('standalone campus outdoor graph', () => {
       expect(calculatePath(graph, main, indoor)).not.toBeNull();
     }
     expect([...nodes.values()].some((node) => node.buildingId === 'holt')).toBe(
-      false
+      true
     );
     const candidates = new Map(
       [...nodes].filter(
-        ([, node]) => node.buildingId === null && node.floorId === 0
+        ([, node]) => node.buildingId === 'outside' && node.floorId === 0
       )
     );
     expect(

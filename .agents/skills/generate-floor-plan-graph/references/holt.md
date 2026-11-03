@@ -1,5 +1,33 @@
 # Holt Hall (`holt`)
 
+## Current branch correction — 2026-10-28
+
+This section supersedes the historical counts, origin and alignment status below.
+The first-floor origin is now native PDF (355, 682); floors 2–3 and adjacent-floor
+connections already exist on this branch. Holt has a campus transform from OSM
+relation 7031762, outer way 478296315. See `src/graph/campusAlignment.json`.
+
+The user requested restoring the missing stair-room approaches, correcting stale
+parent-room test IDs and a first-floor review preview. Ten nodes and fifteen
+edges restore the user-confirmed level passages from the earlier `bb62fb2` graph,
+rechecked visually on the PDF and converted to the current origin. Native points:
+north west doors (262,256)/(262,265), junction (273,260), east approach (307,260);
+south west doors (262,472)/(262,481), junction (273,477), east approach (307,477);
+northeast upper/lower approaches (340,224)/(340,244). Existing IDs and vertical
+transfer nodes remain intact. Passage edges are corridors with accessibility
+unknown; the prior no-bypass uncertainty is superseded by user confirmation.
+
+First floor now has 193 nodes and 208 undirected edges, all reachable indoors
+from the south AO entrance. The restoration joins the formerly isolated southeast
+exit/landing without outdoor or upper-floor routing. Parent-room tests use current
+181 and interior approach IDs instead of obsolete `*-turn` IDs; the 101 lower
+suite permits its existing entrances through 101 or 111.
+
+The explicitly requested `src/data/holt/floor-1-preview.png` is generated from the
+saved JSON by `node tools/indoor/render-holt-first-floor.mjs`. It overlays the PDF
+and enlarges H1/H2/H3, with restored nodes/edges highlighted and the former isolated
+landing ringed red. It is a local review artifact, not an import or commit artifact.
+
 Digitized 2026-10-19. Display name: Holt Hall; source folder/alias: Holt.
 
 ## Sources and inventory
