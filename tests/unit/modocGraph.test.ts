@@ -56,8 +56,12 @@ describe('Modoc floor-plan graphs', () => {
     const [graph, nodes] = loadGraphFromData();
     expect(
       allNodes.reduce(
-        (sum, node) => sum + graph.get(node.id as NodeId)!
-          .filter((edge) => nodes.get(edge.to)?.buildingId === 'modoc').length,
+        (sum, node) =>
+          sum +
+          graph
+            .get(node.id as NodeId)!
+            .filter((edge) => nodes.get(edge.to)?.buildingId === 'modoc')
+            .length,
         0
       )
     ).toBe(allEdges.length * 2);
@@ -123,7 +127,9 @@ describe('Modoc floor-plan graphs', () => {
     expect(
       graph.get('modoc-2-room-216B' as NodeId)?.map((edge) => edge.to)
     ).toEqual(['modoc-2-room-216-inside']);
-    const entranceEdges = [...graph.get('modoc-1-exit-southwest-ao' as NodeId)!];
+    const entranceEdges = [
+      ...graph.get('modoc-1-exit-southwest-ao' as NodeId)!
+    ];
     nodes.get('modoc-1-exit-southwest-ao' as NodeId)!.position.x = 99;
     graph.get('modoc-1-exit-southwest-ao' as NodeId)!.length = 0;
     const [freshGraph, freshNodes] = loadGraphFromData();

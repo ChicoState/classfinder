@@ -41,7 +41,12 @@ export function findNodeNearPosition(
   let closestDistanceSqr = Number.POSITIVE_INFINITY;
 
   for (const node of nodes.values()) {
-    const currentDistanceSqr = distanceSqr(x, y, node.position.x, node.position.y);
+    const currentDistanceSqr = distanceSqr(
+      x,
+      y,
+      node.position.x,
+      node.position.y
+    );
     if (node.floorId == floor && currentDistanceSqr < closestDistanceSqr) {
       closestDistanceSqr = currentDistanceSqr;
       closestNode = node;

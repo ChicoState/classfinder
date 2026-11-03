@@ -145,7 +145,11 @@ function createReadablePath(
 
       const [turnAngle] = findEdgeTurnAngle(previousEdge, nextEdge, nodes);
 
-      if (nextEdge.type !== edge.type || turnAngle > 30 || edge.type === 'door') {
+      if (
+        nextEdge.type !== edge.type ||
+        turnAngle > 30 ||
+        edge.type === 'door'
+      ) {
         break;
       }
 

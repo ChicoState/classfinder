@@ -4,7 +4,7 @@
     "status": "manual review required; node-level barriers and access tags unavailable",
     "source": {
       "path": "campus-osm.json",
-      "sha256": "8ec616dd757a041bcc09a9020173f40ac2591df6ee7fcb18c778b1be08d700f8",
+      "sha256": "2d09a86c71accd89bab5604b45ed0e12abac36438092ae0f752fed80c34035d5",
       "timestamp": "2026-10-21T19:49:22Z",
       "query": "Campus-area highway ways from scripts/fetch-osm-campus-map.mjs; no wider street network",
       "nodeTagRetrieval": "Single bounded historical Overpass query timed out on 2026-10-25; no supplemental data received."

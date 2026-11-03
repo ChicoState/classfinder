@@ -54,8 +54,12 @@ describe('Tehama floor-plan graphs', () => {
     const [graph, nodes] = loadGraphFromData();
     expect(
       serializedNodes.reduce(
-        (n, node) => n + graph.get(node.id as NodeId)!
-          .filter((edge) => nodes.get(edge.to)?.buildingId === 'tehama').length,
+        (n, node) =>
+          n +
+          graph
+            .get(node.id as NodeId)!
+            .filter((edge) => nodes.get(edge.to)?.buildingId === 'tehama')
+            .length,
         0
       )
     ).toBe(edges.length * 2);
@@ -138,7 +142,8 @@ describe('Tehama floor-plan graphs', () => {
       freshNodes.get('tehama-1-exit-north-ao' as NodeId)!.position
     ).toEqual(toGlobalPosition({ x: 0, y: 0 }, 'tehama'));
     expect(
-      freshGraph.get('tehama-1-exit-north-ao' as NodeId)!
+      freshGraph
+        .get('tehama-1-exit-north-ao' as NodeId)!
         .find((edge) => edge.to === 'tehama-1-hall-north-724')?.isAccessible
     ).toBe(true);
   });

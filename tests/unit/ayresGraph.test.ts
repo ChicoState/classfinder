@@ -62,7 +62,9 @@ describe('Ayres floor plans', () => {
     expect(
       [...graph]
         .filter(([key]) => key.startsWith('ayres-'))
-        .flatMap(([, edges]) => edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'ayres'))
+        .flatMap(([, edges]) =>
+          edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'ayres')
+        )
     ).toHaveLength(380);
     expect(nodes.get(id(floor1.metadata.origin.nodeId))?.position).toEqual(
       toGlobalPosition({ x: 0, y: 0 }, 'ayres')

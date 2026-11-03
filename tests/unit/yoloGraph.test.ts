@@ -51,8 +51,11 @@ describe('Yolo floor-plan graphs', () => {
     const [graph, nodes] = loadGraphFromData();
     expect(
       allNodes.reduce(
-        (sum, node) => sum + graph.get(node.id as NodeId)!
-          .filter((edge) => nodes.get(edge.to)?.buildingId === 'yolo').length,
+        (sum, node) =>
+          sum +
+          graph
+            .get(node.id as NodeId)!
+            .filter((edge) => nodes.get(edge.to)?.buildingId === 'yolo').length,
         0
       )
     ).toBe(allEdges.length * 2);
@@ -122,6 +125,8 @@ describe('Yolo floor-plan graphs', () => {
     expect(freshNodes.get('yolo-1-exit-south-ao' as NodeId)?.position.x).toBe(
       toGlobalPosition({ x: 0, y: 0 }, 'yolo').x
     );
-    expect(freshGraph.get('yolo-1-exit-south-ao' as NodeId)).toEqual(entranceEdges);
+    expect(freshGraph.get('yolo-1-exit-south-ao' as NodeId)).toEqual(
+      entranceEdges
+    );
   });
 });

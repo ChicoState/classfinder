@@ -67,7 +67,9 @@ describe('Butte floor plans', () => {
     expect(
       [...graph]
         .filter(([id]) => id.startsWith('butte-'))
-        .flatMap(([, edges]) => edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'butte'))
+        .flatMap(([, edges]) =>
+          edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'butte')
+        )
     ).toHaveLength(2 * serializedEdges.length);
     expect(nodes.get('butte-1-exit-north-east-ao' as NodeId)?.position).toEqual(
       toGlobalPosition({ x: 0, y: 0 }, 'butte')

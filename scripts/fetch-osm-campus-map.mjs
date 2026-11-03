@@ -18,23 +18,25 @@ const response = await fetch('https://overpass-api.de/api/interpreter', {
   method: 'POST',
   headers: {
     'content-type': 'application/x-www-form-urlencoded',
-    'user-agent': 'ClassFinder-campus-map-script/0.1',
+    'user-agent': 'ClassFinder-campus-map-script/0.1'
   },
-  body: new URLSearchParams({ data: query }),
+  body: new URLSearchParams({ data: query })
 });
 
 if (!response.ok) {
-  throw new Error(`Overpass API returned ${response.status} ${response.statusText}`);
+  throw new Error(
+    `Overpass API returned ${response.status} ${response.statusText}`
+  );
 }
 
 const osm = await response.json();
 const ways = osm.elements.filter(
-  (element) => element.type === 'way' && element.geometry?.length > 1,
+  (element) => element.type === 'way' && element.geometry?.length > 1
 );
 
 if (ways.length === 0) {
   throw new Error(
-    `No OSM features found inside the university area named "${campusName}". Check its OSM boundary and tags.`,
+    `No OSM features found inside the university area named "${campusName}". Check its OSM boundary and tags.`
   );
 }
 
@@ -52,7 +54,7 @@ const projectedWidth = (east - west) * xScale;
 const projectedHeight = north - south;
 const scale = Math.min(
   (width - padding * 2) / projectedWidth,
-  (height - padding * 2) / projectedHeight,
+  (height - padding * 2) / projectedHeight
 );
 const mapWidth = projectedWidth * scale;
 const mapHeight = projectedHeight * scale;
@@ -60,7 +62,8 @@ const offsetX = (width - mapWidth) / 2;
 const offsetY = (height - mapHeight) / 2;
 const project = ({ lat, lon }) =>
   `${(offsetX + (lon - west) * xScale * scale).toFixed(2)},${(
-    offsetY + (north - lat) * scale
+    offsetY +
+    (north - lat) * scale
   ).toFixed(2)}`;
 const escapeXml = (value) =>
   String(value).replace(/[<>&"']/g, (character) => {
@@ -69,7 +72,7 @@ const escapeXml = (value) =>
       '>': '&gt;',
       '&': '&amp;',
       '"': '&quot;',
-      "'": '&apos;',
+      "'": '&apos;'
     };
     return entities[character];
   });
@@ -80,9 +83,16 @@ const features = ways
     const isBuilding = Boolean(tags.building);
     const isArea =
       isBuilding ||
-      Boolean(tags.landuse || tags.leisure || tags.natural === 'wood' || tags.natural === 'water');
+      Boolean(
+        tags.landuse ||
+          tags.leisure ||
+          tags.natural === 'wood' ||
+          tags.natural === 'water'
+      );
     const points = way.geometry.map(project).join(' ');
-    const title = escapeXml(tags.name ?? tags.building ?? tags.highway ?? 'OSM feature');
+    const title = escapeXml(
+      tags.name ?? tags.building ?? tags.highway ?? 'OSM feature'
+    );
 
     if (isArea && way.geometry.length > 2) {
       const fill = isBuilding ? '#d6c8b8' : '#d9edce';
@@ -95,7 +105,13 @@ const features = ways
     }
 
     if (tags.highway) {
-      const isPath = ['footway', 'path', 'pedestrian', 'steps', 'cycleway'].includes(tags.highway);
+      const isPath = [
+        'footway',
+        'path',
+        'pedestrian',
+        'steps',
+        'cycleway'
+      ].includes(tags.highway);
       const stroke = isPath ? '#c99a63' : '#fff';
       const lineWidth = isPath ? 2 : 4;
       return `<polyline points="${points}" fill="none" stroke="${stroke}" stroke-width="${lineWidth}" stroke-linecap="round" stroke-linejoin="round"><title>${title}</title></polyline>`;
@@ -117,4 +133,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 const { writeFile } = await import('node:fs/promises');
 await writeFile(`${outputPrefix}.json`, `${JSON.stringify(osm, null, 2)}\n`);
 await writeFile(`${outputPrefix}.svg`, svg);
-console.log(`Wrote ${outputPrefix}.json and ${outputPrefix}.svg (${ways.length} ways).`);
+console.log(
+  `Wrote ${outputPrefix}.json and ${outputPrefix}.svg (${ways.length} ways).`
+);
