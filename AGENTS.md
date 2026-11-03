@@ -10,7 +10,7 @@ This repository has an infrastructure foundation, a React application shell, and
 - `package.json`, `tsconfig.json`, `eslint.config.js`, `.prettierrc.json`: TypeScript tooling.
 - `Dockerfile`, `compose.yml`, `.dockerignore`: development container setup.
 - `scripts/`: infrastructure smoke checks only.
-- `tests/unit`: graph loading, assembly, and Dijkstra tests. `tests/ui` and `tests/e2e`: reserved for future user-flow tests.
+- `tests/unit`: graph loading, assembly, and Dijkstra tests. `tests/ui` and `tests/e2e`: application rendering, floor selection, and built-app navigation tests.
 - `.github/workflows/`: pull-request and GitHub Pages release automation.
 - `src/`: React application source, graph contracts and Dijkstra in `lib/`, and the graph loader in `graph/`.
 - `src/data/<building-id>/*.json`: automatically discovered at build time by the loader; each file has `edges` and may have `nodes` (connection files need no nodes). All nodes are initialized before two-way edges are added.
@@ -51,3 +51,8 @@ The pull-request workflow mirrors these checks when application files and tests 
 - Add or update meaningful tests with application behavior, then enforce the coverage threshold selected in the plan.
 - Update this file and `README.md` whenever commands, paths, services, or workflows change.
 - Use documentation and code-review skills before merging material changes.
+
+Run `npm run check` for the on-demand pre-push checks; no Git hooks are installed.
+Playwright builds and serves the app automatically; install Chromium once with
+`npx playwright install chromium`. Coverage includes source except bootstrap and
+type-only files and requires 80% statements/lines/functions and 75% branches.

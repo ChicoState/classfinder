@@ -1,4 +1,26 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+
+// Keep coordinate selection deterministic as bundled buildings grow.
+vi.mock('../../src/graph/graphLoader', async (importOriginal) => {
+  const { connectBothWays } =
+    await importOriginal<typeof import('../../src/graph/graphLoader')>();
+  return {
+    connectBothWays,
+    loadGraphFromData: () => {
+      const a = 'a' as NodeId;
+      const b = 'b' as NodeId;
+      const nodes: Nodes = new Map([
+        [a, createNode(a, 0, 0)],
+        [b, createNode(b, -13.08, 6.55)]
+      ]);
+      const graph = new Map([
+        [a, [{ to: b, distance: 1, weight: 1, type: 'door' as const }]],
+        [b, []]
+      ]);
+      return [graph, nodes];
+    }
+  };
+});
 
 import {
   getNextInstruction,
@@ -28,6 +50,27 @@ describe('getNextInstruction', () => {
   const previous = 'previous' as NodeId;
   const current = 'current' as NodeId;
   const next = 'next' as NodeId;
+
+  it('rejects missing path endpoints', () => {
+    expect(() =>
+      getNextInstruction(null, createEdge(current, next, 'corridor'), new Map())
+    ).toThrow('Path references a node');
+  });
+
+  it.each([0, 1])('handles a zero-length segment at position %s', (x) => {
+    const nodes: Nodes = new Map([
+      [previous, createNode(previous, 0, 0)],
+      [current, createNode(current, x, 0)],
+      [next, createNode(next, 1, 0)]
+    ]);
+    expect(
+      getNextInstruction(
+        createEdge(previous, current, 'corridor'),
+        createEdge(current, next, 'corridor'),
+        nodes
+      )
+    ).toBe('Continue along the corridor.');
+  });
 
   it('describes the first corridor edge without a turn', () => {
     const nodes: Nodes = new Map([
@@ -133,6 +176,15 @@ describe('getNextInstruction', () => {
 });
 
 describe('getReadableInstructions', () => {
+  it('returns null when endpoint nodes have no connecting path', () => {
+    expect(getReadableInstructions(-13.08, 6.55, 1, 0, 0, 1)).toBeNull();
+  });
+
+  it('returns null for a floor without nodes', () => {
+    expect(getReadableInstructions(0, 0, 99, 0, 0, 1)).toBeNull();
+    expect(getReadableInstructions(0, 0, 1, 0, 0, 99)).toBeNull();
+  });
+
   it('returns an instruction for each edge followed by the destination', () => {
     expect(getReadableInstructions(0, 0, 1, -13.08, 6.55, 1)).toEqual([
       {
@@ -158,7 +210,3 @@ describe('getReadableInstructions', () => {
     ]);
   });
 });
-
-console.table(
-  getReadableInstructions(0, 0, 1, -24.38, 177.47, 4)
-);
