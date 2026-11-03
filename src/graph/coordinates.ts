@@ -10,18 +10,20 @@ export function toLocalPosition(
   globalPosition: Vector2,
   buildingId: string | null
 ): Vector2 {
-  if (buildingId === null || buildingId === 'outside') return { ...globalPosition };
+  if (buildingId === null || buildingId === 'outside')
+    return { ...globalPosition };
 
   const transform = transforms.get(buildingId);
   if (!transform)
     throw new Error(`No campus alignment for building ${buildingId}.`);
 
   const { a, b, tx, ty } = transform;
-  const invA = 1 / a;
-  const invB = 1 / b;
+  const determinant = a * a + b * b;
+  const dx = globalPosition.x - tx;
+  const dy = globalPosition.y - ty;
   return {
-    x: invA * (globalPosition.x - tx) + invB * (globalPosition.y - ty),
-    y: -invB * (globalPosition.x - tx) + invA * (globalPosition.y - ty)
+    x: (a * dx + b * dy) / determinant,
+    y: (-b * dx + a * dy) / determinant
   };
 }
 

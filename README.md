@@ -297,3 +297,8 @@ verified against their source PDFs. `tests/unit/plumasGraph.test.ts` checks all
 three two-way transfers and routes from campus to all 82 third-floor nodes and
 back. Elevator availability/access remains unknown; costs still omit vertical
 rise and waiting time.
+
+The local website opens at `http://localhost:5173/`. Its existing router and map
+use the npm dependencies `react-router`, `react-leaflet`, and `leaflet`; Compose
+installs them from the lockfile automatically. After pulling dependency changes,
+restart Compose so `npm ci` refreshes the container's dependency volume.

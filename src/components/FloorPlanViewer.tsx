@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Building } from '../buildings/types';
 import type { Node } from '../lib/graph';
+import { toLocalPosition } from '../graph/coordinates';
 //This file is how the floor plans are viewed on the building page. This  will probably end up getting mostly scrapped as this was mostly for the demo.
 //So I don't think I will go into too much depth with my comments.
 
@@ -19,11 +20,11 @@ export default function FloorPlanViewer({building, routeNodes}: Props)
 	const plan = building.floors.find((floor) => floor.floor === selectedFloor)!;
 
 	
-	const routePoints = routeNodes.filter((node) => node.floorId === selectedFloor).map((node) => ({
+	const routePoints = routeNodes.filter((node) => node.buildingId === building.graphBuildingId && node.floorId === selectedFloor).map((node) => ({
 		x: 
-			(plan.pdfOrigin.x + node.position.x / plan.feetPerPdfPoint) * plan.pdfPointToImageScale,
+			(plan.pdfOrigin.x + toLocalPosition(node.position, building.graphBuildingId).x / plan.feetPerPdfPoint) * plan.pdfPointToImageScale,
 		y:
-			(plan.pdfOrigin.y - node.position.y / plan.feetPerPdfPoint) * plan.pdfPointToImageScale,
+			(plan.pdfOrigin.y - toLocalPosition(node.position, building.graphBuildingId).y / plan.feetPerPdfPoint) * plan.pdfPointToImageScale,
 		}));
 
 		return (

@@ -1,6 +1,6 @@
 import BuildingPage from './pages/BuildingPage';
 import CampusMap from './components/CampusMap';
-import { Link, Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 
 function HomePage()
 {
