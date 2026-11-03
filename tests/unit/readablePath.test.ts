@@ -106,3 +106,27 @@ it('groups an elevator ride to its final floor', () => {
     )?.map((node) => node.instruction)
   ).toEqual(['Take the elevator to floor 4.', 'You have arrived.']);
 });
+
+it('returns null when endpoint nodes have no connecting path', () => {
+  expect(
+    route(
+      [
+        [0, 0],
+        [1, 0]
+      ],
+      []
+    )
+  ).toBeNull();
+});
+
+it('returns null when either requested floor has no nodes', () => {
+  route(
+    [
+      [0, 0],
+      [1, 0]
+    ],
+    ['door']
+  );
+  expect(getReadableInstructions(0, 0, 99, 1, 0, 1)).toBeNull();
+  expect(getReadableInstructions(0, 0, 1, 1, 0, 99)).toBeNull();
+});

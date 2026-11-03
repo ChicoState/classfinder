@@ -13,12 +13,13 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit --project tsconfig.json",
-    "test": "vitest run --passWithNoTests",
-    "coverage": "vitest run --passWithNoTests --coverage.enabled",
-    "test:e2e": "playwright test --pass-with-no-tests",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage.enabled",
+    "test:e2e": "playwright test",
     "test:smoke": "node scripts/smoke-infrastructure.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run coverage && npm run test:smoke && npm run test:e2e"
   },
   "dependencies": {
     "heap-js": "^2.7.1",

@@ -2,6 +2,8 @@ name: Pull request checks
 
 on:
   pull_request:
+  push:
+    branches: [main]
 
 permissions:
   contents: read
@@ -19,7 +21,6 @@ jobs:
       - run: npm run format:check
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm test
       - run: npm run coverage
       - run: npm run test:smoke
       - uses: actions/upload-artifact@v4
@@ -31,7 +32,6 @@ jobs:
 
   browser-and-build:
     needs: quality
-    if: { hashFiles('index.html', 'src/**') != '' }
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,10 +41,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: npm run build
       - run: npm run test:e2e
-        env:
-          PLAYWRIGHT_WEB_SERVER: 'true'
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

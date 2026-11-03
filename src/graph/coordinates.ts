@@ -6,6 +6,7 @@ const transforms = new Map<string, SimilarityTransform>(
   Object.entries(buildings)
 );
 
+// converts global campus coordinates to local building coordinates
 export function toLocalPosition(
   globalPosition: Vector2,
   buildingId: string | null
@@ -27,7 +28,7 @@ export function toLocalPosition(
   };
 }
 
-/** Converts saved building drawing coordinates to the single runtime campus frame. */
+// Converts saved building drawing coordinates to the single runtime campus frame.
 export function toGlobalPosition(
   position: Vector2,
   buildingId: string | null
@@ -45,6 +46,7 @@ export function toGlobalPosition(
   };
 }
 
+// Converts GPS coordinates to the campus coordinate system.
 export function gpsToCampusPosition(
   latitude: number,
   longitude: number

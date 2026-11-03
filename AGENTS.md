@@ -72,3 +72,8 @@ The pull-request workflow mirrors these checks when application files and tests 
 - Plumas third-floor integration (2026-11-03): corresponding west/east stair and east elevator transfers now connect floors 2–3 after visual comparison of both source PDFs. The former “floor 2 absent” limitation was stale. `tests/unit/plumasGraph.test.ts` checks the three two-way links and campus routes to all 82 third-floor nodes and back. Elevator access remains unknown. The loaded graph gains six directed edges (10,780 total); source floor topology is unchanged.
 
 - Local website startup: the existing React UI requires runtime `react-router`, `react-leaflet`, and `leaflet`, with `@types/leaflet` for TypeScript. These are locked npm dependencies and are installed by Compose's existing `npm ci`. FloorPlanViewer converts global route positions with the inverse building transform using `graphBuildingId`, filtering both building and floor; coordinate round-trip and viewer projection regressions cover this boundary.
+
+Run `npm run check` for the on-demand pre-push checks; no Git hooks are installed.
+Playwright builds and serves the app automatically; install Chromium once with
+`npx playwright install chromium`. Coverage includes source except bootstrap and
+type-only files and requires 80% statements/lines/functions and 75% branches.

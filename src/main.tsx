@@ -15,5 +15,5 @@ createRoot(rootElement).render(
     <HashRouter>
       <App />
     </HashRouter>
-  </StrictMode>,
+  </StrictMode>
 );

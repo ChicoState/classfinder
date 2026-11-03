@@ -219,3 +219,118 @@ describe('Langdon floor plans', () => {
     ]);
   });
 });
+
+describe('Langdon per-floor topology and serialized edges', () => {
+  it('loads unique, finite nodes and two-way coordinate-derived edges', () => {
+    const [graph, nodes] = loadGraphFromData();
+    expect(new Set(serializedNodes.map((node) => node.id)).size).toBe(
+      serializedNodes.length
+    );
+    const pairs = new Set<string>();
+    for (const node of serializedNodes) {
+      expect(nodes.get(node.id as NodeId)).toEqual({
+        ...node,
+        position: toGlobalPosition(node.position, node.buildingId)
+      });
+      expect(node.buildingId).toBe('lang');
+      expect(
+        Number.isFinite(node.position.x) && Number.isFinite(node.position.y)
+      ).toBe(true);
+    }
+    for (const edge of serializedEdges) {
+      const from = nodes.get(edge.from as NodeId)!;
+      const to = nodes.get(edge.to as NodeId)!;
+      const pair = [edge.from, edge.to].sort().join('|');
+      expect(pairs.has(pair)).toBe(false);
+      pairs.add(pair);
+      expect(edge.from).not.toBe(edge.to);
+      expect(edge).not.toHaveProperty('distance');
+      const distance = Math.hypot(
+        from.position.x - to.position.x,
+        from.position.y - to.position.y
+      );
+      const { from: fromId, to: toId, ...attributes } = edge;
+      expect(graph.get(fromId as NodeId)).toContainEqual({
+        ...attributes,
+        to: toId,
+        distance
+      });
+      expect(graph.get(toId as NodeId)).toContainEqual({
+        ...attributes,
+        to: fromId,
+        distance
+      });
+    }
+    expect(nodes.get('lang-1-exit-119-west' as NodeId)?.position).toEqual(
+      toGlobalPosition({ x: 0, y: 0 }, 'lang')
+    );
+  });
+
+  it('reaches every doorway within its own floor and across floors using real Dijkstra', () => {
+    const [graph, nodes] = loadGraphFromData();
+    const origin = nodes.get('lang-1-exit-119-west' as NodeId)!;
+    for (const floor of floors) {
+      const candidates = new Map(
+        [...nodes].filter(
+          ([, node]) =>
+            node.buildingId === 'lang' && node.floorId === floor.metadata.floor
+        )
+      );
+      const start = nodes.get(floor.nodes[0].id as NodeId)!;
+      const snapped = findNodeNearPosition(
+        candidates,
+        start.position.x,
+        start.position.y,
+        start.floorId
+      );
+      expect(snapped?.id).toBe(start.id);
+      const localGraph = new Map(
+        [...graph]
+          .filter(([id]) => candidates.has(id))
+          .map(([id, edges]) => [
+            id,
+            edges.filter((edge) => candidates.has(edge.to))
+          ])
+      );
+      for (const goal of candidates.values()) {
+        expect(calculatePath(localGraph, start, goal), goal.id).not.toBeNull();
+        expect(calculatePath(graph, origin, goal), goal.id).not.toBeNull();
+        expect(calculatePath(graph, goal, origin), goal.id).not.toBeNull();
+      }
+      for (const edge of floor.edges) {
+        expect(nodes.get(edge.from as NodeId)?.floorId).toBe(
+          floor.metadata.floor
+        );
+        expect(nodes.get(edge.to as NodeId)?.floorId).toBe(
+          floor.metadata.floor
+        );
+      }
+    }
+  });
+
+  it('uses only the two corresponding stair cores and elevator on adjacent floors', () => {
+    expect(connections.edges).toHaveLength(6);
+    for (const edge of connections.edges) {
+      const [, fromFloor, ...fromPurpose] = edge.from.split('-');
+      const [, toFloor, ...toPurpose] = edge.to.split('-');
+      expect(Number(toFloor) - Number(fromFloor)).toBe(1);
+      expect(fromPurpose).toEqual(toPurpose);
+      if (edge.type === 'stairs') expect(edge.isAccessible).toBe(false);
+      else expect(edge.isAccessible).toBe(true);
+    }
+  });
+
+  it('retains parent-room access for enclosed side rooms', () => {
+    const neighbors = (id: string) =>
+      serializedEdges.flatMap((edge) =>
+        edge.from === id ? [edge.to] : edge.to === id ? [edge.from] : []
+      );
+    expect(neighbors('lang-1-room-121A')).toEqual(['lang-1-room-121']);
+    expect(neighbors('lang-1-room-118A')).toEqual([
+      'lang-1-room-118A-vestibule'
+    ]);
+    expect(neighbors('lang-2-room-207D')).toEqual(['lang-2-room-207-turn']);
+    expect(neighbors('lang-2-room-205A')).toEqual(['lang-2-room-205-turn']);
+    expect(neighbors('lang-3-room-303A')).toEqual(['lang-3-room-303']);
+  });
+});
