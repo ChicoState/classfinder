@@ -9,3 +9,9 @@ test-results/
 npm-debug.log*
 *.log
 /artifacts/campus-routes/
+
+# Facilities CAD drawings (limited-use agreement): never commit; generated maps are fine
+*.dwg
+*.DWG
+*.dxf
+*.DXF

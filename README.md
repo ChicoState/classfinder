@@ -9,9 +9,10 @@ ClassFinder will help students enter classes and receive campus directions. The 
 - `Dockerfile`, `compose.yml`, `.dockerignore` — reproducible Node.js development environment.
 - `scripts/` — infrastructure verification and the existing OSM source collector.
 - `tools/outdoor/` — offline outdoor graph generation and preview rendering.
+- `tools/cadviz/` — offline tool that turns Facilities CAD drawings into floor-map SVGs (the drawings never enter the repository).
 - `index.html` — Vite's browser document shell.
 - `src/` — React application source, with `main.tsx` as the entrypoint, `App.tsx` as the root component, shared graph contracts in `lib/graph.ts`, and graph-assembly helpers in `graph/`.
-- `src/data/` — bundled floor-plan JSON and a local visual verification preview.
+- `src/data/` — bundled floor-plan JSON and a local visual verification preview; `src/data/<building-id>/maps/` holds generated floor maps.
 - `tests/unit/` — graph data, routing, instructions, and vector math; `tests/ui/` — application and floor viewer behavior; `tests/e2e/` — built application navigation.
 - `.github/workflows/` — pull-request checks and GitHub Pages release deployment.
 - `.agents/skills/` — project-provided agent skills.
@@ -178,6 +179,52 @@ displaying or redistributing the derived outdoor data. This does not relicense
 independent indoor datasets or application code. The preview uses local vector
 data and downloads no map tiles. Supplemental collection follows the
 [Overpass usage guidance](https://dev.overpass-api.de/overpass-doc/en/preface/commons.html).
+
+## Floor maps from Facilities CAD
+
+`tools/cadviz` turns Facilities CAD floor plans (DWG or DXF) into clean SVG base
+maps for directions: four images per floor, facing N, E, S and W, so the map can
+turn with the student's direction of travel. Hallways are squared to the image,
+labels stay upright, and the colours are Chico State's (white, black, Chico Red).
+Routes are not drawn into the images; the app draws them on top.
+
+```sh
+npm run cadviz -- ~/cad-data/holt --building holt
+```
+
+This writes `src/data/holt/maps/floor-<n>-<N|E|S|W>.svg` and `maps.json`, taking
+the floor number from the end of each file name (`HoltHall-2.dwg` is floor 2). It
+prints a link to a local preview page with the navigation graph drawn over each
+image. DWG files need the free
+[ODA File Converter](https://www.opendesign.com/guestfiles/oda_file_converter)
+(or set `CADVIZ_ODA` to its path); DXF files need nothing. `--style file.json`
+overrides colours and sizes (see `CHICO_STATE` in `tools/cadviz/render.ts`).
+
+When `src/data/<building>/floor-<n>.json` exists, cadviz aligns that graph with
+the drawing automatically: graph room nodes (`…-room-<number>`) are matched to CAD
+rooms and their doors, and a scale, rotation and shift are fitted. For Holt, 75–100
+rooms match per floor with a median error of about 1.2 feet. `maps.json` then gives,
+for each image:
+
+- `graphToPx`: an SVG `matrix(a, b, c, d, e, f)` from the building's source graph
+  feet to image pixels: `x = a * gx + c * gy + e`, `y = b * gx + d * gy + f`.
+  Loaded nodes are in global campus feet, so convert them first with
+  `toLocalPosition(node.position, buildingId)` from `src/graph/coordinates.ts`,
+  as `FloorPlanViewer` already does for the PDF previews.
+- `graphUp`: the source-graph direction that points up in that image. Choose the
+  facing whose `graphUp` best matches the student's next step, measured between
+  local positions (largest dot product).
+- `alignment`: how many rooms matched and the median and maximum error in feet.
+
+Rooms that students can visit carry `data-room="<number>"`, so an inlined SVG can
+highlight a destination with CSS. Private rooms are never labelled.
+
+Facilities shared the drawings under a limited-use agreement: only the generated
+maps may be committed. DWG/DXF files are ignored by Git and never belong in the
+repository. cadviz reads only room outlines, numbers and types, door swings,
+floor notes, accessibility symbols and survey points (used only to orient the
+plan); restricted layers (telecom, electrical, mechanical, plumbing, structural,
+fire protection) and title blocks are skipped unread.
 
 ## Getting Started
 
