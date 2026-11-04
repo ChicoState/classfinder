@@ -55,3 +55,38 @@ Serialized edges do not store distances. The loader derives every runtime distan
 The original environment lacked `pdftotext`, `pdftoppm`, Python PDF modules, and Python venv support. Temporary `pdfjs-dist` plus `@napi-rs/canvas` under `/tmp` enabled vector-PDF inspection. This is a fallback, not a required dependency: use available tools, respect network approvals, and keep inspection packages out of the app manifest/lockfile. Temporary installations may not persist.
 
 Prior final checks passed unit tests, coverage, lint, typecheck, build, smoke checks, and Docker configuration. E2E ran with no tests. Repository-wide formatting failed on an existing invalid workflow `if` expression in `.github/workflows/pr-checks.yml` and formatting in `src/main.tsx`/`src/styles.css`; changed files passed. These are historical results, not a license to skip checks or assume old failures/test counts remain current.
+
+## Global campus registration (2026-10-25)
+
+User explicitly requested O’Connell/Langdon outdoor connections and one global
+runtime coordinate system. Source floor JSON and PDF origins above are unchanged.
+The loader now transforms every O’Connell floor using the same similarity in
+`src/graph/campusAlignment.json`: scale 1.1166698897430516, rotation
+39.03493252634291 degrees counterclockwise, translation
+(-483.96293239132564, -47.85735564505134) global feet. The outdoor origin is OSM
+node 4715296203 at 39.7276776, -121.8456054; positive X east, Y north.
+
+Three matched reference-floor AO doorways anchor the fit: lower AO → OSM
+5849825682, upper AO → 5849825683, west AO → 11938244696. Matches use actual
+ground-floor openings and the ends of covered OSM footways; excluded OSM indoor
+corridors 1320210552/1320210554 corroborate the entrance identity, not a shortcut.
+The fit's RMS error is 2.94 feet, maximum 3.60 feet. The 11.67% scale increase is
+a material, provisional correction to the dated PDF coordinate scale and must
+be visually reviewed; it is not a surveyed dimension. All loaded O’Connell edge
+distances, including transfers, scale accordingly.
+
+Three explicit, bidirectional door links in outdoor `building-connections.json`
+span the registration residuals; accessibility is omitted. Combined graph-only
+`src/data/outdoor/ocon-lang-preview.png` was explicitly requested and shows ground
+floors, nearby outdoors, entrance labels A–D, and the actual loaded Dijkstra route
+from O’Connell room 124 to Langdon room 120 (744.30 feet, 26 edges, stairs included).
+The associated route report records traversal and review limits. No individual
+floor preview was refreshed. Runtime callers must use global coordinates;
+source drawing coordinates remain for digitization and provenance only.
+
+Following the user's confirmation of walkability between Langdon's three gates
+and the tested O’Connell doorway, all three gates now connect through the outdoor
+courtyard. The refreshed combined preview labels these E–G. The same interior
+test now enters Langdon's east gate: 387.97 feet / 27 edges, no stairs, equal cost
+in reverse. O’Connell entrance matches, alignment and source geometry did not
+change; the earlier 744.30-foot dock route is historical.

@@ -12,7 +12,7 @@ export type EdgeKind =
 
 export type Node = {
   id: NodeId;
-  buildingId: string | null;
+  buildingId: string;
   floorId: number;
   position: Vector2;
 };

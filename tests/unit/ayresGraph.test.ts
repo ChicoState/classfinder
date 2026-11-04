@@ -3,6 +3,7 @@ import floor1 from '../../src/data/ayres/floor-1.json';
 import floor2 from '../../src/data/ayres/floor-2.json';
 import connections from '../../src/data/ayres/connections.json';
 import { loadGraphFromData } from '../../src/graph/graphLoader';
+import { toGlobalPosition } from '../../src/graph/coordinates';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
@@ -61,17 +62,26 @@ describe('Ayres floor plans', () => {
     expect(
       [...graph]
         .filter(([key]) => key.startsWith('ayres-'))
-        .flatMap(([, edges]) => edges)
+        .flatMap(([, edges]) =>
+          edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'ayres')
+        )
     ).toHaveLength(380);
-    expect(nodes.get(id(floor1.metadata.origin.nodeId))?.position).toEqual({
-      x: 0,
-      y: 0
-    });
+    expect(nodes.get(id(floor1.metadata.origin.nodeId))?.position).toEqual(
+      toGlobalPosition({ x: 0, y: 0 }, 'ayres')
+    );
   });
 
   it('routes through both floors while preserving the documented exterior-only components', () => {
     const [graph, nodes] = loadGraphFromData();
     const entrance = nodes.get(id('ayres-1-entrance-northwest'))!;
+    const indoorGraph = new Map(
+      [...graph]
+        .filter(([from]) => nodes.get(from)?.buildingId === 'ayres')
+        .map(([from, edges]) => [
+          from,
+          edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'ayres')
+        ])
+    );
     const isolated = new Set([
       'ayres-1-room-129A',
       'ayres-1-room-129B',
@@ -87,7 +97,18 @@ describe('Ayres floor plans', () => {
     for (const node of serializedNodes) {
       const destination = nodes.get(id(node.id))!;
       if (isolated.has(node.id)) {
-        expect(calculatePath(graph, entrance, destination), node.id).toBeNull();
+        expect(
+          calculatePath(indoorGraph, entrance, destination),
+          node.id
+        ).toBeNull();
+        expect(
+          calculatePath(graph, entrance, destination),
+          node.id
+        ).not.toBeNull();
+        expect(
+          calculatePath(graph, destination, entrance),
+          node.id
+        ).not.toBeNull();
       } else {
         expect(
           calculatePath(graph, entrance, destination),

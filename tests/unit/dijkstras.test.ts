@@ -2,11 +2,14 @@ import { describe, expect, it } from 'vitest';
 
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { Edge, Graph, Node, NodeId, Nodes } from '../../src/lib/graph';
+import { loadGraphFromData } from '../../src/graph/graphLoader';
+import alignment from '../../src/graph/campusAlignment.json';
+import endpoints from '../../tools/routing/campus-endpoints.json';
 
 function createNode(id: NodeId, x: number, y: number, floorId = 1): Node {
   return {
     id,
-    buildingId: null,
+    buildingId: 'outside',
     floorId,
     position: { x, y }
   };
@@ -142,4 +145,52 @@ describe('calculatePath', () => {
     ]);
     expect(calculatePath(graph, isolatedNode, classroomNode)).toBeNull();
   });
+});
+
+describe('global campus routes', () => {
+  const [graph, nodes] = loadGraphFromData();
+  const buildings = Object.keys(endpoints) as (keyof typeof endpoints)[];
+  const pairs = buildings.flatMap((from) =>
+    buildings.filter((to) => to !== from).map((to) => [from, to] as const)
+  );
+
+  it('covers every registered building with an indoor endpoint', () => {
+    expect(buildings.sort()).toEqual(Object.keys(alignment.buildings).sort());
+    expect(alignment.excludedBuildingIds).toEqual([]);
+    for (const building of buildings) {
+      expect(nodes.get(endpoints[building] as NodeId)?.buildingId).toBe(
+        building
+      );
+    }
+  });
+
+  it.each(pairs)(
+    'routes from %s to %s through the loaded outdoor graph',
+    (from, to) => {
+      const start = nodes.get(endpoints[from] as NodeId)!;
+      const goal = nodes.get(endpoints[to] as NodeId)!;
+      const path = calculatePath(graph, start, goal);
+      expect(path).not.toBeNull();
+      expect(path!.length).toBeGreaterThan(0);
+      let current = start.id;
+      for (const edge of path!) {
+        expect(edge.from).toBe(current);
+        expect(graph.get(current)).toContainEqual({
+          to: edge.to,
+          distance: edge.distance,
+          weight: edge.weight,
+          type: edge.type,
+          ...(edge.isAccessible === undefined
+            ? {}
+            : { isAccessible: edge.isAccessible })
+        });
+        expect(Number.isFinite(edge.distance) && edge.distance >= 0).toBe(true);
+        current = edge.to;
+      }
+      expect(current).toBe(goal.id);
+      expect(
+        path!.some((edge) => nodes.get(edge.to)?.buildingId === 'outside')
+      ).toBe(true);
+    }
+  );
 });

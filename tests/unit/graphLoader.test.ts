@@ -9,11 +9,42 @@ import { loadGraphFromData } from '../../src/graph/graphLoader';
 import { calculatePath } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
-const floors = [floor1, floor2, floor3, floor4];
+import lang1 from '../../src/data/lang/floor-1.json';
+import lang2 from '../../src/data/lang/floor-2.json';
+import lang3 from '../../src/data/lang/floor-3.json';
+import langConnections from '../../src/data/lang/connections.json';
+import outdoor from '../../src/data/outdoor/campus.json';
+import entranceLinks from '../../src/data/outdoor/building-connections.json';
+import { toGlobalPosition } from '../../src/graph/coordinates';
+import alignment from '../../src/graph/campusAlignment.json';
+
+const allDatasets = Object.values(
+  import.meta.glob<{ nodes?: unknown[]; edges: unknown[] }>(
+    '../../src/data/*/*.json',
+    { eager: true, import: 'default' }
+  )
+);
+const totalNodes = allDatasets.reduce((n, d) => n + (d.nodes?.length ?? 0), 0);
+const totalEdges = allDatasets.reduce((n, d) => n + d.edges.length, 0);
+const floors = [floor1, floor2, floor3, floor4, lang1, lang2, lang3];
+const datasets = [...floors, outdoor];
 const data = {
   metadata: floor1.metadata,
-  nodes: floors.flatMap((floor) => floor.nodes),
-  edges: [...floors.flatMap((floor) => floor.edges), ...connections.edges]
+  nodes: [
+    ...floors.flatMap((floor) => floor.nodes),
+    ...outdoor.nodes,
+    ...entranceLinks.nodes
+  ].map((node) => ({
+    ...node,
+    position: toGlobalPosition(node.position, node.buildingId),
+    buildingId: node.buildingId ?? 'outside'
+  })),
+  edges: [
+    ...datasets.flatMap((dataset) => dataset.edges),
+    ...connections.edges,
+    ...langConnections.edges,
+    ...entranceLinks.edges
+  ]
 };
 
 function distanceBetweenNodes(from: NodeId, to: NodeId): number {
@@ -33,28 +64,22 @@ describe('loadGraphFromData', () => {
   it('loads the floor-plan nodes with their coordinates and building details', () => {
     const [graph, nodes] = loadGraphFromData();
 
-    expect(
-      [...nodes.values()].filter((node) => node.buildingId === 'ocon')
-    ).toHaveLength(data.nodes.length);
+    expect(nodes.size).toBe(totalNodes);
     expect(graph.size).toBe(nodes.size);
     for (const node of data.nodes) {
       expect(nodes.get(node.id as NodeId)).toEqual(node);
       expect(graph.has(node.id as NodeId)).toBe(true);
     }
     expect(nodes.get(data.metadata.origin.nodeId as NodeId)?.position).toEqual({
-      x: 0,
-      y: 0
+      x: alignment.buildings.ocon.tx,
+      y: alignment.buildings.ocon.ty
     });
   });
 
   it('derives edge distances from endpoint positions while expanding connections', () => {
-    const [graph, nodes] = loadGraphFromData();
+    const [graph] = loadGraphFromData();
 
-    expect(
-      [...graph.entries()]
-        .filter(([id]) => nodes.get(id)?.buildingId === 'ocon')
-        .flatMap(([, edges]) => edges)
-    ).toHaveLength(data.edges.length * 2);
+    expect([...graph.values()].flat()).toHaveLength(totalEdges * 2);
     for (const { from, ...edge } of data.edges) {
       expect(edge).not.toHaveProperty('distance');
       const distance = distanceBetweenNodes(from as NodeId, edge.to as NodeId);
@@ -137,10 +162,11 @@ describe('loadGraphFromData', () => {
     nodes.clear();
 
     const [freshGraph, freshNodes] = loadGraphFromData();
-    expect(
-      [...freshNodes.values()].filter((node) => node.buildingId === 'ocon')
-    ).toHaveLength(data.nodes.length);
-    expect(freshNodes.get(entranceId)?.position).toEqual({ x: 0, y: 0 });
+    expect(freshNodes.size).toBe(totalNodes);
+    expect(freshNodes.get(entranceId)?.position).toEqual({
+      x: alignment.buildings.ocon.tx,
+      y: alignment.buildings.ocon.ty
+    });
     expect(freshGraph.get(entranceId)?.[0].weight).toBe(1);
   });
 });

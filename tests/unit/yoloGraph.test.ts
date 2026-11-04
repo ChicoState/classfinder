@@ -3,6 +3,7 @@ import floor1 from '../../src/data/yolo/floor-1.json';
 import floor2 from '../../src/data/yolo/floor-2.json';
 import connections from '../../src/data/yolo/connections.json';
 import { loadGraphFromData } from '../../src/graph/graphLoader';
+import { toGlobalPosition } from '../../src/graph/coordinates';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
@@ -50,7 +51,11 @@ describe('Yolo floor-plan graphs', () => {
     const [graph, nodes] = loadGraphFromData();
     expect(
       allNodes.reduce(
-        (sum, node) => sum + graph.get(node.id as NodeId)!.length,
+        (sum, node) =>
+          sum +
+          graph
+            .get(node.id as NodeId)!
+            .filter((edge) => nodes.get(edge.to)?.buildingId === 'yolo').length,
         0
       )
     ).toBe(allEdges.length * 2);
@@ -113,12 +118,15 @@ describe('Yolo floor-plan graphs', () => {
     expect(
       graph.get('yolo-2-room-247' as NodeId)?.map((edge) => edge.to)
     ).toEqual(['yolo-2-room-243-inside']);
+    const entranceEdges = [...graph.get('yolo-1-exit-south-ao' as NodeId)!];
     nodes.get('yolo-1-exit-south-ao' as NodeId)!.position.x = 99;
     graph.get('yolo-1-exit-south-ao' as NodeId)!.length = 0;
     const [freshGraph, freshNodes] = loadGraphFromData();
     expect(freshNodes.get('yolo-1-exit-south-ao' as NodeId)?.position.x).toBe(
-      0
+      toGlobalPosition({ x: 0, y: 0 }, 'yolo').x
     );
-    expect(freshGraph.get('yolo-1-exit-south-ao' as NodeId)?.length).toBe(1);
+    expect(freshGraph.get('yolo-1-exit-south-ao' as NodeId)).toEqual(
+      entranceEdges
+    );
   });
 });

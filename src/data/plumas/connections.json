@@ -6,11 +6,13 @@
     "undirected": true,
     "source": [
       "csuc-floor-plans/Plumas/plms-1.pdf",
-      "csuc-floor-plans/Plumas/plms-2.pdf"
+      "csuc-floor-plans/Plumas/plms-2.pdf",
+      "csuc-floor-plans/Plumas/plms-3.pdf"
     ],
-    "alignment": "Floor 2 translated in PDF points by (-3.6,-1.2) into the floor 1 frame using both stair landings.",
-    "distanceConvention": "Runtime distance is derived from aligned endpoint coordinates; no vertical-distance override. Approximate stair links are 0.25 feet; elevator link is approximately 4.83 feet. Vertical rise, effort and waiting time are not represented.",
-    "accessibility": "Stairs false; elevator access unknown. Adjacent floors only."
+    "alignment": "Floor 2 translated in PDF points by (-3.6,-1.2) into the floor 1 frame using both stair landings. Floor 3 translated by (-3.3,-3.6) PDF points into the same floor 1 frame using both stair landings.",
+    "distanceConvention": "Runtime distance is derived from aligned endpoint coordinates; no vertical-distance override. Floor 1\u20132 local stair offsets are approximately 0.25 feet and the elevator offset is approximately 4.83 feet. Floor 2\u20133 local stair offsets are approximately 1.13/1.12 feet and the elevator offset is approximately 9.03 feet. Campus alignment scales these horizontal offsets; vertical rise, effort and waiting time are not represented.",
+    "accessibility": "Stairs false; elevator access unknown. Adjacent floors only.",
+    "review": "Floor 2 and 3 PDFs visually compared on 2026-11-03: corresponding west/east stair cores and east elevator are present with hallway approaches on both floors. Dated elevator doorway positions differ; access and availability remain unknown."
   },
   "edges": [
     {
@@ -30,6 +32,26 @@
     {
       "from": "plumas-1-elevator",
       "to": "plumas-2-elevator",
+      "weight": 1,
+      "type": "elevator"
+    },
+    {
+      "from": "plumas-2-stairs-west",
+      "to": "plumas-3-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "plumas-2-stairs-east",
+      "to": "plumas-3-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "plumas-2-elevator",
+      "to": "plumas-3-elevator",
       "weight": 1,
       "type": "elevator"
     }

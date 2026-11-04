@@ -4,6 +4,7 @@ import floor2 from '../../src/data/glenn/floor-2.json';
 import floor3 from '../../src/data/glenn/floor-3.json';
 import connections from '../../src/data/glenn/connections.json';
 import { loadGraphFromData } from '../../src/graph/graphLoader';
+import { toGlobalPosition } from '../../src/graph/coordinates';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
@@ -21,10 +22,9 @@ describe('Glenn floor plans', () => {
     expect(new Set(serializedNodes.map((node) => node.id)).size).toBe(
       serializedNodes.length
     );
-    expect(nodes.get(id(floor1.metadata.origin.nodeId))?.position).toEqual({
-      x: 0,
-      y: 0
-    });
+    expect(nodes.get(id(floor1.metadata.origin.nodeId))?.position).toEqual(
+      toGlobalPosition({ x: 0, y: 0 }, 'glenn')
+    );
     const pairs = new Set<string>();
     for (const floor of floors) {
       expect(floor.metadata.undirected).toBe(true);
@@ -70,13 +70,23 @@ describe('Glenn floor plans', () => {
     }
     const directedEdges = [...graph]
       .filter(([key]) => key.startsWith('glenn-'))
-      .flatMap(([, edges]) => edges);
+      .flatMap(([, edges]) =>
+        edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'glenn')
+      );
     expect(directedEdges).toHaveLength(serializedEdges.length * 2);
   });
 
   it('reaches every supported interior destination through its parent room or vestibule', () => {
     const [graph, nodes] = loadGraphFromData();
     const entrance = nodes.get(id('glenn-1-entrance-north'))!;
+    const indoorGraph = new Map(
+      [...graph]
+        .filter(([from]) => nodes.get(from)?.buildingId === 'glenn')
+        .map(([from, edges]) => [
+          from,
+          edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'glenn')
+        ])
+    );
     const externalOnly = new Set([
       'glenn-1-unnumbered-northwest-door',
       'glenn-1-unnumbered-north-middle-door'
@@ -84,7 +94,18 @@ describe('Glenn floor plans', () => {
     for (const node of serializedNodes) {
       const destination = nodes.get(id(node.id))!;
       if (externalOnly.has(node.id)) {
-        expect(calculatePath(graph, entrance, destination), node.id).toBeNull();
+        expect(
+          calculatePath(indoorGraph, entrance, destination),
+          node.id
+        ).toBeNull();
+        expect(
+          calculatePath(graph, entrance, destination),
+          node.id
+        ).not.toBeNull();
+        expect(
+          calculatePath(graph, destination, entrance),
+          node.id
+        ).not.toBeNull();
       } else {
         expect(
           calculatePath(graph, entrance, destination),

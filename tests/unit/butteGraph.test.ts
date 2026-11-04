@@ -6,6 +6,7 @@ import floor4 from '../../src/data/butte/floor-4.json';
 import floor5 from '../../src/data/butte/floor-5.json';
 import connections from '../../src/data/butte/connections.json';
 import { loadGraphFromData } from '../../src/graph/graphLoader';
+import { toGlobalPosition } from '../../src/graph/coordinates';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
@@ -30,7 +31,10 @@ describe('Butte floor plans', () => {
     );
     const pairs = new Set<string>();
     for (const node of serializedNodes) {
-      expect(nodes.get(node.id as NodeId)).toEqual(node);
+      expect(nodes.get(node.id as NodeId)).toEqual({
+        ...node,
+        position: toGlobalPosition(node.position, node.buildingId)
+      });
       expect(node.buildingId).toBe('butte');
       expect(
         Number.isFinite(node.position.x) && Number.isFinite(node.position.y)
@@ -63,10 +67,12 @@ describe('Butte floor plans', () => {
     expect(
       [...graph]
         .filter(([id]) => id.startsWith('butte-'))
-        .flatMap(([, edges]) => edges)
+        .flatMap(([, edges]) =>
+          edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'butte')
+        )
     ).toHaveLength(2 * serializedEdges.length);
     expect(nodes.get('butte-1-exit-north-east-ao' as NodeId)?.position).toEqual(
-      { x: 0, y: 0 }
+      toGlobalPosition({ x: 0, y: 0 }, 'butte')
     );
   });
 

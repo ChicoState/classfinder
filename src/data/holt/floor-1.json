@@ -68,8 +68,86 @@
       "Auditorium east stairs appear only on floor 1 and are not extended to floors 2 or 3.",
       "Room 129/129B is divided by a folding partition; no through-room shortcut is assumed.",
       "Room 172 is inside the auditorium boundary; its internal stage access cannot be completed without referenced sheet 1, so it is omitted rather than linked through the outer wall.",
-      "The north and south bridge stair runs span the passage; no same-floor corridor crosses either flight. The south east-facing exit and its landing form a separate two-node component. Their connection through the stair core cannot be resolved from this sheet without inventing a same-floor bypass or landing correspondence."
-    ]
+      "The source stair graphics alone do not establish the geometry of the level passages; the user-confirmed walking paths are represented by approximate centerlines, marked H1\u2013H3 in the requested preview."
+    ],
+    "stairRoomPassages": {
+      "evidence": "User confirmed on 2026-10-19 that level paths connect the landings through the stair rooms. Restored on 2026-10-28 at user request after merge replaced these nodes. This supersedes the missing-bypass interpretation.",
+      "geometry": "Approximate native PDF doorway/approach centers rechecked on holt-1.pdf at 4 pixels per PDF point. Restored positions use the current origin (355,682), not the historical origin (354,681). Existing IDs, stair transfer nodes and vertical edges are preserved.",
+      "accessibility": "Unknown; no accessible flags added to level corridor links.",
+      "sourceCommit": "bb62fb2",
+      "restoredNodes": [
+        {
+          "nodeId": "holt-1-stairs-middle-north-west-door-256",
+          "pdfPointFromTopLeft": {
+            "x": 262,
+            "y": 256
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-middle-north-west-door-265",
+          "pdfPointFromTopLeft": {
+            "x": 262,
+            "y": 265
+          }
+        },
+        {
+          "nodeId": "holt-1-hall-stair-room-north-west",
+          "pdfPointFromTopLeft": {
+            "x": 273,
+            "y": 260
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-middle-north-east",
+          "pdfPointFromTopLeft": {
+            "x": 307,
+            "y": 260
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-middle-south-west-door-472",
+          "pdfPointFromTopLeft": {
+            "x": 262,
+            "y": 472
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-middle-south-west-door-481",
+          "pdfPointFromTopLeft": {
+            "x": 262,
+            "y": 481
+          }
+        },
+        {
+          "nodeId": "holt-1-hall-stair-room-south-west",
+          "pdfPointFromTopLeft": {
+            "x": 273,
+            "y": 477
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-middle-south-east",
+          "pdfPointFromTopLeft": {
+            "x": 307,
+            "y": 477
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-north-east-upper",
+          "pdfPointFromTopLeft": {
+            "x": 340,
+            "y": 224
+          }
+        },
+        {
+          "nodeId": "holt-1-stairs-north-east-lower",
+          "pdfPointFromTopLeft": {
+            "x": 340,
+            "y": 244
+          }
+        }
+      ]
+    }
   },
   "nodes": [
     {
@@ -1718,6 +1796,96 @@
         "x": -51.39,
         "y": 112.78
       }
+    },
+    {
+      "id": "holt-1-stairs-middle-north-west-door-256",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -51.67,
+        "y": 236.67
+      }
+    },
+    {
+      "id": "holt-1-stairs-middle-north-west-door-265",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -51.67,
+        "y": 231.67
+      }
+    },
+    {
+      "id": "holt-1-hall-stair-room-north-west",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -45.56,
+        "y": 234.44
+      }
+    },
+    {
+      "id": "holt-1-stairs-middle-north-east",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -26.67,
+        "y": 234.44
+      }
+    },
+    {
+      "id": "holt-1-stairs-middle-south-west-door-472",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -51.67,
+        "y": 116.67
+      }
+    },
+    {
+      "id": "holt-1-stairs-middle-south-west-door-481",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -51.67,
+        "y": 111.67
+      }
+    },
+    {
+      "id": "holt-1-hall-stair-room-south-west",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -45.56,
+        "y": 113.89
+      }
+    },
+    {
+      "id": "holt-1-stairs-middle-south-east",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -26.67,
+        "y": 113.89
+      }
+    },
+    {
+      "id": "holt-1-stairs-north-east-upper",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -8.33,
+        "y": 254.44
+      }
+    },
+    {
+      "id": "holt-1-stairs-north-east-lower",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -8.33,
+        "y": 243.33
+      }
     }
   ],
   "edges": [
@@ -2882,6 +3050,96 @@
       "to": "holt-1-stairs-middle-south",
       "weight": 1,
       "type": "door"
+    },
+    {
+      "from": "holt-1-north-bridge-west",
+      "to": "holt-1-stairs-middle-north-west-door-256",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-1-stairs-middle-north-west-door-256",
+      "to": "holt-1-hall-stair-room-north-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-north-bridge-west",
+      "to": "holt-1-stairs-middle-north-west-door-265",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-1-stairs-middle-north-west-door-265",
+      "to": "holt-1-hall-stair-room-north-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-hall-stair-room-north-west",
+      "to": "holt-1-stairs-middle-north-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-stairs-middle-north-east",
+      "to": "holt-1-north-bridge-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-south-bridge-west",
+      "to": "holt-1-stairs-middle-south-west-door-472",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-1-stairs-middle-south-west-door-472",
+      "to": "holt-1-hall-stair-room-south-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-south-bridge-west",
+      "to": "holt-1-stairs-middle-south-west-door-481",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "holt-1-stairs-middle-south-west-door-481",
+      "to": "holt-1-hall-stair-room-south-west",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-hall-stair-room-south-west",
+      "to": "holt-1-stairs-middle-south-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-stairs-middle-south-east",
+      "to": "holt-1-south-bridge-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-stairs-north-east-upper",
+      "to": "holt-1-stairs-north-east-lower",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-stairs-north-east-upper",
+      "to": "holt-1-stairs-auditorium-east-top",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-stairs-north-east-lower",
+      "to": "holt-1-stairs-auditorium-east",
+      "weight": 1,
+      "type": "corridor"
     }
   ]
 }

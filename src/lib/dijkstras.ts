@@ -29,8 +29,8 @@ function distanceSqr(x1: number, y1: number, x2: number, y2: number): number {
 }
 
 // inefficient but probably fine for this project
-// if it proves not to be, partition nodes by chunks to optimize
-// doesn't use vector2 path because this is more efficient, might be pointless
+// if it proves not to be, partition nodes into chunks to optimize
+// doesn't use vector2 lib because this is more efficient, but might be pointless
 export function findNodeNearPosition(
   nodes: Nodes,
   x: number,

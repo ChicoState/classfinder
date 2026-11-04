@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "name": "O’Connell and Langdon entrance links to campus-feet outdoor graph",
+    "undirected": true,
+    "units": "feet",
+    "alignment": "src/graph/campusAlignment.json",
+    "provenance": "O’Connell uses three matched AO doorway endpoints. Langdon connects its loading-dock approach and all three existing gates through the user-confirmed walkable courtyard.",
+    "accessibility": "Unknown; no true flag is inferred from a nearby AO doorway.",
+    "review": "Registration residuals and precise approach geometry remain approximate. Gate/courtyard walkability is user-confirmed. No proximity search creates these links.",
+    "walkabilityConfirmation": {
+      "date": "2026-10-25",
+      "source": "User confirmation in this task",
+      "statement": "The entire section between the gates in Langdon and the O’Connell doors used in the test is walkable; the gates can safely connect to the outdoor graph.",
+      "geometry": "Three approach points five global feet outside the existing gate midpoints, connected parallel to the fence. The west approach joins existing courtyard OSM node 12217284216; the east approach joins existing O’Connell exterior approach OSM node 5862340697. These paths stay in the confirmed open area; only gate edges cross the fence.",
+      "accessibility": "General walkability only; no accessible-route or ramp-compliance assertion."
+    },
+    "connections": [
+      {
+        "indoorNodeId": "ocon-1-exit-lower-ao",
+        "outdoorNodeId": "outdoor-0-osm-5849825682",
+        "evidence": "Lower AO lobby doorway to the southeast covered OSM footway endpoint"
+      },
+      {
+        "indoorNodeId": "ocon-1-exit-upper-ao",
+        "outdoorNodeId": "outdoor-0-osm-5849825683",
+        "evidence": "Upper AO lobby doorway to the northwest covered OSM footway endpoint"
+      },
+      {
+        "indoorNodeId": "ocon-1-exit-west-ao",
+        "outdoorNodeId": "outdoor-0-osm-11938244696",
+        "evidence": "West AO corridor doorway at the southwest covered OSM footway endpoint"
+      },
+      {
+        "indoorNodeId": "lang-1-loading-dock-south",
+        "outdoorNodeId": "outdoor-0-osm-11938244697",
+        "evidence": "Shown open loading-dock south circulation and mapped footway 1301833214 at the west wing. This connects outdoor approaches, not room 115 directly."
+      },
+      {
+        "indoorNodeId": "lang-1-fence-gate-west",
+        "outdoorNodeId": "outdoor-0-lang-gate-west-approach",
+        "evidence": "Existing user-approved gate midpoint; exterior courtyard walkability and gate connection confirmed by the user on 2026-10-25. The five-foot approach offset is schematic geometry."
+      },
+      {
+        "indoorNodeId": "lang-1-fence-gate-middle",
+        "outdoorNodeId": "outdoor-0-lang-gate-middle-approach",
+        "evidence": "Existing user-approved gate midpoint; exterior courtyard walkability and gate connection confirmed by the user on 2026-10-25. The five-foot approach offset is schematic geometry."
+      },
+      {
+        "indoorNodeId": "lang-1-fence-gate-east",
+        "outdoorNodeId": "outdoor-0-lang-gate-east-approach",
+        "evidence": "Existing user-approved gate midpoint; exterior courtyard walkability and gate connection confirmed by the user on 2026-10-25. The five-foot approach offset is schematic geometry."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "outdoor-0-lang-gate-west-approach",
+      "buildingId": null,
+      "floorId": 0,
+      "position": {
+        "x": -517.83,
+        "y": -150.01
+      }
+    },
+    {
+      "id": "outdoor-0-lang-gate-middle-approach",
+      "buildingId": null,
+      "floorId": 0,
+      "position": {
+        "x": -499.76,
+        "y": -134.11
+      }
+    },
+    {
+      "id": "outdoor-0-lang-gate-east-approach",
+      "buildingId": null,
+      "floorId": 0,
+      "position": {
+        "x": -481.68,
+        "y": -118.2
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "ocon-1-exit-lower-ao",
+      "to": "outdoor-0-osm-5849825682",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-exit-upper-ao",
+      "to": "outdoor-0-osm-5849825683",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "ocon-1-exit-west-ao",
+      "to": "outdoor-0-osm-11938244696",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-loading-dock-south",
+      "to": "outdoor-0-osm-11938244697",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "lang-1-fence-gate-west",
+      "to": "outdoor-0-lang-gate-west-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-fence-gate-middle",
+      "to": "outdoor-0-lang-gate-middle-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "lang-1-fence-gate-east",
+      "to": "outdoor-0-lang-gate-east-approach",
+      "weight": 1,
+      "type": "door"
+    },
+    {
+      "from": "outdoor-0-lang-gate-west-approach",
+      "to": "outdoor-0-lang-gate-middle-approach",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-lang-gate-middle-approach",
+      "to": "outdoor-0-lang-gate-east-approach",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-lang-gate-west-approach",
+      "to": "outdoor-0-osm-12217284216",
+      "weight": 1,
+      "type": "outdoor"
+    },
+    {
+      "from": "outdoor-0-lang-gate-east-approach",
+      "to": "outdoor-0-osm-5862340697",
+      "weight": 1,
+      "type": "outdoor"
+    }
+  ]
+}

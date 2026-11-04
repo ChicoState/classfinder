@@ -1,0 +1,350 @@
+{
+  "butte": {
+    "entrances": [
+      {
+        "nodeId": "butte-1-exit-north-east-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "butte-1-exit-north-west",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "butte-1-room-101-exterior-door",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-room-103-exterior-door",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-exit-west-stairs",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-room-102-exterior-door",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-room-104-exterior-door",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-exit-east-service",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-exit-southeast-stairs",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "butte-1-exit-south-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "butte-1-room-150-south-west-door",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "butte-1-room-150-south-east-door",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      }
+    ]
+  },
+  "glenn": {
+    "entrances": [
+      {
+        "nodeId": "glenn-1-entrance-north",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "glenn-1-unnumbered-northwest-door",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "glenn-1-unnumbered-north-middle-door",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "glenn-1-entrance-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "glenn-1-entrance-106B-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "glenn-1-entrance-108C-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "glenn-1-entrance-east",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "glenn-1-entrance-south",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      }
+    ]
+  },
+  "modoc": {
+    "entrances": [
+      {
+        "nodeId": "modoc-1-exit-north-wheelchair",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "modoc-1-exit-southwest-ao",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "modoc-1-exit-southeast-wheelchair",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "modoc-1-exit-east-landing",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "modoc-1-gate-yard-north",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "modoc-1-gate-yard-southwest",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        },
+        "outdoorTargetNodeId": "outdoor-0-osm-7698079280"
+      }
+    ],
+    "doorwaysViaGates": [
+      "modoc-1-exit-125-yard",
+      "modoc-1-exit-129-yard",
+      "modoc-1-exit-131-yard"
+    ],
+    "gateNodeIds": ["modoc-1-gate-yard-north", "modoc-1-gate-yard-southwest"],
+    "sourceBarriers": [
+      [
+        {
+          "x": 58.33,
+          "y": 190.62
+        },
+        {
+          "x": 119,
+          "y": 190.62
+        },
+        {
+          "x": 119,
+          "y": 169.2
+        },
+        {
+          "x": 144.44,
+          "y": 169.2
+        },
+        {
+          "x": 144.44,
+          "y": 117.57
+        },
+        {
+          "x": 119,
+          "y": 117.57
+        },
+        {
+          "x": 119,
+          "y": 91.46
+        },
+        {
+          "x": 58.33,
+          "y": 91.46
+        }
+      ]
+    ],
+    "barrierReason": "Dashed yard fence follows the supplied plan perimeter. Openings are limited to the existing north and southwest gate nodes; no playground/sandbox crossing."
+  },
+  "tehama": {
+    "entrances": [
+      {
+        "nodeId": "tehama-1-exit-north-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "tehama-1-exit-west-north",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "tehama-1-exit-west-south",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "tehama-1-exit-south",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      }
+    ]
+  },
+  "holt": {
+    "entrances": [
+      {
+        "nodeId": "holt-1-exit-south-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "holt-1-exit-south-west",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      },
+      {
+        "nodeId": "holt-1-exit-north-ao",
+        "outwardLocal": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "nodeId": "holt-1-exit-west-south",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "holt-1-exit-west-north",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "holt-1-exit-east-south",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "holt-1-exit-east-north",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    ]
+  },
+  "plumas": {
+    "entrances": [
+      {
+        "nodeId": "plumas-1-exit-east-ao",
+        "outwardLocal": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "plumas-1-exit-west",
+        "outwardLocal": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "nodeId": "plumas-1-exit-south",
+        "outwardLocal": {
+          "x": 0,
+          "y": -1
+        }
+      }
+    ]
+  }
+}

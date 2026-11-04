@@ -1,0 +1,41 @@
+{
+  "image": "open-street-view-map.png",
+  "method": "Similarity fit from global east/south feet to manually identified OSM footprint corners in the supplied north-up screenshot. Display registration only; runtime graph coordinates are unchanged.",
+  "anchors": [
+    {
+      "osmNodeId": 313659485,
+      "pixel": {
+        "x": 591,
+        "y": 481
+      }
+    },
+    {
+      "osmNodeId": 313659475,
+      "pixel": {
+        "x": 540,
+        "y": 572
+      }
+    },
+    {
+      "osmNodeId": 4502036602,
+      "pixel": {
+        "x": 430,
+        "y": 1074
+      }
+    },
+    {
+      "osmNodeId": 4502036605,
+      "pixel": {
+        "x": 515,
+        "y": 1179
+      }
+    },
+    {
+      "osmNodeId": 313654462,
+      "pixel": {
+        "x": 480,
+        "y": 954
+      }
+    }
+  ]
+}

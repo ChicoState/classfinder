@@ -9,6 +9,8 @@ Create small, traceable routing datasets from architectural drawings. Preserve t
 
 ## Scope and source inspection
 
+- PDF inspection tools are already installed locally at `/home/eyebaian/.local/share/classfinder-pdf-tools/`: `pdfjs-dist` and `@napi-rs/canvas`. Reuse them before downloading or installing PDF tools again; they are independent of application dependencies. Run `node /home/eyebaian/.local/share/classfinder-pdf-tools/view-pdf.mjs <source.pdf> <output.png> [render-scale]` to print page metadata/text and render a page (default scale 4, page 1). For another page, append its 1-based page number after the scale. Keep source renderings in `/tmp`. Text extraction may be empty when labels are vector outlines; inspect the rendered image. This is a machine-local tool location, so check that it exists on a different machine.
+
 - Read `AGENTS.md`, `src/lib/graph.ts`, `src/lib/dijkstras.ts`, `src/graph/graphLoader.ts`, existing building data, and relevant tests. Preserve unrelated edits and existing IDs when extending a building.
 - Locate PDFs with `rg --files csuc-floor-plans`. Inspect every requested floor visually, including openings and small labels. Vector-outline labels may not appear in text extraction; an empty extraction does not mean the drawing is empty.
 - When working on a building, resolve its stable building ID and read this skill's `references/<building-id>.md` if it exists. Load only the corresponding building reference, not every building's notes. For GPS or outdoor integration, also read [references/geographic-alignment.md](references/geographic-alignment.md).
@@ -79,7 +81,7 @@ Omit `isAccessible` when unknown; omission is not true. Stair traversal is false
 - Follow visible openings. Interior-only rooms must be reached through their actual parent room. Retain multiple usable entrances and supported alternatives.
 - Door edges may include approaches or travel between room doors. Corridor edges include lobby/open circulation. Use ramp, stairs, elevator, and outdoor kinds for the movement actually represented.
 - Dashed equipment is not a walkway. Proximity is not connectivity. Do not invent doors for enclosed or ambiguous spaces; retain visible unnumbered entrances and document missing access evidence.
-- Include only shown, relevant outdoor segments, such as an exterior stair exit's approach to a nearby entrance. A neighboring building outline does not establish its indoor graph or a campus path.
+- During indoor-only digitization, include only source-shown, relevant outdoor segments, such as an exterior stair exit's approach to a nearby entrance. For campus outdoor work, use the user's map-informed walkability guidance in [references/geographic-alignment.md](references/geographic-alignment.md): missing OSM ways need not block plausible open-area connections, but each inferred location must be traceable and marked for review. A neighboring building outline does not establish its indoor graph.
 
 ## Scale, building origin, and floor alignment
 

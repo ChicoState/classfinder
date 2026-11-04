@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "building": "Langdon Hall",
+    "buildingId": "lang",
+    "sources": [
+      "csuc-floor-plans/Langdon/lang-1.pdf",
+      "csuc-floor-plans/Langdon/lang-2.pdf"
+    ],
+    "sourceDate": "2010-09-02",
+    "undirected": true,
+    "units": "feet",
+    "weightAssumptions": "Weight 1; all distances derive from aligned plan-view endpoints. Vertical rise, stair effort and elevator waiting time are omitted. Aligned elevator endpoints may yield zero distance; no transfer override.",
+    "accessibility": "Stairs are false. Elevator transfers are true based on user confirmation on 2026-10-14 that the elevator works and is accessible.",
+    "alignment": "See each floor metadata. Separate east/west stair cores and passenger elevator chain, adjacent floors only."
+  },
+  "edges": [
+    {
+      "from": "lang-1-stairs-west",
+      "to": "lang-2-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-1-stairs-east",
+      "to": "lang-2-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-2-stairs-west",
+      "to": "lang-3-stairs-west",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-2-stairs-east",
+      "to": "lang-3-stairs-east",
+      "weight": 1,
+      "type": "stairs",
+      "isAccessible": false
+    },
+    {
+      "from": "lang-1-elevator-passenger",
+      "to": "lang-2-elevator-passenger",
+      "weight": 1,
+      "type": "elevator",
+      "isAccessible": true
+    },
+    {
+      "from": "lang-2-elevator-passenger",
+      "to": "lang-3-elevator-passenger",
+      "weight": 1,
+      "type": "elevator",
+      "isAccessible": true
+    }
+  ]
+}

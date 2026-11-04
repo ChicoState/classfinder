@@ -3,6 +3,7 @@ import floor1 from '../../src/data/modoc/floor-1.json';
 import floor2 from '../../src/data/modoc/floor-2.json';
 import connections from '../../src/data/modoc/connections.json';
 import { loadGraphFromData } from '../../src/graph/graphLoader';
+import { toGlobalPosition } from '../../src/graph/coordinates';
 import { calculatePath, findNodeNearPosition } from '../../src/lib/dijkstras';
 import type { NodeId } from '../../src/lib/graph';
 
@@ -55,7 +56,12 @@ describe('Modoc floor-plan graphs', () => {
     const [graph, nodes] = loadGraphFromData();
     expect(
       allNodes.reduce(
-        (sum, node) => sum + graph.get(node.id as NodeId)!.length,
+        (sum, node) =>
+          sum +
+          graph
+            .get(node.id as NodeId)!
+            .filter((edge) => nodes.get(edge.to)?.buildingId === 'modoc')
+            .length,
         0
       )
     ).toBe(allEdges.length * 2);
@@ -121,14 +127,17 @@ describe('Modoc floor-plan graphs', () => {
     expect(
       graph.get('modoc-2-room-216B' as NodeId)?.map((edge) => edge.to)
     ).toEqual(['modoc-2-room-216-inside']);
+    const entranceEdges = [
+      ...graph.get('modoc-1-exit-southwest-ao' as NodeId)!
+    ];
     nodes.get('modoc-1-exit-southwest-ao' as NodeId)!.position.x = 99;
     graph.get('modoc-1-exit-southwest-ao' as NodeId)!.length = 0;
     const [freshGraph, freshNodes] = loadGraphFromData();
     expect(
       freshNodes.get('modoc-1-exit-southwest-ao' as NodeId)?.position.x
-    ).toBe(0);
-    expect(freshGraph.get('modoc-1-exit-southwest-ao' as NodeId)?.length).toBe(
-      1
+    ).toBe(toGlobalPosition({ x: 0, y: 0 }, 'modoc').x);
+    expect(freshGraph.get('modoc-1-exit-southwest-ao' as NodeId)).toEqual(
+      entranceEdges
     );
   });
 });
