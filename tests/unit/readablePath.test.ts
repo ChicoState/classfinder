@@ -26,7 +26,7 @@ function route(points: number[][], types: EdgeKind[], setup?: () => void) {
             {
               to: String(index + 1) as NodeId,
               type: types[index],
-              distance: 1,
+              distance: 10,
               weight: 1
             }
           ]
@@ -50,7 +50,7 @@ it('groups a straight corridor into one instruction', () => {
       ],
       ['corridor', 'corridor', 'corridor']
     )?.map((node) => node.instruction)
-  ).toEqual(['Continue along the corridor.', 'You have arrived.']);
+  ).toEqual(['Continue for 30 feet along the corridor.', 'You have arrived.']);
 });
 
 it('places a sharp turn at the junction instead of the start', () => {
@@ -67,12 +67,12 @@ it('places a sharp turn at the junction instead of the start', () => {
     {
       position: { x: 0, y: 0 },
       floorId: 1,
-      instruction: 'Continue along the corridor.'
+      instruction: 'Continue for 10 feet along the corridor.'
     },
     {
       position: { x: 1, y: 0 },
       floorId: 1,
-      instruction: 'Turn left and continue along the corridor.'
+      instruction: 'Turn left and continue for 10 feet along the corridor.'
     },
     { position: { x: 1, y: 1 }, floorId: 1, instruction: 'You have arrived.' }
   ]);
@@ -91,7 +91,7 @@ it('groups gradual bends without turning early', () => {
     route(points, Array<EdgeKind>(4).fill('corridor'))?.map(
       (node) => node.instruction
     )
-  ).toEqual(['Continue along the corridor.', 'You have arrived.']);
+  ).toEqual(['Continue for 40 feet along the corridor.', 'You have arrived.']);
 });
 
 it('groups an elevator ride to its final floor', () => {
@@ -178,11 +178,11 @@ it.each([1, -1])(
     );
     const direction = side === 1 ? 'left' : 'right';
     expect(instructions?.[0].instruction).toBe(
-      `Continue along the corridor. Take the second ${direction}.`
+      `Continue for 40 feet along the corridor. Take the second ${direction}.`
     );
     expect(instructions?.[1].position).toEqual({ x: 4, y: 0 });
     expect(instructions?.[1].instruction).toBe(
-      `Turn ${direction} and continue along the corridor.`
+      `Turn ${direction} and continue for 10 feet along the corridor.`
     );
   }
 );
@@ -209,7 +209,7 @@ it.each([
     }
   );
   expect(instructions?.[0].instruction).toBe(
-    `Continue along the corridor. Take the ${ordinal} left.`
+    `Continue for ${(count + 1) * 10} feet along the corridor. Take the ${ordinal} left.`
   );
 });
 
@@ -231,10 +231,10 @@ it('resets counts after a doorway', () => {
     }
   );
   expect(instructions?.map((node) => node.instruction)).toEqual([
-    'Continue along the corridor.',
+    'Continue for 20 feet along the corridor.',
     'Go through the doorway.',
-    'Continue along the corridor. Take the first left.',
-    'Turn left and continue along the corridor.',
+    'Continue for 10 feet along the corridor. Take the first left.',
+    'Turn left and continue for 10 feet along the corridor.',
     'You have arrived.'
   ]);
 });
@@ -258,7 +258,7 @@ it('uses the incoming heading rather than fixed map axes', () => {
     }
   );
   expect(instructions?.[0].instruction).toBe(
-    'Continue along the corridor. Take the second left.'
+    'Continue for 30 feet along the corridor. Take the second left.'
   );
 });
 
@@ -283,7 +283,7 @@ it('ignores straight/backward branches and nodes on another floor or building', 
     }
   );
   expect(instructions?.[0].instruction).toBe(
-    'Continue along the corridor. Take the first left.'
+    'Continue for 20 feet along the corridor. Take the first left.'
   );
 });
 
@@ -305,9 +305,53 @@ it('starts a new count after taking a turn', () => {
     }
   );
   expect(instructions?.map((node) => node.instruction)).toEqual([
-    'Continue along the corridor. Take the second left.',
-    'Turn left and continue along the corridor. Take the first left.',
-    'Turn left and continue along the corridor.',
+    'Continue for 20 feet along the corridor. Take the second left.',
+    'Turn left and continue for 20 feet along the corridor. Take the first left.',
+    'Turn left and continue for 10 feet along the corridor.',
     'You have arrived.'
   ]);
+});
+
+it.each([
+  [1, 'Go through the doorway on your left.'],
+  [-1, 'Go through the doorway on your right.']
+])(
+  'describes a doorway relative to the incoming heading (%s)',
+  (side, expected) => {
+    const instructions = route(
+      [
+        [0, 0],
+        [1, 0],
+        [1, Number(side)]
+      ],
+      ['corridor', 'door']
+    );
+    expect(instructions?.[1].instruction).toBe(expected);
+  }
+);
+
+it('describes a doorway behind the incoming heading', () => {
+  const instructions = route(
+    [
+      [0, 0],
+      [2, 0],
+      [1, 0]
+    ],
+    ['corridor', 'door']
+  );
+  expect(instructions?.[1].instruction).toBe(
+    'Turn around and go through the doorway.'
+  );
+});
+
+it('uses a neutral doorway instruction without an incoming heading', () => {
+  expect(
+    route(
+      [
+        [0, 0],
+        [1, 0]
+      ],
+      ['door']
+    )?.[0].instruction
+  ).toBe('Go through the doorway.');
 });

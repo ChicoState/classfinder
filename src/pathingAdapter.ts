@@ -54,8 +54,16 @@ function ordinal(value: number): string {
   return names[value - 1] ?? `${value}${suffix}`;
 }
 
-function movementInstruction(turn: Turn, skippedTurns: SkippedTurns, destination: string, nextTurn: Turn, distance: number): Instruction {
-  const movement = (turn === 'straight' ? 'Continue' : `Turn ${turn} and continue`) + ` for ${Math.round(distance / 5) * 5} feet`;
+function movementInstruction(
+  turn: Turn,
+  skippedTurns: SkippedTurns,
+  destination: string,
+  nextTurn: Turn,
+  distance: number
+): Instruction {
+  const movement =
+    (turn === 'straight' ? 'Continue' : `Turn ${turn} and continue`) +
+    ` for ${Math.round(distance / 5) * 5} feet`;
   const instruction = `${movement} ${destination}.`;
 
   if (nextTurn !== 'left' && nextTurn !== 'right') return instruction;
@@ -65,11 +73,20 @@ function movementInstruction(turn: Turn, skippedTurns: SkippedTurns, destination
 }
 
 function doorInstruction(turn: Turn): Instruction {
-  return 'Go through the doorway ' + (turn === 'straight' ? '' : 'on your ' + turn);
+  if (turn === 'straight') return 'Go through the doorway.';
+  if (turn === 'around') return 'Turn around and go through the doorway.';
+  return `Go through the doorway on your ${turn}.`;
 }
 
 const instructionFormatters: Record<EdgeKind, InstructionFormatter> = {
-  corridor: ({ turn, skippedTurns, nextTurn, distance }) => movementInstruction(turn, skippedTurns, 'along the corridor', nextTurn, distance),
+  corridor: ({ turn, skippedTurns, nextTurn, distance }) =>
+    movementInstruction(
+      turn,
+      skippedTurns,
+      'along the corridor',
+      nextTurn,
+      distance
+    ),
   door: ({ turn }) => doorInstruction(turn),
   stairs: ({ fromNode, toNode }) =>
     fromNode.floorId === toNode.floorId
@@ -80,7 +97,8 @@ const instructionFormatters: Record<EdgeKind, InstructionFormatter> = {
       ? 'Take the elevator.'
       : `Take the elevator to floor ${toNode.floorId}.`,
   ramp: () => 'Use the ramp.',
-  outdoor: ({ turn, skippedTurns, nextTurn, distance }) => movementInstruction(turn, skippedTurns, 'outdoors', nextTurn, distance)
+  outdoor: ({ turn, skippedTurns, nextTurn, distance }) =>
+    movementInstruction(turn, skippedTurns, 'outdoors', nextTurn, distance)
 };
 
 function requireNode(nodes: Nodes, nodeId: NodeId): Node {
@@ -174,14 +192,14 @@ function countSkippedTurns(
         !['corridor', 'ramp', 'outdoor'].includes(exit.type)
       )
         continue;
-      
+
       const neighbor = requireNode(nodes, exit.to);
       if (
         neighbor.floorId !== junction.floorId ||
         neighbor.buildingId !== junction.buildingId
       )
         continue;
-      
+
       sides.add(
         classifyTurn(
           ...findTurnAngle(
@@ -191,7 +209,7 @@ function countSkippedTurns(
         )
       );
     }
-    
+
     if (sides.has('left')) counts[0]++;
     if (sides.has('right')) counts[1]++;
   }
@@ -245,17 +263,23 @@ function createReadablePath(
       nextEdge &&
       nextEdge.type === edge.type &&
       requireNode(nodes, nextEdge.from).isJunction
-        ? classifyTurn(...findEdgeTurnAngle(path[nextEdgeIndex - 1], nextEdge, nodes))
+        ? classifyTurn(
+            ...findEdgeTurnAngle(path[nextEdgeIndex - 1], nextEdge, nodes)
+          )
         : 'straight';
-    
+
     const formatter = instructionFormatters[edge.type];
     const instruction = formatter({
       fromNode: requireNode(nodes, edge.from),
-      turn: classifyTurn(...findEdgeTurnAngle(i > 0 ? path[i - 1] : null, edge, nodes)),
+      turn: classifyTurn(
+        ...findEdgeTurnAngle(i > 0 ? path[i - 1] : null, edge, nodes)
+      ),
       skippedTurns: countSkippedTurns(path, nodes, i, nextEdgeIndex),
       nextTurn,
       toNode: requireNode(nodes, path[nextEdgeIndex - 1].to),
-      distance: path.slice(i, nextEdgeIndex).reduce((sum, e) => sum + e.distance, 0)
+      distance: path
+        .slice(i, nextEdgeIndex)
+        .reduce((sum, e) => sum + e.distance, 0)
     });
 
     const node = requireNode(nodes, edge.from);
