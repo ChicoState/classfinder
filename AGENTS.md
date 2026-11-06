@@ -74,6 +74,9 @@ The pull-request workflow mirrors these checks when application files and tests 
 - Local website startup: the existing React UI requires runtime `react-router`, `react-leaflet`, and `leaflet`, with `@types/leaflet` for TypeScript. These are locked npm dependencies and are installed by Compose's existing `npm ci`. FloorPlanViewer converts global route positions with the inverse building transform using `graphBuildingId`, filtering both building and floor; coordinate round-trip and viewer projection regressions cover this boundary.
 
 Run `npm run check` for the on-demand pre-push checks; no Git hooks are installed.
+The simple cross-campus instruction test is `npm test -- tests/unit/campusInstructions.test.ts`.
+It routes Butte room 101 to Yolo room 108 and regenerates the ignored local
+`artifacts/campus-routes/instructions.md` with verbatim directions and graph node sequence.
 Playwright builds and serves the app automatically; install Chromium once with
 `npx playwright install chromium`. Coverage includes source except bootstrap and
 type-only files and requires 80% statements/lines/functions and 75% branches.

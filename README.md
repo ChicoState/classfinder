@@ -295,6 +295,15 @@ Run `node tools/routing/render-campus-routes.mjs` to generate the local
 building with eleven differently colored outgoing routes), and `routes.json`
 with every traversal and distance. The offline renderer uses the existing
 machine-local canvas installation (`CLASSFINDER_PDF_TOOLS` can override it).
+
+For a simple indoor-to-indoor directions check, run
+`npm test -- tests/unit/campusInstructions.test.ts`. It routes from Butte room 101
+to Yolo room 108 through the production graph and instruction adapter, verifies
+continuous edges, outdoor traversal, and arrival, and writes numbered directions,
+distance, and the graph node sequence to
+[the local instruction report](artifacts/campus-routes/instructions.md).
+The report is regenerated on each run and remains an ignored local artifact.
+
 `tools/routing/map-registration.json` records the manual footprint landmarks used
 to fit `open-street-view-map.png`; this display registration does not modify graph
 coordinates. Shared routes use slight parallel offsets for visibility. Numbered

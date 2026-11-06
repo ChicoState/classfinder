@@ -27,11 +27,12 @@ type InstructionContext = {
   skippedTurns: SkippedTurns;
   nextTurn: Turn;
   toNode: Node;
+  distance: number;
 };
 
 type InstructionFormatter = (context: InstructionContext) => Instruction;
 
-const directionalEdgeTypes = new Set<EdgeKind>(['corridor', 'outdoor']);
+const directionalEdgeTypes = new Set<EdgeKind>(['corridor', 'outdoor', 'door']);
 
 function ordinal(value: number): string {
   const names = [
@@ -53,18 +54,23 @@ function ordinal(value: number): string {
   return names[value - 1] ?? `${value}${suffix}`;
 }
 
-function movementInstruction(turn: Turn, skippedTurns: SkippedTurns, destination: string, nextTurn: Turn): Instruction {
-  const movement =
-    turn === 'straight' ? 'Continue' : `Turn ${turn} and continue`;
+function movementInstruction(turn: Turn, skippedTurns: SkippedTurns, destination: string, nextTurn: Turn, distance: number): Instruction {
+  const movement = (turn === 'straight' ? 'Continue' : `Turn ${turn} and continue`) + ` for ${Math.round(distance / 5) * 5} feet`;
   const instruction = `${movement} ${destination}.`;
+
   if (nextTurn !== 'left' && nextTurn !== 'right') return instruction;
+
   const count = skippedTurns[nextTurn === 'left' ? 0 : 1] + 1;
   return `${instruction} Take the ${ordinal(count)} ${nextTurn}.`;
 }
 
+function doorInstruction(turn: Turn): Instruction {
+  return 'Go through the doorway ' + (turn === 'straight' ? '' : 'on your ' + turn);
+}
+
 const instructionFormatters: Record<EdgeKind, InstructionFormatter> = {
-  corridor: ({ turn, skippedTurns, nextTurn }) => movementInstruction(turn, skippedTurns, 'along the corridor', nextTurn),
-  door: () => 'Go through the doorway.',
+  corridor: ({ turn, skippedTurns, nextTurn, distance }) => movementInstruction(turn, skippedTurns, 'along the corridor', nextTurn, distance),
+  door: ({ turn }) => doorInstruction(turn),
   stairs: ({ fromNode, toNode }) =>
     fromNode.floorId === toNode.floorId
       ? 'Take the stairs.'
@@ -74,7 +80,7 @@ const instructionFormatters: Record<EdgeKind, InstructionFormatter> = {
       ? 'Take the elevator.'
       : `Take the elevator to floor ${toNode.floorId}.`,
   ramp: () => 'Use the ramp.',
-  outdoor: ({ turn, skippedTurns, nextTurn }) => movementInstruction(turn, skippedTurns, 'outdoors', nextTurn)
+  outdoor: ({ turn, skippedTurns, nextTurn, distance }) => movementInstruction(turn, skippedTurns, 'outdoors', nextTurn, distance)
 };
 
 function requireNode(nodes: Nodes, nodeId: NodeId): Node {
@@ -107,6 +113,7 @@ function findEdgeTurnAngle(
   const toNode = requireNode(nodes, edge.to);
   const incoming = subtract(previousToNode.position, previousFromNode.position);
   const outgoing = subtract(toNode.position, fromNode.position);
+
   return findTurnAngle(incoming, outgoing);
 }
 
@@ -233,24 +240,22 @@ function createReadablePath(
     }
 
     const nextEdge = path[nextEdgeIndex];
-    // Announce the ordinal on the approach, before reaching the target turn.
+    // Find and show the next turn, before reaching the target turn.
     const nextTurn =
       nextEdge &&
       nextEdge.type === edge.type &&
       requireNode(nodes, nextEdge.from).isJunction
-        ? classifyTurn(
-            ...findEdgeTurnAngle(path[nextEdgeIndex - 1], nextEdge, nodes)
-          )
+        ? classifyTurn(...findEdgeTurnAngle(path[nextEdgeIndex - 1], nextEdge, nodes))
         : 'straight';
+    
     const formatter = instructionFormatters[edge.type];
     const instruction = formatter({
       fromNode: requireNode(nodes, edge.from),
-      turn: classifyTurn(
-        ...findEdgeTurnAngle(i > 0 ? path[i - 1] : null, edge, nodes)
-      ),
+      turn: classifyTurn(...findEdgeTurnAngle(i > 0 ? path[i - 1] : null, edge, nodes)),
       skippedTurns: countSkippedTurns(path, nodes, i, nextEdgeIndex),
       nextTurn,
-      toNode: requireNode(nodes, path[nextEdgeIndex - 1].to)
+      toNode: requireNode(nodes, path[nextEdgeIndex - 1].to),
+      distance: path.slice(i, nextEdgeIndex).reduce((sum, e) => sum + e.distance, 0)
     });
 
     const node = requireNode(nodes, edge.from);
