@@ -64,7 +64,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -89.58,
+        "x": -87.58,
         "y": -9.58
       }
     },
@@ -75,7 +75,8 @@
       "position": {
         "x": -89.58,
         "y": -9.58
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-north-576",
@@ -84,7 +85,8 @@
       "position": {
         "x": -36.04,
         "y": -9.58
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-center-311",
@@ -92,7 +94,7 @@
       "floorId": 3,
       "position": {
         "x": -36.04,
-        "y": -9.58
+        "y": -11.58
       }
     },
     {
@@ -100,17 +102,18 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -5.0,
+        "x": -5,
         "y": -9.58
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-stair-east-311",
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -5.0,
-        "y": -9.58
+        "x": -5,
+        "y": -9.79
       }
     },
     {
@@ -120,14 +123,15 @@
       "position": {
         "x": -89.58,
         "y": -175.62
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-south-319",
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -89.58,
+        "x": -87.58,
         "y": -175.62
       }
     },
@@ -136,7 +140,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -24.79,
+        "x": -26.79,
         "y": -175.62
       }
     },
@@ -147,7 +151,8 @@
       "position": {
         "x": -24.79,
         "y": -175.62
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-elevator-lobby",
@@ -165,14 +170,15 @@
       "position": {
         "x": -36.04,
         "y": -30.21
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-stair-east-410",
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -5.0,
+        "x": -5,
         "y": -30.21
       }
     },
@@ -210,7 +216,8 @@
       "position": {
         "x": -36.04,
         "y": -48.33
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-east-497",
@@ -388,7 +395,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -5.0,
+        "x": -5,
         "y": -24.58
       }
     },
@@ -407,7 +414,7 @@
       "floorId": 3,
       "position": {
         "x": 2.29,
-        "y": -10.0
+        "y": -10
       }
     },
     {
@@ -415,8 +422,8 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -5.0,
-        "y": -10.0
+        "x": -5,
+        "y": -10
       }
     },
     {
@@ -425,7 +432,7 @@
       "floorId": 3,
       "position": {
         "x": 15.21,
-        "y": -10.0
+        "y": -10
       }
     },
     {
@@ -1245,14 +1252,15 @@
       "position": {
         "x": -89.58,
         "y": -85.42
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-cluster-a-319",
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -89.58,
+        "x": -87.58,
         "y": -85.42
       }
     },
@@ -1261,7 +1269,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -82.92
       }
     },
@@ -1270,7 +1278,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -85.42
       }
     },
@@ -1353,14 +1361,15 @@
       "position": {
         "x": -89.58,
         "y": -106.46
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-cluster-b-319",
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -89.58,
+        "x": -87.58,
         "y": -106.46
       }
     },
@@ -1369,7 +1378,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -103.75
       }
     },
@@ -1378,7 +1387,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -106.46
       }
     },
@@ -1405,7 +1414,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -108.96
       }
     },
@@ -1425,14 +1434,15 @@
       "position": {
         "x": -89.58,
         "y": -126.46
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "tehama-3-hall-cluster-c-319",
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -89.58,
+        "x": -87.58,
         "y": -126.46
       }
     },
@@ -1459,7 +1469,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -128.75
       }
     },
@@ -1468,7 +1478,7 @@
       "buildingId": "tehama",
       "floorId": 3,
       "position": {
-        "x": -80.0,
+        "x": -80,
         "y": -126.46
       }
     },

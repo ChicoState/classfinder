@@ -440,7 +440,8 @@
       "position": {
         "x": 26.53,
         "y": 133.47
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "trinity-1-stairs-northeast",
@@ -474,7 +475,7 @@
       "buildingId": "trinity",
       "floorId": 1,
       "position": {
-        "x": 35.0,
+        "x": 35,
         "y": 145.97
       }
     },
@@ -789,7 +790,7 @@
       "buildingId": "trinity",
       "floorId": 1,
       "position": {
-        "x": 24.44,
+        "x": 25.42,
         "y": 66.39
       }
     },
@@ -826,7 +827,7 @@
       "floorId": 1,
       "position": {
         "x": -0.97,
-        "y": 66.39
+        "y": 64.39
       }
     },
     {
@@ -917,7 +918,8 @@
       "position": {
         "x": -0.97,
         "y": 8.75
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "trinity-1-room-139",
@@ -1024,7 +1026,7 @@
       "floorId": 1,
       "position": {
         "x": 25.42,
-        "y": 66.39
+        "y": 64.39
       }
     },
     {
@@ -1176,8 +1178,8 @@
       "buildingId": "trinity",
       "floorId": 1,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       }
     },
     {
@@ -1233,6 +1235,26 @@
         "x": -65.14,
         "y": 125.56
       }
+    },
+    {
+      "id": "trinity-1-south-lobby-junction",
+      "buildingId": "trinity",
+      "floorId": 1,
+      "position": {
+        "x": 6.67,
+        "y": 66.39
+      },
+      "isJunction": true
+    },
+    {
+      "id": "trinity-1-south-east-entry-junction",
+      "buildingId": "trinity",
+      "floorId": 1,
+      "position": {
+        "x": 21.11,
+        "y": 66.39
+      },
+      "isJunction": true
     }
   ],
   "edges": [
@@ -1724,13 +1746,13 @@
       "from": "trinity-1-elevator-lobby-south"
     },
     {
-      "to": "trinity-1-south-hall-top",
+      "to": "trinity-1-south-east-entry-junction",
       "weight": 1,
       "type": "corridor",
-      "from": "trinity-1-south-hall-west-top"
+      "from": "trinity-1-south-hall-top"
     },
     {
-      "to": "trinity-1-south-west-833",
+      "to": "trinity-1-south-hall-west-top",
       "weight": 1,
       "type": "corridor",
       "from": "trinity-1-south-west-830"
@@ -1856,7 +1878,7 @@
       "from": "trinity-1-south-west-1218"
     },
     {
-      "to": "trinity-1-south-east-833",
+      "to": "trinity-1-south-hall-top",
       "weight": 1,
       "type": "corridor",
       "from": "trinity-1-south-east-830"
@@ -1965,7 +1987,7 @@
       "from": "trinity-1-elevator-lobby-south"
     },
     {
-      "to": "trinity-1-south-hall-west-top",
+      "to": "trinity-1-south-lobby-junction",
       "weight": 1,
       "type": "corridor",
       "from": "trinity-1-elevator-lobby-south-door"
@@ -1983,7 +2005,7 @@
       "from": "trinity-1-east-south-approach"
     },
     {
-      "to": "trinity-1-south-hall-top",
+      "to": "trinity-1-south-east-entry-junction",
       "weight": 1,
       "type": "corridor",
       "from": "trinity-1-east-south-door"
@@ -2047,6 +2069,18 @@
       "to": "trinity-1-exit-west-north",
       "weight": 1,
       "type": "door"
+    },
+    {
+      "to": "trinity-1-south-hall-west-top",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-1-south-lobby-junction"
+    },
+    {
+      "to": "trinity-1-south-lobby-junction",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-1-south-east-entry-junction"
     }
   ]
 }

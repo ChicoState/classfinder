@@ -57,6 +57,7 @@ type SerializedNode = {
   buildingId: string | null;
   floorId: number | null;
   position: { x: number; y: number };
+  isJunction?: true;
 };
 type SerializedEdge = {
   from: string;
@@ -69,6 +70,8 @@ type SerializedEdge = {
 
 Check these against current `graph.ts`. Restore `NodeId` branding at the TypeScript boundary. `from` is only for serialization: it becomes the loaded `Graph` adjacency-list key and is omitted from `Edge` values. Indoor nodes use the building ID and numeric floor. Use nullable fields appropriately for genuinely outdoor nodes when outdoor work is requested.
 
+The optional `isJunction: true` marker is required on circulation junction nodes and omitted on other nodes. When applying this guidance, inspect and update the serialized contract, runtime `Node` type, loader validation/copying, and meaningful preservation tests as needed so the marker survives loading. Do not assume the current loader supports it. Derive exits and headings dynamically from adjacency and positions; do not store exit lists, bearings, turn counts, or a duplicate junction registry.
+
 Set `metadata.undirected: true`. Store each two-way edge once and expand it in both directions when loading. Serialized edges do not contain `distance`: the loader calculates its runtime value with `Math.hypot(from.position.x - to.position.x, from.position.y - to.position.y)`. Default weight is `1`; the current Dijkstra cost is `distance * weight`. Costs must be finite and nonnegative.
 
 Omit `isAccessible` when unknown; omission is not true. Stair traversal is false. Mark true only for supported facts such as source-marked AO/wheelchair entrance edges, without claiming a complete accessible route. Do not infer elevator availability, service-elevator permission, unlocked doors, or ramp compliance. Metadata cannot enforce restrictions in a router that ignores them.
@@ -77,11 +80,24 @@ Omit `isAccessible` when unknown; omission is not true. Stair traversal is false
 
 - Room destinations are **doorway nodes**, not a room center plus a separate door node.
 - Add only necessary junctions, bends, distinct entrances, and stair/elevator access points. Avoid grids, decorative/furniture nodes, and extra points along unobstructed straight paths.
-- Keep a node if removing it would cross a wall, lose a branch or transfer, or substantially distort travel distance. Minimal does not mean arbitrary straight-line shortcuts.
+- Keep a node if removing it would cross a wall, lose a branch or transfer, substantially distort travel distance, or misrepresent a junction's approach/exit direction. Minimal does not mean arbitrary straight-line shortcuts.
 - Follow visible openings. Interior-only rooms must be reached through their actual parent room. Retain multiple usable entrances and supported alternatives.
 - Door edges may include approaches or travel between room doors. Corridor edges include lobby/open circulation. Use ramp, stairs, elevator, and outdoor kinds for the movement actually represented.
 - Dashed equipment is not a walkway. Proximity is not connectivity. Do not invent doors for enclosed or ambiguous spaces; retain visible unnumbered entrances and document missing access evidence.
 - During indoor-only digitization, include only source-shown, relevant outdoor segments, such as an exterior stair exit's approach to a nearby entrance. For campus outdoor work, use the user's map-informed walkability guidance in [references/geographic-alignment.md](references/geographic-alignment.md): missing OSM ways need not block plausible open-area connections, but each inferred location must be traceable and marked for review. A neighboring building outline does not establish its indoor graph.
+
+## Junctions and exit geometry (new and existing graphs)
+
+Apply these requirements to every floor being generated or corrected, including junctions passed straight through by the selected route. Do not limit inspection to turns on a sample route.
+
+- Represent every source-supported circulation junction explicitly: T intersections, crossroads, forks, and branching lobby passages. A corridor bend alone is not a junction; room door spurs and stair/elevator transfers must remain distinguishable from corridor branches. Node degree alone does not establish a physical junction.
+- Place the junction node at the physical meeting of the walkable branches. Each immediate neighbor must lie along its branch's initial direction, so the vector from junction to neighbor reflects the exit heading. Check incoming directions too: every branch can be approached in reverse. Do not connect directly to a distant endpoint beyond a bend if that diagonal would give a false heading, even when it stays inside an open lobby.
+- Reuse suitably placed nodes; otherwise add the minimum approach/bend nodes needed to preserve each branch's direction. Use distinct, noncoincident positions supported by the drawing. Never move room doorways, building origins, or transfer landmarks merely to manufacture convenient angles. Do not force branches to right angles or invent precision beyond the source.
+- Mark each physical intersection with `isJunction: true` on its junction node; descriptive IDs alone are insufficient. Use one marked node per physical junction where source geometry supports it; additional approach/bend nodes remain unmarked. Preserve genuinely separate nearby intersections. If a broad or staggered intersection cannot be represented this way without misleading geometry or duplicate counts, document it and ask the user rather than inventing grouping fields or collapsing distinct intersections.
+- For new floors, inventory junctions and branches during source inspection, then construct their local geometry before joining longer corridor runs. Include supported branches even when a chosen destination route does not use them.
+- For existing floors, compare the saved graph against the source, inventory missing/unmarked junctions and misleading neighbor vectors, then split affected edges or add necessary nodes. Preserve existing IDs, origins, alignment, doorway positions, weights, and accessibility evidence unless a source-backed correction requires a change. Remove superseded shortcut edges; update affected references and any generation scripts so regeneration retains the corrections. Stay within the requested building/floors and record any unaudited scope.
+- Record source page/location and unresolved junction geometry in the building reference, distinguishing observations from assumptions. Only junction nodes need the additional marker; neighboring nodes use their existing positions and edges without extra exit annotations.
+- This data supports counting passed junctions or relevant left/right branches. It does not implement ordinal instructions: instruction generation must inspect off-route exits and consume the junction marker. Do not claim that graph changes alone fix instruction wording or silently expand digitization into routing/UI changes.
 
 ## Scale, building origin, and floor alignment
 
@@ -115,6 +131,8 @@ Verify the following:
 - Unique IDs, correct building/floor fields, finite coordinates, exact origin, allowed edge kinds, existing endpoints, no duplicate undirected pairs/self-links, no serialized `distance` property, and valid loaded distances/weights.
 - Within-floor edges stay on their floor; only connections cross floors. Check reachability for each intended destination, and explain any genuinely disconnected region rather than forcing a route.
 - Scale conversion and coordinate-derived edge distances are consistent. Compare routes to actual openings, walls, corners, ramps, and columns. Connectivity tests alone cannot establish physical correctness.
+- Junction inventory matches the inspected source area; every circulation junction has `isJunction: true`, other nodes omit it, and the production loader preserves it. Derive exits from actual adjacency and ensure each physical branch is represented without duplicate exit counts. Distinguish room door spurs, bends, and vertical transfers from circulation branches.
+- Inspect a temporary source overlay showing marked junction IDs and immediate neighbor segments. Check headings from every approach, including straight-through routes past unused branches; check a bend before/after a junction and any broad or closely spaced intersections present. Correct misleading diagonals and recheck affected route distances/reachability. Record uncertain geometry rather than asserting reliable turn counts from connectivity alone.
 - Transfer endpoints correspond, supported floor ranges are correct, assumptions are labelled, and accessibility is not overstated.
 - Loaded two-way links produce twice the serialized edge count. Test attribute preservation, independent loads, cross-floor routes, and floor-aware start candidates with real Dijkstra.
 - Use test-first development for loader behavior changes. Run applicable AGENTS checks and a production build for integration changes. Distinguish no-test E2E runs and pre-existing formatting failures from successful checks. Do not repair unrelated files just to make checks green.

@@ -68,7 +68,7 @@
       "Auditorium east stairs appear only on floor 1 and are not extended to floors 2 or 3.",
       "Room 129/129B is divided by a folding partition; no through-room shortcut is assumed.",
       "Room 172 is inside the auditorium boundary; its internal stage access cannot be completed without referenced sheet 1, so it is omitted rather than linked through the outer wall.",
-      "The source stair graphics alone do not establish the geometry of the level passages; the user-confirmed walking paths are represented by approximate centerlines, marked H1\u2013H3 in the requested preview."
+      "The source stair graphics alone do not establish the geometry of the level passages; the user-confirmed walking paths are represented by approximate centerlines, marked H1–H3 in the requested preview."
     ],
     "stairRoomPassages": {
       "evidence": "User confirmed on 2026-10-19 that level paths connect the landings through the stair rooms. Restored on 2026-10-28 at user request after merge replaced these nodes. This supersedes the missing-bypass interpretation.",
@@ -175,7 +175,8 @@
       "position": {
         "x": -0.56,
         "y": 32.78
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-south-east-mid",
@@ -211,7 +212,8 @@
       "position": {
         "x": -56.11,
         "y": 86.39
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-south-west-top",
@@ -265,7 +267,8 @@
       "position": {
         "x": -56.11,
         "y": 114.44
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-south-bridge-east",
@@ -355,7 +358,8 @@
       "position": {
         "x": -56.11,
         "y": 147.78
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-middle-north-link",
@@ -364,7 +368,8 @@
       "position": {
         "x": -56.11,
         "y": 199.44
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-north-bridge-west",
@@ -373,7 +378,8 @@
       "position": {
         "x": -56.11,
         "y": 234.17
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-north-bridge-east",
@@ -391,7 +397,8 @@
       "position": {
         "x": -56.11,
         "y": 262.5
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-north-se",
@@ -436,7 +443,8 @@
       "position": {
         "x": -0.56,
         "y": 321.94
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-1-north-east-upper",
@@ -1886,6 +1894,24 @@
         "x": -8.33,
         "y": 243.33
       }
+    },
+    {
+      "id": "holt-1-hall-stair-room-north-door-approach",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -53.33,
+        "y": 234.17
+      }
+    },
+    {
+      "id": "holt-1-hall-stair-room-south-door-approach",
+      "buildingId": "holt",
+      "floorId": 1,
+      "position": {
+        "x": -53.33,
+        "y": 114.44
+      }
     }
   ],
   "edges": [
@@ -3028,7 +3054,7 @@
       "type": "door"
     },
     {
-      "from": "holt-1-north-bridge-west",
+      "from": "holt-1-hall-stair-room-north-door-approach",
       "to": "holt-1-north-stair-door",
       "weight": 1,
       "type": "door"
@@ -3040,7 +3066,7 @@
       "type": "door"
     },
     {
-      "from": "holt-1-south-bridge-west",
+      "from": "holt-1-hall-stair-room-south-door-approach",
       "to": "holt-1-south-stair-door",
       "weight": 1,
       "type": "door"
@@ -3052,7 +3078,7 @@
       "type": "door"
     },
     {
-      "from": "holt-1-north-bridge-west",
+      "from": "holt-1-hall-stair-room-north-door-approach",
       "to": "holt-1-stairs-middle-north-west-door-256",
       "weight": 1,
       "type": "door"
@@ -3064,7 +3090,7 @@
       "type": "corridor"
     },
     {
-      "from": "holt-1-north-bridge-west",
+      "from": "holt-1-hall-stair-room-north-door-approach",
       "to": "holt-1-stairs-middle-north-west-door-265",
       "weight": 1,
       "type": "door"
@@ -3088,7 +3114,7 @@
       "type": "corridor"
     },
     {
-      "from": "holt-1-south-bridge-west",
+      "from": "holt-1-hall-stair-room-south-door-approach",
       "to": "holt-1-stairs-middle-south-west-door-472",
       "weight": 1,
       "type": "door"
@@ -3100,7 +3126,7 @@
       "type": "corridor"
     },
     {
-      "from": "holt-1-south-bridge-west",
+      "from": "holt-1-hall-stair-room-south-door-approach",
       "to": "holt-1-stairs-middle-south-west-door-481",
       "weight": 1,
       "type": "door"
@@ -3138,6 +3164,18 @@
     {
       "from": "holt-1-stairs-north-east-lower",
       "to": "holt-1-stairs-auditorium-east",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-north-bridge-west",
+      "to": "holt-1-hall-stair-room-north-door-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "holt-1-south-bridge-west",
+      "to": "holt-1-hall-stair-room-south-door-approach",
       "weight": 1,
       "type": "corridor"
     }

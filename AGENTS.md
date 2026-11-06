@@ -77,3 +77,5 @@ Run `npm run check` for the on-demand pre-push checks; no Git hooks are installe
 Playwright builds and serves the app automatically; install Chromium once with
 `npx playwright install chromium`. Coverage includes source except bootstrap and
 type-only files and requires 80% statements/lines/functions and 75% branches.
+
+- Indoor junction audit (2026-11-04): all 34 indoor floor graphs reviewed against source PDFs. 94 circulation junctions carry `isJunction: true`, including three-way intersections. Seventeen approach/junction nodes added and six redundant coincident nodes merged; loaded graph is 4,926 nodes / 10,802 directed edges. No identical positions remain within an indoor floor. Existing origin, doorway, transfer, campus alignment and accessibility evidence are retained. Holt's paired stair-room doors share one corridor approach per user confirmation. Building skill references contain per-floor source locations and merged IDs. `tests/unit/junctionGeometry.test.ts` checks markers, positions, initial circulation headings and left/right reversal. The outdoor campus graph and runtime instruction wording are outside this audit.

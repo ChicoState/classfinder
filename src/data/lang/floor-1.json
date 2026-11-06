@@ -19,7 +19,7 @@
       "description": "West exterior doorway of room 119 on the reference first floor.",
       "pdfPointFromTopLeft": {
         "x": 105.33333333333333,
-        "y": 160.0
+        "y": 160
       }
     },
     "axes": {
@@ -29,8 +29,8 @@
     "alignment": {
       "method": "Reference floor",
       "pdfToReferenceTranslation": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       },
       "rotationDegrees": 0,
       "scaleFactor": 1
@@ -49,7 +49,7 @@
       "The crossed square beside 115 and the large crossed shaft beside the elevator are not treated as destinations. No north-end doorway is inferred from the dashed line."
     ],
     "fences": {
-      "interpretation": "User-confirmed fences: only the three dashed sections immediately above rooms approximately 105\u2013103. Do not generalize to other dotted/dashed lines.",
+      "interpretation": "User-confirmed fences: only the three dashed sections immediately above rooms approximately 105–103. Do not generalize to other dotted/dashed lines.",
       "gatePlacement": "One gate per section; midpoint positions explicitly approved by the user. The PDF does not mark precise gate locations.",
       "sections": [
         {
@@ -81,7 +81,7 @@
             "y": 510.22222222222223
           },
           "endPdfPointFromTopLeft": {
-            "x": 508.0,
+            "x": 508,
             "y": 510.22222222222223
           }
         }
@@ -141,7 +141,7 @@
       "floorId": 1,
       "position": {
         "x": 46.3,
-        "y": -70.0
+        "y": -70
       }
     },
     {
@@ -311,8 +311,8 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": 35.0,
-        "y": -45.0
+        "x": 35,
+        "y": -45
       }
     },
     {
@@ -321,7 +321,7 @@
       "floorId": 1,
       "position": {
         "x": 20.56,
-        "y": -45.0
+        "y": -45
       }
     },
     {
@@ -329,8 +329,8 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       }
     },
     {
@@ -347,7 +347,7 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -92.78
       }
     },
@@ -412,7 +412,8 @@
       "position": {
         "x": 46.3,
         "y": -151.85
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "lang-1-hall-109",
@@ -475,7 +476,8 @@
       "position": {
         "x": 164.44,
         "y": -151.85
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "lang-1-hall-stairs-east",
@@ -509,7 +511,7 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": -5.0,
+        "x": -5,
         "y": -140.37
       }
     },
@@ -518,7 +520,7 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": -5.0,
+        "x": -5,
         "y": -145.93
       }
     },
@@ -527,7 +529,7 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -140.37
       }
     },
@@ -599,7 +601,7 @@
       "buildingId": "lang",
       "floorId": 1,
       "position": {
-        "x": 125.0,
+        "x": 125,
         "y": -161.67
       }
     },
@@ -717,7 +719,7 @@
       "floorId": 1,
       "position": {
         "x": -17.22,
-        "y": -160.0
+        "y": -160
       }
     },
     {
@@ -825,7 +827,7 @@
       "floorId": 1,
       "position": {
         "x": 178.33,
-        "y": -150.0
+        "y": -150
       }
     },
     {

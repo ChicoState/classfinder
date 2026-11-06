@@ -603,7 +603,8 @@
       "position": {
         "x": 17.36,
         "y": 66.39
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "trinity-2-elevator-lobby-south",
@@ -692,7 +693,7 @@
       "floorId": 2,
       "position": {
         "x": -0.97,
-        "y": 66.39
+        "y": 64.39
       }
     },
     {
@@ -774,7 +775,8 @@
       "position": {
         "x": -0.97,
         "y": 8.75
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "trinity-2-room-239",
@@ -1045,6 +1047,16 @@
         "x": -8.19,
         "y": 64.03
       }
+    },
+    {
+      "id": "trinity-2-south-lobby-junction",
+      "buildingId": "trinity",
+      "floorId": 2,
+      "position": {
+        "x": 6.67,
+        "y": 66.39
+      },
+      "isJunction": true
     }
   ],
   "edges": [
@@ -1445,13 +1457,13 @@
       "from": "trinity-2-elevator-lobby-south"
     },
     {
-      "to": "trinity-2-south-hall-top",
+      "to": "trinity-2-south-lobby-junction",
       "weight": 1,
       "type": "corridor",
-      "from": "trinity-2-south-hall-west-top"
+      "from": "trinity-2-ramp-bottom"
     },
     {
-      "to": "trinity-2-south-west-833",
+      "to": "trinity-2-south-hall-west-top",
       "weight": 1,
       "type": "corridor",
       "from": "trinity-2-south-west-830"
@@ -1667,7 +1679,7 @@
       "from": "trinity-2-elevator-lobby-south"
     },
     {
-      "to": "trinity-2-south-hall-west-top",
+      "to": "trinity-2-south-lobby-junction",
       "weight": 1,
       "type": "corridor",
       "from": "trinity-2-elevator-lobby-south-door"
@@ -1719,6 +1731,12 @@
       "to": "trinity-2-room-239A",
       "weight": 1,
       "type": "door"
+    },
+    {
+      "to": "trinity-2-south-hall-west-top",
+      "weight": 1,
+      "type": "corridor",
+      "from": "trinity-2-south-lobby-junction"
     }
   ]
 }

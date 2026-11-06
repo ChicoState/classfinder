@@ -18,7 +18,7 @@
       "nodeId": "modoc-1-exit-southwest-ao",
       "description": "AO-marked southwest exterior lobby door on floor 1. Upper-floor origin is its projection.",
       "pdfPointFromTopLeft": {
-        "x": 192.0,
+        "x": 192,
         "y": 521.5
       }
     },
@@ -32,8 +32,8 @@
         "scale": 1,
         "rotationDegrees": 0,
         "translationPdfPoints": {
-          "x": 0.0,
-          "y": 0.0
+          "x": 0,
+          "y": 0
         }
       }
     },
@@ -265,7 +265,7 @@
       "buildingId": "modoc",
       "floorId": 1,
       "position": {
-        "x": 25.0,
+        "x": 25,
         "y": 115.21
       }
     },
@@ -365,7 +365,7 @@
       "floorId": 1,
       "position": {
         "x": 7.5,
-        "y": 190.0
+        "y": 190
       }
     },
     {
@@ -555,7 +555,8 @@
       "position": {
         "x": 13.75,
         "y": 13.12
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "modoc-1-custodial-southwest",
@@ -571,8 +572,8 @@
       "buildingId": "modoc",
       "floorId": 1,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       }
     },
     {
@@ -599,7 +600,7 @@
       "floorId": 1,
       "position": {
         "x": 31.88,
-        "y": 20.0
+        "y": 20
       }
     },
     {
@@ -942,7 +943,8 @@
       "position": {
         "x": 73.54,
         "y": 13.12
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "modoc-1-hall-east-1318",

@@ -15,7 +15,12 @@ function loadHoltSourceGraph(): [Graph, Nodes] {
   const nodes: Nodes = new Map(
     floor.nodes.map((node) => [
       node.id as NodeId,
-      { ...node, id: node.id as NodeId, position: { ...node.position } }
+      {
+        ...node,
+        id: node.id as NodeId,
+        position: { ...node.position },
+        isJunction: node.isJunction ? (true as const) : undefined
+      }
     ])
   );
   const graph: Graph = new Map([...nodes.keys()].map((id) => [id, []]));

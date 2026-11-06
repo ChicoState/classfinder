@@ -210,7 +210,7 @@
       "floorId": 2,
       "position": {
         "x": -19.17,
-        "y": -135.0
+        "y": -135
       }
     },
     {
@@ -308,9 +308,10 @@
       "buildingId": "ayres",
       "floorId": 2,
       "position": {
-        "x": 38.12,
+        "x": 30.62,
         "y": -203.96
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ayres-2-hall-213",
@@ -515,7 +516,7 @@
       "buildingId": "ayres",
       "floorId": 2,
       "position": {
-        "x": 105.0,
+        "x": 105,
         "y": -208.96
       }
     },

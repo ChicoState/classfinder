@@ -312,3 +312,20 @@ The local website opens at `http://localhost:5173/`. Its existing router and map
 use the npm dependencies `react-router`, `react-leaflet`, and `leaflet`; Compose
 installs them from the lockfile automatically. After pulling dependency changes,
 restart Compose so `npm ci` refreshes the container's dependency volume.
+
+Indoor floor graphs mark source-supported circulation intersections with
+`isJunction: true`, including three-way Ts and forks. Immediate neighboring
+positions preserve exit headings; callers derive left/right exits dynamically
+from adjacency and positions, distinguishing room-door and vertical-transfer
+spurs. The 2026-11-04 audit covered all 34 indoor floors (94 junction markers),
+merged redundant coincident nodes, and retained building origins and doorway
+positions. Per-building source locations and correction notes are in
+`.agents/skills/generate-floor-plan-graph/references/`. This data audit does not
+implement ordinal navigation instructions or review the outdoor campus graph.
+
+Instruction generation announces ordinal turns on the approach segment (for
+example, “Take the second left”). It counts passed marked junctions offering an
+exit on that side, once per junction, using the incoming heading and the existing
+30° straight / 150° turn-around thresholds. Corridor, ramp and outdoor branches on
+the same building/floor qualify; doorway and stair/elevator spurs do not. Counts
+restart after a turn or edge-type change. The turn cue remains at the junction.

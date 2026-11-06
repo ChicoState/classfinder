@@ -18,8 +18,8 @@ const id = (name: string) => name as NodeId;
 describe('Ayres floor plans', () => {
   it('loads valid unique geometry and expands each edge with its attributes', () => {
     const [graph, nodes] = loadGraphFromData();
-    expect(new Set(serializedNodes.map((node) => node.id)).size).toBe(188);
-    expect(serializedNodes).toHaveLength(188);
+    expect(new Set(serializedNodes.map((node) => node.id)).size).toBe(189);
+    expect(serializedNodes).toHaveLength(189);
     const pairs = new Set<string>();
     for (const floor of floors) {
       for (const node of floor.nodes) {
@@ -58,14 +58,14 @@ describe('Ayres floor plans', () => {
         distance
       });
     }
-    expect(serializedEdges).toHaveLength(190);
+    expect(serializedEdges).toHaveLength(191);
     expect(
       [...graph]
         .filter(([key]) => key.startsWith('ayres-'))
         .flatMap(([, edges]) =>
           edges.filter((edge) => nodes.get(edge.to)?.buildingId === 'ayres')
         )
-    ).toHaveLength(380);
+    ).toHaveLength(382);
     expect(nodes.get(id(floor1.metadata.origin.nodeId))?.position).toEqual(
       toGlobalPosition({ x: 0, y: 0 }, 'ayres')
     );

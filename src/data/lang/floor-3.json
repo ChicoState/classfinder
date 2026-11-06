@@ -18,7 +18,7 @@
       "nodeId": "lang-1-exit-119-west",
       "description": "West exterior doorway of room 119 on the reference first floor.",
       "pdfPointFromTopLeft": {
-        "x": 104.0,
+        "x": 104,
         "y": -233.77777777777777
       }
     },
@@ -54,7 +54,7 @@
       "entrancePlacement": "Approximate midpoint of the corridor-facing (drawing-north) shaft frontage. Door symbols are absent from the PDF; position is inferred, not user-measured.",
       "pdfPointFromTopLeft": {
         "x": 125.77777777777777,
-        "y": 144.0
+        "y": 144
       },
       "cost": "Plan-view coordinate distance only; vertical rise and waiting time omitted. Aligned transfer endpoints can have zero distance."
     }
@@ -67,7 +67,8 @@
       "position": {
         "x": -9.07,
         "y": -151.3
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "lang-3-hall-middle-west",
@@ -92,7 +93,7 @@
       "buildingId": "lang",
       "floorId": 3,
       "position": {
-        "x": 125.0,
+        "x": 125,
         "y": -151.3
       }
     },
@@ -401,6 +402,15 @@
         "x": 9.07,
         "y": -151.3
       }
+    },
+    {
+      "id": "lang-3-stairs-west-approach",
+      "buildingId": "lang",
+      "floorId": 3,
+      "position": {
+        "x": -17.04,
+        "y": -151.3
+      }
     }
   ],
   "edges": [
@@ -496,7 +506,7 @@
     },
     {
       "from": "lang-3-hall-west",
-      "to": "lang-3-stairs-west",
+      "to": "lang-3-stairs-west-approach",
       "weight": 1,
       "type": "corridor"
     },
@@ -650,6 +660,12 @@
       "weight": 1,
       "type": "door",
       "isAccessible": true
+    },
+    {
+      "from": "lang-3-stairs-west-approach",
+      "to": "lang-3-stairs-west",
+      "weight": 1,
+      "type": "corridor"
     }
   ]
 }
