@@ -299,9 +299,21 @@ function createReadablePath(
   return readablePath;
 }
 
-// Calculates a readable path of nodes with instructions from a starting position to an ending position, based on the nodes in the graph and the building ID.
-// start and end building ids are optional, used to help ensure the node found is in the correct building. By default it assumes you could be anywhere.
-// You can also pass 'outside' to filter out all building nodes.
+export function getReadableInstructionsBetweenNodes(
+  startNodeId: NodeId,
+  endNodeId: NodeId
+): ReadablePath | null {
+  const startNode = nodes.get(startNodeId);
+  const endNode = nodes.get(endNodeId);
+
+  if (!startNode || !endNode) {
+    return null;
+  }
+
+  const path = calculatePath(graph, startNode, endNode);
+  return path ? createReadablePath(path, nodes, endNode) : null;
+}
+
 export function getReadableInstructions(
   startX: number,
   startY: number,
@@ -338,7 +350,5 @@ export function getReadableInstructions(
     return null;
   }
 
-  const path = calculatePath(graph, startNode, endNode);
-
-  return path ? createReadablePath(path, nodes, endNode) : null;
+  return getReadableInstructionsBetweenNodes(startNode.id, endNode.id);
 }
