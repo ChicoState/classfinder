@@ -103,8 +103,9 @@
       "floorId": 3,
       "position": {
         "x": -0.56,
-        "y": 86.39
-      }
+        "y": 88.33
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-south-nw",
@@ -113,7 +114,8 @@
       "position": {
         "x": -56.11,
         "y": 86.39
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-south-west-top",
@@ -167,7 +169,8 @@
       "position": {
         "x": -56.11,
         "y": 114.44
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-middle-west-bottom",
@@ -248,7 +251,8 @@
       "position": {
         "x": -56.11,
         "y": 147.78
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-middle-north-link",
@@ -257,7 +261,8 @@
       "position": {
         "x": -56.11,
         "y": 199.44
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-north-bridge-west",
@@ -275,7 +280,8 @@
       "position": {
         "x": -56.11,
         "y": 262.5
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-north-se",
@@ -1814,7 +1820,8 @@
       "position": {
         "x": -79.17,
         "y": 150.56
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-3-west-suite-bottom-west",
@@ -1895,15 +1902,6 @@
       "position": {
         "x": -23.06,
         "y": 340.83
-      }
-    },
-    {
-      "id": "holt-3-south-office-hall-west",
-      "buildingId": "holt",
-      "floorId": 3,
-      "position": {
-        "x": -0.56,
-        "y": 88.33
       }
     },
     {
@@ -2138,7 +2136,7 @@
     },
     {
       "from": "holt-3-middle-west-mid",
-      "to": "holt-3-middle-west-bottom",
+      "to": "holt-3-west-suite-north-elbow",
       "weight": 1,
       "type": "corridor"
     },
@@ -3206,12 +3204,6 @@
     },
     {
       "from": "holt-3-south-ne",
-      "to": "holt-3-south-office-hall-west",
-      "weight": 1,
-      "type": "corridor"
-    },
-    {
-      "from": "holt-3-south-office-hall-west",
       "to": "holt-3-south-office-hall",
       "weight": 1,
       "type": "corridor"

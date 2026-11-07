@@ -74,6 +74,11 @@ The pull-request workflow mirrors these checks when application files and tests 
 - Local website startup: the existing React UI requires runtime `react-router`, `react-leaflet`, and `leaflet`, with `@types/leaflet` for TypeScript. These are locked npm dependencies and are installed by Compose's existing `npm ci`. FloorPlanViewer converts global route positions with the inverse building transform using `graphBuildingId`, filtering both building and floor; coordinate round-trip and viewer projection regressions cover this boundary.
 
 Run `npm run check` for the on-demand pre-push checks; no Git hooks are installed.
+The simple cross-campus instruction test is `npm test -- tests/unit/campusInstructions.test.ts`.
+It routes Butte room 101 to Yolo room 108 and regenerates the ignored local
+`artifacts/campus-routes/instructions.md` with verbatim directions and graph node sequence.
 Playwright builds and serves the app automatically; install Chromium once with
 `npx playwright install chromium`. Coverage includes source except bootstrap and
 type-only files and requires 80% statements/lines/functions and 75% branches.
+
+- Indoor junction audit (2026-11-04): all 34 indoor floor graphs reviewed against source PDFs. 94 circulation junctions carry `isJunction: true`, including three-way intersections. Seventeen approach/junction nodes added and six redundant coincident nodes merged; loaded graph is 4,926 nodes / 10,802 directed edges. No identical positions remain within an indoor floor. Existing origin, doorway, transfer, campus alignment and accessibility evidence are retained. Holt's paired stair-room doors share one corridor approach per user confirmation. Building skill references contain per-floor source locations and merged IDs. `tests/unit/junctionGeometry.test.ts` checks markers, positions, initial circulation headings and left/right reversal. The outdoor campus graph and runtime instruction wording are outside this audit.

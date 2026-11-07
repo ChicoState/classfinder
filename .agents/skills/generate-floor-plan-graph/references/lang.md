@@ -135,3 +135,61 @@ code changed. No accessibility flag was inferred. The updated loaded room-124
 to room-120 route uses the east gate, 387.97 feet / 27 edges, with the same cost
 in reverse and no stairs. The requested combined graph-only preview labels the
 three gates E–G and records confirmation/provenance in the route report.
+
+## Indoor junction audit — 2026-11-04 (completed)
+
+Inspected the saved graph against every supplied source floor page and temporary
+source overlays. Three-way Ts and forks count as well as crossroads. Room-door
+spurs, standalone bends and vertical transfers alone are not circulation junctions.
+The campus outdoor dataset is excluded by user instruction.
+
+First-floor north/south wing and east vestibule Ts are marked. Floors 2/3 have west hall/service passage Ts and short westward approaches before the stair landings, avoiding diagonal initial headings. Source-shown first-floor gate approaches remain entrance spurs; the campus outdoor graph was not reviewed.
+
+### floor-1.json
+
+Source: csuc-floor-plans/Langdon/lang-1.pdf; page 1 of each PDF.
+Date: 2010-09-02. Units: feet; conversion 0.4166666666666667 feet/PDF point.
+Origin: `lang-1-exit-119-west`; projected native PDF origin (105.33333333333333, 160).
+Axes: drawing-right X / drawing-up Y. Existing floor/building alignment is retained;
+its transform and landmarks are recorded in the floor metadata.
+
+| Junction ID | Native PDF point (top-left) |
+| --- | --- |
+| `lang-1-hall-north-wing` | (216.45, 524.44) |
+| `lang-1-hall-east-rooms` | (499.99, 524.44) |
+### floor-2.json
+
+Source: csuc-floor-plans/Langdon/lang-2.pdf; page 1 of each PDF.
+Date: 2010-09-02. Units: feet; conversion 0.4166666666666667 feet/PDF point.
+Origin: `lang-1-exit-119-west`; projected native PDF origin (104, -12).
+Axes: drawing-right X / drawing-up Y. Existing floor/building alignment is retained;
+its transform and landmarks are recorded in the floor metadata.
+
+| Junction ID | Native PDF point (top-left) |
+| --- | --- |
+| `lang-2-hall-west` | (82.23, 351.12) |
+
+Added necessary approaches/junctions: `lang-2-stairs-west-approach`.
+### floor-3.json
+
+Source: csuc-floor-plans/Langdon/lang-2.pdf; page 1 of each PDF.
+Date: 2010-09-02. Units: feet; conversion 0.4166666666666667 feet/PDF point.
+Origin: `lang-1-exit-119-west`; projected native PDF origin (104, -233.77777777777777).
+Axes: drawing-right X / drawing-up Y. Existing floor/building alignment is retained;
+its transform and landmarks are recorded in the floor metadata.
+
+| Junction ID | Native PDF point (top-left) |
+| --- | --- |
+| `lang-3-hall-west` | (82.23, 129.34) |
+
+Added necessary approaches/junctions: `lang-3-stairs-west-approach`.
+
+Focused validation preserves every original connected component after resolving
+merged IDs. All 34 floors have distinct node positions within a floor. Marked
+intersections have nonzero immediate segments and distinct circulation headings;
+production-loader tests preserve every marker. Origins, building transforms,
+transfer chains, weights and accessibility evidence are retained. No final preview
+under src/data was refreshed. No stored exit lists, headings or grouping fields
+were added. The existing PDFs remain approximate and do not establish current
+access or furnishing-dependent paths through open rooms/lobbies. Instruction
+wording and ordinal turn generation remain outside this data audit.

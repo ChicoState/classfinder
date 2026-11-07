@@ -15,6 +15,7 @@ export type Node = {
   buildingId: string;
   floorId: number;
   position: Vector2;
+  isJunction?: true;
 };
 
 export type Edge = {

@@ -97,7 +97,8 @@
       "position": {
         "x": -73,
         "y": 0
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "plumas-1-hall-east",
@@ -115,7 +116,8 @@
       "position": {
         "x": -16,
         "y": 0
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "plumas-1-hall-elevator",
@@ -358,7 +360,8 @@
       "position": {
         "x": -73,
         "y": -41.25
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "plumas-1-hall-south-exit",

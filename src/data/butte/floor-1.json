@@ -18,8 +18,8 @@
       "nodeId": "butte-1-exit-north-east-ao",
       "description": "First-floor north east AO-marked exterior doorway; projected reference origin on upper floors.",
       "pdfPointFromTopLeft": {
-        "x": 291.0,
-        "y": 135.0
+        "x": 291,
+        "y": 135
       },
       "referenceFloorPdfPointFromTopLeft": {
         "x": 291,
@@ -36,11 +36,11 @@
         "scale": 1,
         "rotationDegrees": 0,
         "translationPdfPoints": {
-          "x": 0.0,
-          "y": 0.0
+          "x": 0,
+          "y": 0
         }
       },
-      "uncertainty": "Manual alignment. Most shared core walls agree within approximately 0.5 feet; north stair drawings differ substantially on floors 1\u20133 and are not used as alignment anchors."
+      "uncertainty": "Manual alignment. Most shared core walls agree within approximately 0.5 feet; north stair drawings differ substantially on floors 1–3 and are not used as alignment anchors."
     },
     "coordinateConversion": "x = (pdfX + 0.0 - 291) * 20/72; y = (135 - pdfY - 0.0) * 20/72.",
     "undirected": true,
@@ -75,7 +75,7 @@
       "buildingId": "butte",
       "floorId": 1,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -8.33
       }
     },
@@ -140,7 +140,8 @@
       "position": {
         "x": -21.11,
         "y": -94.44
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "butte-1-hall-women",
@@ -174,8 +175,8 @@
       "buildingId": "butte",
       "floorId": 1,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       }
     },
     {
@@ -184,7 +185,7 @@
       "floorId": 1,
       "position": {
         "x": -21.11,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -273,7 +274,7 @@
       "buildingId": "butte",
       "floorId": 1,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -37.22
       }
     },
@@ -354,7 +355,7 @@
       "buildingId": "butte",
       "floorId": 1,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": 17.36
       }
     },

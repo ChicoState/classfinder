@@ -74,3 +74,80 @@ Overlay inspection corrected wall crossings, branch positions and parent-room ac
 Before extending: inspect floors 2/3 separately, align fixed features against the reference floor, and confirm stair serving ranges and transfer elevations. Preserve the user-confirmed same-floor passages through the stair rooms. Consult additional lecture-hall/basement sheets before routing inside the tiered seating or joining its B landing. Present-day access and elevator availability need separate evidence. No GPS alignment has been performed.
 
 PDF tools are saved at `/home/eyebaian/.local/share/classfinder-pdf-tools/`; the skill entrypoint documents the reusable `view-pdf.mjs` command. Reuse those installed tools on this machine.
+
+## Indoor junction audit — 2026-11-04 (completed)
+
+Inspected the saved graph against every supplied source floor page and temporary
+source overlays. Three-way Ts and forks count as well as crossroads. Room-door
+spurs, standalone bends and vertical transfers alone are not circulation junctions.
+The campus outdoor dataset is excluded by user instruction.
+
+User confirmed on 2026-11-04 that the paired west stair-room doors represent one corridor branch. Each pair (and the transfer doorway on that approach) now shares an unmarked approach before reaching the marked bridge junction. Both doorway IDs and the user-confirmed same-floor paths remain. Interior stair-room door fans are unmarked. On floor 3 the west suite joins at its north elbow, a separate T above the ring corner; the east office hallway joins the south ring at south-ne.
+
+### floor-1.json
+
+Source: csuc-floor-plans/Holt/holt-1.pdf; page 1 of each PDF.
+Date: 2011-02-17. Units: feet; conversion 0.5555555555555556 feet/PDF point.
+Origin: `holt-1-exit-south-ao`; projected native PDF origin (355, 682).
+Axes: drawing-right X / drawing-up Y. Existing floor/building alignment is retained;
+its transform and landmarks are recorded in the floor metadata.
+
+| Junction ID | Native PDF point (top-left) |
+| --- | --- |
+| `holt-1-south-east-bottom` | (353.99, 623.00) |
+| `holt-1-south-nw` | (254.00, 526.50) |
+| `holt-1-south-bridge-west` | (254.00, 476.01) |
+| `holt-1-middle-south-link` | (254.00, 416.00) |
+| `holt-1-middle-north-link` | (254.00, 323.01) |
+| `holt-1-north-bridge-west` | (254.00, 260.49) |
+| `holt-1-north-sw` | (254.00, 209.50) |
+| `holt-1-north-ne` | (353.99, 102.51) |
+
+Added necessary approaches/junctions: `holt-1-hall-stair-room-north-door-approach`, `holt-1-hall-stair-room-south-door-approach`.
+### floor-2.json
+
+Source: csuc-floor-plans/Holt/holt-2.pdf; page 1 of each PDF.
+Date: 2008-07-24. Units: feet; conversion 0.5555555555555556 feet/PDF point.
+Origin: `holt-1-exit-south-ao`; projected native PDF origin (355, 682).
+Axes: drawing-right X / drawing-up Y. Existing floor/building alignment is retained;
+its transform and landmarks are recorded in the floor metadata.
+
+| Junction ID | Native PDF point (top-left) |
+| --- | --- |
+| `holt-2-south-nw` | (254.00, 526.50) |
+| `holt-2-middle-south-link` | (254.00, 416.00) |
+| `holt-2-middle-north-link` | (254.00, 323.01) |
+| `holt-2-north-sw` | (254.00, 209.50) |
+### floor-3.json
+
+Source: csuc-floor-plans/Holt/holt-3.pdf; page 1 of each PDF.
+Date: 2009-09-15. Units: feet; conversion 0.5555555555555556 feet/PDF point.
+Origin: `holt-1-exit-south-ao`; projected native PDF origin (355, 682).
+Axes: drawing-right X / drawing-up Y. Existing floor/building alignment is retained;
+its transform and landmarks are recorded in the floor metadata.
+
+| Junction ID | Native PDF point (top-left) |
+| --- | --- |
+| `holt-3-south-ne` | (353.99, 523.01) |
+| `holt-3-south-nw` | (254.00, 526.50) |
+| `holt-3-south-bridge-west` | (254.00, 476.01) |
+| `holt-3-middle-south-link` | (254.00, 416.00) |
+| `holt-3-middle-north-link` | (254.00, 323.01) |
+| `holt-3-north-sw` | (254.00, 209.50) |
+| `holt-3-west-suite-north-elbow` | (212.49, 410.99) |
+
+Corrected circulation point positions: `holt-3-south-ne`. Doorway positions and the origin were preserved.
+
+Merged redundant coincident nodes (old → retained):
+
+- `holt-3-south-office-hall-west` → `holt-3-south-ne`
+
+Focused validation preserves every original connected component after resolving
+merged IDs. All 34 floors have distinct node positions within a floor. Marked
+intersections have nonzero immediate segments and distinct circulation headings;
+production-loader tests preserve every marker. Origins, building transforms,
+transfer chains, weights and accessibility evidence are retained. No final preview
+under src/data was refreshed. No stored exit lists, headings or grouping fields
+were added. The existing PDFs remain approximate and do not establish current
+access or furnishing-dependent paths through open rooms/lobbies. Instruction
+wording and ordinal turn generation remain outside this data audit.
