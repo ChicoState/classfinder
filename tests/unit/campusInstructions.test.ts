@@ -45,25 +45,31 @@ it('generates directions from Butte room 101 across campus to Yolo room 108', as
   expect(instructions).not.toBeNull();
   expect(instructions![0].position).toEqual(start.position);
   expect(instructions!.some((step) => step.floorId === 0)).toBe(true);
-  expect(
-    instructions!.every((step) => step.instruction.trim().length > 0)
-  ).toBe(true);
+  expect(instructions!.map((step) => step.id)).toEqual([
+    start.id,
+    ...path!.map((edge) => edge.to)
+  ]);
+  const directions = instructions!.filter(
+    (step) => step.instruction !== undefined
+  );
+  expect(directions.every((step) => step.instruction!.trim().length > 0)).toBe(
+    true
+  );
   expect(instructions!.at(-1)).toEqual({
-    position: end.position,
-    floorId: end.floorId,
+    ...end,
     instruction: 'You have arrived.'
   });
 
   const report = [
     '# Butte room 101 → Yolo room 108',
     '',
-    `Distance: ${path!.reduce((sum, edge) => sum + edge.distance, 0).toFixed(2)} feet · ${path!.length} edges · ${instructions!.length} instructions`,
+    `Distance: ${path!.reduce((sum, edge) => sum + edge.distance, 0).toFixed(2)} feet · ${path!.length} edges · ${directions.length} instructions`,
     '',
     'Regenerate: `npm test -- tests/unit/campusInstructions.test.ts`',
     '',
     'Directions below are verbatim output from the current instruction adapter. Floor 0 is outdoors.',
     '',
-    ...instructions!.map(
+    ...directions.map(
       (step, index) =>
         `${index + 1}. **Floor ${step.floorId}:** ${step.instruction}`
     ),

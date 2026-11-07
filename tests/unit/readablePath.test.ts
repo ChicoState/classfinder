@@ -36,7 +36,11 @@ function route(points: number[][], types: EdgeKind[], setup?: () => void) {
   setup?.();
   const [x, y, floor = 1] = points[0];
   const [endX, endY, endFloor = 1] = points.at(-1)!;
-  return getReadableInstructions(x, y, floor, endX, endY, endFloor);
+  return (
+    getReadableInstructions(x, y, floor, endX, endY, endFloor)?.filter(
+      (node) => node.instruction !== undefined
+    ) ?? null
+  );
 }
 
 it('groups a straight corridor into one instruction', () => {
@@ -65,16 +69,26 @@ it('places a sharp turn at the junction instead of the start', () => {
     )
   ).toEqual([
     {
+      id: '0',
+      buildingId: 'test',
       position: { x: 0, y: 0 },
       floorId: 1,
       instruction: 'Continue for 10 feet along the corridor.'
     },
     {
+      id: '1',
+      buildingId: 'test',
       position: { x: 1, y: 0 },
       floorId: 1,
       instruction: 'Turn left and continue for 10 feet along the corridor.'
     },
-    { position: { x: 1, y: 1 }, floorId: 1, instruction: 'You have arrived.' }
+    {
+      id: '2',
+      buildingId: 'test',
+      position: { x: 1, y: 1 },
+      floorId: 1,
+      instruction: 'You have arrived.'
+    }
   ]);
 });
 

@@ -9,10 +9,8 @@ const [graph, nodes] = loadGraphFromData();
 
 export type Instruction = string;
 
-export type ReadableNode = {
-  position: Vector2;
-  floorId: number;
-  instruction: Instruction;
+export type ReadableNode = Node & {
+  instruction?: Instruction;
 };
 
 export type ReadablePath = ReadableNode[];
@@ -216,11 +214,11 @@ function countSkippedTurns(
   return counts;
 }
 
-function toReadableNode(node: Node, instruction: Instruction): ReadableNode {
+function toReadableNode(node: Node, instruction?: Instruction): ReadableNode {
   return {
+    ...node,
     position: { ...node.position },
-    floorId: node.floorId,
-    instruction
+    ...(instruction === undefined ? {} : { instruction })
   };
 }
 
@@ -284,6 +282,9 @@ function createReadablePath(
 
     const node = requireNode(nodes, edge.from);
     readablePath.push(toReadableNode(node, instruction));
+    for (let index = i + 1; index < nextEdgeIndex; index++) {
+      readablePath.push(toReadableNode(requireNode(nodes, path[index].from)));
+    }
     i = nextEdgeIndex;
   }
 
