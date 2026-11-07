@@ -134,7 +134,7 @@ describe('getNextInstruction', () => {
 
 describe('getReadableInstructions', () => {
   it('returns an instruction for each edge followed by the destination', () => {
-    expect(getReadableInstructions(0, 0, 1, -13.08, 6.55, 1)).toEqual([
+    expect(getReadableInstructions(0, 0, 1, -13.08, 6.55, 1, 'ocon')).toEqual([
       {
         position: { x: 0, y: 0 },
         floorId: 1,
@@ -149,7 +149,7 @@ describe('getReadableInstructions', () => {
   });
 
   it('returns a destination instruction when the route has no edges', () => {
-    expect(getReadableInstructions(0, 0, 1, 0, 0, 1)).toEqual([
+    expect(getReadableInstructions(0, 0, 1, 0, 0, 1, 'ocon')).toEqual([
       {
         position: { x: 0, y: 0 },
         floorId: 1,
@@ -159,6 +159,6 @@ describe('getReadableInstructions', () => {
   });
 });
 
-console.table(
-  getReadableInstructions(0, 0, 1, -24.38, 177.47, 4)
-);
+it('rejects coordinates in an unknown building', () => {
+  expect(getReadableInstructions(0, 0, 1, 0, 0, 1, 'missing')).toBeNull();
+});

@@ -1,6 +1,6 @@
 # ClassFinder
 
-ClassFinder will help students enter classes and receive campus directions. The repository now contains the initial Vite/React application shell; class-entry behavior, routing logic, and campus data are still being built.
+ClassFinder gives students room-to-room directions across twelve campus buildings. Select two rooms to see both building maps and the outdoor walking route. Click the destination building marker to jump to arrival directions. The interface uses the existing campus map and floor plans.
 
 ## Repository map
 
@@ -11,7 +11,9 @@ ClassFinder will help students enter classes and receive campus directions. The 
 - `index.html` — Vite's browser document shell.
 - `src/` — React application source, with `main.tsx` as the entrypoint, `App.tsx` as the root component, shared graph contracts in `lib/graph.ts`, and graph-assembly helpers in `graph/`.
 - `src/data/` — bundled floor-plan JSON and a local visual verification preview.
-- `tests/unit/` — graph loading, graph assembly, and Dijkstra tests; `tests/ui/` and `tests/e2e/` are reserved for future flows.
+- `tests/unit/` — graph loading and routing tests; `tests/ui/` and `tests/e2e/` verify room selection and the outdoor-to-indoor handoff.
+- `src/routing/` — bundled OpenStreetMap paths, entrance handoffs, room inventory and journey planning.
+- `tools/import-campus-paths.py` — optional maintainer tool to refresh the outdoor snapshot.
 - `.github/workflows/` — pull-request checks and GitHub Pages release deployment.
 - `.agents/skills/` — project-provided agent skills.
 
@@ -27,7 +29,7 @@ shaft. The JSON metadata records the PDF scale and digitization limitations.
 The upper stair connects floors 1–2 only; the west and lower stairs
 and both elevators connect floors 1–4.
 
-Use `findNodeNearPosition` with the known starting floor, then pass the resulting
+Filter nodes by building before using `findNodeNearPosition` with the known starting floor, then pass the resulting
 start node and the destination node to `calculatePath`. Each returned path edge
 contains both `from` and `to` node IDs so instruction code can derive the direction
 of consecutive segments. Nearest-node lookup uses only X/Y within the requested
@@ -41,8 +43,8 @@ their destination floor.
 This data belongs in `src/data` because it is part of the application and is
 imported by the loader. A root-level data directory would make more sense for
 independent source datasets or preprocessing inputs. The original PDFs remain in
-`csuc-floor-plans/`; `src/data/ocon/floor-*-preview.png` files are local review aids
-and are not imported by the application or intended for commits. The loader
+`csuc-floor-plans/`; registered `floor-*-preview.png` files are application assets
+used by the indoor viewer and must be preserved. The loader
 trusts the bundled dataset; it is not an arbitrary JSON upload parser.
 
 ## Getting Started
@@ -83,13 +85,14 @@ npm run lint
 npm run typecheck
 npm test
 npm run coverage
-npm run test:e2e
+npm run build
+PLAYWRIGHT_WEB_SERVER=true npm run test:e2e
 npm run test:smoke
 docker compose config
 ```
 
-Unit tests cover graph loading and routing. UI and end-to-end coverage must be
-added as application flows are implemented.
+Tests cover graph loading, indoor/outdoor routing, room selection and the building-marker handoff.
+See [classroom directions](docs/classroom-directions.md) for the data source, refresh process and known limitations.
 
 ## GitHub configuration
 
@@ -110,3 +113,11 @@ The release workflow deploys version tags to GitHub Pages. Before its first rele
   The `-v` removes only the local `node_modules` volume; dependencies will be installed again from `package-lock.json`.
 
 - **GitHub Pages deployment fails:** Confirm Pages is enabled for GitHub Actions and that the repository allows the workflow's `pages: write` and `id-token: write` permissions.
+
+Indoor maps are linked from the home page for all twelve bundled buildings.
+`src/buildings/registry.ts` connects their floor images, coordinate calibration,
+and initial routes to the shared viewer. The existing preview images are reused;
+Holt floor 1 uses a raster rendering of its source PDF with the shared route
+overlay. All buildings use plain maps and floor buttons without an embedded PDF
+toolbar or dashboard. Campus markers without bundled graphs
+show “Indoor map coming soon”.

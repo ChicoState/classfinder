@@ -2,7 +2,7 @@
 
 ## Project status
 
-This repository has an infrastructure foundation, a React application shell, and initial graph loading and routing logic. `infrastructure_plan.md` is the source of truth for platform and tooling decisions; class-entry and navigation user flows are not implemented yet.
+This repository has an infrastructure foundation, a React application shell, and initial graph loading and routing logic. `infrastructure_plan.md` is the source of truth for platform and tooling decisions; room selection and indoor/outdoor navigation show both building maps when directions are generated; clicking the destination building jumps to arrival directions.
 
 ## Repository map
 
@@ -51,3 +51,26 @@ The pull-request workflow mirrors these checks when application files and tests 
 - Add or update meaningful tests with application behavior, then enforce the coverage threshold selected in the plan.
 - Update this file and `README.md` whenever commands, paths, services, or workflows change.
 - Use documentation and code-review skills before merging material changes.
+
+## Indoor map integration
+
+The home page links all twelve bundled buildings through `src/buildings/registry.ts`.
+The shared viewer uses the existing floor previews and per-floor calibration;
+Acker floor 1 spans two source sheets. Holt floor 1 uses a plain raster rendering
+of its source PDF with the shared route overlay. Preview assets are now
+application imports where registered; preserve them when updating map data.
+
+## Classroom journeys
+
+- `src/routing/` owns the OpenStreetMap pedestrian snapshot, explicit entrance
+  handoffs, room inventory and three-leg journey planning. Keep outdoor lat/lon
+  coordinates separate from indoor drawing coordinates.
+- `docs/classroom-directions.md` documents the flow, ODbL source, limitations and
+  snapshot update commands; `tools/import-campus-paths.py` is optional maintainer
+  tooling. `scripts/` remains infrastructure-only.
+- Coordinate-based `getReadableInstructions` requires the graph building ID as
+  its final argument to avoid mixing overlapping building coordinate systems.
+- Entrance matches are approximate; Tehama/Yolo approaches are explicit dashed
+  links. Preserve their disclosure and verify on site before claiming accuracy.
+- Run `npm run build` then `PLAYWRIGHT_WEB_SERVER=true npm run test:e2e` to
+  exercise the production build with a managed preview server.
