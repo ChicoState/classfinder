@@ -113,7 +113,8 @@
       "position": {
         "x": -56.11,
         "y": 86.39
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-2-south-west-top",
@@ -248,7 +249,8 @@
       "position": {
         "x": -56.11,
         "y": 147.78
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-2-middle-north-link",
@@ -257,7 +259,8 @@
       "position": {
         "x": -56.11,
         "y": 199.44
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-2-north-bridge-west",
@@ -275,7 +278,8 @@
       "position": {
         "x": -56.11,
         "y": 262.5
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "holt-2-north-se",

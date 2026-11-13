@@ -47,8 +47,8 @@
       "buildingId": "ayres",
       "floorId": 1,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       }
     },
     {
@@ -111,8 +111,9 @@
       "floorId": 1,
       "position": {
         "x": 0.21,
-        "y": -86.04
-      }
+        "y": -80.42
+      },
+      "isJunction": true
     },
     {
       "id": "ayres-1-hall-105",
@@ -120,8 +121,9 @@
       "floorId": 1,
       "position": {
         "x": 0.21,
-        "y": -105.0
-      }
+        "y": -105
+      },
+      "isJunction": true
     },
     {
       "id": "ayres-1-hall-107",
@@ -148,7 +150,8 @@
       "position": {
         "x": 0.21,
         "y": -159.58
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ayres-1-hall-west-pocket",
@@ -193,7 +196,8 @@
       "position": {
         "x": 0.21,
         "y": -203.54
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ayres-1-hall-116",
@@ -318,7 +322,7 @@
       "floorId": 1,
       "position": {
         "x": 11.46,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -327,7 +331,7 @@
       "floorId": 1,
       "position": {
         "x": 16.25,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -336,7 +340,7 @@
       "floorId": 1,
       "position": {
         "x": 23.96,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -345,7 +349,7 @@
       "floorId": 1,
       "position": {
         "x": 29.17,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -354,7 +358,7 @@
       "floorId": 1,
       "position": {
         "x": 38.12,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -363,7 +367,7 @@
       "floorId": 1,
       "position": {
         "x": 46.88,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -372,7 +376,7 @@
       "floorId": 1,
       "position": {
         "x": 63.54,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -381,7 +385,7 @@
       "floorId": 1,
       "position": {
         "x": 74.38,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -488,7 +492,7 @@
       "buildingId": "ayres",
       "floorId": 1,
       "position": {
-        "x": 60.0,
+        "x": 60,
         "y": -78.75
       }
     },
@@ -578,7 +582,7 @@
       "buildingId": "ayres",
       "floorId": 1,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -90.21
       }
     },
@@ -696,7 +700,7 @@
       "floorId": 1,
       "position": {
         "x": -21.04,
-        "y": -160.0
+        "y": -160
       }
     },
     {
@@ -741,7 +745,7 @@
       "floorId": 1,
       "position": {
         "x": 6.46,
-        "y": -165.0
+        "y": -165
       }
     },
     {
@@ -1046,7 +1050,7 @@
       "buildingId": "ayres",
       "floorId": 1,
       "position": {
-        "x": 110.0,
+        "x": 110,
         "y": -214.38
       }
     },
@@ -1064,7 +1068,7 @@
       "buildingId": "ayres",
       "floorId": 1,
       "position": {
-        "x": 110.0,
+        "x": 110,
         "y": -234.58
       }
     },
@@ -1227,7 +1231,7 @@
       "floorId": 1,
       "position": {
         "x": -8.96,
-        "y": -260.0
+        "y": -260
       }
     },
     {
@@ -1246,6 +1250,15 @@
       "position": {
         "x": 8.12,
         "y": -284.58
+      }
+    },
+    {
+      "id": "ayres-1-hall-112-west-approach",
+      "buildingId": "ayres",
+      "floorId": 1,
+      "position": {
+        "x": 6.46,
+        "y": -105
       }
     }
   ],
@@ -1559,7 +1572,7 @@
       "from": "ayres-1-hall-112-west"
     },
     {
-      "to": "ayres-1-hall-112-south",
+      "to": "ayres-1-hall-112-west-approach",
       "weight": 1,
       "type": "corridor",
       "from": "ayres-1-hall-105"
@@ -2062,6 +2075,12 @@
       "weight": 1,
       "type": "door",
       "from": "ayres-1-room-120-interior"
+    },
+    {
+      "to": "ayres-1-hall-112-south",
+      "weight": 1,
+      "type": "corridor",
+      "from": "ayres-1-hall-112-west-approach"
     }
   ]
 }

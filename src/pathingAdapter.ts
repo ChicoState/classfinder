@@ -9,42 +9,83 @@ const [graph, nodes] = loadGraphFromData();
 
 export type Instruction = string;
 
-export type ReadableNode = {
-  position: Vector2;
-  floorId: number;
-  instruction: Instruction;
+export type ReadableNode = Node & {
+  instruction?: Instruction;
 };
 
 export type ReadablePath = ReadableNode[];
 
 type Turn = 'straight' | 'left' | 'right' | 'around';
 
+type SkippedTurns = [number, number];
+
 type InstructionContext = {
   fromNode: Node;
   turn: Turn;
+  skippedTurns: SkippedTurns;
+  nextTurn: Turn;
   toNode: Node;
+  distance: number;
 };
 
 type InstructionFormatter = (context: InstructionContext) => Instruction;
 
-const directionalEdgeTypes = new Set<EdgeKind>(['corridor', 'outdoor']);
+const directionalEdgeTypes = new Set<EdgeKind>(['corridor', 'outdoor', 'door']);
 
-function movementInstruction(turn: Turn, destination: string): Instruction {
-  switch (turn) {
-    case 'left':
-      return `Turn left and continue ${destination}.`;
-    case 'right':
-      return `Turn right and continue ${destination}.`;
-    case 'around':
-      return `Turn around and continue ${destination}.`;
-    case 'straight':
-      return `Continue ${destination}.`;
-  }
+function ordinal(value: number): string {
+  const names = [
+    'first',
+    'second',
+    'third',
+    'fourth',
+    'fifth',
+    'sixth',
+    'seventh',
+    'eighth',
+    'ninth',
+    'tenth'
+  ];
+  const suffix =
+    value % 100 >= 11 && value % 100 <= 13
+      ? 'th'
+      : ({ 1: 'st', 2: 'nd', 3: 'rd' }[value % 10] ?? 'th');
+  return names[value - 1] ?? `${value}${suffix}`;
+}
+
+function movementInstruction(
+  turn: Turn,
+  skippedTurns: SkippedTurns,
+  destination: string,
+  nextTurn: Turn,
+  distance: number
+): Instruction {
+  const movement =
+    (turn === 'straight' ? 'Continue' : `Turn ${turn} and continue`) +
+    ` for ${Math.round(distance / 5) * 5} feet`;
+  const instruction = `${movement} ${destination}.`;
+
+  if (nextTurn !== 'left' && nextTurn !== 'right') return instruction;
+
+  const count = skippedTurns[nextTurn === 'left' ? 0 : 1] + 1;
+  return `${instruction} Take the ${ordinal(count)} ${nextTurn}.`;
+}
+
+function doorInstruction(turn: Turn): Instruction {
+  if (turn === 'straight') return 'Go through the doorway.';
+  if (turn === 'around') return 'Turn around and go through the doorway.';
+  return `Go through the doorway on your ${turn}.`;
 }
 
 const instructionFormatters: Record<EdgeKind, InstructionFormatter> = {
-  corridor: ({ turn }) => movementInstruction(turn, 'along the corridor'),
-  door: () => 'Go through the doorway.',
+  corridor: ({ turn, skippedTurns, nextTurn, distance }) =>
+    movementInstruction(
+      turn,
+      skippedTurns,
+      'along the corridor',
+      nextTurn,
+      distance
+    ),
+  door: ({ turn }) => doorInstruction(turn),
   stairs: ({ fromNode, toNode }) =>
     fromNode.floorId === toNode.floorId
       ? 'Take the stairs.'
@@ -54,7 +95,8 @@ const instructionFormatters: Record<EdgeKind, InstructionFormatter> = {
       ? 'Take the elevator.'
       : `Take the elevator to floor ${toNode.floorId}.`,
   ramp: () => 'Use the ramp.',
-  outdoor: ({ turn }) => movementInstruction(turn, 'outdoors')
+  outdoor: ({ turn, skippedTurns, nextTurn, distance }) =>
+    movementInstruction(turn, skippedTurns, 'outdoors', nextTurn, distance)
 };
 
 function requireNode(nodes: Nodes, nodeId: NodeId): Node {
@@ -87,6 +129,11 @@ function findEdgeTurnAngle(
   const toNode = requireNode(nodes, edge.to);
   const incoming = subtract(previousToNode.position, previousFromNode.position);
   const outgoing = subtract(toNode.position, fromNode.position);
+
+  return findTurnAngle(incoming, outgoing);
+}
+
+function findTurnAngle(incoming: Vector2, outgoing: Vector2): [number, number] {
   const incomingMagnitude = magnitude(incoming);
   const outgoingMagnitude = magnitude(outgoing);
 
@@ -115,11 +162,63 @@ function classifyTurn(angle: number, direction: number): Turn {
   return direction > 0 ? 'left' : 'right';
 }
 
-function toReadableNode(node: Node, instruction: Instruction): ReadableNode {
+// Count each passed physical junction once per side, using the local approach.
+function countSkippedTurns(
+  path: Path,
+  nodes: Nodes,
+  start: number,
+  end: number
+): SkippedTurns {
+  const counts: SkippedTurns = [0, 0];
+  for (let index = start + 1; index < end; index++) {
+    const edge = path[index];
+    const previous = path[index - 1];
+    const junction = requireNode(nodes, edge.from);
+
+    if (!junction.isJunction) continue;
+
+    const incoming = subtract(
+      junction.position,
+      requireNode(nodes, previous.from).position
+    );
+
+    const sides = new Set<Turn>();
+    for (const exit of graph.get(junction.id) ?? []) {
+      if (
+        exit.to === previous.from ||
+        exit.to === edge.to ||
+        !['corridor', 'ramp', 'outdoor'].includes(exit.type)
+      )
+        continue;
+
+      const neighbor = requireNode(nodes, exit.to);
+      if (
+        neighbor.floorId !== junction.floorId ||
+        neighbor.buildingId !== junction.buildingId
+      )
+        continue;
+
+      sides.add(
+        classifyTurn(
+          ...findTurnAngle(
+            incoming,
+            subtract(neighbor.position, junction.position)
+          )
+        )
+      );
+    }
+
+    if (sides.has('left')) counts[0]++;
+    if (sides.has('right')) counts[1]++;
+  }
+  return counts;
+}
+
+function toReadableNode(node: Node, instruction?: Instruction): ReadableNode {
   return {
+    ...node,
     position: { ...node.position },
-    floorId: node.floorId,
-    instruction
+    ...(instruction === undefined ? {} : { instruction })
   };
 }
 
@@ -156,17 +255,36 @@ function createReadablePath(
       nextEdgeIndex++;
     }
 
+    const nextEdge = path[nextEdgeIndex];
+    // Find and show the next turn, before reaching the target turn.
+    const nextTurn =
+      nextEdge &&
+      nextEdge.type === edge.type &&
+      requireNode(nodes, nextEdge.from).isJunction
+        ? classifyTurn(
+            ...findEdgeTurnAngle(path[nextEdgeIndex - 1], nextEdge, nodes)
+          )
+        : 'straight';
+
     const formatter = instructionFormatters[edge.type];
     const instruction = formatter({
       fromNode: requireNode(nodes, edge.from),
       turn: classifyTurn(
         ...findEdgeTurnAngle(i > 0 ? path[i - 1] : null, edge, nodes)
       ),
-      toNode: requireNode(nodes, path[nextEdgeIndex - 1].to)
+      skippedTurns: countSkippedTurns(path, nodes, i, nextEdgeIndex),
+      nextTurn,
+      toNode: requireNode(nodes, path[nextEdgeIndex - 1].to),
+      distance: path
+        .slice(i, nextEdgeIndex)
+        .reduce((sum, e) => sum + e.distance, 0)
     });
 
     const node = requireNode(nodes, edge.from);
     readablePath.push(toReadableNode(node, instruction));
+    for (let index = i + 1; index < nextEdgeIndex; index++) {
+      readablePath.push(toReadableNode(requireNode(nodes, path[index].from)));
+    }
     i = nextEdgeIndex;
   }
 
@@ -181,9 +299,21 @@ function createReadablePath(
   return readablePath;
 }
 
-// Calculates a readable path of nodes with instructions from a starting position to an ending position, based on the nodes in the graph and the building ID.
-// start and end building ids are optional, used to help ensure the node found is in the correct building. By default it assumes you could be anywhere.
-// You can also pass 'outside' to filter out all building nodes.
+export function getReadableInstructionsBetweenNodes(
+  startNodeId: NodeId,
+  endNodeId: NodeId
+): ReadablePath | null {
+  const startNode = nodes.get(startNodeId);
+  const endNode = nodes.get(endNodeId);
+
+  if (!startNode || !endNode) {
+    return null;
+  }
+
+  const path = calculatePath(graph, startNode, endNode);
+  return path ? createReadablePath(path, nodes, endNode) : null;
+}
+
 export function getReadableInstructions(
   startX: number,
   startY: number,
@@ -220,7 +350,5 @@ export function getReadableInstructions(
     return null;
   }
 
-  const path = calculatePath(graph, startNode, endNode);
-
-  return path ? createReadablePath(path, nodes, endNode) : null;
+  return getReadableInstructionsBetweenNodes(startNode.id, endNode.id);
 }

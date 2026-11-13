@@ -116,7 +116,8 @@
       "position": {
         "x": -16.6,
         "y": 132.47
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ocon-1-lobby-upper",
@@ -513,6 +514,34 @@
         "x": -50.68,
         "y": 181.55
       }
+    },
+    {
+      "id": "ocon-1-hall-restroom-junction",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -53.64,
+        "y": 132.47
+      },
+      "isJunction": true
+    },
+    {
+      "id": "ocon-1-lobby-upper-south-approach",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -16.6,
+        "y": 148.5
+      }
+    },
+    {
+      "id": "ocon-1-hall-service-approach",
+      "buildingId": "ocon",
+      "floorId": 1,
+      "position": {
+        "x": -22.16,
+        "y": 132.47
+      }
     }
   ],
   "edges": [
@@ -561,6 +590,12 @@
     },
     {
       "from": "ocon-1-lobby-upper-junction",
+      "to": "ocon-1-lobby-upper-south-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-lobby-upper-south-approach",
       "to": "ocon-1-lobby-upper",
       "weight": 1,
       "type": "corridor"
@@ -615,7 +650,7 @@
       "type": "door"
     },
     {
-      "from": "ocon-1-lobby-upper-junction",
+      "from": "ocon-1-hall-service-approach",
       "to": "ocon-1-elevator-service",
       "weight": 1,
       "type": "door"
@@ -747,7 +782,7 @@
       "type": "door"
     },
     {
-      "from": "ocon-1-hall-west-junction",
+      "from": "ocon-1-hall-restroom-junction",
       "to": "ocon-1-restroom-vestibule",
       "weight": 1,
       "type": "corridor"
@@ -778,6 +813,12 @@
     },
     {
       "from": "ocon-1-hall-west-junction",
+      "to": "ocon-1-hall-restroom-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-restroom-junction",
       "to": "ocon-1-hall-west",
       "weight": 1,
       "type": "corridor"
@@ -845,9 +886,15 @@
     },
     {
       "from": "ocon-1-lobby-upper-junction",
+      "to": "ocon-1-hall-service-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-1-hall-service-approach",
       "to": "ocon-1-hall-west-junction",
       "weight": 1,
-      "type": "door"
+      "type": "corridor"
     }
   ]
 }

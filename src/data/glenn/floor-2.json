@@ -19,7 +19,7 @@
       "description": "Wheelchair-marked north exterior entrance",
       "referenceFloor": 1,
       "pdfPoint": [319, 66.5],
-      "projectedPdfPoint": [323.5, 67.0]
+      "projectedPdfPoint": [323.5, 67]
     },
     "axes": {
       "x": "drawing-right",
@@ -45,7 +45,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -16.46
       }
     },
@@ -54,7 +54,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -21.46
       }
     },
@@ -63,7 +63,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -23.96
       }
     },
@@ -72,7 +72,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -30.42
       }
     },
@@ -81,7 +81,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -42.71
       }
     },
@@ -90,7 +90,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -46.25
       }
     },
@@ -99,7 +99,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -52.71
       }
     },
@@ -108,7 +108,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -58.54
       }
     },
@@ -117,8 +117,8 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
-        "y": -65.0
+        "x": 0,
+        "y": -65
       }
     },
     {
@@ -126,7 +126,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -69.79
       }
     },
@@ -135,7 +135,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -87.08
       }
     },
@@ -144,7 +144,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -96.88
       }
     },
@@ -153,7 +153,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -104.58
       }
     },
@@ -162,7 +162,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -107.08
       }
     },
@@ -171,7 +171,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -114.58
       }
     },
@@ -180,7 +180,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -122.29
       }
     },
@@ -189,7 +189,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -133.33
       }
     },
@@ -198,7 +198,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -144.38
       }
     },
@@ -207,7 +207,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -153.33
       }
     },
@@ -216,7 +216,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -176.88
       }
     },
@@ -225,7 +225,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -195.42
       }
     },
@@ -234,7 +234,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -203.33
       }
     },
@@ -243,7 +243,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -209.38
       }
     },
@@ -252,7 +252,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -229.38
       }
     },
@@ -261,7 +261,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -240.83
       }
     },
@@ -270,7 +270,7 @@
       "buildingId": "glenn",
       "floorId": 2,
       "position": {
-        "x": 0.0,
+        "x": 0,
         "y": -10.42
       }
     },
@@ -352,7 +352,7 @@
       "floorId": 2,
       "position": {
         "x": -4.17,
-        "y": -65.0
+        "y": -65
       }
     },
     {
@@ -469,7 +469,7 @@
       "floorId": 2,
       "position": {
         "x": -4.17,
-        "y": -30.0
+        "y": -30
       }
     },
     {
@@ -649,7 +649,7 @@
       "floorId": 2,
       "position": {
         "x": -24.17,
-        "y": -95.0
+        "y": -95
       }
     },
     {
@@ -1075,7 +1075,7 @@
     },
     {
       "from": "glenn-2-room-204-north",
-      "to": "glenn-2-suite-204-north",
+      "to": "glenn-2-suite-204-northeast",
       "weight": 1,
       "type": "corridor"
     },
@@ -1087,7 +1087,7 @@
     },
     {
       "from": "glenn-2-room-204-south",
-      "to": "glenn-2-suite-204-south",
+      "to": "glenn-2-suite-204-southeast",
       "weight": 1,
       "type": "corridor"
     },

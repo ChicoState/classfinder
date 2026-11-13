@@ -132,7 +132,8 @@
       "position": {
         "x": -2.71,
         "y": 133.4
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ocon-3-hall-317",
@@ -213,7 +214,8 @@
       "position": {
         "x": -54.19,
         "y": 132.47
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ocon-3-hall-west-347",
@@ -736,6 +738,25 @@
         "x": -4.56,
         "y": 152.66
       }
+    },
+    {
+      "id": "ocon-3-hall-restroom-junction",
+      "buildingId": "ocon",
+      "floorId": 3,
+      "position": {
+        "x": -44.56,
+        "y": 132.47
+      },
+      "isJunction": true
+    },
+    {
+      "id": "ocon-3-hall-east-north-approach",
+      "buildingId": "ocon",
+      "floorId": 3,
+      "position": {
+        "x": -2.71,
+        "y": 146.4
+      }
     }
   ],
   "edges": [
@@ -764,7 +785,7 @@
       "type": "door"
     },
     {
-      "from": "ocon-3-hall-west-junction",
+      "from": "ocon-3-hall-restroom-junction",
       "to": "ocon-3-restroom-vestibule",
       "weight": 1,
       "type": "corridor"
@@ -1149,6 +1170,12 @@
     },
     {
       "from": "ocon-3-lobby-upper",
+      "to": "ocon-3-hall-east-north-approach",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-3-hall-east-north-approach",
       "to": "ocon-3-hall-east-upper",
       "weight": 1,
       "type": "corridor"
@@ -1209,6 +1236,12 @@
     },
     {
       "from": "ocon-3-hall-west-junction",
+      "to": "ocon-3-hall-restroom-junction",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-3-hall-restroom-junction",
       "to": "ocon-3-hall-east-upper",
       "weight": 1,
       "type": "corridor"

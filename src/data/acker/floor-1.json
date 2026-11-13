@@ -63,7 +63,7 @@
     "accessibility": "Only source AO entrance edge true; stair edges false; all other accessibility unknown.",
     "uncertainties": [
       "Manual doorway positions from dated plans, rounded to two decimals; not surveyed or GPS calibrated.",
-      "Room 151\u2013156 doors face exterior north, with no shown connecting walkway: retained as six isolated doorway nodes.",
+      "Room 151–156 doors face exterior north, with no shown connecting walkway: retained as six isolated doorway nodes.",
       "West storage has an exterior-only door without a shown connecting path: retained as isolated doorway.",
       "Floor-1 elevator shaft/approach is dashed across the sheet match line: no lower landing or vertical elevator edge inferred.",
       "Floor-2 broadcasting booth stair goes UP beyond the supplied floor plans; no booth geometry invented.",
@@ -78,8 +78,8 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 0
       }
     },
     {
@@ -88,7 +88,7 @@
       "floorId": 1,
       "position": {
         "x": -4.44,
-        "y": 10.0
+        "y": 10
       }
     },
     {
@@ -106,7 +106,7 @@
       "floorId": 1,
       "position": {
         "x": -19.17,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -115,7 +115,7 @@
       "floorId": 1,
       "position": {
         "x": -12.5,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -124,7 +124,7 @@
       "floorId": 1,
       "position": {
         "x": -5.28,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -402,9 +402,10 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -140.0,
+        "x": -140,
         "y": -73.33
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "acker-1-south-gym-hall-378",
@@ -452,15 +453,6 @@
       }
     },
     {
-      "id": "acker-1-south-gym-hall-691",
-      "buildingId": "acker",
-      "floorId": 1,
-      "position": {
-        "x": -45.28,
-        "y": -73.33
-      }
-    },
-    {
       "id": "acker-1-room-149",
       "buildingId": "acker",
       "floorId": 1,
@@ -501,7 +493,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -140.0,
+        "x": -140,
         "y": -83.33
       }
     },
@@ -510,7 +502,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -140.0,
+        "x": -140,
         "y": -105.83
       }
     },
@@ -519,7 +511,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -140.0,
+        "x": -140,
         "y": -125.28
       }
     },
@@ -582,7 +574,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -65.0,
+        "x": -65,
         "y": -96.11
       }
     },
@@ -610,7 +602,7 @@
       "floorId": 1,
       "position": {
         "x": -52.5,
-        "y": -80.0
+        "y": -80
       }
     },
     {
@@ -628,7 +620,7 @@
       "floorId": 1,
       "position": {
         "x": -45.28,
-        "y": -5.0
+        "y": -5
       }
     },
     {
@@ -656,7 +648,8 @@
       "position": {
         "x": -45.28,
         "y": -73.33
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "acker-1-east-hall-931",
@@ -924,7 +917,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -140.0,
+        "x": -140,
         "y": -140.56
       }
     },
@@ -933,7 +926,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -170.0,
+        "x": -170,
         "y": -160.56
       }
     },
@@ -996,7 +989,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -190.28
       }
     },
@@ -1005,7 +998,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -195.56
       }
     },
@@ -1014,7 +1007,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -210.83
       }
     },
@@ -1023,7 +1016,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -218.61
       }
     },
@@ -1032,7 +1025,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -224.44
       }
     },
@@ -1041,7 +1034,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -237.78
       }
     },
@@ -1050,7 +1043,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -251.11
       }
     },
@@ -1059,7 +1052,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -264.17
       }
     },
@@ -1068,7 +1061,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -277.5
       }
     },
@@ -1077,7 +1070,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -290.56
       }
     },
@@ -1086,7 +1079,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -304.17
       }
     },
@@ -1239,7 +1232,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -55.0,
+        "x": -55,
         "y": -291.39
       }
     },
@@ -1248,7 +1241,7 @@
       "buildingId": "acker",
       "floorId": 1,
       "position": {
-        "x": -45.0,
+        "x": -45,
         "y": -309.44
       }
     },
@@ -1285,7 +1278,7 @@
       "floorId": 1,
       "position": {
         "x": -37.22,
-        "y": -60.0
+        "y": -60
       }
     },
     {
@@ -1518,7 +1511,7 @@
     },
     {
       "from": "acker-1-south-gym-hall-639",
-      "to": "acker-1-south-gym-hall-691",
+      "to": "acker-1-east-hall-923",
       "weight": 1,
       "type": "corridor"
     },
@@ -1693,12 +1686,6 @@
     {
       "from": "acker-1-east-hall-1267",
       "to": "acker-1-east-hall-1327",
-      "weight": 1,
-      "type": "corridor"
-    },
-    {
-      "from": "acker-1-south-gym-hall-691",
-      "to": "acker-1-east-hall-923",
       "weight": 1,
       "type": "corridor"
     },

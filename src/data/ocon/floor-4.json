@@ -105,7 +105,8 @@
       "position": {
         "x": -44.56,
         "y": 160.06
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ocon-4-hall-northeast",
@@ -166,9 +167,10 @@
       "buildingId": "ocon",
       "floorId": 4,
       "position": {
-        "x": -4.56,
-        "y": 72.84
-      }
+        "x": -7.53,
+        "y": 68.21
+      },
+      "isJunction": true
     },
     {
       "id": "ocon-4-hall-438",
@@ -204,7 +206,8 @@
       "position": {
         "x": -10.12,
         "y": 23.21
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "ocon-4-hall-426",
@@ -628,6 +631,15 @@
         "x": -34.19,
         "y": 99.88
       }
+    },
+    {
+      "id": "ocon-4-hall-419-north-approach",
+      "buildingId": "ocon",
+      "floorId": 4,
+      "position": {
+        "x": -7.53,
+        "y": 74.03
+      }
     }
   ],
   "edges": [
@@ -981,13 +993,7 @@
     },
     {
       "from": "ocon-4-hall-middle",
-      "to": "ocon-4-hall-419",
-      "weight": 1,
-      "type": "corridor"
-    },
-    {
-      "from": "ocon-4-hall-419",
-      "to": "ocon-4-hall-422",
+      "to": "ocon-4-hall-419-north-approach",
       "weight": 1,
       "type": "corridor"
     },
@@ -1016,12 +1022,6 @@
       "type": "corridor"
     },
     {
-      "from": "ocon-4-hall-419",
-      "to": "ocon-4-hall-438",
-      "weight": 1,
-      "type": "corridor"
-    },
-    {
       "from": "ocon-4-hall-west",
       "to": "ocon-4-hall-west-service",
       "weight": 1,
@@ -1038,6 +1038,24 @@
       "to": "ocon-4-room-unlabeled-middle-side-lower-door",
       "weight": 1,
       "type": "door"
+    },
+    {
+      "from": "ocon-4-hall-419",
+      "to": "ocon-4-hall-438",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-4-hall-419",
+      "to": "ocon-4-hall-422",
+      "weight": 1,
+      "type": "corridor"
+    },
+    {
+      "from": "ocon-4-hall-419-north-approach",
+      "to": "ocon-4-hall-419",
+      "weight": 1,
+      "type": "corridor"
     }
   ]
 }

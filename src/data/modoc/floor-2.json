@@ -18,7 +18,7 @@
       "nodeId": "modoc-1-exit-southwest-ao",
       "description": "AO-marked southwest exterior lobby door on floor 1. Upper-floor origin is its projection.",
       "pdfPointFromTopLeft": {
-        "x": 189.0,
+        "x": 189,
         "y": 524.5
       }
     },
@@ -32,8 +32,8 @@
         "scale": 1,
         "rotationDegrees": 0,
         "translationPdfPoints": {
-          "x": 3.0,
-          "y": -3.0
+          "x": 3,
+          "y": -3
         }
       }
     },
@@ -291,7 +291,7 @@
       "buildingId": "modoc",
       "floorId": 2,
       "position": {
-        "x": -10.0,
+        "x": -10,
         "y": 170.83
       }
     },
@@ -365,7 +365,8 @@
       "position": {
         "x": 13.75,
         "y": 151.46
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "modoc-2-room-221A",
@@ -498,7 +499,7 @@
       "buildingId": "modoc",
       "floorId": 2,
       "position": {
-        "x": 40.0,
+        "x": 40,
         "y": 87.08
       }
     },
@@ -563,7 +564,8 @@
       "position": {
         "x": 13.75,
         "y": 13.12
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "modoc-2-room-214-north-door",
@@ -688,7 +690,7 @@
       "floorId": 2,
       "position": {
         "x": 31.88,
-        "y": 20.0
+        "y": 20
       }
     },
     {
@@ -715,7 +717,7 @@
       "floorId": 2,
       "position": {
         "x": 13.75,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -724,7 +726,7 @@
       "floorId": 2,
       "position": {
         "x": 20.62,
-        "y": 0.0
+        "y": 0
       }
     },
     {
@@ -734,7 +736,8 @@
       "position": {
         "x": 73.33,
         "y": 13.12
-      }
+      },
+      "isJunction": true
     },
     {
       "id": "modoc-2-hall-east-939",
@@ -1003,7 +1006,7 @@
       "floorId": 2,
       "position": {
         "x": 77.5,
-        "y": 40.0
+        "y": 40
       }
     },
     {
